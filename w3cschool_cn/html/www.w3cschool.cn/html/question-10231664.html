@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/html/question-10231664.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:32:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" /> 
+<title>伪静态是什么？如何区分伪静态与普通html静态网页?_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="html," /> 
+<meta name="description" content="伪静态是什么？伪静态与普通html静态网页区别?" />
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico" />
+<link href="../statics/css/question.css" rel="stylesheet" type="text/css" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+</head>
+<body id="projectList">
+<!--引入头部-->
+<!--带关键词栏头部-->
+<!--header start--> 
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li> 
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li>
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://www.w3cschool.cn/collection/" title="专题">专题</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="navfirst_item">
+<div id="navfirst">
+<ul id="menu">
+<li><a href="http://www.w3cschool.cn/" title="w3cschool首页"><i class="home-icon img-icon"></i>首页</a></li>
+<li><a href="index.html" title="HTML教程">HTML</a></li>
+<li><a href="http://www.w3cschool.cn/css/" title="CSS教程">CSS</a></li>
+<li><a href="http://www.w3cschool.cn/javascript/" title="Javascript教程">Javascript</a></li>
+<li><a href="http://www.w3cschool.cn/jquery/" title="Jquery教程">Jquery</a></li>
+<li><a href="http://www.w3cschool.cn/bootstrap/" title="Bootstrap教程">Bootstrap</a></li>
+<li><a href="http://www.w3cschool.cn/php/" title="PHP教程">PHP</a></li>
+<li><a href="http://www.w3cschool.cn/java/" title="Java教程">Java</a></li>
+<li><a href="http://www.w3cschool.cn/python3/" title="Python3教程">Python3</a></li>
+<li><a href="http://www.w3cschool.cn/mysql/" title="MySQL教程">MySQL</a></li>
+<li><a href="http://www.w3cschool.cn/sql/" title="SQL教程">SQL</a></li>
+<li><a href="http://www.w3cschool.cn/json/" title="JSON教程">Json</a></li>
+<!--<li><a href="//www.w3cschool.cn/c/" title="C教程">C</a></li>-->
+<li><a href="http://www.w3cschool.cn/weixinapp/" title="微信小程序开发文档">微信小程序</a></li>
+<li><a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a></li>
+<li><a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a></li>
+<!--<li><a href="//www.w3cschool.cn/position/positionList" title="职业路线">职业路线</a></li>-->
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">更多...</a></li>
+</ul>
+</div>
+</div>
+<script>
+var apppath = 'question-10231664.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="wrapper">
+<div class="bread-nav">
+<img src="../statics/yimages/positionred.png" alt="话题">
+<a href="http://www.w3cschool.cn/">首页</a> &gt;
+<a href="index.html" title="HTML 教程">HTML 教程</a> &gt;
+<a href="topic.html" title="HTML 教程话题列表">HTML 教程话题列表</a> &gt;
+<span>详情</span>
+</div>
+<div class="pro-page-main">
+<div class="page-panel-inner">
+<div class="page-panel-content">
+<div class="question-head">
+<div class="question-head-content">
+<div class="question-head-title" data-qid="10231664">
+<h1>伪静态是什么？如何区分伪静态与普通html静态网页?</h1>
+<span class="gifts">精华</span>
+</div>
+<div class="ar-desc">
+<a href="https://www.w3cschool.cn/u/101">tomcat080</a>
+<span class="v-line">2016-11-29 11:55:13</span>
+<span class="v-line">浏览(1838)</span>
+<span class="v-line" id="answercount2">回复(5)</span>
+<span class="v-line"><a href="javascript:;" data-type="question" title="这个很棒" onclick="approve(this)">赞(0)</a></span>
+</div>
+</div>
+<div class="question-content">
+<div class="md"><p>伪静态是什么？伪静态与普通html静态网页区别?</p></div>
+<div class="question-lable">
+<label>标签：</label>
+<a title="html" href="https://www.w3cschool.cn/topic/html">html</a>
+</div>
+</div>
+</div>
+<div class="question-reply">
+<div class="question-reply-title">
+<h2>回答(<span id="answercount">5</span>)</h2>
+</div>
+<div class="question-list">
+<div class="question-item" id="DivAnswer690" data-aid="690">
+<div class="ask-user-avatar">
+<a href="https://www.w3cschool.cn/u/96"><img src="../attachments/avatar2/avatar_96.jpg"></a>
+</div>
+<div class="question-info">
+<div class="reply-head">
+<a href="https://www.w3cschool.cn/u/96">天才异客</a>
+<span class="gifts-small">精华</span>
+<span>2016-11-29</span>
+</div>
+<div class="reply-content md"><h2>什么是伪静态,伪静态作用</h2>
+<hr />
+<p>伪静态即是网站本身是动态网页如<code>.php</code> 、<code>.asp</code> 、 <code>.aspx</code> 等格式动态网页有时这类动态网页还跟“?”加参数来读取数据库内不同资料。很典型的案例即是discuz论坛系统，后台就有一个设置伪静态功能，开启伪静态后，动态网页即被转换重写成静态网页类型页面，通过浏览器访问地址和真的静态页面没区别。前提服务器支持伪静态重写<a href="http://www.w3cschool.cn/thinkphp323/4jz72ozt.html">URL Rewrite</a> 功能。</p>
+<h2>需要伪静态功能地方</h2>
+<hr />
+<p>考虑<a href="http://www.w3cschool.cn/seoer/">搜索引擎优化SEO</a> ，将动态网页通过服务器处理成静态页面，如www.w3cschool.cn/php?=php-json这样的动态网页处理成www.w3cschool.cn/php/php-json.html 这样格式静态页面，常见的论坛帖子页面，都是经过伪静态处理成静态页面格式<a href="index.html">html</a> 页面。考虑网站所用的程序语言不易被发现，经过重写来伪静态来将动态网页的程序后缀变为html的静态页面格式。</p>
+<h2>伪静态的利与弊</h2>
+<hr />
+<p>当然犹如一篇文章的作者所说的：&quot;如果流量稍大一些使用伪静态就出现CPU使用超负荷，我的同时在线300多人就挂了，而不使用伪静态的时候同时在线超500人都不挂，我的IIS数是1000。”确实是这样的，由于伪静态是用正则判断而不是真实地址，分辨到底显示哪个页面的责任也由直接指定转由CPU来判断了，所以CPU占有量的上升，确实是伪静态最大的弊病。</p>
+<h2>我们应该选择伪静态还是真静态？</h2>
+<hr />
+<ol>
+<li>使用真静态和假静态对SEO来说没有什么区别</li>
+<li>使用真静态可能将导致硬盘损坏并将影响论坛性能</li>
+<li>使用伪静态将占用一定量的CPU占有率，大量使用将导致CPU超负荷</li>
+<li>最重要的一点，我们要静态是为了SEO</li>
+</ol>
+<p>所以：</p>
+<ol>
+<li>使用真静态的方法可以直接排除了，因为无论怎么生成，对硬盘来说都是很伤的。</li>
+<li>既然真伪静态的效果一样，我们就可以选择伪静态了。</li>
+<li>但是伪静态大量使用会造成CPU超负荷。</li>
+<li>所以我们只要不大量使用就可以了。</li>
+<li>既然静态只是给SEO看的，我们只需要伪静态给SEO就行了，不需要给用户使用。</li>
+<li>所以我们只要在专门提供给SEO爬的Archiver中使用伪静态就可以了。</li>
+<li>谢谢大家耐心看我写的文章。</li>
+<li>有何不解的地方或是有不同的看法欢迎提出。</li>
+</ol>
+<h2>关于伪静态和真静态的评论</h2>
+<hr />
+<p>真正的静态化和伪静态还是有本质的区别的。为浏览用户处理一个纯粹htm和一个调用多个数据的php在CPU的使用率方面明显前者少。记得原来有个人说html下载硬盘读写频繁，他这么说好像读取数据库不用读写磁盘似的，何况还有一大堆缓存的零散<a href="http://www.w3cschool.cn/php/">php</a> 也是放在硬盘的，这些读取不用磁盘操作么？可笑。读取单个htm+图片Flash等附件就可以实现的目的，何苦要读数据库又要读php缓存文件又要重新整合数据输出再+图片Flash等附件这么大费周章呢？CMS首页不需要很多的互动的，论坛那一套不应该拿到这里来用，相反应该更多考虑的是：美观！兼容！信息的直观！性能！还有稳定！伪静态查考-Apache与IIS伪静态设置方法具体伪静态实现可以根据自己所用的语言写的网站去百度或谷歌搜索实现方法-<a href="http://www.w3cschool.cn/css/css-intro.html">css介绍</a> 。</p></div>
+<div class="reply-group" >
+<span class="question-op">
+<a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)">
+<i class="icon-thumbs-up"></i>
+<span>3</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)">
+<i class="icon-thumbs-down"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="分享" class="" onclick="share_out(event,this,'answer')">
+<i class=" icon-share"></i>
+<span>分享</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="评论" onclick="showReply(this)">
+<i class="icon-comments"></i>
+<span id="replycount690">0</span>
+</a>
+</span>
+<a href="javascript:;" class="report-op" data-tid="690" data-module="answer" onclick="showReportBox(this)">举报</a>
+</div>
+<div class="comment-content" style="display: none;">
+<div class="comment-content-list">
+<ul class="reply-ul">
+</ul>
+</div>
+<div class="comment-box">
+<textarea class="comment-txt form-input" placeholder="回复..."></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a>
+<a href="javascript:;" class="comment-btn cancel-btn-bg" onclick="cancelReply(this)">取消</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="question-item" id="DivAnswer2501" data-aid="2501">
+<div class="ask-user-avatar">
+<a href="https://www.w3cschool.cn/u/310597"><img src="../attachments/avatar2/avatar_310597.jpg"></a>
+</div>
+<div class="question-info">
+<div class="reply-head">
+<a href="https://www.w3cschool.cn/u/310597">Silence广</a>
+<span>2018-02-11</span>
+</div>
+<div class="reply-content md"><p>恩 对 很对</p></div>
+<div class="reply-group" >
+<span class="question-op">
+<a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)">
+<i class="icon-thumbs-up"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)">
+<i class="icon-thumbs-down"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="分享" class="" onclick="share_out(event,this,'answer')">
+<i class=" icon-share"></i>
+<span>分享</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="评论" onclick="showReply(this)">
+<i class="icon-comments"></i>
+<span id="replycount2501">0</span>
+</a>
+</span>
+<a href="javascript:;" class="report-op" data-tid="2501" data-module="answer" onclick="showReportBox(this)">举报</a>
+</div>
+<div class="comment-content" style="display: none;">
+<div class="comment-content-list">
+<ul class="reply-ul">
+</ul>
+</div>
+<div class="comment-box">
+<textarea class="comment-txt form-input" placeholder="回复..."></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a>
+<a href="javascript:;" class="comment-btn cancel-btn-bg" onclick="cancelReply(this)">取消</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="question-item" id="DivAnswer3596" data-aid="3596">
+<div class="ask-user-avatar">
+<a href="https://www.w3cschool.cn/u/21897"><img src="../attachments/avatar2/avatar_21897.jpg"></a>
+</div>
+<div class="question-info">
+<div class="reply-head">
+<a href="https://www.w3cschool.cn/u/21897">一笔荒芜</a>
+<span>2018-05-31</span>
+</div>
+<div class="reply-content md"><p>有同样等问题咋解决,只能慢慢等大神啦.留名留名。。</p></div>
+<div class="reply-group" >
+<span class="question-op">
+<a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)">
+<i class="icon-thumbs-up"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)">
+<i class="icon-thumbs-down"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="分享" class="" onclick="share_out(event,this,'answer')">
+<i class=" icon-share"></i>
+<span>分享</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="评论" onclick="showReply(this)">
+<i class="icon-comments"></i>
+<span id="replycount3596">0</span>
+</a>
+</span>
+<a href="javascript:;" class="report-op" data-tid="3596" data-module="answer" onclick="showReportBox(this)">举报</a>
+</div>
+<div class="comment-content" style="display: none;">
+<div class="comment-content-list">
+<ul class="reply-ul">
+</ul>
+</div>
+<div class="comment-box">
+<textarea class="comment-txt form-input" placeholder="回复..."></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a>
+<a href="javascript:;" class="comment-btn cancel-btn-bg" onclick="cancelReply(this)">取消</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="question-item" id="DivAnswer4594" data-aid="4594">
+<div class="ask-user-avatar">
+<a href="https://www.w3cschool.cn/u/530301"><img src="../attachments/avatar2/avatar_530301.jpg"></a>
+</div>
+<div class="question-info">
+<div class="reply-head">
+<a href="https://www.w3cschool.cn/u/530301">1144100656</a>
+<span>2018-05-31</span>
+</div>
+<div class="reply-content md"><p>吃瓜群众,坐等大神来解决。。。。。</p></div>
+<div class="reply-group" >
+<span class="question-op">
+<a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)">
+<i class="icon-thumbs-up"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)">
+<i class="icon-thumbs-down"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="分享" class="" onclick="share_out(event,this,'answer')">
+<i class=" icon-share"></i>
+<span>分享</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="评论" onclick="showReply(this)">
+<i class="icon-comments"></i>
+<span id="replycount4594">0</span>
+</a>
+</span>
+<a href="javascript:;" class="report-op" data-tid="4594" data-module="answer" onclick="showReportBox(this)">举报</a>
+</div>
+<div class="comment-content" style="display: none;">
+<div class="comment-content-list">
+<ul class="reply-ul">
+</ul>
+</div>
+<div class="comment-box">
+<textarea class="comment-txt form-input" placeholder="回复..."></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a>
+<a href="javascript:;" class="comment-btn cancel-btn-bg" onclick="cancelReply(this)">取消</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="question-item" id="DivAnswer5050" data-aid="5050">
+<div class="ask-user-avatar">
+<a href="https://www.w3cschool.cn/u/25712"><img src="../attachments/avatar2/avatar_25712.jpg"></a>
+</div>
+<div class="question-info">
+<div class="reply-head">
+<a href="https://www.w3cschool.cn/u/25712">1152696398</a>
+<span>2018-05-31</span>
+</div>
+<div class="reply-content md"><p>留名留名!!!,同样的问题,看看咋结局!!!</p></div>
+<div class="reply-group" >
+<span class="question-op">
+<a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)">
+<i class="icon-thumbs-up"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)">
+<i class="icon-thumbs-down"></i>
+<span>0</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="分享" class="" onclick="share_out(event,this,'answer')">
+<i class=" icon-share"></i>
+<span>分享</span>
+</a>
+</span>
+<span class="question-op">
+<a href="javascript:;" title="评论" onclick="showReply(this)">
+<i class="icon-comments"></i>
+<span id="replycount5050">0</span>
+</a>
+</span>
+<a href="javascript:;" class="report-op" data-tid="5050" data-module="answer" onclick="showReportBox(this)">举报</a>
+</div>
+<div class="comment-content" style="display: none;">
+<div class="comment-content-list">
+<ul class="reply-ul">
+</ul>
+</div>
+<div class="comment-box">
+<textarea class="comment-txt form-input" placeholder="回复..."></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a>
+<a href="javascript:;" class="comment-btn cancel-btn-bg" onclick="cancelReply(this)">取消</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="multipage">
+<div class="pagination">
+            
+</div>            
+</div>
+<div class="comment-mod">
+<div class="comment-desc">
+要回复，请先<a href="https://www.w3cschool.cn/login?refer=/question/10231664">登录</a>
+或者<a href="http://www.w3cschool.cn/register">注册</a>
+</div>
+</div>
+</div>
+</div>
+<div class="page-panel-sidebar">
+<div class="topic-sidebar-top">
+<a href="https://www.w3cschool.cn/question/askQuestion?name=html" class="ask-btn"><i class="icons-img icons-focus"></i>我要发表</a>
+</div>
+<div class="hot-question">
+<h2>热门问答</h2>
+<ul class="hot-question-list">
+<li><a href="https://www.w3cschool.cn/html5/question-10231350.html">HTML图片轮播代码怎么写？</a></li>
+<li><a href="https://www.w3cschool.cn/php/question-10231338.html">让一个人去开发一个网站，那么这个人需要具备哪些技能？</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231604.html">HTML &lt;a&gt;标签中的文字要怎么居中对齐？</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231616.html">W3Cschool有HTML和CSS离线教程手册下载吗？</a></li>
+<li><a href="https://www.w3cschool.cn/mysql/question-10231464.html">mysql 如何实现多表跨库联合查询？</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231583.html">pc端网站如何实现移动端适配？</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231597.html">在HTML代码中要如何插入空格？</a></li>
+<li><a href="https://www.w3cschool.cn/eclipse/question-10231300.html">为什么要使用eclipse？</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231595.html">在HTML代码中如何把超链接(标签 a)的下划线去掉？</a></li>
+<li><a href="https://www.w3cschool.cn/css3/question-10231610.html">如何用CSS实现背景图片自适应？</a></li>
+<li><a href="question-10231638.html">大家好！求解答一下我这一小段代码，我为什么实现不了居右的效果？</a></li>
+<li><a href="https://www.w3cschool.cn/json/question-10231298.html">js中如何向json数组添加元素</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231283.html">Html5相比Html多了哪些新特性?</a></li>
+<li><a href="question-10231663.html">文字和图片居中的HTML代码怎么写？</a></li>
+<li><a href="https://www.w3cschool.cn/css3/question-10231607.html">CSS3与CSS的区别有哪些？</a></li>
+<li><a href="https://www.w3cschool.cn/css/question-10231676.html">学会CSS技术需要多长时间？ 精通CSS需要多长时间？</a></li>
+<li><a href="https://www.w3cschool.cn/csharp/question-10231322.html">做c#可以用什么软件？</a></li>
+<li><a href="https://www.w3cschool.cn/javascript/question-10231450.html">闭包是什么，有什么特性，对页面有什么影响?</a></li>
+<li><a href="https://www.w3cschool.cn/html5/question-10231596.html">如何清除HTML样式？</a></li>
+<li><a href="https://www.w3cschool.cn/w3cschool/question-10232085.html">W3Cschool常见问题汇总</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- 举报 -->
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+ <li class="radio-box">
+   <input id="reportRadio" type="radio" name="reportType" value="1"> 广告等垃圾信息
+ </li>
+ <li class="radio-box">
+   <input id="reportRadio" type="radio" name="reportType" value="2"> 不友善内容
+ </li>
+ <li class="radio-box">
+   <input id="reportRadio" type="radio" name="reportType" value="3"> 违反法律法规的内容
+ </li>
+  <li class="radio-box">
+   <input id="reportRadio" type="radio" name="reportType" value="4"> 不宜公开讨论的政治内容
+ </li>
+ <li class="radio-box" onclick="reportOther(this)">
+   <input id="reportRadio" type="radio" name="reportType" value="0"> 其他
+   <input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+ </li>
+</ul>
+<button onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<!-- 举报结束 -->
+</div>
+<!--引入尾部-->
+<!--footer start-->
+<div id="footer_item">
+<div id="footer">
+<div class="footer-box">
+<div class="footer-title">网站相关</div>
+<div class="footer-items">
+<a href="http://www.w3cschool.cn/about/about.html">关于我们</a>
+<a href="http://www.w3cschool.cn/about/join.html">加入我们</a>
+<a href="http://www.w3cschool.cn/sitemap/">网站地图</a>
+<a target="_blank" href="http://www.w3cschool.cn/links" title="友情链接">友情链接</a>
+</div>
+</div>
+<div class="footer-box">
+<div class="footer-title">内容专区</div>
+<div class="footer-items">
+<a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a>
+<a href="http://www.w3cschool.cn/manual" title="技术文档参考手册">极客文档</a>
+<a href="https://123.w3cschool.cn/webtools" title="编程在线工具">在线工具</a>
+<a href="http://www.w3cschool.cn/archives/" title="文章存档">文章存档</a>
+</div>
+</div>
+<div class="footer-box">
+<div class="footer-title">常用链接</div>
+<div class="footer-items">
+<a href="http://123.w3cschool.cn/" title="技术学习极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/codecamp/" target="_blank" title="编程实战">编程实战</a>
+<a href="http://www.w3cschool.cn/download" target="_blank" title="w3cschool离线版下载">w3cschool离线下载</a>
+<a href="https://m.w3cschool.cn/" target="_blank" title="w3cschool手机版">w3cschool手机版</a>
+</div>
+</div>
+<div class="footer-box">
+<div class="footer-title">联系我们</div>
+<div class="footer-items">
+<a target="_blank" href="https://www.w3cschool.cn/w3cschool/question-10232085.html" title="常见问题QA">常见问题QA</a>
+<a href="http://www.w3cschool.cn/lecturerApply" target="_blank">课程合作</a>
+<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=69bf2226eb0fbd411c740b015055bab665fcef4721dbe974882223b476e2962e" ref="nofollow">官方QQ群：236419487</a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3532917531&amp;site=qq&amp;menu=yes" ref="nofollow">商务合作QQ：3532917531</a>
+</div>
+</div>
+<div class="footer-box">
+<div class="tcode"><img src="../../7n.w3cschool.cn/statics/images/w3c/w3cschool743e.png?imageView2/1/w/100/h/100" alt="微信订阅号" width="100" height="100"></div>
+<p class="tcode-txt">微信号：w3cschoolcn</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>Copyright&copy;2018 亿动科技 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. 闽ICP备15016281号-3</p>
+</div>
+</div>
+<div id="dialogBackground" class="dialogBackground"></div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>
+<div class="qr-img"><img src="../../7n.w3cschool.cn/statics/images/w3c/w3cschool743e.jpg?imageView2/1/w/100/h/100" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 662px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。"></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+<!--footer end-->
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script src="../statics/js/question.js" type="text/javascript"></script>
+<script src="../statics/js/share.js" type="text/javascript"></script>
+<script type="text/javascript">
+var qtype = "0";
+var AnswerInfo = {
+'aid':0,
+};
+hljs.initHighlightingOnLoad();
+function submitForm(){
+var qid = $(".question-head-title").attr("data-qid");
+var answerinfo = $("#elmaaa").val();
+if(answerinfo.length == 0){
+toastr.info("答案不能为空!",'',{"positionClass": "toast-top-center"});
+return;
+}
+hljs.initHighlighting.called = false;
+hljs.initHighlighting();
+$.ajaxdo({
+   url:"/question/saveAnswer",
+   type:"post",
+   dataType: 'json',
+   data:{"qid":qid,"aid":AnswerInfo.aid,"answerinfo":answerinfo},
+   sync:false,
+   success:function(data){
+   if(data.statusCode == 200){
+   obj = eval(data.data);
+   if(AnswerInfo.aid>0){
+   var answerdiv = $("#DivAnswer"+AnswerInfo.aid+"");
+   answerdiv.find(".md").html(obj.answer);
+$("html").animate({scrollTop:answerdiv.offset().top-200});
+answerdiv.parent().addClass("borderflash");
+setTimeout(function(){answerdiv.parent().removeClass("borderflash");},3500);
+toastr.success("修改成功",'',{"positionClass": "toast-top-center"});
+   }else{
+   var htmlstr = '<div class="question-item" id="DivAnswer'+obj.aid+'" data-aid="'+obj.aid+'"><div class="ask-user-avatar"><a href="/u/'+obj.uid+'"><img src="/attachments/avatar2/avatar_'+obj.uid+'.jpg"></a></div><div class="question-info"><div class="reply-head"><a href="/u/'+obj.uid+'">'+obj.nickname+'</a><span>刚刚</span></div><div class="reply-content md">'+obj.answer+'</div><div class="reply-group"><span class="question-op"><a href="javascript:;" title="赞同回复" data-type="answer" onclick="approve(this)"><i class="icon-thumbs-up"></i><span>0</span></a></span><span class="question-op"><a href="javascript:;" title="对答案持反对意见" class="" onclick="disapproval(this)"><i class="icon-thumbs-down"></i><span>0</span></a></span><span class="question-op"><a href="javascript:;" title="分享" class="" onclick="share_out(event,this,\'answer\')"><i class=" icon-share"></i><span>分享</span></a></span><span class="question-op"><a href="javascript:;" title="评论" onclick="showReply(this)"><i class="icon-comments"></i><span id="replycount'+obj.aid+'">0</span></a></span><a href="javascript:;" class="report-op" data-tid="'+obj.aid+'" data-module="answer" onclick="showReportBox(this)">举报</a><a href="javascript:;" class="report-op" onclick="delAnswer('+obj.aid+')">删除</a></div><div class="comment-content" style="display: none;"><div class="comment-content-list"><ul class="reply-ul"></ul></div><div class="comment-box"><textarea class="comment-txt form-input" placeholder="回复..."></textarea><div class="comment-box-btn"><a href="javascript:;" class="comment-btn" onclick="saveReply(this)">回复</a><a href="" class="comment-btn cancel-btn-bg">取消</a></div></div></div></div></div>';
+   $(".question-list").append(htmlstr);
+   newxheditor.setSource("");
+   var answernum = $("#answercount").text()*1+1;
+$("#answercount").text(answernum);
+$("#answercount2").text("回答("+answernum+")");
+toastr.success("回答成功",'',{"positionClass": "toast-top-center"});
+if(obj.creditPower > 0 && qtype == '0'){
+setTimeout(function(){toastr.success("+2点经验值",'',{"positionClass": "toast-top-center"});},1000);
+   }
+   }
+   if(qtype != '1'){
+   cancelEditAnswer();
+   }
+   }else{
+   toastr.error(data.message,'',{"positionClass": "toast-top-center"});
+   }
+   }
+   });
+}
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/html/question-10231664.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:32:47 GMT -->
+</html>

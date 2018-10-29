@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-colorvalues.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:30:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>HTML 颜色值_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="HTML 颜色值" />
+<meta name="description" content="HTML 颜色值 颜色由红(R)、绿(G)、蓝(B)组成。  颜色值 颜色值由十六进制来表示红、绿、蓝（RGB）。 每个颜色的最低值为0(十六进制为00)，最高值为255(十六进制为FF)。 十六进制值的写法为#号后跟三个或六个十六进制字符。 三位数表示法为：#RGB，转换为6位数表示为：#RRGG_来自HTML 教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'html-colorvalues.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/html" title="HTML 教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="HTML 教程" src="../attachments/cover/cover_html.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>HTML 教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="html问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">html问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="22" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="241bxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 教程">HTML 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tutorial.html" title="HTML 教程导读">HTML 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-intro.html" title="HTML 简介">HTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-editors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-editors.html" title="HTML 编辑器的介绍及推荐">HTML 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-basic">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-basic.html" title="HTML 基础">HTML 基础</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-elements.html" title="HTML 元素">HTML 元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-attributes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-attributes.html" title="HTML 属性">HTML 属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-heading">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-heading.html" title="HTML 标题">HTML 标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-paragraphs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-paragraphs.html" title="HTML        段落">HTML        段落</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-formatting">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-formatting.html" title="HTML 文本格式化">HTML 文本格式化</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-links">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-links.html" title="HTML 链接">HTML 链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-head">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-head.html" title="HTML 头部">HTML 头部</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css.html" title="HTML CSS百科及常用嵌入方式">HTML CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-images.html" title="HTML 图像">HTML 图像</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tables.html" title="HTML 表格">HTML 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-lists">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-lists.html" title="HTML 列表">HTML 列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-blocks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-blocks.html" title="HTML 区块">HTML 区块</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-layouts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-layouts.html" title="HTML 布局">HTML 布局</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-form">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-form.html" title="HTML 表单">HTML 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-iframes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-iframes.html" title="HTML 框架">HTML 框架</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colors.html" title="HTML 颜色">HTML 颜色</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colornames">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colornames.html" title="HTML 颜色名">HTML 颜色名</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colorvalues">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colorvalues.html" title="HTML 颜色值">HTML 颜色值</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scripts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scripts.html" title="HTML 脚本">HTML 脚本</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-entities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-entities.html" title="HTML 字符实体">HTML 字符实体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-url">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-url.html" title="HTML URL">HTML URL</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-quicklist">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-quicklist.html" title="HTML 速查列表">HTML 速查列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-summary.html" title="HTML 总结">HTML 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="9odg1ptd">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML XHTML">HTML XHTML</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-xhtml">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-xhtml.html" title="XHTML 简介">XHTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="1pdjxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 媒体">HTML 媒体</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-media">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-media.html" title="HTML 媒体(Media)">HTML 媒体(Media)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-object.html" title="HTML 插件">HTML 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-sounds">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-sounds.html" title="HTML 音频(Audio)">HTML 音频(Audio)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-videos">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-videos.html" title="HTML 视频(Videos)播放">HTML 视频(Videos)播放</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="y12r1210">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 实例/测验">HTML 实例/测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-html_examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-html_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_quiz.html" title="HTML 测验">HTML 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-codecamp.html" title="HTML 编程实战闯关">HTML 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-fj7r22x9">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 相关教程">HTML 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-brge22wl">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-index.html" title="HTML 入门教程">HTML 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="4flh1s7s">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 拓展阅读">HTML 拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-space">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-space.html" title="HTML中如何键入空格">HTML中如何键入空格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-code.html" title="程序员必须知道的HTML常用代码有哪些？">HTML常用代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-Label">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-Label.html" title="全方位详解HTML常用标签">HTML常用标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-template">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-template.html" title="精选多个程序员都想要的免费HTML模板下载">HTML模板下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-textbox">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-textbox.html" title="HTML文本框参考样式及常见操作技巧大全">HTML文本框样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scrollbar">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scrollbar.html" title="HTML滚动条样式代码及使用技巧">HTML滚动条样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-copyright">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-copyright.html" title="HTML版权符号写法及美化">HTML版权符号写法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-cui11xk2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-cui11xk2.html" title="HTML元素嵌套嵌套错误可能引起的问题">HTML元素嵌套问题</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(122936)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">23</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/html/html-colorvalues" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>HTML 颜色值</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Alma 最后一次修改&nbsp;<span>2015-09-10</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><h2>HTML <span class="color_h1">颜色值</span></h2> <p class="intro">颜色由红(R)、绿(G)、蓝(B)组成。</p> <hr> <h2>颜色值</h2> <p>颜色值由十六进制来表示红、绿、蓝（RGB）。</p> <p>每个颜色的最低值为0(十六进制为00)，最高值为255(十六进制为FF)。</p> <p>十六进制值的写法为#号后跟三个或六个十六进制字符。</p> <p>三位数表示法为：#RGB，转换为6位数表示为：#RRGGBB。</p> <div class="example"> <h2 class="example">颜色实例</h2> <table class="reference"> <tbody><tr> <th style="text-align: center; width: 25%;">颜色</th> <th style="text-align: center; width: 25%;">3位十六进制颜色值</th> <th style="text-align: center; width: 25%;">6位十六进制颜色值</th> <th style="text-align: center;">RGB</th> </tr> <tr> <td style="text-align: center; background-color: rgb(0, 0, 0);">&nbsp;</td> <td style="text-align: center;">#000</td> <td style="text-align: center;">#000000</td> <td style="text-align: center;">rgb(0,0,0)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(255, 0, 0);">&nbsp;</td> <td style="text-align: center;">#F00</td> <td style="text-align: center;">#FF0000</td> <td style="text-align: center;">rgb(255,0,0)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(0, 255, 0);">&nbsp;</td> <td style="text-align: center;">#0F0</td> <td style="text-align: center;">#00FF00</td> <td style="text-align: center;">rgb(0,255,0)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(0, 0, 255);">&nbsp;</td> <td style="text-align: center;">#00F</td> <td style="text-align: center;">#0000FF</td> <td style="text-align: center;">rgb(0,0,255)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(255, 255, 0);">&nbsp;</td> <td style="text-align: center;">#FF0</td> <td style="text-align: center;">#FFFF00</td> <td style="text-align: center;">rgb(255,255,0)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(0, 255, 255);">&nbsp;</td> <td style="text-align: center;">#0FF</td> <td style="text-align: center;">#00FFFF</td> <td style="text-align: center;">rgb(0,255,255)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(255, 0, 255);">&nbsp;</td> <td style="text-align: center;">#F0F</td> <td style="text-align: center;">#FF00FF</td> <td style="text-align: center;">rgb(255,0,255)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(192, 192, 192);">&nbsp;</td> <td style="text-align: center;">#888</td> <td style="text-align: center;">#888888</td> <td style="text-align: center;">rgb(136,136,136)</td> </tr> <tr> <td style="text-align: center; background-color: rgb(255, 255, 255);">&nbsp;</td> <td style="text-align: center;">#FFF</td> <td style="text-align: center;">#FFFFFF</td> <td style="text-align: center;">rgb(255,255,255)</td> </tr> </tbody></table> <br><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_colorhex" class="tryitbtn">尝试一下 »</a> </div> <hr><h2>通过十六进制（Hex）的颜色值排序</h2> <p><a href="html-colornames.html" target="_blank">查看以颜色名称排序的颜色列表</a></p> <table class="reference notranslate" cellspacing="0" border="1" width="100%"> <tbody><tr> <th align="left" width="25%" style="text-align: center;">Color Name</th> <th align="left" width="15%" style="text-align: center;">HEX</th> <th align="left" width="60%" style="text-align: center;">Color</th> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Black">Black</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/000000">#000000</a></td> <td bgcolor="#000000" style="text-align: center;">&nbsp;</td></tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Navy">Navy</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/000080">#000080</a></td> <td bgcolor="#000080" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkBlue">DarkBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00008B">#00008B</a></td> <td bgcolor="#00008B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumBlue">MediumBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/0000CD">#0000CD</a></td> <td bgcolor="#0000CD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Blue">Blue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/0000FF">#0000FF</a></td> <td bgcolor="#0000FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkGreen">DarkGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/006400">#006400</a></td> <td bgcolor="#006400" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Green">Green</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/008000">#008000</a></td> <td bgcolor="#008000" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Teal">Teal</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/008080">#008080</a></td> <td bgcolor="#008080" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkCyan">DarkCyan</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/008B8B">#008B8B</a></td> <td bgcolor="#008B8B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DeepSkyBlue">DeepSkyBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00BFFF">#00BFFF</a></td> <td bgcolor="#00BFFF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkTurquoise">DarkTurquoise</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00CED1">#00CED1</a></td> <td bgcolor="#00CED1" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumSpringGreen">MediumSpringGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00FA9A">#00FA9A</a></td> <td bgcolor="#00FA9A" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Lime">Lime</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00FF00">#00FF00</a></td> <td bgcolor="#00FF00" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SpringGreen">SpringGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00FF7F">#00FF7F</a></td> <td bgcolor="#00FF7F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Aqua">Aqua</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00FFFF">#00FFFF</a></td> <td bgcolor="#00FFFF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Cyan">Cyan</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/00FFFF">#00FFFF</a></td> <td bgcolor="#00FFFF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MidnightBlue">MidnightBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/191970">#191970</a></td> <td bgcolor="#191970" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DodgerBlue">DodgerBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/1E90FF">#1E90FF</a></td> <td bgcolor="#1E90FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightSeaGreen">LightSeaGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/20B2AA">#20B2AA</a></td> <td bgcolor="#20B2AA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/ForestGreen">ForestGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/228B22">#228B22</a></td> <td bgcolor="#228B22" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SeaGreen">SeaGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/2E8B57">#2E8B57</a></td> <td bgcolor="#2E8B57" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkSlateGray">DarkSlateGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/2F4F4F">#2F4F4F</a></td> <td bgcolor="#2F4F4F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LimeGreen">LimeGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/32CD32">#32CD32</a></td> <td bgcolor="#32CD32" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumSeaGreen">MediumSeaGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/3CB371">#3CB371</a></td> <td bgcolor="#3CB371" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Turquoise">Turquoise</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/40E0D0">#40E0D0</a></td> <td bgcolor="#40E0D0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/RoyalBlue">RoyalBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/4169E1">#4169E1</a></td> <td bgcolor="#4169E1" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SteelBlue">SteelBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/4682B4">#4682B4</a></td> <td bgcolor="#4682B4" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkSlateBlue">DarkSlateBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/483D8B">#483D8B</a></td> <td bgcolor="#483D8B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumTurquoise">MediumTurquoise</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/48D1CC">#48D1CC</a></td> <td bgcolor="#48D1CC" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Indigo">Indigo </a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/4B0082">#4B0082</a></td> <td bgcolor="#4B0082" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkOliveGreen">DarkOliveGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/556B2F">#556B2F</a></td> <td bgcolor="#556B2F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/CadetBlue">CadetBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/5F9EA0">#5F9EA0</a></td> <td bgcolor="#5F9EA0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/CornflowerBlue">CornflowerBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/6495ED">#6495ED</a></td> <td bgcolor="#6495ED" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumAquaMarine">MediumAquaMarine</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/66CDAA">#66CDAA</a></td> <td bgcolor="#66CDAA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DimGray">DimGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/696969">#696969</a></td> <td bgcolor="#696969" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SlateBlue">SlateBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/6A5ACD">#6A5ACD</a></td> <td bgcolor="#6A5ACD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/OliveDrab">OliveDrab</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/6B8E23">#6B8E23</a></td> <td bgcolor="#6B8E23" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SlateGray">SlateGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/708090">#708090</a></td> <td bgcolor="#708090" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightSlateGray">LightSlateGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/778899">#778899</a></td> <td bgcolor="#778899" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumSlateBlue">MediumSlateBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/7B68EE">#7B68EE</a></td> <td bgcolor="#7B68EE" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LawnGreen">LawnGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/7CFC00">#7CFC00</a></td> <td bgcolor="#7CFC00" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Chartreuse">Chartreuse</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/7FFF00">#7FFF00</a></td> <td bgcolor="#7FFF00" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Aquamarine">Aquamarine</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/7FFFD4">#7FFFD4</a></td> <td bgcolor="#7FFFD4" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Maroon">Maroon</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/800000">#800000</a></td> <td bgcolor="#800000" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Purple">Purple</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/800080">#800080</a></td> <td bgcolor="#800080" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Olive">Olive</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/808000">#808000</a></td> <td bgcolor="#808000" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Gray">Gray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/808080">#808080</a></td> <td bgcolor="#808080" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SkyBlue">SkyBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/87CEEB">#87CEEB</a></td> <td bgcolor="#87CEEB" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightSkyBlue">LightSkyBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/87CEFA">#87CEFA</a></td> <td bgcolor="#87CEFA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/BlueViolet">BlueViolet</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/8A2BE2">#8A2BE2</a></td> <td bgcolor="#8A2BE2" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkRed">DarkRed</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/8B0000">#8B0000</a></td> <td bgcolor="#8B0000" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkMagenta">DarkMagenta</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/8B008B">#8B008B</a></td> <td bgcolor="#8B008B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SaddleBrown">SaddleBrown</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/8B4513">#8B4513</a></td> <td bgcolor="#8B4513" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkSeaGreen">DarkSeaGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/8FBC8F">#8FBC8F</a></td> <td bgcolor="#8FBC8F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightGreen">LightGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/90EE90">#90EE90</a></td> <td bgcolor="#90EE90" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumPurple">MediumPurple</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/9370DB">#9370DB</a></td> <td bgcolor="#9370DB" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkViolet">DarkViolet</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/9400D3">#9400D3</a></td> <td bgcolor="#9400D3" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PaleGreen">PaleGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/98FB98">#98FB98</a></td> <td bgcolor="#98FB98" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkOrchid">DarkOrchid</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/9932CC">#9932CC</a></td> <td bgcolor="#9932CC" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/YellowGreen">YellowGreen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/9ACD32">#9ACD32</a></td> <td bgcolor="#9ACD32" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Sienna">Sienna</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/A0522D">#A0522D</a></td> <td bgcolor="#A0522D" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Brown">Brown</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/A52A2A">#A52A2A</a></td> <td bgcolor="#A52A2A" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkGray">DarkGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/A9A9A9">#A9A9A9</a></td> <td bgcolor="#A9A9A9" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightBlue">LightBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/ADD8E6">#ADD8E6</a></td> <td bgcolor="#ADD8E6" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/GreenYellow">GreenYellow</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/ADFF2F">#ADFF2F</a></td> <td bgcolor="#ADFF2F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PaleTurquoise">PaleTurquoise</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/AFEEEE">#AFEEEE</a></td> <td bgcolor="#AFEEEE" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightSteelBlue">LightSteelBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/B0C4DE">#B0C4DE</a></td> <td bgcolor="#B0C4DE" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PowderBlue">PowderBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/B0E0E6">#B0E0E6</a></td> <td bgcolor="#B0E0E6" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/FireBrick">FireBrick</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/B22222">#B22222</a></td> <td bgcolor="#B22222" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkGoldenRod">DarkGoldenRod</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/B8860B">#B8860B</a></td> <td bgcolor="#B8860B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumOrchid">MediumOrchid</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/BA55D3">#BA55D3</a></td> <td bgcolor="#BA55D3" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/RosyBrown">RosyBrown</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/BC8F8F">#BC8F8F</a></td> <td bgcolor="#BC8F8F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkKhaki">DarkKhaki</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/BDB76B">#BDB76B</a></td> <td bgcolor="#BDB76B" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Silver">Silver</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/C0C0C0">#C0C0C0</a></td> <td bgcolor="#C0C0C0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MediumVioletRed">MediumVioletRed</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/C71585">#C71585</a></td> <td bgcolor="#C71585" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/IndianRed">IndianRed </a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/CD5C5C">#CD5C5C</a></td> <td bgcolor="#CD5C5C" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Peru">Peru</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/CD853F">#CD853F</a></td> <td bgcolor="#CD853F" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Chocolate">Chocolate</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/D2691E">#D2691E</a></td> <td bgcolor="#D2691E" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Tan">Tan</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/D2B48C">#D2B48C</a></td> <td bgcolor="#D2B48C" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightGray">LightGray</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/D3D3D3">#D3D3D3</a></td> <td bgcolor="#D3D3D3" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Thistle">Thistle</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/D8BFD8">#D8BFD8</a></td> <td bgcolor="#D8BFD8" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Orchid">Orchid</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DA70D6">#DA70D6</a></td> <td bgcolor="#DA70D6" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/GoldenRod">GoldenRod</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DAA520">#DAA520</a></td> <td bgcolor="#DAA520" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PaleVioletRed">PaleVioletRed</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DB7093">#DB7093</a></td> <td bgcolor="#DB7093" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Crimson">Crimson</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DC143C">#DC143C</a></td> <td bgcolor="#DC143C" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Gainsboro">Gainsboro</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DCDCDC">#DCDCDC</a></td> <td bgcolor="#DCDCDC" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Plum">Plum</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DDA0DD">#DDA0DD</a></td> <td bgcolor="#DDA0DD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/BurlyWood">BurlyWood</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/DEB887">#DEB887</a></td> <td bgcolor="#DEB887" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightCyan">LightCyan</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/E0FFFF">#E0FFFF</a></td> <td bgcolor="#E0FFFF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Lavender">Lavender</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/E6E6FA">#E6E6FA</a></td> <td bgcolor="#E6E6FA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkSalmon">DarkSalmon</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/E9967A">#E9967A</a></td> <td bgcolor="#E9967A" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Violet">Violet</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/EE82EE">#EE82EE</a></td> <td bgcolor="#EE82EE" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PaleGoldenRod">PaleGoldenRod</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/EEE8AA">#EEE8AA</a></td> <td bgcolor="#EEE8AA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightCoral">LightCoral</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F08080">#F08080</a></td> <td bgcolor="#F08080" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Khaki">Khaki</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F0E68C">#F0E68C</a></td> <td bgcolor="#F0E68C" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/AliceBlue">AliceBlue</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F0F8FF">#F0F8FF</a></td> <td bgcolor="#F0F8FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/HoneyDew">HoneyDew</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F0FFF0">#F0FFF0</a></td> <td bgcolor="#F0FFF0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Azure">Azure</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F0FFFF">#F0FFFF</a></td> <td bgcolor="#F0FFFF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SandyBrown">SandyBrown</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F4A460">#F4A460</a></td> <td bgcolor="#F4A460" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Wheat">Wheat</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F5DEB3">#F5DEB3</a></td> <td bgcolor="#F5DEB3" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Beige">Beige</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F5F5DC">#F5F5DC</a></td> <td bgcolor="#F5F5DC" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/WhiteSmoke">WhiteSmoke</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F5F5F5">#F5F5F5</a></td> <td bgcolor="#F5F5F5" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MintCream">MintCream</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F5FFFA">#F5FFFA</a></td> <td bgcolor="#F5FFFA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/GhostWhite">GhostWhite</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/F8F8FF">#F8F8FF</a></td> <td bgcolor="#F8F8FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Salmon">Salmon</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FA8072">#FA8072</a></td> <td bgcolor="#FA8072" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/AntiqueWhite">AntiqueWhite</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FAEBD7">#FAEBD7</a></td> <td bgcolor="#FAEBD7" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Linen">Linen</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FAF0E6">#FAF0E6</a></td> <td bgcolor="#FAF0E6" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightGoldenRodYellow">LightGoldenRodYellow</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FAFAD2">#FAFAD2</a></td> <td bgcolor="#FAFAD2" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/OldLace">OldLace</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FDF5E6">#FDF5E6</a></td> <td bgcolor="#FDF5E6" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Red">Red</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF0000">#FF0000</a></td> <td bgcolor="#FF0000" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Fuchsia">Fuchsia</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF00FF">#FF00FF</a></td> <td bgcolor="#FF00FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Magenta">Magenta</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF00FF">#FF00FF</a></td> <td bgcolor="#FF00FF" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DeepPink">DeepPink</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF1493">#FF1493</a></td> <td bgcolor="#FF1493" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/OrangeRed">OrangeRed</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF4500">#FF4500</a></td> <td bgcolor="#FF4500" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Tomato">Tomato</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF6347">#FF6347</a></td> <td bgcolor="#FF6347" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/HotPink">HotPink</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF69B4">#FF69B4</a></td> <td bgcolor="#FF69B4" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Coral">Coral</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF7F50">#FF7F50</a></td> <td bgcolor="#FF7F50" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/DarkOrange">DarkOrange</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FF8C00">#FF8C00</a></td> <td bgcolor="#FF8C00" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightSalmon">LightSalmon</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFA07A">#FFA07A</a></td> <td bgcolor="#FFA07A" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Orange">Orange</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFA500">#FFA500</a></td> <td bgcolor="#FFA500" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightPink">LightPink</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFB6C1">#FFB6C1</a></td> <td bgcolor="#FFB6C1" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Pink">Pink</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFC0CB">#FFC0CB</a></td> <td bgcolor="#FFC0CB" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Gold">Gold</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFD700">#FFD700</a></td> <td bgcolor="#FFD700" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PeachPuff">PeachPuff</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFDAB9">#FFDAB9</a></td> <td bgcolor="#FFDAB9" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/NavajoWhite">NavajoWhite</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFDEAD">#FFDEAD</a></td> <td bgcolor="#FFDEAD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Moccasin">Moccasin</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFE4B5">#FFE4B5</a></td> <td bgcolor="#FFE4B5" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Bisque">Bisque</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFE4C4">#FFE4C4</a></td> <td bgcolor="#FFE4C4" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/MistyRose">MistyRose</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFE4E1">#FFE4E1</a></td> <td bgcolor="#FFE4E1" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/BlanchedAlmond">BlanchedAlmond</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFEBCD">#FFEBCD</a></td> <td bgcolor="#FFEBCD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/PapayaWhip">PapayaWhip</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFEFD5">#FFEFD5</a></td> <td bgcolor="#FFEFD5" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LavenderBlush">LavenderBlush</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFF0F5">#FFF0F5</a></td> <td bgcolor="#FFF0F5" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/SeaShell">SeaShell</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFF5EE">#FFF5EE</a></td> <td bgcolor="#FFF5EE" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Cornsilk">Cornsilk</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFF8DC">#FFF8DC</a></td> <td bgcolor="#FFF8DC" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LemonChiffon">LemonChiffon</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFACD">#FFFACD</a></td> <td bgcolor="#FFFACD" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/FloralWhite">FloralWhite</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFAF0">#FFFAF0</a></td> <td bgcolor="#FFFAF0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Snow">Snow</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFAFA">#FFFAFA</a></td> <td bgcolor="#FFFAFA" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Yellow">Yellow</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFF00">#FFFF00</a></td> <td bgcolor="#FFFF00" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/LightYellow">LightYellow</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFFE0">#FFFFE0</a></td> <td bgcolor="#FFFFE0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/Ivory">Ivory</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFFF0">#FFFFF0</a></td> <td bgcolor="#FFFFF0" style="text-align: center;">&nbsp;</td> </tr> <tr> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showcolor/White">White</a>&nbsp;</td> <td align="left" style="text-align: center;"><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhexcolor/FFFFFF">#FFFFFF</a></td> <td bgcolor="#FFFFFF" style="text-align: center;">&nbsp;</td></tr></tbody></table></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="html-colornames.html" title="上一篇：HTML 颜色名">HTML 颜色名</a></div>
+<div class="next-link"><a href="html-scripts.html" title="下一篇：HTML 脚本">HTML 脚本</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="html5-mathml.html" title="HTML5 MathML">HTML5 MathML</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="html-colornames.html" title="上一篇：HTML 颜色名" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="html-scripts.html" title="下一篇：HTML 脚本" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'html-colorvalues',
+pename:'html',
+ismenu:'0',
+ktitle:'HTML 颜色值',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'html',
+bookname:'HTML 教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "15419";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '10';
+var aid   = '22';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-colorvalues.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:30:51 GMT -->
+</html>

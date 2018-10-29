@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-Label.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:31:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>全方位详解HTML常用标签_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="全方位详解HTML常用标签" />
+<meta name="description" content="HTML标签是与大小写无关的，例如“主体”&lt;body&gt;跟&lt;BODY&gt;表示的意思是一样的，推荐使用小写。类似“&lt;关键字&gt;”这样由尖括号包关键字组成，例如&lt;html&gt;,&lt;div&gt;……就是HTML标签。HTML标签一般是成对出现的，由开始标签类似“&lt;div&gt;元素内容&lt;/div&gt;”，左边标签一边叫开始标签，右边&lt;/ &gt;叫结束标签，有始有终，除了一些个别是单闭合标签的，具体请看下面的标签分类说明。_来自HTML 教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'html-Label.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/html" title="HTML 教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="HTML 教程" src="../attachments/cover/cover_html.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>HTML 教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="html问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">html问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="83280" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="241bxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 教程">HTML 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tutorial.html" title="HTML 教程导读">HTML 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-intro.html" title="HTML 简介">HTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-editors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-editors.html" title="HTML 编辑器的介绍及推荐">HTML 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-basic">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-basic.html" title="HTML 基础">HTML 基础</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-elements.html" title="HTML 元素">HTML 元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-attributes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-attributes.html" title="HTML 属性">HTML 属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-heading">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-heading.html" title="HTML 标题">HTML 标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-paragraphs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-paragraphs.html" title="HTML        段落">HTML        段落</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-formatting">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-formatting.html" title="HTML 文本格式化">HTML 文本格式化</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-links">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-links.html" title="HTML 链接">HTML 链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-head">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-head.html" title="HTML 头部">HTML 头部</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css.html" title="HTML CSS百科及常用嵌入方式">HTML CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-images.html" title="HTML 图像">HTML 图像</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tables.html" title="HTML 表格">HTML 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-lists">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-lists.html" title="HTML 列表">HTML 列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-blocks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-blocks.html" title="HTML 区块">HTML 区块</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-layouts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-layouts.html" title="HTML 布局">HTML 布局</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-form">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-form.html" title="HTML 表单">HTML 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-iframes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-iframes.html" title="HTML 框架">HTML 框架</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colors.html" title="HTML 颜色">HTML 颜色</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colornames">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colornames.html" title="HTML 颜色名">HTML 颜色名</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colorvalues">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colorvalues.html" title="HTML 颜色值">HTML 颜色值</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scripts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scripts.html" title="HTML 脚本">HTML 脚本</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-entities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-entities.html" title="HTML 字符实体">HTML 字符实体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-url">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-url.html" title="HTML URL">HTML URL</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-quicklist">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-quicklist.html" title="HTML 速查列表">HTML 速查列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-summary.html" title="HTML 总结">HTML 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="9odg1ptd">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML XHTML">HTML XHTML</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-xhtml">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-xhtml.html" title="XHTML 简介">XHTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="1pdjxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 媒体">HTML 媒体</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-media">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-media.html" title="HTML 媒体(Media)">HTML 媒体(Media)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-object.html" title="HTML 插件">HTML 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-sounds">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-sounds.html" title="HTML 音频(Audio)">HTML 音频(Audio)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-videos">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-videos.html" title="HTML 视频(Videos)播放">HTML 视频(Videos)播放</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="y12r1210">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 实例/测验">HTML 实例/测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-html_examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-html_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_quiz.html" title="HTML 测验">HTML 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-codecamp.html" title="HTML 编程实战闯关">HTML 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-fj7r22x9">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 相关教程">HTML 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-brge22wl">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-index.html" title="HTML 入门教程">HTML 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="4flh1s7s">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 拓展阅读">HTML 拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-space">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-space.html" title="HTML中如何键入空格">HTML中如何键入空格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-code.html" title="程序员必须知道的HTML常用代码有哪些？">HTML常用代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-Label">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-Label.html" title="全方位详解HTML常用标签">HTML常用标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-template">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-template.html" title="精选多个程序员都想要的免费HTML模板下载">HTML模板下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-textbox">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-textbox.html" title="HTML文本框参考样式及常见操作技巧大全">HTML文本框样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scrollbar">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scrollbar.html" title="HTML滚动条样式代码及使用技巧">HTML滚动条样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-copyright">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-copyright.html" title="HTML版权符号写法及美化">HTML版权符号写法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-cui11xk2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-cui11xk2.html" title="HTML元素嵌套嵌套错误可能引起的问题">HTML元素嵌套问题</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(95589)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">26</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/html/html-Label" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>全方位详解HTML常用标签</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Carrie 最后一次修改&nbsp;<span>2016-11-02</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><p style="text-align: left;">
+	HTML是所有网页制作技术的核心和基础，也是每个网页制作者必须掌握的基本知识，而HTML标签是HTML语言中最基本的单位，是HTML最重要的组成部分。</p><p style="text-align: left;">初学者首先要知道html标签的一些特点：
+</p>
+<p style="text-align: left;">
+	<span style="line-height: 1.7; font-size: 13px;"><br>
+	</span>
+</p>
+<p style="text-align: left;">
+	<span style="line-height: 1.7; font-size: 13px;">HTML标签是与大小写无关的，例如“主体”跟表示的意思是一样的，推荐使用小写。类似“&lt;p&gt;”这样由尖括号包关键字组成，例如,</span>
+</p>
+<div>&lt;h1&gt;标题&lt;/h1&gt;就是HTML标签。HTML标签一般是成对出现的，由开始标签类似&lt;h1&gt;，左边标签一边叫开始标签，右边&lt;/h1&gt;叫结束标签，有始有终，除了一些个别是单闭合标签的，下面列举HTML单闭合标签。</div>
+
+<p style="text-align: left;">
+	<span style="line-height: 1.7; font-size: 13px;"></span>
+</p>
+<hr>
+<h2><span style="line-height: 1.7; font-size: 13px;"><span>单闭合标签</span></span></h2><p>1.&lt;br /&gt;</p><p>2.&lt;hr /&gt;</p><p>3.&lt;area /&gt;</p><p>4.&lt;base /&gt;</p><p>5.&lt;img /&gt;</p><p>6.&lt;input /&gt;</p><p>7.&lt;link /&gt;</p><p>8.&lt;meta /&gt;</p><p>9.&lt;basefont /&gt;</p><p>10.&lt;param /&gt;</p><p>11.&lt;col /&gt;</p><p>12.&lt;frame /&gt;</p><p>13.&lt;embed /&gt;</p>
+
+
+<h2><span style="line-height: 1.7; font-size: 13px;"><span>字体效果</span></span></h2>
+<div>
+	<span style="line-height: 1.7; font-size: 13px;"><span></span></span>
+	<table class="" width="856" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+	<tr>
+		<td valign="top" width="171">
+			<h1>…</h1>
+		</td>
+		<td valign="top" width="237">
+			标题1（最大）一级级往下字体变小，网页一般从h1~h4，h4之后一般不会用了
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			<del>…</del>
+		</td>
+		<td valign="top" width="291">
+			删除线
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="171">
+			<h6>…</h6>
+		</td>
+		<td valign="top" width="237">
+			标题6（最小）
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			<del>…</del>
+		</td>
+		<td valign="top" width="291">
+			删除线（表示删除）
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="171">
+			<strong>…</strong>
+		</td>
+		<td valign="top" width="237">
+			粗体字
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			…
+		</td>
+		<td valign="top" width="291">
+			键盘文字
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="171">
+			<strong>..</strong>
+		</td>
+		<td valign="top" width="237">
+			粗体字（强调）
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			…
+		</td>
+		<td valign="top" width="291">
+			打字体
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="171">
+			<em>…</em>
+		</td>
+		<td valign="top" width="237">
+			斜体字
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			…
+		</td>
+		<td valign="top" width="291">
+			固定宽度字体（在文件中空白、换行、定位功能有效）
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="171">
+			<em>…</em></td>
+		<td valign="top" width="237">
+			斜体字（强调）
+		</td>
+		<td valign="top" width="10">
+			&nbsp;
+		</td>
+		<td valign="top" width="146">
+			…</td><td valign="top" width="291">固定宽度字体（不执行标记符号）</td></tr><tr><td valign="top" width="171">...</td><td valign="top" width="237">斜体字（表示定义）</td><td valign="top" width="10"><br></td><td valign="top" width="146">…</td><td valign="top" width="291">固定宽度小字体</td></tr><tr><td valign="top" width="171"><span class="Apple-style-span" style="text-decoration: underline;">…</span></td><td valign="top" width="237">底线</td><td valign="top" width="10"><br></td><td valign="top" width="146"><span style="color:00ff00;" class="Apple-style-span">…</span></td><td valign="top" width="291">字体颜色（写成类似color=“#00ff00”也可以）</td></tr><tr><td valign="top" width="171"><ins>...</ins></td><td valign="top" width="237">底线（表示插入文字）</td><td valign="top" width="10"><br></td><td valign="top" width="146"><span style="font-size:10px;" class="Apple-style-span">…</span></td><td valign="top" width="291">最小字体</td></tr><tr><td valign="top" width="171"><strike>…</strike></td><td valign="top" width="237">横线</td><td valign="top" width="10"><br></td><td valign="top" width="146"><span px="" style="font-size:100" class="Apple-style-span"></span></td><td valign="top" width="291">无限增大(字体大小为100px)</td></tr></tbody></table><p><br></p><h2>区断标记</h2><table class="" width="858" cellspacing="0" cellpadding="2" border="1"><tbody><tr><td valign="top" width="179"><hr></td><td valign="top" width="233">水平线</td><td valign="top" width="10"><br></td><td valign="top" width="148">…</td><td valign="top" width="286">禁止换行，No Break的缩写</td></tr><tr><td valign="top" width="179"><hr size="9/"></td><td valign="top" width="233">水平线（设定大小）</td><td valign="top" width="10"><br></td><td valign="top" width="148"><p>…</p></td><td valign="top" width="286">段落</td></tr><tr><td valign="top" width="179"><hr width="80%/"></td><td valign="top" width="233">水平线（设定宽度）</td><td valign="top" width="10"><br></td><td valign="top" width="148"><center>…</center></td><td valign="top" width="286">对其包围的文本进行居中设置</td></tr><tr><td valign="top" width="179"><hr color="00ff00/"></td><td valign="top" width="233">水平线（设定颜色）</td><td valign="top" width="10"><br></td><td valign="top" width="148"><br></td><td valign="top" width="286"><br></td></tr><tr><td valign="top" width="179"><br></td><td valign="top" width="233">换行</td><td valign="top" width="10"><br></td><td valign="top" width="148"><br></td><td valign="top" width="286"><br></td></tr></tbody></table><p><br></p><h2>链接</h2><div><table width="859" cellspacing="0" cellpadding="2" border="1"><tbody><tr><td valign="top" width="184"></td><td valign="top" width="233">为页面上的所有链接规定默认地址或默认目标</td><td valign="top" width="10"><br></td><td valign="top" width="152"><a href="%e5%9c%b0%e5%9d%80.html" _xhe_href="地址" target="_top"></a></td><td valign="top" width="278">指定超链接目标的 URL(全窗口连接)</td></tr><tr><td valign="top" width="184"><a href="%e5%9c%b0%e5%9d%80.html" _xhe_href="地址"></a></td><td valign="top" width="233">指定超链接目标的 URL</td><td valign="top" width="10"><br></td><td valign="top" width="152"><a href="%e5%9c%b0%e5%9d%80.html" _xhe_href="地址" target="页框名"></a></td><td valign="top" width="278">指定超链接目标的 URL（在指定页框连接）</td></tr><tr><td valign="top" width="184"><a href="%e5%9c%b0%e5%9d%80.html" _xhe_href="地址" target="_blank"></a></td><td valign="top" width="233">指定超链接目标的 URL(另开新窗口)</td><td valign="top" width="10"><br></td><td valign="top" width="152"><br></td><td valign="top" width="278"><br></td></tr></tbody></table><p><br></p><h2>图像/音乐</h2><table class="" width="861" cellspacing="0" cellpadding="2" border="1"><tbody><tr><td valign="top" width="192"><img src="../../7n.w3cschool.cn/statics/images/logo.png" _xhe_src="图片地址/" class=""></td><td valign="top" width="230">往网页贴图片</td><td valign="top" width="10"><br></td><td valign="top" width="156"><img src="../../7n.w3cschool.cn/statics/images/logo.png" _xhe_src="图片地址" border="1/"></td><td valign="top" width="271">设定贴的图片边框</td></tr><tr><td valign="top" width="192"><img src="../../7n.w3cschool.cn/statics/images/logo.png" _xhe_src="图片地址" width="180/"></td><td valign="top" width="230">设定贴的图片宽度</td><td valign="top" width="10"><br></td><td valign="top" width="156"></td><td valign="top" width="271">背景音乐设定</td></tr><tr><td valign="top" width="192"><img src="../../7n.w3cschool.cn/statics/images/logo.png" _xhe_src="图片地址" height="30/"></td><td valign="top" width="230">设定贴的图片高度</td><td valign="top" width="10"><br></td><td valign="top" width="156"><br></td><td valign="top" width="271"><br></td></tr></tbody></table><p><br></p><h2>表格</h2><table width="863" cellspacing="0" cellpadding="2" border="1"><tbody><tr><td valign="top" width="200">…<table aling="left" class=" xhe-border"></table></td><td valign="top" width="227">表格位置，置左</td><td valign="top" width="10"><br></td><td valign="top" width="158">…<table class=" xhe-border" cellpadding="参数"></table></td><td valign="top" width="266">指定网格线与网络线之间的距离（使用数字）</td></tr><tr><td valign="top" width="200">…<table class=" xhe-border" align="center"></table></td><td valign="top" width="227">表格的位置，置中</td><td valign="top" width="10"><br></td><td valign="top" width="158">…<table cols="参数" class=" xhe-border"></table></td><td valign="top" width="266">指定表格的栏数</td></tr><tr><td valign="top" width="200">…<table class=" xhe-border" background="%e5%9b%be%e7%89%87%e8%b7%af%e5%be%84.html"></table></td><td valign="top" width="227">背景图片的URL=就是路径网址</td><td valign="top" width="10"><br></td><td valign="top" width="158">…<table frame="参数" class=" xhe-border"></table></td><td valign="top" width="266">设定表格外边框线的显示方式</td></tr><tr><td valign="top" width="200">…<table border="边框大小"></table></td><td valign="top" width="227">设定表格边框大小（使用数字）</td><td valign="top" width="10"><br></td><td valign="top" width="158">…<table class=" xhe-border" width="宽度"></table></td><td valign="top" width="266">指定表格宽度大小（使用数字）</td></tr><tr><td valign="top" width="200">…<table class=" xhe-border" bgcolor="颜色码"></table></td><td valign="top" width="227">设置表格的背景颜色</td><td valign="top" width="10"><br></td><td valign="top" width="158">…<table class=" xhe-border" height="高度"></table></td><td valign="top" width="266">指定表格高度大小（使用数字）</td></tr><tr><td valign="top" width="200">…<table class=" xhe-border" bordercolor="颜色码"></table></td><td valign="top" width="227">设定表格边框的颜色</td><td valign="top" width="10"><br></td><td valign="top" width="158"><br></td><td colspan="参数">…</td><td valign="top" width="266">指定储存格合并栏的栏数(使用数字)</td></tr><tr><td valign="top" width="200">…<table bordercolordark="颜色码" class=" xhe-border"></table></td><td valign="top" width="227">设定表格暗边框的颜色</td><td valign="top" width="10"><br></td><td valign="top" width="158"><br></td><td rowspan="参数">…</td><td valign="top" width="266">指定储存格合并列的列数（使用数字）</td></tr><tr><td valign="top" width="200">…<table bordercolorlight="颜色码" class=" xhe-border"></table></td><td valign="top" width="227">设定表格亮边框的颜色</td><td valign="top" width="10"><br></td><td valign="top" width="158"><br></td><td valign="top" width="266"><br></td></tr></tbody></table><p><br></p><h2>分割窗口</h2><table width="866" cellspacing="0" cellpadding="2" border="1"><tbody><tr><td valign="top" width="206"></td><td valign="top" width="222">左右分割，将左边框架分割大小为20%，右边框架的大小浏览器会自动调整</td><td valign="top" width="10"><br></td><td valign="top" width="162">…</td><td valign="top" width="264">加上批注</td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">上下分割，将上面框架分割大小为20%，下面框架的大小浏览器会自动调整</td><td valign="top" width="10"><br></td><td valign="top" width="162"><dd>…</dd></td><td valign="top" width="264">设定定义列表的项目描述</td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">分割左右两个框架</td><td valign="top" width="10"><br></td><td valign="top" width="162">…</td><td valign="top" width="264">显示"定义"文字</td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">分割左中右三个框架</td><td valign="top" width="10"><br></td><td valign="top" width="162">…</td><td valign="top" width="264">列表文字卷标</td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">分割上中下三个框架</td><td valign="top" width="10"><br></td><td valign="top" width="162"><dl>…</dl></td><td valign="top" width="264">设定定义列表的卷标</td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">批注</td><td valign="top" width="10"><br></td><td valign="top" width="162"><dt>...</dt></td><td valign="top" width="264">定义列表中的项目</td></tr><tr><td valign="top" width="206"><a href="#" _xhe_href="" target=""></a></td><td valign="top" width="222">指定超级链接的分割窗口</td><td valign="top" width="10"><br></td><td valign="top" width="162"><span class="Apple-style-span" style="font-style: italic;">…</span></td><td valign="top" width="264">强调之用</td></tr><tr><td valign="top" width="206">&lt;a href="#锚的名称&gt;</td><td valign="top" width="222">指定锚名称的超级链接</td><td valign="top" width="10"><br></td><td valign="top" width="162"><span style=""></span></td><td valign="top" width="264">任意指定所用的字形</td></tr><tr><td valign="top" width="206"><a href="#" _xhe_href=""></a></td><td valign="top" width="222">指定超级链接</td><td valign="top" width="10"><br></td><td valign="top" width="162"><span size="" style=""></span></td><td valign="top" width="264">设定字体大小</td></tr><tr><td valign="top" width="206"><a name="锚的名称" class=" xhe-anchor"></a></td><td valign="top" width="222">被连结点的名称</td><td valign="top" width="10"><br></td><td valign="top" width="162"></td><td valign="top" width="264">设定</td></tr><tr><td valign="top" width="206">…</td><td valign="top" width="222">用来显示电子邮箱地址</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><span class="Apple-style-span" style="font-weight: bold;">…</span></td><td valign="top" width="222">粗体字</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">指定超级链接的分割窗口</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">加入背景音乐</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><big>…</big></td><td valign="top" width="222">呈现大号字体效果</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">显示闪烁的字符串或文字（IE不支持）</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><br></td><td valign="top" width="222">设定文字颜色</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206">…</td><td valign="top" width="222">显示本文</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><br></td><td valign="top" width="222">换行</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"></td><td valign="top" width="222">设定表格标题位置</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"></td></tr></tbody><caption>…</caption><tbody><tr><td valign="top" width="222">为表格加上标题</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><center>…</center></td><td valign="top" width="222">对包围的文本进行居中处理，html5不支持此标签</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><cite>…<cite></cite></cite></td><td valign="top" width="222">用于引经据典的文字</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr><tr><td valign="top" width="206"><code>…</code></td><td valign="top" width="222">用于列出一段程序代码</td><td valign="top" width="10"><br></td><td valign="top" width="162"><br></td><td valign="top" width="264"><br></td></tr></tbody></table> </div></div><span style="line-height: 1.7; font-size: 13px;" class="Apple-style-span"></span><div><div><div wmode="2"><div><div><span class="Apple-style-span" style="font-weight: bold;">跑马灯</span></div></div></div></div></div><div><div align="center"><table cellspacing="0" cellpadding="0" border="1"><tbody><tr><td width="251"><p align="center"><span class="Apple-style-span" style="font-weight: bold;">标签</span></p></td><td width="262"><p align="center"><span class="Apple-style-span" style="font-weight: bold;">功能</span></p></td></tr><tr><td width="251">...</td><td width="262">普通卷动</td></tr><tr><td width="251">...</td><td width="262">滑动</td></tr><tr><td width="251">...</td><td width="262">预设卷动</td></tr><tr><td width="251">...</td><td width="262">来回卷动</td></tr><tr><td width="251">...</td><td width="262">向下卷动</td></tr><tr><td width="251">...</td><td width="262">向上卷动</td></tr><tr><td width="251"></td><td width="262">向右卷动</td></tr><tr><td width="251"></td><td width="262">向左卷动</td></tr><tr><td width="251">...</td><td width="262">卷动次数</td></tr><tr><td width="251">...</td><td width="262">设定宽度</td></tr><tr><td width="251">...</td><td width="262">设定高度</td></tr><tr><td width="251">...</td><td width="262">设定背景颜色</td></tr><tr><td width="251">...</td><td width="262">设定卷动距离</td></tr><tr><td width="251">...</td><td width="262">设定卷动时间</td></tr></tbody></table></div></div></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="html-code.html" title="上一篇：程序员必须知道的HTML常用代码有哪些？">程序员必须知道的HTML常用代码有哪些？</a></div>
+<div class="next-link"><a href="html-template.html" title="下一篇：精选多个程序员都想要的免费HTML模板下载">精选多个程序员都想要的免费HTML模板下载</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="html5-mathml.html" title="HTML5 MathML">HTML5 MathML</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="html-code.html" title="上一篇：程序员必须知道的HTML常用代码有哪些？" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="html-template.html" title="下一篇：精选多个程序员都想要的免费HTML模板下载" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'html-Label',
+pename:'html',
+ismenu:'0',
+ktitle:'全方位详解HTML常用标签',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'html',
+bookname:'HTML 教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "83224";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '10';
+var aid   = '83280';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-Label.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:31:31 GMT -->
+</html>

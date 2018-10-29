@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-css-form-input-type.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:32:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>HTML 表单输入类型_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="HTML 表单输入类型" />
+<meta name="description" content="HTML表单输入类型按钮输入输入元素的提交，重置和按钮类型创建与使用button元素时创建的按钮非常相似的按钮。创建按钮的输入元素类型如下所示。submit - 创建提交表单的按钮。其他属性：formaction，formenctype，formmethod，formtarget，formnoval_来自HTML 教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'html-css-form-input-type.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/html" title="HTML 教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="HTML 教程" src="../attachments/cover/cover_html.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>HTML 教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="html问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">html问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="93273" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="html-7c4s1zxz">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 介绍">HTML 介绍</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-index">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-index.html" title="HTML 简介">HTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-element">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-element.html" title="HTML 元素">HTML 元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-attribute">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-attribute.html" title="HTML 属性">HTML 属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-structure">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-structure.html" title="HTML 结构">HTML 结构</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-entities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-entities.html" title="HTML 实体">HTML 实体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-document">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-document.html" title="HTML 文档">HTML 文档</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-meta">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-meta.html" title="HTML 元数据">HTML 元数据</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-style">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-style.html" title="HTML 样式">HTML 样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-resource-link">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-resource-link.html" title="HTML 资源链接">HTML 资源链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-favicon">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-favicon.html" title="HTML 图标">HTML 图标</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-script">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-script.html" title="HTML 脚本">HTML 脚本</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-r9f41zya">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 基本标签">HTML 基本标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-basic-tags">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-basic-tags.html" title="HTML 基本标签">HTML 基本标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-content">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-content.html" title="HTML 页面内容">HTML 页面内容</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-hyperlinks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-hyperlinks.html" title="HTML 超链接">HTML 超链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-format">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-format.html" title="HTML 格式化">HTML 格式化</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-list">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-list.html" title="HTML 列表">HTML 列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-figure">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-figure.html" title="HTML figure">HTML figure</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-image">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-image.html" title="HTML 图像">HTML 图像</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-iframe">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-iframe.html" title="HTML iframe">HTML iframe</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-i43a1zyj">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 表格">HTML 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-table">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table.html" title="HTML 表格">HTML 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-table-header">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table-header.html" title="HTML 表头">HTML 表头</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-table-column">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table-column.html" title="HTML 表列">HTML 表列</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-table-span">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table-span.html" title="HTML 表跨度">HTML 表跨度</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-table-caption">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table-caption.html" title="HTML 表标题">HTML 表标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-table-borders">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-table-borders.html" title="HTML 表边框">HTML 表边框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-cx1k1zym">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 表单">HTML 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-form">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form.html" title="HTML 表单">HTML 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-encoding">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-encoding.html" title="HTML 表单编码">HTML 表单编码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-attribute">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-attribute.html" title="HTML 表单属性">HTML 表单属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-label">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-label.html" title="HTML 表单标签">HTML 表单标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-fieldset">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-fieldset.html" title="HTML 表单元素分组">HTML 表单元素分组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-button">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-button.html" title="HTML 表单按钮">HTML 表单按钮</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-input">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-input.html" title="HTML 表单输入">HTML 表单输入</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-input-type">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-input-type.html" title="HTML 表单输入类型">HTML 表单输入类型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-select">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-select.html" title="HTML 表单选择">HTML 表单选择</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-textarea">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-textarea.html" title="HTML 表单文本域">HTML 表单文本域</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-output">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-output.html" title="HTML 表单输出">HTML 表单输出</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-form-input-validation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-form-input-validation.html" title="HTML 表单验证">HTML 表单验证</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-s5o81zz3">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 对象">HTML 对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-object.html" title="HTML object">HTML object</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-progress">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-progress.html" title="HTML progress">HTML progress</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-meter">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-meter.html" title="HTML Meter">HTML Meter</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(7439)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">8</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/html/html-css-form-input-type" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>HTML 表单输入类型</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>sufang</span>&nbsp;创建，Loen 最后一次修改&nbsp;<span>2017-01-05</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><div class="row"><div class="col-lg-12"><h2 trans_replace="0" trans="1">HTML表单输入类型</h2><h2 id="button_input" trans_replace="0" trans="1"></h2><h2>按钮输入</h2><p trans_replace="0" trans="1"><span>输入元素的提交，重置和按钮类型创建与使用<span><span></span></span><code>button</code><span><span></span></span>元素时创建的按钮非常相似的按钮。</span></p><p trans_replace="0" trans="1"><span>创建按钮的输入元素类型如下所示。</span></p><ul><li>submit - <span>创建提交表单的按钮。其他属性：formaction，formenctype，formmethod，formtarget，formnovalidate。</span></li><li>reset - <span>创建用于重置表单的按钮。</span></li><li>button - <span>创建不执行任何操作的按钮。</span></li></ul><p trans_replace="0" trans="1"><span>使用提交类型时可用的其他属性与使用submit<span><span></span></span><code>button</code><span><span></span></span>元素时相同。</span></p><p trans_replace="0" trans="1"><span>重置和按钮类型不定义任何其他属性。</span></p><p trans_replace="0" trans="1"><span>对于这三种输入类型，按钮上显示的标签取自value属性。</span></p><p trans_replace="0" trans="1"><span>以下代码使用输入元素创建按钮</span>：</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"name"</span><span class="r">&gt;</span> Name: <span class="r">&lt;</span><span class="r">input</span> value=<span class="q">"XML"</span> id=<span class="q">"name"</span>
+        name=<span class="q">"name"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#9bbbbb;"></span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"password"</span><span class="r">&gt;</span> Password: 
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"password"</span> placeholder=<span class="q">"Min 6  characters"</span> id=<span class="q">"password"</span> name=<span class="q">"password"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"fave"</span><span class="r">&gt;</span> Fruit: 
+      <span class="r">&lt;</span><span class="r">input</span> value=<span class="q">"Apples"</span> id=<span class="q">"fave"</span> name=<span class="q">"fave"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt; 
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"reset"</span> value=<span class="q">"Reset Form"</span> /&gt; 
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"button"</span> value=<span class="q">"My Button"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><p trans_replace="0" trans="1"><span>输入按钮元素不能使用按钮元素显示标记的文本。</span><br></p><h2 id="password_input" trans_replace="0" trans="1"></h2><h2>密码输入</h2><p trans_replace="0" trans="1"><span>将<span><span></span></span><code>type</code>属性设置为<span><span></span></span><code>password</code><span><span></span></span>会创建用于输入密码的输入元素。</span></p><p trans_replace="0" trans="1"><span>用户键入的字符由掩码字符，例如星号(*)表示。</span></p><p trans_replace="0" trans="1"><span>密码输入元素可以具有以下附加属性。其中许多都与文本类型共享，并以相同的方式工作。</span></p><ul><li>maxlength - <span>设置用户可以在密码框中输入的最大字符数。</span></li><li>pattern - <span>指定用于输入验证的正则表达式模式。</span></li><li>placeholder - <span>指定一个提示，告诉用户您希望输入的种类。</span></li><li>readonly - <span>如果存在，则使密码框为只读，并且用户无法编辑内容。</span></li><li>required - <span>指定用户必须输入值以进行输入验证。</span></li><li>size - <span>指定元素的宽度，以字符数表示。</span></li><li>value - <span>指定密码的初始值。</span></li></ul><p trans_replace="0" trans="1">以下代码显示正在使用的密码类型。</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"name"</span><span class="r">&gt;</span> Name: 
+      <span class="r">&lt;</span><span class="r">input</span> value=<span class="q">"XML"</span> id=<span class="q">"name"</span> name=<span class="q">"name"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#ab999a;"></span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"password"</span><span class="r">&gt;</span> Password: 
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"password"</span> placeholder=<span class="q">"Min 6 characters"</span> id=<span class="q">"password"</span> name=<span class="q">"password"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+      
+        <span class="r">&lt;</span><span class="r">br</span> /&gt;Another Password: 
+       <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"password"</span> 
+              name=<span class="q">"pwdPassword"</span> 
+              value=<span class="q">""</span> 
+                  size=<span class="q">"20"</span> 
+                  maxlength=<span class="q">"20"</span> /&gt;<span class="r">&lt;</span><span class="r">br</span> /&gt;      
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"fave"</span><span class="r">&gt;</span> Fruit: 
+      <span class="r">&lt;</span><span class="r">input</span> value=<span class="q">"Apples"</span> id=<span class="q">"fave"</span> name=<span class="q">"fave"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">button</span> type=<span class="q">"submit"</span><span class="r">&gt;</span>Submit Vote<span class="r">&lt;/button&gt;</span>
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><div><br></div><h2 id="Restrict_Data_Entry_input" trans_replace="0" trans="1">限制数据项输入</h2><p trans_replace="0" trans="1"><span><span>HTML5为输入元素的type属性引入了新值，我们可以从用户收集更多特定数据。</span></span></p><p trans_replace="0" trans="1"><span><span>以下列表总结了这些新类型值。</span></span></p><ul><li>checkbox - <span>将输入限制为true / false复选框</span>。</li><li>color - <span>将输入限制为颜色。</span></li><li>date - <span>将输入限制为日期。</span></li><li>datetime - <span>将输入限制为具有时区的全球日期和时间。</span></li><li>datetime-local - <span>将输入限制为不带时区的全局日期和时间。</span></li><li>email - <span>将输入限制为格式正确的电子邮件地址。</span></li><li>month - <span>将输入限制为年和月。</span></li><li>number - <span>将输入限制为整数或浮点数。</span></li><li>radiobutton - <span>将输入限制为固定的选项集。</span></li><li>range - <span>将输入限制为指定范围。</span></li><li>tel - <span>将输入限制为格式正确的电话号码。</span></li><li>time - <span>将输入限制为一天中的时间。</span></li><li>week - <span>将输入限制为年和周。</span></li><li>url - <span>将输入限制为完全限定的URL。</span></li></ul><h2 id="number_input" trans_replace="0" trans="1"></h2><h2>数字输入</h2><p trans_replace="0" trans="1"><span>type属性的数字值创建一个只接受数字值的输入框。</span></p><p trans_replace="0" trans="1"><span>以下列表描述了使用数字输入类型时可用的其他属性。</span></p><ul><li>list - <span>设置为此元素提供值的datalist元素的id。</span></li><li>min - <span>为输入验证目的设置最小值。</span> </li><li>max - <span>设置用于输入验证目的的最大值。</span></li><li>readonly - <span>如果存在，则使输入框为只读，并且用户无法编辑内容。</span></li><li>required - <span>用户必须提供用于输入验证目的的值。</span></li><li>step - <span>将增量和减量的步长设置为该值。</span></li><li>value - <span>指定元素的初始值。</span></li></ul><p trans_replace="0" trans="1">min，max，step和value属性的值可以是表示为整数或十进制数；例如，3和3.14。</p><p trans_replace="0" trans="1"><span>以下代码显示正在使用的输入的数字类型。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"price"</span><span class="r">&gt;</span> $ per unit in your area: <span class="r">&lt;</span><span class="r">input</span>
+        type=<span class="q">"number"</span> step=<span class="q">"1"</span> min=<span class="q">"0"</span> max=<span class="q">"100"</span> value=<span class="q">"1"</span> id=<span class="q">"price"</span>
+        name=<span class="q">"price"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#9abaab;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="range_input" trans_replace="0" trans="1"></h2><h2>范围输入</h2><p trans_replace="0" trans="1"><span>我们可以使用输入元素的范围类型来获取数值。</span></p><p trans_replace="0" trans="1"><span>范围输入元素的值限制用户从预定范围中选择值。</span></p><p trans_replace="0" trans="1"><span>范围类型支持与数字类型相同的一组属性。</span></p><p trans_replace="0" trans="1"><span>以下代码显示了使用的范围类型。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"price"</span><span class="r">&gt;</span> $ per unit in your area: 1 <span class="r">&lt;</span><span class="r">input</span>
+        type=<span class="q">"range"</span> step=<span class="q">"1"</span> min=<span class="q">"0"</span> max=<span class="q">"100"</span> value=<span class="q">"1"</span> id=<span class="q">"price"</span>
+        name=<span class="q">"price"</span> /&gt;100
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#9abaaa;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="checkbox_input" trans_replace="0" trans="1"></h2><h2>复选框输入</h2><p trans_replace="0" trans="1"><span>输入元素的复选框类型创建一个复选框，允许用户进行真/假选择。</span></p><p trans_replace="0" trans="1"><span>type属性的此值支持以下列表中显示的其他属性。</span></p><ul><li>checked - <span>如果应用，请在最初显示时或表单重置时选中复选框。</span></li><li>required - <span>指定用户必须选中复选框。</span></li><li>value - <span>设置在选中复选框时提交到服务器的值。</span></li></ul><p trans_replace="0" trans="1"><span>以下代码显示了正在使用的输入元素的复选框类型。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"veggie"</span><span class="r">&gt;</span> Are you vegetarian:
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"checkbox"</span> id=<span class="q">"veggie"</span> name=<span class="q">"veggie"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#a9a9ab;"></span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+    Which of the following skills do you possess? Select all that apply.<span class="r">&lt;</span><span class="r">br</span> /&gt;
+    <span class="r">&lt;</span><span class="r">input</span> checked type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"html"</span> /&gt;HTML <span class="r">&lt;</span><span class="r">br</span> /&gt; 
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"xhtml"</span> /&gt;XHTML <span class="r">&lt;</span><span class="r">br</span> /&gt; 
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"CSS"</span> /&gt;CSS<span class="r">&lt;</span><span class="r">br</span> /&gt; 
+    <span class="r">&lt;</span><span class="r">input</span> checked type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"JavaScript"</span> /&gt;JavaScript<span class="r">&lt;</span><span class="r">br</span> /&gt;
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"aspnet"</span> /&gt;ASP.Net<span class="r">&lt;</span><span class="r">br</span> /&gt;
+    <span class="r">&lt;</span><span class="r">input</span> checked type=<span class="q">"checkbox"</span> name=<span class="q">"chkSkills"</span> value=<span class="q">"php"</span> /&gt;PHP    
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="radio_input" trans_replace="0" trans="1"></h2><h2></h2><h2>radio输入</h2><p trans_replace="0" trans="1"><span>输入元素的 <span>radio</span> 类型创建一组单选按钮，让用户从一组固定的选项中进行选择。</span></p><p trans_replace="0" trans="1"><span>以下列表描述了<span>radio</span>类型输入元素支持的其他属性。</span></p><ul><li>checked - <span>如果应用，请在最初显示时或表单重置时选择单选按钮。</span></li><li>required - <span>用户必须选择一个单选按钮。</span></li><li>value - <span>指定复选框被选中时提交给服务器的数据值。</span></li></ul><p trans_replace="0" trans="1"><span>具有类型radio的每个输入元素向用户表示单个选项。</span></p><p trans_replace="0" trans="1"><span>一组独占选项应该具有与name属性相同的值</span>。</p><p trans_replace="0" trans="1"><span>你可以在下面的代码中看到它是如何工作的。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">fieldset</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">legend</span><span class="r">&gt;</span>Vote for your favorite fruit<span class="r">&lt;/legend&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"apples"</span><span class="r">&gt;</span>
+        <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"radio"</span> checked value=<span class="q">"Apples"</span> id=<span class="q">"apples"</span> name=<span class="q">"fave"</span> /&gt; Apples
+      <span class="r">&lt;/label&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"oranges"</span><span class="r">&gt;</span>
+         <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"radio"</span> value=<span class="q">"Oranges"</span> id=<span class="q">"oranges"</span> name=<span class="q">"fave"</span> /&gt; Oranges
+      <span class="r">&lt;/label&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"cherries"</span><span class="r">&gt;</span>
+         <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"radio"</span> value=<span class="q">"Cherries"</span> id=<span class="q">"cherries"</span> name=<span class="q">"fave"</span> /&gt; Cherries
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/fieldset&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#aab9aa;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><p trans_replace="0" trans="1"><span>上面的代码创建了三个<span>radio</span>类型输入元素。</span></p><p trans_replace="0" trans="1"><span>所有三个的name属性的值都是fave，这意味着浏览器会将它们视为一个组。</span></p><p trans_replace="0" trans="1"><span>选择其中一个单选按钮将取消选择其他两个。 value属性设置在提交表单时要发送到服务器的数据值。</span></p><p trans_replace="0" trans="1"><span><span>Fieldset</span> 和 <span>legend</span> 属性为用户提供三个按钮相关的视觉提示。</span></p><p trans_replace="0" trans="1"><span>在第一个<span><span>radio</span></span>元素上设置checked属性，以便始终选择一个值。</span></p><h2 id="email_input" trans_replace="0" trans="1"></h2><h2><span>电子邮件输入</span></h2><p trans_replace="0" trans="1"><span>电子邮件类型值将输入元素配置为仅接受作为有效电子邮件地址的输入。</span></p><p trans_replace="0" trans="1"><span>它支持以下列表中显示的其他属性。</span></p><ul><li>list - <span>设置为元素提供值的数据表元素的ID。</span></li><li>maxlength - <span>指定用户可以在文本框中输入的最大长度。</span></li><li>pattern - <span>指定用于输入验证的正则表达式模式。</span></li><li>placeholder - <span>向用户指定提示。</span></li><li>readonly - <span>如果存在，请将文本框设置为只读。</span></li><li>required - <span>指定用户必须提供值。</span></li><li>size - <span>指定元素的宽度。</span></li><li>value - <span>指定元素的初始值。对于电子邮件类型，可以是单个地址，也可以是由逗号分隔的多个地址。</span></li></ul><p trans_replace="0" trans="1">电子邮件类型还支持<code> multiple </code>属性，当应用时，允许输入元素接受多个电子邮件地址。</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"email"</span><span class="r">&gt;</span> Email: <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"email"</span>
+        placeholder=<span class="q">"user@domain.com"</span> id=<span class="q">"email"</span> name=<span class="q">"email"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#99b9b9;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="tel_input" trans_replace="0" trans="1"></h2><h2><span>tel输入</span></h2><p trans_replace="0" trans="1">tel类型值将输入元素配置为仅接受输入，其是电话号码。</p><p trans_replace="0" trans="1">它支持以下列表中显示的其他属性。</p><ul><li>list - <span>设置为元素提供值的数据表元素的ID。</span></li><li>maxlength - <span>指定用户可以在文本框中输入的最大长度。</span></li><li>pattern - <span>指定用于输入验证的正则表达式模式。</span></li><li>placeholder - <span>向用户指定提示。</span></li><li>readonly - <span>如果存在，请将文本框设置为只读。</span></li><li>required - <span>指定用户必须提供值。</span></li><li>size - <span>指定元素的宽度。</span></li><li>value - <span>指定元素的初始值。</span></li></ul><p trans_replace="0" trans="1">以下代码显示如何使用<code> tel </code>输入。</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+<span style="color:#abbab9;"></span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"tel"</span><span class="r">&gt;</span> Tel: <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"tel"</span>
+        placeholder=<span class="q">"(XXX)-XXX-XXXX"</span> id=<span class="q">"tel"</span> name=<span class="q">"tel"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="url_input" trans_replace="0" trans="1"></h2><h2><span>url输入</span></h2><p trans_replace="0" trans="1"><span>url类型值将输入元素配置为仅接受作为URL的输入。</span></p><p trans_replace="0" trans="1"><span>它支持以下列表中显示的其他属性。</span></p><ul><li>list - <span>设置为元素提供值的数据表元素的ID。</span></li><li>maxlength - <span>指定用户可以在文本框中输入的最大长度。</span></li><li>pattern - <span>指定用于输入验证的正则表达式模式。</span></li><li>placeholder - <span>向用户指定提示。</span></li><li>readonly - <span>如果存在，请将文本框设置为只读。</span></li><li>required - <span>指定用户必须提供值。</span></li><li>size - <span>指定元素的宽度。</span></li><li>value - <span>指定元素的初始值。</span></li></ul><p trans_replace="0" trans="1">以下代码显示了如何使用<code> url </code>输入。</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+<span style="color:#baaa9b;"></span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"url"</span><span class="r">&gt;</span> Your homepage: <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"url"</span> id=<span class="q">"url"</span>
+        name=<span class="q">"url"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="time_date_input" trans_replace="0" trans="1">时间日期输入</h2><p trans_replace="0" trans="1"><span>HTML5引入了一些输入元素类型来从用户收集日期和时间。以下列表描述了这些输入类型。</span></p><ul><li>datetime - <span>获取全局日期和时间，包括时区。</span><br>例如:2014-07-19T16:42:39.421Z</li><li>datetime-local - <span>获取本地日期和时间（没有时区信息）。</span><br>例如:2014-07-19T16:42:39.421</li><li>date - <span>获取本地日期（没有时间或时区）。</span><br>例如:2014-07-20</li><li>month - <span>获取年份和月份（无日期，时间或时区信息）。</span><br>例如:2014-08</li><li>time - <span>获得时间。</span><br>例如:17:42:44.746</li><li>week - <span>获取当前周。</span><br>例如:2011-W30</li></ul><p trans_replace="0" trans="1"><span><span>以下列表具有可用于“日期和时间”输入元素类型的其他属性。</span></span></p><ul><li>list -<span>设置为元素提供值的数据表元素的ID。</span></li><li>min - <span>设置最小可接受值。</span></li><li>max - <span>设置最大可接受值。</span></li><li>readonly - <span>将文本框标记为只读。</span></li><li>required - <span>指定用户必须提供值。</span></li><li>step - <span>指定该值的增量和减量的粒度。</span></li><li>value - <span>指定元素的初始值。</span></li></ul><p trans_replace="0" trans="1">以下代码显示正在使用的日期类型。</p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"lastbuy"</span><span class="r">&gt;</span> When did you last buy:
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"date"</span> id=<span class="q">"lastbuy"</span> name=<span class="q">"lastbuy"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#9abaab;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="color_input" trans_replace="0" trans="1">颜色输入</h2><p trans_replace="0" trans="1"><span>输入元素的颜色类型限制用户选择颜色。</span></p><p trans_replace="0" trans="1"><span>颜色值正好表示为七个字符：前导＃，后跟三个两位十六进制值，表示红色，绿色和蓝色值（例如，＃FF1234）。</span></p><p trans_replace="0" trans="1"><span>您可以在以下代码中看到正在使用的此类型的输入元素。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"color"</span><span class="r">&gt;</span> Color:
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"color"</span> id=<span class="q">"color"</span> name=<span class="q">"color"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#aabaaa;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="search_input" trans_replace="0" trans="1">搜索输入</h2><p trans_replace="0" trans="1"><span>输入元素的搜索类型向用户呈现用于输入搜索词语的单行文本框。</span></p><p trans_replace="0" trans="1"><span>以下代码显示如何使用搜索输入。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"search"</span><span class="r">&gt;</span> Search: <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"search"</span> id=<span class="q">"search"</span>
+        name=<span class="q">"search"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#a99aa9;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="hidden_input" trans_replace="0" trans="1">隐藏输入</h2><p trans_replace="0" trans="1"><span>要将数据项发送到服务器而不向用户显示，请使用隐藏的输入元素。</span></p><p trans_replace="0" trans="1"><span>以下代码显示了如何使用此类型的输入元素。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"hidden"</span> name=<span class="q">"recordID"</span> value=<span class="q">"1234"</span> /&gt;
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit Vote"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><h2 id="image_input" trans_replace="0" trans="1">图像输入</h2><p trans_replace="0" trans="1"><span>输入元素的图像类型创建显示图像并在单击时提交表单的按钮。</span></p><p trans_replace="0" trans="1"><span>这种类型的输入元素支持以下所示的附加属性。</span></p><ul><li>alt - <span>提供元素的文本描述。</span></li><li>formaction - <span><span>对于</span>按钮元素</span></li><li>formenctype - <span>对于</span><span>按钮元素</span></li><li>formmethod - <span>对于</span><span>按钮元素</span></li><li>formtarget - <span><span>对于</span>按钮元素</span></li><li>formnovalidate - <span><span>对于</span>按钮元素</span></li><li>height - <span>指定图像的高度（以像素为单位）。</span></li><li>src - <span>指定应显示的图像的URL。</span></li><li>width - <span>指定图像的宽度（以像素为单位）。</span></li></ul><p trans_replace="0" trans="1"><span>以下代码显示了正在使用的输入元素的图像类型。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">label</span> for=<span class="q">"name"</span><span class="r">&gt;</span> Name: <span class="r">&lt;</span><span class="r">input</span> value=<span class="q">"XML"</span> id=<span class="q">"name"</span>
+        name=<span class="q">"name"</span> /&gt;
+      <span class="r">&lt;/label&gt;</span>
+    <span class="r">&lt;/p&gt;</span><span style="color:#a99aba;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"image"</span> src=<span class="q">"accept.png"</span> name=<span class="q">"submit"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><p trans_replace="0" trans="1"><span>当用户点击图像时，浏览器提交表单并且包括表示用户相对于图像的左上角点击的x和y坐标的两个数据项。</span></p><p trans_replace="0" trans="1"><span>提供坐标以表示图像上的不同区域。</span></p><h2 id="file_upload_input" trans_replace="0" trans="1"></h2><h2><span>文件上传输入</span></h2><p trans_replace="0" trans="1"><span>文件输入元素在表单提交期间将文件上传到服务器。</span></p><p trans_replace="0" trans="1"><span>这种类型的输入支持如下所示的附加属性。</span></p><ul><li>accept - <span>指定将接受的MIME类型集。 RFC2046定义MIME类型（http://tools.ietf.org/html/rfc2046）。</span></li><li>multiple - <span>指定输入元素可以上传多个文件。在写作的时候，没有一个主流浏览器实现了这个属性。</span></li><li>required - <span>指定用户必须提供用于输入验证目的的值。</span></li></ul><p trans_replace="0" trans="1"><span>以下代码显示正在使用的输入元素的文件类型。</span></p><div class="codeDiv"><pre><code><span class="r">&lt;</span><span class="r">!</span><span class="r">DOCTYPE</span><span class="r"> </span><span class="r">HTML</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">html</span><span class="r">&gt;</span>
+<span class="r">&lt;</span><span class="r">body</span><span class="r">&gt;</span>
+  <span class="r">&lt;</span><span class="r">form</span> method=<span class="q">"post"</span> action=<span class="q">"http://example.com/form"</span>
+    enctype=<span class="q">"multipart/form-data"</span><span class="r">&gt;</span>
+    <span class="r">&lt;</span><span class="r">p</span><span class="r">&gt;</span>
+      <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"file"</span> name=<span class="q">"filedata"</span> /&gt;
+    <span class="r">&lt;/p&gt;</span><span style="color:#a9ba9b;"></span>
+    <span class="r">&lt;</span><span class="r">input</span> type=<span class="q">"submit"</span> value=<span class="q">"Submit"</span> /&gt;
+  <span class="r">&lt;/form&gt;</span>
+<span class="r">&lt;/body&gt;</span>
+<span class="r">&lt;/html&gt;</span></code></pre></div><p trans_replace="0" trans="1"><span>只有当表单的编码类型为multipart/form-data时，才能上传文件。</span></p><p trans_replace="0" trans="1"><span>当用户单击“选择文件”按钮时，将显示一个允许选择文件的对话框。</span></p><p trans_replace="0" trans="1"><span>当表单提交时，文件的内容将被发送到服务器。</span></p></div></div></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="html-css-form-input.html" title="上一篇：HTML 表单输入">HTML 表单输入</a></div>
+<div class="next-link"><a href="html-css-form-select.html" title="下一篇：HTML 表单选择">HTML 表单选择</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="html5-mathml.html" title="HTML5 MathML">HTML5 MathML</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="html-css-form-input.html" title="上一篇：HTML 表单输入" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="html-css-form-select.html" title="下一篇：HTML 表单选择" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'html-css-form-input-type',
+pename:'html',
+ismenu:'0',
+ktitle:'HTML 表单输入类型',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'html',
+bookname:'HTML 教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "93262";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '10';
+var aid   = '93273';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-css-form-input-type.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:32:58 GMT -->
+</html>

@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:30:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>HTML CSS百科及常用嵌入方式_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="HTML CSS百科及常用嵌入方式" />
+<meta name="description" content="html是网页的结构，CSS是网页的样式，javascript是行为。结构就是盖房子先要把结构建出来，然后用CSS来装饰。其实你在用dreamweaver做网页时就已经用到了CSS，比如你用DW的属性面板来设置一个字的字体、颜色和大小，当你选好后，就会自动生成一个.style1的红色代码，在&lt;style&gt;&lt;/style&gt;之间不知道你注意过没有，这就是CSS。_来自HTML 教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'html-css.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/html" title="HTML 教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="HTML 教程" src="../attachments/cover/cover_html.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>HTML 教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="html问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">html问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="21" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="241bxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 教程">HTML 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tutorial.html" title="HTML 教程导读">HTML 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-intro.html" title="HTML 简介">HTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-editors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-editors.html" title="HTML 编辑器的介绍及推荐">HTML 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-basic">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-basic.html" title="HTML 基础">HTML 基础</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-elements.html" title="HTML 元素">HTML 元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-attributes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-attributes.html" title="HTML 属性">HTML 属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-heading">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-heading.html" title="HTML 标题">HTML 标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-paragraphs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-paragraphs.html" title="HTML        段落">HTML        段落</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-formatting">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-formatting.html" title="HTML 文本格式化">HTML 文本格式化</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-links">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-links.html" title="HTML 链接">HTML 链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-head">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-head.html" title="HTML 头部">HTML 头部</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css.html" title="HTML CSS百科及常用嵌入方式">HTML CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-images.html" title="HTML 图像">HTML 图像</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-tables.html" title="HTML 表格">HTML 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-lists">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-lists.html" title="HTML 列表">HTML 列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-blocks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-blocks.html" title="HTML 区块">HTML 区块</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-layouts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-layouts.html" title="HTML 布局">HTML 布局</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-form">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-form.html" title="HTML 表单">HTML 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-iframes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-iframes.html" title="HTML 框架">HTML 框架</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colors.html" title="HTML 颜色">HTML 颜色</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colornames">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colornames.html" title="HTML 颜色名">HTML 颜色名</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-colorvalues">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-colorvalues.html" title="HTML 颜色值">HTML 颜色值</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scripts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scripts.html" title="HTML 脚本">HTML 脚本</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-entities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-entities.html" title="HTML 字符实体">HTML 字符实体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-url">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-url.html" title="HTML URL">HTML URL</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-quicklist">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-quicklist.html" title="HTML 速查列表">HTML 速查列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-summary.html" title="HTML 总结">HTML 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="9odg1ptd">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML XHTML">HTML XHTML</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-xhtml">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-xhtml.html" title="XHTML 简介">XHTML 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="1pdjxf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 媒体">HTML 媒体</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-media">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-media.html" title="HTML 媒体(Media)">HTML 媒体(Media)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-object.html" title="HTML 插件">HTML 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-sounds">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-sounds.html" title="HTML 音频(Audio)">HTML 音频(Audio)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-videos">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-videos.html" title="HTML 视频(Videos)播放">HTML 视频(Videos)播放</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="y12r1210">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 实例/测验">HTML 实例/测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-html_examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_examples.html" title="HTML 实例">HTML 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-html_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-html_quiz.html" title="HTML 测验">HTML 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-codecamp.html" title="HTML 编程实战闯关">HTML 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="html-fj7r22x9">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 相关教程">HTML 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-brge22wl">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-index.html" title="HTML 入门教程">HTML 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="4flh1s7s">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="HTML 拓展阅读">HTML 拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-space">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-space.html" title="HTML中如何键入空格">HTML中如何键入空格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-code.html" title="程序员必须知道的HTML常用代码有哪些？">HTML常用代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-Label">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-Label.html" title="全方位详解HTML常用标签">HTML常用标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-template">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-template.html" title="精选多个程序员都想要的免费HTML模板下载">HTML模板下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-textbox">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-textbox.html" title="HTML文本框参考样式及常见操作技巧大全">HTML文本框样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-scrollbar">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-scrollbar.html" title="HTML滚动条样式代码及使用技巧">HTML滚动条样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-copyright">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-copyright.html" title="HTML版权符号写法及美化">HTML版权符号写法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-cui11xk2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-cui11xk2.html" title="HTML元素嵌套嵌套错误可能引起的问题">HTML元素嵌套问题</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(241457)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">119</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/html/html-css" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>HTML CSS百科及常用嵌入方式</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Alma 最后一次修改&nbsp;<span>2015-09-18</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><h2>HTML <span class="color_h1">样式- CSS</span></h2><div><span class="color_h1"></span><div><span>CSS（Cascading Style Sheet）可译为“层叠样式表”或“级联样式表”，它定义如何显示 HTML 元素，用于控制Web页面的外观。通过使用CSS实现页面的内容与表现形式分离，极大提高了工作效率 。样式存储在样式表中，通常放在&lt;head&gt;部分或存储在 外部CSS文件中。作为网页标准化设计的趋势，CSS取得了浏览器厂商的广泛支持，正越来越多的被应用到网页设计中去。<br></span></div><div><span><br></span></div><div><span>网页现在的新标准是W3C。目前的模式是html+css+javascript，如何理解呢，就是html是网页的结构，CSS是网页的样式，javascript是行为。结构就是盖房子先要把结构建出来，然后用CSS来装饰。其实你在用dreamweaver做网页时就已经用到了CSS，比如你用DW的属性面板来设置一个字的字体、颜色和大小，当你选好后，就会自动生成一个.style1的红色代码，在&lt;style&gt;&lt;/style&gt;之间不知道你注意过没有，这就是CSS。</span></div></div> <hr> <p class="intro">CSS (Cascading Style Sheets) 用于渲染HTML元素标签的样式.</p> <div style="position:relative;"> <div style="opacity:0.5;position:absolute;left:50px;top:-30px;width:300px;height:150px;background-color:#40B3DF"></div> <div style="opacity:0.3;position:absolute;left:120px;top:20px;width:100px;height:200px;background-color:#8AC007"></div> <div style="margin-top:30px;width:360px;height:130px;padding:20px;border-radius:10px;border:10px solid #EE872A;font-size:120%;"> <h2>Look! Styles and colors</h2> <div style="letter-spacing:12px;font-size:15px;position:relative;left:25px;top:10px;">Manipulate Text</div> <div style="color:#40B3DF;letter-spacing:12px;font-size:15px;position:relative;left:25px;top:20px;">Colors, <span style="color:#ffffff;background-color:#B4009E;">&nbsp;Boxes</span></div> <div style="color:#000000;letter-spacing:-1px;font-size:15px;position:relative;top:15px;">and more...</div> </div> </div> <br><br> <p><a showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_styles" target="_blank"></a><button class="btn example-btn">尝试一下 »</button></p> <hr> <div class="tryit_ex"> <img src="../../7n.w3cschool.cn/statics/images/course/tryitimg.gif" width="40" height="46px" alt="Examples"><h2>尝试一下 - 实例</h2> </div> <p><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_style">HTML使用样式</a><br> 本例演示如何使用添加到 &lt;head&gt; 部分的样式信息对 HTML 进行格式化。</p> <p><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_linknoline">本例演示如何使用样式属性做一个没有下划线的链接。</a><br> 如何使用 style 属性制作一个没有下划线的链接。</p> <p><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_link">链接到一个外部样式表</a><br> 本例演示如何  标签链接到一个外部样式表。</p> <hr> <h2>如何使用CSS</h2> <p>CSS 是在 HTML 4 开始使用的,是为了更好的渲染HTML元素而引入的.</p> <p>CSS 可以通过以下方式添加到HTML中:</p> <ul> <li>内联样式- 在HTML元素中使用"style"<strong> 属性</strong> </li> <li>内部样式表 -在HTML文档头部 &lt;head&gt; 区域使用&lt;style&gt;<strong> 元素</strong> 来包含CSS</li> <li>外部引用 - 使用外部 CSS<strong> 文件</strong></li> </ul> <p>最好的方式是通过外部引用CSS文件.</p> <p>在本站的HTML教程中我们使用了内联CSS样式来介绍实例，这是为了简化的例子，也使得你能更容易在线编辑代码并在线运行实例。 </p> <p>你可以通过本站的CSS教程 <a href="https://www.w3cschool.cn/css/css-tutorial.html">CSS 教程</a>学习更多的CSS知识.</p> <hr><h2>内联样式</h2> <p>当特殊的样式需要应用到个别元素时，就可以使用内联样式。 使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性。以下实例显示出如何改变段落的颜色和左外边距。</p> <div class="code notranslate"><div> &lt;p style="color:blue;margin-left:20px;"&gt;This is a paragraph.&lt;/p&gt; </div></div> <p> 学习更多样式，请访问 <a href="https://www.w3cschool.cn/css/css-tutorial.html" target="_blank"> CSS 教程</a>. </p> <hr><h2>HTML样式实例 - 背景颜色</h2> <p>背景色属性（background-color）定义一个元素的背景颜色：</p> <div class="example"> <h2 class="example">Example</h2> <div class="example_code notranslate"> &lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br><br> &lt;body style="background-color:yellow;"&gt;<br> &lt;h2 style="background-color:red;"&gt;This is a heading&lt;/h2&gt;<br> &lt;p style="background-color:green;"&gt;This is a paragraph.&lt;/p&gt;<br> &lt;/body&gt;<br><br> &lt;/html&gt;</div> <br><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_bodybgstyle" class="tryitbtn">尝试一下 »</a> </div> <p>早期背景色属性（background-color）是使用 bgcolor 属性定义。</p> <p><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_bodybgcol">尝试一下: 旧版HTML来设置背景方式</a></p> <hr><h2>HTML 样式实例 - 字体, 字体颜色 ，字体大小</h2> <p>我们可以使用font-family（字体），color（颜色），和font-size（字体大小）属性来定义字体的样式:</p> <div class="example"> <h2 class="example">实例</h2> <div class="example_code notranslate"> &lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br><br> &lt;body&gt;<br> &lt;h1 style="font-family:verdana;"&gt;A heading&lt;/h1&gt;<br> &lt;p style="font-family:arial;color:red;font-size:20px;"&gt;A paragraph.&lt;/p&gt;<br> &lt;/body&gt;<br><br> &lt;/html&gt;</div> <br><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_newfont" class="tryitbtn">尝试一下 »</a> </div> <p>现在通常使用font-family（字体），color（颜色），和font-size（字体大小）属性来定义文本样式，而不是使用&lt;font&gt;标签。</p> <hr><h2>HTML 样式实例 - 文本对齐方式</h2> <p>使用 text-align（文字对齐）属性指定文本的水平与垂直对齐方式：</p> <div class="example"> <h2 class="example">实例</h2> <div class="example_code notranslate"> &lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br><br> &lt;body&gt;<br> &lt;h1 style="text-align:center;"&gt;Center-aligned heading&lt;/h1&gt;<br> &lt;p&gt;This is a paragraph.&lt;/p&gt;<br> &lt;/body&gt;<br><br> &lt;/html&gt;</div> <br><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_headeralign" class="tryitbtn">尝试一下 »</a> </div> <p>文本对齐属性 text-align取代了旧标签 &lt;center&gt; 。</p> <p><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_header">尝试一下 </a></p> <hr><h2>内部样式表</h2> <p>当单个文件需要特别样式时，就可以使用内部样式表。你可以在&lt;head&gt; 部分通过 &lt;style&gt;标签定义内部样式表:</p> <div class="code notranslate"><div> &lt;head&gt;<br> &lt;style type="text/css"&gt;<br> body {background-color:yellow;}<br> p {color:blue;}<br> &lt;/style&gt;<br> &lt;/head&gt; </div></div> <br> <hr><h2>外部样式表</h2> <p>当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。</p> <div class="code notranslate"><div> &lt;head&gt;<br> &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br> &lt;/head&gt; </div></div> <br> <hr><h2>HTML 样式标签</h2> <table class="reference notranslate"> <tbody><tr> <th align="left" style="text-align: center;">标签</th> <th align="left" style="text-align: center;">描述</th> </tr> <tr> <td style="text-align: center;"><a href="https://www.w3cschool.cn/htmltags/tag-style.html">&lt;style&gt;</a></td> <td style="text-align: center;">定义文本样式</td> </tr> <tr> <td style="text-align: center;"><a href="https://www.w3cschool.cn/htmltags/tag-link.html">&lt;link&gt;</a></td> <td style="text-align: center;">定义资源引用地址</td> </tr> </tbody></table> <br> <hr><h2>已弃用的标签和属性</h2> <p>在HTML 4, 原来支持定义HTML元素样式的标签和属性已被弃用。这些标签将不支持新版本的HTML标签。</p> <p>不建议使用的标签有: &lt;font&gt;, &lt;center&gt;, &lt;strike&gt;</p><p>不建议使用的属性: color 和 bgcolor.</p><h2></h2><h2><hr>学习 HTML+CSS 的书籍推荐</h2><div><strong>1、《CSS那些事儿》</strong></div><div><img src="../attachments/day_161103/201611031601501661.png" alt="CSS那些事儿" class=""><br></div><div>本书专注于CSS技巧实例的讲解，由浅入深地分析了CSS样式在布局时所需要理解的原理。绕开随处可见的基础知识、网络中能随意搜索到的hack技巧，侧重原理分析，拓展读者使用CSS布局的思维方式，通过本书的阅读读者将会了解到使用CSS布局的强大功能。<br><br></div><div>全书以传达CSS布局思维为中心，通过页面中的文字、图片、表格、表单等常见元素的处理及各种页面布局方式的使用，使读者能深入了解到如何在页面中更好地运用CSS布局。尤其是在页面布局的部分中，全面分析了多种布局方式，着重分解了两列等高和三列等高的几种方式，并相应说明了等高布局的优缺点。<br><br></div><div>无论是CSS布局的初学者还是具有一定水准的读者，阅读本书之后将会发现，原来CSS样式居然是这么好玩的东西。本书适合网站开发人员、网页设计人员参考学习，同时也适合作为相关培训机构的教材。<br></div><div><br></div><div><br></div><div><strong>2、《Head First HTML and CSS 2nd Edition》<br></strong></div><div><strong>&nbsp; &nbsp; &nbsp;《Head First HTML5》</strong></div><div>&nbsp; &nbsp; &nbsp; 这两本应该都有翻译，但是建议看原版<br><br></div><div><br></div><div><strong>3、《Eric Meyer谈CSS》（上下册）</strong></div><div><img src="../attachments/day_161103/201611031601501547.png" alt="Eric Meyer谈CSS"><br></div><div>《Eric Meyer谈CSS(卷1)》融汇了世界级专家Eric Meyer极富价值的CSS实战经验，运用13个典型实际项目，采取手把手的方式来指导读者如何使用CSS来解决实际问题。项目包括转换现有网页、设置新闻网页的样式、设置日历样式、设置菜单样式、创建打印样式多列布局等。<br><br></div><div><br></div><div><strong><span>4、《</span><span>CSS禅意花园》</span></strong></div><div><span><img src="../attachments/day_161103/201611031601506100.png" alt="CSS禅意花园"><br></span></div><div><span>这本书的作者是世界著名的网站设计师，书中的范例来自网站设计领域最著名的网站——CSS Zen Garden（CSS禅意花园）。全书分为两个主要部分。第1章为第一部分，讨论网站“CSS禅意花同”及其最基本的主题，包含正确的标记结构和灵活性规划等。第二部分包括6章，占据了书中的大部分篇幅。<br><br></span></div><div><span>每章剖析“CSS禅意花园”收录的6件设计作品，这些作品围绕一个主要的设计概念展开，如文字的使用等。通过探索36件设计作品面临的挑战和解决的问题，读者将洞悉主要的Web设计原则以及它们运用的CSS布局技巧，理解CSS设计的精髓，恰当地处理图形和字体来创建界面优美、性能优良且具有强大生命力的网站。<br></span></div><div><span>&nbsp; &nbsp; &nbsp;</span></div><div><span><br></span></div><div><strong><span>5、《</span><span>精通HTML</span><span>》</span></strong></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228837541626.jpg" alt="精通HTML"><br></span></div><div><span>本书深入地探讨了(X)HTML及相关技术包括CSS、微格式、语义网等，重点阐述了如何在恰当的时候使用恰当的标签，全书始终贯彻现代的Web设计理念，从而使读者可以学习如何充分利用各种标记提供的多样性，创建语义丰富和结构合理的网站。<br><br></span></div><div><span>本书适合具备初步HTML和CSS知识的Web设计开发人员阅读。<br></span></div><div><span>&nbsp; &nbsp; &nbsp;</span></div><div><strong style="font-size: 13px; line-height: 1.7;">6、《精通CSS:高级Web标准解决方案》</strong></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228880324099.jpg" alt="精通CSS"><br></span></div><div><span>本书将最有用的CSS技术汇总在一起，在介绍基本的CSS概念和最佳实践之后，讨论了核心的CSS技术，例如图像、链接、列表操纵、表单设计、数据表格设计以及纯CSS布局。每一章内容由浅入深，直到建立比较复杂的示例。之后本书用两章讨论招数、过滤器、bug和bug修复，最后由Simon Collison和Cameron Moll两位杰出的CSS设计人员，将书中讨论的许多技术组合起来，给出了两个实例研究。本书还集中介绍了现实的浏览器问题，是弥补CSS知识欠缺不可或缺的参考书。<br><br></span></div><div><span>本书适合具有(X)HTML和CSS基本知识的任何网页设计人员阅读。&nbsp; &nbsp;&nbsp;</span></div><div><span><br></span></div><div><span><br></span></div><div><span><strong>7、《深入浅出html》</strong></span></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228898547376.jpg" alt="深入浅出HTML"><br></span></div><div><span><span>本书是一部讲述现代web标准的优秀教程，彻底摒弃了过时的内容，始终贯彻三层分离的思想。书中结合实例讲述如何使用html、css设计符合现代web标准的网页，并讲解了如何使用javascript添加动态行为。书中的主体部分让读者接触html、xhtml的各种主题，逐渐熟悉各种元素。最后一章将书中讲述的各种技术付诸应用，带领读者一步步地创建一个实用的网站。</span><br><br></span></div><div><span><br></span></div><div><span><strong>8、《CSS权威指南》（第3版）</strong></span></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228937824818.jpg" alt="CSS权威指南（第三版）"><br></span></div><div><span>你是否既想获得丰富复杂的网页样式，同时又想节省时间和精力？本书为你展示了如何遵循CSS最新规范（CSS2和CSS2.1）将层叠样式表的方方面面应用于实践。</span></div><div><span><br>通过本书提供的诸多示例，你将了解如何做到仅在一处建立样式表就能创建或修改整个网站的外观，以及如何得到HTML力不能及的更丰富的表现效果。</span></div><div><span><br>资深CSS专家Eric A.Meyer。利用他独有的睿智和丰富的经验对属性、标记、标记属性和实现做了深入的研究，另外在浏览器支持和设计原则等实际问题上也有独到的见解。你所需要的就是HTML 4.0的知识即可以为网站布局和分页创建简明而且易于维护的脚本，同时兼具桌面系统的美观性和可控性。<br></span></div><div><span><br></span></div><div><span><br></span></div><div><span><strong>9、《网站重构》（第3版）</strong></span></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228958587028.jpg" alt="网站重构（第3版）"><br></span></div><div><span>《网站重构:应用Web标准进行设计(第3版)》内容简介：畅销书作家、设计师、网页标准教父jeffrey zeldman再次更新了他经典的、颠覆行业的指南书。这已经是《网站重构:应用Web标准进行设计(第3版)》的第3版了,此次更新基本涵盖了随着环境和技术的变化,web标准所面临的挑战以及因此而发生的改善。第3版让基于标准的设计思想更加清晰,更加易于理解,帮助你在这个领域中保持聪明和领先。</span></div><div><span><br>一如既往,《网站重构:应用Web标准进行设计(第3版)》提供了更多明确的见解和新的例子,来阐述基于标准的设计的核心思想,为你的网站最终确定一个合理的设计与开发方法。</span></div><div><span><br>与前两版不同的是,在第3版,除了有很多的“why”来提出问题,也提供了大量的“how”来解决问题。另外,在写作方法上作者力图用诙谐的、有吸引力的写作风格,使复杂的技术更易于理解消化,帮助你轻松创建一个访问快速、低成本维护和开发、更多用户的网站,帮助你用新技术使css布局适应多个浏览器,使网站内容更容易被搜索和访问到。<br></span></div><div><span><br></span></div><div><span><br></span></div><div><span><strong>10、《html+css+js网页制作从入门到精通》</strong></span></div><div><span><img src="../../7n.w3cschool.cn/attachments/image/20161104/1478228995751857.jpg" alt="HTML、CSS、JavaScript网页制作从入门到精通"><br></span></div><div><span><span>《HTML\CSS\JavaScript网页制作从入门到精通》共分为18章和4个附录，重点介绍使用HTML进行网页制作的方方面面，同时讲解了目前流行的Web标准与CSS网页布局实例，以及基于JavaScript语言的网页特效制作。为了便于读者学习，附录中汇集了经过作者精心整理的网页制作技巧60多例。</span><br></span></div><p></p><p><br></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="html-head.html" title="上一篇：HTML 头部">HTML 头部</a></div>
+<div class="next-link"><a href="html-images.html" title="下一篇：HTML 图像">HTML 图像</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="html5-mathml.html" title="HTML5 MathML">HTML5 MathML</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="html-head.html" title="上一篇：HTML 头部" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="html-images.html" title="下一篇：HTML 图像" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'html-css',
+pename:'html',
+ismenu:'0',
+ktitle:'HTML CSS百科及常用嵌入方式',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'html',
+bookname:'HTML 教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/html.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "15419";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '10';
+var aid   = '21';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/html/html-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:30:49 GMT -->
+</html>
