@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/javascript/js-type-conversion.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:56:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>JavaScript 类型转换_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="JavaScript 类型转换" />
+<meta name="description" content="JavaScript 类型转换 
+
+Number() 转换为数字， String() 转换为字符串， Boolean() 转化为布尔值。
+
+ JavaScript 数据类型 
+在 JavaScript 中有 5 种不同的数据类型：
+
+    string
+    number
+    boolean_来自javascript教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'js-type-conversion.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/javascript" title="javascript教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="javascript教程" src="../attachments/cover/cover_javascript.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>javascript教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="javascript问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">javascript问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="4646" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="tbh7af21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JavaScript 教程">JavaScript 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-tutorial.html" title="JavaScript 教程导读">JavaScript 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-intro.html" title="javascript 简介">javascript 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-skillmap">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-skillmap.html" title="JavaScript 知识图谱">JavaScript 知识图谱</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-howto">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-howto.html" title="JavaScript 用法">JavaScript 用法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-output">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-output.html" title="JavaScript 输出">JavaScript 输出</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-syntax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-syntax.html" title="JavaScript 语法">JavaScript 语法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-statements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-statements.html" title="JavaScript 语句">JavaScript 语句</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-comments">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-comments.html" title="JavaScript 注释">JavaScript 注释</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-variables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-variables.html" title="JavaScript 变量">JavaScript 变量</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-datatypes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-datatypes.html" title="JavaScript 数据类型">JavaScript 数据类型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-functions">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-functions.html" title="JavaScript 函数">JavaScript 函数</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-scope">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-scope.html" title="JavaScript 作用域">JavaScript 作用域</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-events">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-events.html" title="JavaScript 事件">JavaScript 事件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-strings">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-strings.html" title="JavaScript 字符串">JavaScript 字符串</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-operators">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-operators.html" title="JavaScript 运算符">JavaScript 运算符</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-comparisons">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-comparisons.html" title="JavaScript 比较和逻辑运算符">JavaScript 比较和逻辑运算符</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="wopi12hp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="wopi12hp.html" title="JavaScript 流程语句知识脑图">JavaScript 流程语句知识脑图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-if-else">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-if-else.html" title="JavaScript If…Else 语句">JavaScript If…Else 语句</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-switch">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-switch.html" title="JavaScript switch 语句">JavaScript switch 语句</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-loop-for">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-loop-for.html" title="JavaScript for 循环">JavaScript for 循环</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-loop-while">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-loop-while.html" title="JavaScript while 循环">JavaScript while 循环</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-break">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-break.html" title="JavaScript Break 和 Continue 语句">JavaScript Break 和 Continue 语句</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-type-conversion">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-type-conversion.html" title="JavaScript 类型转换">JavaScript 类型转换</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-regexp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-regexp.html" title="JavaScript 正则表达式">JavaScript 正则表达式</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-errors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-errors.html" title="JavaScript 错误处理  Throw、Try 和 Catch">JavaScript 错误处理  Throw、Try 和 Catch</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-debugging">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-debugging.html" title="JavaScript 调试">JavaScript 调试</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-form-validation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-form-validation.html" title="JavaScript 表单验证">JavaScript 表单验证</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-reserved">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-reserved.html" title="JavaScript 保留关键字">JavaScript 保留关键字</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-json">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-json.html" title="JavaScript JSON">JavaScript JSON</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-void">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-void.html" title="javascript:void(0) 含义">javascript:void(0) 含义</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-conventions">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-conventions.html" title="JavaScript 代码规范">JavaScript 代码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="up2a9f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS 函数">JS 函数</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-function-definition">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-function-definition.html" title="JavaScript 函数定义">JavaScript 函数定义</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-function-parameters">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-function-parameters.html" title="JavaScript 函数参数">JavaScript 函数参数</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-function-invocation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-function-invocation.html" title="JavaScript 函数调用">JavaScript 函数调用</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-function-closures">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-function-closures.html" title="JavaScript 闭包">JavaScript 闭包</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="3fnbpf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS HTML DOM">JS HTML DOM</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-htmldom">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom.html" title="HTML DOM">HTML DOM</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-htmldom-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom-html.html" title="HTML DOM 改变 HTML 内容">HTML DOM 改变 HTML 内容</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-htmldom-css">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom-css.html" title="HTML DOM 改变 CSS">HTML DOM 改变 CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-htmldom-events">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom-events.html" title="HTML DOM 事件">HTML DOM 事件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-htmldom-eventlistener">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom-eventlistener.html" title="HTML DOM EventListener">HTML DOM EventListener</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-htmldom-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-htmldom-elements.html" title="HTML DOM 元素">HTML DOM 元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="41wxaf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS 高级教程">JS 高级教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-objects">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-objects.html" title="JavaScript 对象">JavaScript 对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-number">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-number.html" title="JavaScript Number 对象">JavaScript Number 对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-string">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-string.html" title="JavaScript 字符串（String）对象">JavaScript 字符串（String）对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-date">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-date.html" title="JavaScript Date（日期）对象">JavaScript Date（日期）对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-array">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-array.html" title="JavaScript Array（数组）对象">JavaScript Array（数组）对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-boolean">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-boolean.html" title="JavaScript Boolean（布尔）对象">JavaScript Boolean（布尔）对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-math">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-math.html" title="JavaScript Math（算数）对象">JavaScript Math（算数）对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-obj-regexp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-obj-regexp.html" title="JavaScript RegExp 对象">JavaScript RegExp 对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="yji712hr">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="yji712hr.html" title="JavaScript Window对象">JavaScript Window对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-execcommand">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-execcommand.html" title="JavaScripy execCommand函数">JavaScripy execCommand函数</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="8bkjyf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS 浏览器BOM">JS window</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-window">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-window.html" title="JavaScript Window">JavaScript Window</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-window-screen">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-window-screen.html" title="JavaScript Window Screen">JavaScript Window Screen</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-window-location">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-window-location.html" title="JavaScript Window Location">JavaScript Window Location</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-window-history">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-window-history.html" title="JavaScript Window History">JavaScript Window History</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-window-navigator">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-window-navigator.html" title="JavaScript Window Navigator">JavaScript Window Navigator</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-popup">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-popup.html" title="JavaScript 弹窗">JavaScript 弹窗</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-timing">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-timing.html" title="JavaScript 计时事件">JavaScript 计时事件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-cookies">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-cookies.html" title="JavaScript Cookies">JavaScript Cookies</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="e63pcf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS 库">JS 库</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-libraries">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-libraries.html" title="JavaScript 库">JavaScript 库</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-lib-jquery">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-lib-jquery.html" title="JavaScript 测试 jQuery">JavaScript 测试 jQuery</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-lib-prototype">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-lib-prototype.html" title="JavaScript 测试 Prototype">JavaScript 测试 Prototype</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="vkhobf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="JS 实例">JS 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="js-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-examples.html" title="JavaScript 实例">JavaScript 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-ex-objects">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-ex-objects.html" title="JavaScript 对象实例">JavaScript 对象实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-ex-browser">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-ex-browser.html" title="JavaScript 浏览器对象实例">JavaScript 浏览器对象实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-ex-dom">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-ex-dom.html" title="JavaScript HTML DOM 实例">JavaScript HTML DOM 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="js-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="js-summary.html" title="JavaScript 总结">JavaScript 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-js_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-js_quiz.html" title="JavaScript 测验">JavaScript 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-codecamp.html" title="JavaScript 编程实战闯关">JavaScript 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="qwt21u6e">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="拓展阅读">拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="javascript-array">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-array.html" title="javascript数组常用方法技巧全解">javascript数组常用方法技巧全解</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-void">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-void.html" title="javascript:void(0);用法及常见问题解析">javascript:void(0);用法及常见问题解析</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-special">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-special.html" title="Javascript特效代码资源打包下载">Javascript特效代码资源打包下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-optimization">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-optimization.html" title="JavaScript性能优化小窍门汇总（含实例）">JavaScript性能优化小窍门汇总（含实例）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-expression">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-expression.html" title="javascript正则表达式知识拓展总结">javascript正则表达式知识拓展总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="javascript-5isn2lax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="javascript-5isn2lax.html" title="JavaScript 原型链的理解">JavaScript 原型链的理解</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(124447)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">63</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/javascript/js-type-conversion" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>JavaScript 类型转换</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Carrie 最后一次修改&nbsp;<span>2015-09-08</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><h2>JavaScript <span class="color_h1">类型转换</span></h2> 
+<hr>
+<p>Number() 转换为数字， String() 转换为字符串， Boolean() 转化为布尔值。</p>
+<hr>
+ <h2>JavaScript 数据类型</h2> 
+<p>在 JavaScript 中有 5 <span>种</span>不同的数据类型：</p>
+<ul>
+    <li>string</li>
+    <li>number</li>
+    <li>boolean</li>
+    <li>object</li>
+    <li>function</li>
+</ul>
+<p>3 种对象类型：</p>
+<ul>
+    <li>Object</li>
+    <li>Date</li>
+    <li>Array</li>
+</ul>
+<p>2 个不包含任何值的数据类型：</p>
+<ul>
+    <li>null</li>
+    <li>undefined</li>
+</ul>
+<hr>
+ <h2>typeof 操作符</h2> 
+<p>你可以使用 <strong>typeof</strong> 操作符来查看 JavaScript 变量的数据类型。</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highELE">typeof</span>  <span class="highVAL">"John"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 string <br></span>  <span class="highELE">typeof</span> 
+        <span class="highVAL">3.14</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 number<br></span>  <span class="highELE">typeof</span> NaN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="highCOM">// 返回 number
+                <br>
+                </span><span class="highELE">typeof</span>  <span class="highVAL">false</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 boolean<br></span><span class="highELE">typeof</span> [
+                <span class="highVAL">1</span>,<span class="highVAL">2</span>,<span class="highVAL">3</span>,<span class="highVAL">4</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="highCOM">// 返回 object<br></span>  <span class="highELE">typeof</span> {name:
+                    <span class="highVAL">&#39;John&#39;</span>, age:34}&nbsp; <span class="highCOM">// 返回 object<br></span><span class="highELE">typeof</span>  <span class="highELE">new</span> Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 object<br></span>
+
+                        <span class="highELE">typeof</span> <span class="highELE">function</span> () {} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 function<br></span>  <span class="highELE">typeof</span> myCar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="highCOM">// 返回 undefined (if myCar is not declared)
+                                <br>
+                                </span> <span class="highELE">typeof</span>  <span class="highVAL">null</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 object </span>
+
+    </div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_typeof_all" target="_blank">尝试一下 »</a> 
+</div>
+<p>请注意：</p>
+<ul>
+    <li>NaN 的数据类型是 number</li>
+    <li>数组(Array)的数据类型是 object</li>
+    <li>日期(Date)的数据类型为 object</li>
+    <li>null 的数据类型是 object</li>
+    <li>未定义变量的数据类型为 undefined</li>
+</ul>
+<p>如果对象是 JavaScript Array 或 JavaScript Date ，我们就无法通过 <strong>typeof</strong> 来判断他们的类型，因为都是 返回 Object。</p>
+<hr>
+ <h2>constructor 属性</h2> 
+<p> <strong>constructor</strong> 属性返回所有 JavaScript 变量的构造函数。</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highVAL">"John"</span>.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回函数 String()&nbsp; { [native code] }<br></span> (<span class="highVAL">3.14</span>).constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="highCOM">// 返回函数 Number()&nbsp; { [native code] }
+            <br>
+            </span>false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回函数 Boolean() { [native code] }<br></span> [<span class="highVAL">1</span>,<span class="highVAL">2</span>,
+            <span class="highVAL">3</span>,<span class="highVAL">4</span>].constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回函数 Array()&nbsp;&nbsp; { [native code] }<br></span> {name:<span class="highVAL">&#39;John&#39;</span>,
+                age:34}.constructor&nbsp; <span class="highCOM">// 返回函数 Object()&nbsp; { [native code] }<br></span>  <span class="highELE">new</span> Date().constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <span class="highCOM">// 返回函数 Date()&nbsp; &nbsp; { [native code] }<br></span> 
+                <span class="highELE">function</span>() {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回函数 Function(){ [native code] } </span>
+
+    </div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_constructor_all" target="_blank">尝试一下 »</a> 
+</div>
+<p>你可以使用 constructor 属性来查看对象是否为数组 (包含字符串 "Array"):</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highELE">function</span> isArray(myArray) {
+        <br>&nbsp;&nbsp;&nbsp; <span class="highELE">return</span> myArray.constructor.toString().indexOf(<span class="highVAL">"Array"</span>) &gt; <span class="highVAL">-1</span>;
+        <br>}</div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_array_isarray" target="_blank">尝试一下 »</a> 
+</div>
+<p>你可以使用 constructor 属性来查看是对象是否为日期 (包含字符串 "Date"):</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highELE">function</span> isDate(myDate) {
+        <br>&nbsp;&nbsp;&nbsp; <span class="highELE">return</span> myDate.constructor.toString().indexOf(<span class="highVAL">"Date"</span>) &gt; <span class="highVAL">-1</span>;
+        <br>}</div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_date_isdate" target="_blank">尝试一下 »</a> 
+</div>
+<br>
+<hr>
+ <h2>JavaScript 类型转换</h2> 
+<p>JavaScript 变量可以转换为新变量或其他数据类型：</p>
+<ul>
+    <li>通过使用 JavaScript 函数</li>
+    <li>通过 JavaScript 自身自动转换</li>
+</ul>
+<hr>
+ <h2>将数字转换为字符串</h2> 
+<p>全局方法 <strong>String()</strong> 可以将数字转换为字符串。</p>
+<p>该方法可用于任何类型的数字，字母，变量，表达式：</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code">String(x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="highCOM">// 将变量 x 转换为字符串并返回<br></span> String(<span class="highVAL">123</span>)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="highCOM">// 将数字 123 转换为字符串并返回<br></span> String(
+        <span class="highVAL">100</span>+ <span class="highVAL">23</span>)&nbsp; <span class="highCOM">// 将数字表达式转换为字符串并返回</span>
+
+    </div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_number_string" target="_blank">尝试一下 »</a> 
+</div>
+<p>Number 方法 <strong>toString()</strong> 也是有同样的效果。</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code">x.toString()
+        <br>(<span class="highVAL">123</span>).toString()
+        <br>(<span class="highVAL">100</span> + <span class="highVAL">23</span>).toString()</div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_number_tostring" target="_blank">尝试一下 »</a> 
+</div>
+<p>在 <a href="https://www.w3cschool.cn/jsref/jsref-obj-number.html">Number 方法</a> 章节中，你可以找到更多数字转换为字符串的方法：</p>
+<table class="reference  ">
+    <tbody>
+        <tr>
+            <th style="width:25%">方法</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>toExponential()</td>
+            <td>把对象的值转换为指数计数法。</td>
+        </tr>
+        <tr>
+            <td>toFixed()</td>
+            <td>把数字转换为字符串，结果的小数点后有指定位数的数字。</td>
+        </tr>
+        <tr>
+            <td>toPrecision()</td>
+            <td>把数字格式化为指定的长度。</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+ <h2>将布尔值转换为字符串</h2> 
+<p>全局方法 <strong>String()</strong> 可以将布尔值转换为字符串。</p>
+<div class="example">
+    <div class="example_code">String(<span class="highVAL">false</span>)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 "false"<br></span> String(<span class="highVAL">true</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span class="highCOM">// 返回 "true" </span>
+
+    </div>
+</div>
+<p>Boolean 方法 <strong>toString()</strong> 也有相同的效果。</p>
+<div class="example">
+    <div class="example_code">false.toString()&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 "false"<br></span> true.toString()&nbsp; &nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 "true" </span>
+
+    </div>
+</div>
+<br>
+<hr>
+ <h2>将日期转换为字符串</h2> 
+<p>全局方法 <strong>String()</strong> 可以将日期转换为字符串。</p>
+<div class="example">
+    <div class="example_code">String(Date())&nbsp;&nbsp;&nbsp; &nbsp; <span class="highCOM">// 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)</span>
+
+    </div>
+</div>
+<p>Date 方法 <strong>toString()</strong> 也有相同的效果。</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code">Date().toString()&nbsp;&nbsp; <span class="highCOM">// 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)</span>
+
+    </div>
+</div>
+<p>在 <a href="https://www.w3cschool.cn/jsref/jsref-obj-date.html">Date 方法</a> 章节中，你可以查看更多关于日期转换为字符串的函数：</p>
+<table class="reference  ">
+    <tbody>
+        <tr>
+            <th>方法</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>getDate()</td>
+            <td>从 Date 对象返回一个月中的某一天 (1 ~ 31)。</td>
+        </tr>
+        <tr>
+            <td>getDay()</td>
+            <td>从 Date 对象返回一周中的某一天 (0 ~ 6)。</td>
+        </tr>
+        <tr>
+            <td>getFullYear()</td>
+            <td>从 Date 对象以四位数字返回年份。</td>
+        </tr>
+        <tr>
+            <td>getHours()</td>
+            <td>返回 Date 对象的小时 (0 ~ 23)。</td>
+        </tr>
+        <tr>
+            <td>getMilliseconds()</td>
+            <td>返回 Date 对象的毫秒(0 ~ 999)。</td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td>
+            <td>返回 Date 对象的分钟 (0 ~ 59)。</td>
+        </tr>
+        <tr>
+            <td>getMonth()</td>
+            <td>从 Date 对象返回月份 (0 ~ 11)。</td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td>
+            <td>返回 Date 对象的秒数 (0 ~ 59)。</td>
+        </tr>
+        <tr>
+            <td>getTime()</td>
+            <td>返回 1970 年 1 月 1 日至今的毫秒数。</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+ <h2>将字符串转换为数字</h2> 
+<p>全局方法 <strong>Number()</strong> 可以将字符串转换为数字。</p>
+<p>字符串包含数字(如 "3.14") 转换为数字 (如 3.14).</p>
+<p>空字符串转换为 0。</p>
+<p>其他的字符串会转换为 NaN (不是个数字)。</p>
+<div class="example">
+    <div class="example_code">Number(<span class="highVAL">"3.14"</span>)&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 3.14<br></span> Number(<span class="highVAL">" "</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 0 <br></span> Number(<span class="highVAL">""</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="highCOM">// 返回 0
+            <br>
+            </span>Number(<span class="highVAL">"99 88"</span>)&nbsp;&nbsp; <span class="highCOM">// 返回 NaN </span>
+
+    </div>
+</div>
+<p>在 <a href="https://www.w3cschool.cn/jsref/jsref-obj-number.html">Number 方法</a> 章节中，你可以查看到更多关于字符串转为数字的方法：</p>
+<table class="reference  ">
+    <tbody>
+        <tr>
+            <th style="width:25%">方法</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>parseFloat()</td>
+            <td>解析一个字符串，并返回一个浮点数。</td>
+        </tr>
+        <tr>
+            <td>parseInt()</td>
+            <td>解析一个字符串，并返回一个整数。</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+ <h2>一元运算符 + </h2> 
+<p> <strong>Operator + </strong> 可用于将变量转换为数字：</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highELE">var</span> y = <span class="highVAL">"5"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// y 是一个字符串<br></span>  <span class="highELE">var</span> x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// x 是一个数字 </span>
+
+    </div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_typeof3" target="_blank">尝试一下 »</a> 
+</div>
+<p>如果变量不能转换，它仍然会是一个数字，但值为 NaN (不是一个数字):</p>
+<div class="example">
+     <h2 class="example">实例</h2> 
+    <div class="example_code"> <span class="highELE">var</span> y = <span class="highVAL">"John"</span>;&nbsp;&nbsp; <span class="highCOM">// y 是一个字符串<br></span>  <span class="highELE">var</span> x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="highCOM">// x 是一个数字 (NaN)</span>
+
+    </div>
+    <br> <a class="tryitbtn" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/tryjs_typeof4" target="_blank">尝试一下 »</a> 
+</div>
+<br>
+<hr>
+ <h2>将布尔值转换为数字</h2> 
+<p>全局方法 <strong>Number()</strong> 可将布尔值转换为数字。</p>
+<div class="example">
+    <div class="example_code">Number(<span class="highVAL">false</span>)&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 0<br></span> Number(<span class="highVAL">true</span>)&nbsp; &nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 1 </span>
+
+    </div>
+</div>
+<br>
+<hr>
+ <h2>将日期转换为数字</h2> 
+<p>全局方法 <strong>Number()</strong> 可将日期转换为数字。</p>
+<div class="example">
+    <div class="example_code">d = <span class="highELE">new</span> Date();
+        <br>Number(d)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 1404568027739 </span>
+
+    </div>
+</div>
+<p>日期方法 <strong>getTime()</strong> 也有相同的效果。</p>
+<div class="example">
+    <div class="example_code">d = <span class="highELE">new</span> Date();
+        <br>d.getTime()&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <span class="highCOM">// 返回 1404568027739 </span>
+
+    </div>
+</div>
+<br>
+<hr>
+ <h2>自动转换类型 Type Conversion</h2> 
+<p>当 JavaScript 尝试操作一个 "错误" 的数据类型时，会自动转换为 "正确" 的数据类型。</p>
+<p>以下输出结果不是你所期望的：</p>
+<div class="example">
+    <div class="example_code"> <span class="highVAL">5</span> + <span class="highVAL">null</span>&nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because null is converted to 0<br></span><span class="highVAL">"5"</span> + <span class="highVAL">null</span>&nbsp;
+        <span class="highCOM">// 返回"5null"&nbsp;&nbsp; because null is converted to "null"
+            <br>
+            </span> <span class="highVAL">"5"</span> + <span class="highVAL">1</span> &nbsp;&nbsp;&nbsp; <span class="highCOM">// 返回 "51"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because 1 is converted to "1"&nbsp; <br></span>  <span class="highVAL">"5"</span> - <span class="highVAL">1</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="highCOM">// 返回 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because "5" is converted to 5</span>
+    </div>
+</div>
+<div>
+    <br>
+</div>
+<hr>
+ <h2>自动转换为字符串</h2> 
+<p>当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法：</p>
+<div class="example">
+    <div class="example_code">document.getElementById(<span class="highVAL">"demo"</span>).innerHTML = myVar;
+        <br>
+        <br> <span class="highCOM">// if myVar = {name:"Fjohn"}&nbsp; // toString 转换为 "[object Object]"<br></span>  <span class="highCOM">// if myVar = [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString 转换为 "1,2,3,4"<br></span>  <span class="highCOM">// if myVar = new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200"<br></span> 
+    </div>
+</div>
+<p>数字和布尔值也经常相互转换：</p>
+<div class="example">
+    <div class="example_code"> <span class="highCOM">// if myVar = 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString 转换为 "123"<br></span>  <span class="highCOM">// if myVar = true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString 转换为 "true"<br></span> 
+        <span class="highCOM">// if myVar = false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString 转换为 "false"</span>
+    </div>
+</div>
+<hr>
+
+<h2>null</h2>
+
+<p>在 JavaScript 中 null 表示 "什么都没有"，是一个只有一个值的特殊类型，表示一个空对象引用。</p>
+<p>当设置为“null”时，可以用来清空对象：</p>
+<div class="example">
+    <div class="example_code">var person = null; // 值为 null(空), 但类型为对象</div>
+</div>
+<p><b>提示：</b>你可以使用 typeof 检测 null 返回是object。</p>
+<hr>
+
+<h2>undefined</h2>
+
+<p>在 JavaScript 中 undefined&nbsp;是一个没有设置值的变量。</p>
+<p>如果一个变量没有设置值的话，就会返回&nbsp;undefined：</p>
+<div class="example">
+    <div class="example_code">var person; // 值为 undefined(空), 类型是undefined</div>
+</div><hr><h2>相关文章</h2><p>JavaScript标准参考教程：<a href="https://www.w3cschool.cn/javascript_guide/javascript_guide-2dg6268m.html" target="_blank">JavaScript 数据类型转换</a></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="js-break.html" title="上一篇：JavaScript Break 和 Continue 语句">JavaScript Break 和 Continue 语句</a></div>
+<div class="next-link"><a href="js-regexp.html" title="下一篇：JavaScript 正则表达式">JavaScript 正则表达式</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="javascript-t64x2ksc.html" title="JavaScript JSON.stringify()">JavaScript JSON.stringify()</a></li>
+<li><a href="js-typeof.html" title="JavaScript typeof, null, 和 undefined">JavaScript typeof, null, 和 undefined</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="js-break.html" title="上一篇：JavaScript Break 和 Continue 语句" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="js-regexp.html" title="下一篇：JavaScript 正则表达式" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'js-type-conversion',
+pename:'javascript',
+ismenu:'0',
+ktitle:'JavaScript 类型转换',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'javascript',
+bookname:'javascript教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/javascript.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/javascript.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "15432";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '54';
+var aid   = '4646';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/javascript/js-type-conversion.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:56:19 GMT -->
+</html>
