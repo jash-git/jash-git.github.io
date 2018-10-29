@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/css/css-div.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:45:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>DIV+CSS布局基本流程及实例介绍_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="DIV+CSS布局基本流程及实例介绍" />
+<meta name="description" content="都说用DIV+CSS布局来设计网站便于优化，容易被收录，那么你对DIV+CSS布局的用法是否了解？CSS布局是网页html通过DIV标签+CSS样式表代码开发制作的（html）网页的统称。DIV+CSS布局是现在非常流行的布局方法，替代了原来的表格布局。下面我们先来看下学习DIV+CSS布局的基本步骤：_来自CSS教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'css-div.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/css" title="CSS教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="CSS教程" src="../attachments/cover/cover_css7d90.png?t=1536043578"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>CSS教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="css问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">css问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="83844" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="1fi5zf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 教程">CSS 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-tutorial.html" title="CSS 教程导读">CSS 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-intro.html" title="CSS 简介">CSS 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-syntax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-syntax.html" title="CSS 语法">CSS 语法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-id-class">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-id-class.html" title="CSS Id 和 Class选择器">CSS Id 和 Class选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-howto">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-howto.html" title="CSS 创建">CSS 创建</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-background">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-background.html" title="CSS Backgrounds(背景)">CSS Backgrounds(背景)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-text">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-text.html" title="CSS Text(文本)">CSS Text(文本)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-font">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-font.html" title="CSS Fonts(字体)">CSS Fonts(字体)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-link">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-link.html" title="CSS 链接(link)">CSS 链接(link)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-list">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-list.html" title="CSS 列表样式(ul)">CSS 列表样式(ul)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-table">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-table.html" title="CSS Table(表格)">CSS Table(表格)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-boxmodel">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-boxmodel.html" title="CSS 盒子模型">CSS 盒子模型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-border">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-border.html" title="CSS Border(边框)">CSS Border(边框)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-outline">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-outline.html" title="CSS 轮廓（outline）属性">CSS 轮廓（outline）属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-margin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-margin.html" title="CSS Margin(外边距)">CSS Margin(外边距)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-padding">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-padding.html" title="CSS Padding（填充）">CSS Padding（填充）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-grouping-nesting">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-grouping-nesting.html" title="CSS 分组和嵌套">CSS 分组和嵌套</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-dimension">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-dimension.html" title="CSS 尺寸 (Dimension)">CSS 尺寸 (Dimension)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-display-visibility">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-display-visibility.html" title="CSS Display(显示) 与 Visibility（可见性）">CSS Display(显示) 与 Visibility（可见性）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-positioning">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-positioning.html" title="CSS Positioning(定位)">CSS Positioning(定位)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-float">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-float.html" title="CSS Float（浮动）">CSS Float（浮动）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-align">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-align.html" title="CSS 水平对齐(Horizontal Align)">CSS 水平对齐(Horizontal Align)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-combinators">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-combinators.html" title="CSS 组合选择符">CSS 组合选择符</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pseudo-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pseudo-classes.html" title="CSS 伪类">CSS 伪类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pseudo-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pseudo-elements.html" title="CSS 伪元素">CSS 伪元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="31tvyfm8">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="31tvyfm8.html" title="CSS 导航栏">CSS 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="xohvqfmc">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="xohvqfmc.html" title="CSS 下拉菜单">CSS 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-gallery">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-gallery.html" title="CSS 图片廊">CSS 图片廊</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-transparency">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-transparency.html" title="CSS 图像透明/不透明">CSS 图像透明/不透明</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-sprites">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-sprites.html" title="CSS 图像拼合技术">CSS 图像拼合技术</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-mediatypes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-mediatypes.html" title="CSS 媒体类型">CSS 媒体类型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-attribute-selectors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-attribute-selectors.html" title="CSS 属性选择器">CSS 属性选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-summary.html" title="CSS 总结">CSS 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-examples.html" title="CSS 实例">CSS 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="zkgy6f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 响应式设计">CSS 响应式设计</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-rwd-viewport">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-viewport.html" title="响应式 Web 设计 – Viewport">响应式 Web 设计 – Viewport</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-grid">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-grid.html" title="响应式 Web 设计 – 网格视图">响应式 Web 设计 – 网格视图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-mediaqueries">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-mediaqueries.html" title="响应式 Web 设计 &#8211; 媒体查询">响应式 Web 设计 &#8211; 媒体查询</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-images.html" title="响应式 Web 设计 – 图片">响应式 Web 设计 – 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-videos">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-videos.html" title="响应式 Web 设计 &#8211; 视频(Video)">响应式 Web 设计 &#8211; 视频(Video)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-frameworks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-frameworks.html" title="响应式 Web 设计 – 框架">响应式 Web 设计 – 框架</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="auqg1214">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS实例">CSS实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-codecamp.html" title="CSS 编程实战闯关">CSS 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-csse_examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-csse_examples.html" title="CSS 实例">CSS 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-css_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-css_quiz.html" title="CSS 测验">CSS 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-t2w822zi">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 相关教程">CSS 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-wcz322wm">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="introduction2mci2080.html" title="CSS 入门教程">CSS 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="pf4u1sjx">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 拓展阅读">CSS 拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-selector">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-selector.html" title="看这一篇就够了,css选择器知识汇总">CSS 选择器汇总</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-center">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-center.html" title="学会这几种方法css居中很简单">CSS 居中布局方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-style">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-style.html" title="css样式就得这么写(css参考样式集合)">CSS 样式参考标准</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-transparent">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-transparent.html" title="CSS 透明度设置方法及常见问题解析">CSS 透明度设置方法及常见问题解析</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-hack">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-hack.html" title="你想知道的css hack知识全都帮你整理好了">CSS 浏览器兼容hack汇总</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-div">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-div.html" title="DIV+CSS布局基本流程及实例介绍">DIV+CSS布局基本流程及实例介绍</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-basics">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-basics.html" title="初学者必读：CSS是什么？DIV+CSS又是什么？">DIV+CSS初学必读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-layout">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-layout.html" title="CSS 布局的基础方法及css布局技巧">CSS 布局的基础方法及css布局技巧</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-center2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-center2.html" title="厉害了我的哥,css图片居中原来有这么多种方法">CSS 图片居中的多种方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-taobao">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-taobao.html" title="CSS 淘宝导航代码集合（附使用技巧）">CSS 淘宝导航代码集合（附使用技巧）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="u21y1t7g">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="u21y1t7g.html" title="CSS虚线实现方法及多种应用实例">CSS虚线实现方法及多种应用实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-scrollbar">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-scrollbar.html" title="CSS滚动条实现步骤及美化小技巧">CSS滚动条实现步骤及美化小技巧</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-navigation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-navigation.html" title="详细的css导航条实现代码及素材下载">详细的css导航条实现代码及素材下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-text-justify">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-text-justify.html" title="CSS两端对齐语法及代码实例教学">CSS两端对齐语法及代码实例教学</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-translucent">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-translucent.html" title="CSS半透明属性介绍及代码实例">CSS半透明属性介绍及代码实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-Load">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-Load.html" title="CSS加载失败的6个原因">CSS加载失败的6个原因</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-quote">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-quote.html" title="HTML引入CSS的常见方法及解析">HTML引入CSS的常见方法及解析</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-mouse">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-mouse.html" title="css鼠标样式语法及20种可选值（属性）">css鼠标样式语法及20种可选值（属性）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-sfrk2opy">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-sfrk2opy.html" title="四款好看实用的CSS表格样式分享">CSS表格样式分享</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pf8o2oq1">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pf8o2oq1.html" title="css与html的区别">css与html的区别</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(58182)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">19</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/css/css-div" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>DIV+CSS布局基本流程及实例介绍</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Carrie 最后一次修改&nbsp;<span>2016-11-09</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><p>都说用DIV+CSS布局来设计网站便于优化，容易被收录，那么你对DIV+CSS布局的用法是否了解？CSS布局是网页<a href="https://www.w3cschool.cn/html/" target="_blank">html</a>通过DIV标签+CSS样式表代码开发制作的（html）网页的统称。DIV+CSS布局是现在非常流行的布局方法，替代了原来的表格布局。下面我们先来看下学习DIV+CSS布局的基本步骤：</p><p></p><div style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_161109/201611091758571121.jpg" style="line-height: 1.7; font-size: 13px;" alt="DIV+CSS"></div><p></p><p><span><br></span></p><p><span><strong>一、认清学习的要求</strong><br><br>1、弄清目的，首先要认识为什么要学习CSS？<br>2、心态不能急，如果你很急躁，否则会很快丧失兴趣。<br>3、坚持，这个不是一到两天的事情，是一个漫长的过程（至少两个月）。<br><br><br><strong>二、基础学习</strong><br><br>1、了解CSS作用是什么？（即CSS、html和js的关系是什么，html结构重要性）<br>2、css基础知识、css属性样式<br>3、html<br><br>上面几点，一般都是很快的掌握了，也不需要做到精通，了解大概就可以。<br><br>差不多时候，开始在网上找一些psd设计稿，自己做做看，做完之后发现问题，并把他们进行总结。<br><br><br><strong>三、学会分析别人网页布局<br></strong><br>当你做psd设计的代码，发现问题，可能找不到答案或没有人帮你回答，也不要急，这时最好看看别人网页的布局结构，主要看html布局框架，进行借鉴（当然网上还有很多结构代码很槽糕）。然后了解美工图如何分析、如何使用PS工具切出需要的素材、如何使用这些切出的图片素材进行布局、布局技巧、兼容性解决与避免等。<br><br>总之：就是让自己布局时候能知道大的布局结构如何布局，建立布局思想与技巧。<br><br><br><strong>四、代码的规范</strong><br><br>当你看完<span>很多</span>别人的网页代码之后，你会发现，他们都有规范，这些规范网上有很多，你需要总结和背诵，当然不是死记硬背，主要在切图上多做多实践，熟了就能记住。<br><br><br><strong>五、大量练习</strong><br><br>练习是从始到终的，不要断，即使找一些简单的网页进行布局实践，开始可能开发很慢，会遇到很多小问题，也不急。<br></span></p><hr><h2><strong>制作DIV CSS网页前思考布局：</strong><br><br></h2><div><span>首先我们拿到一张网页美工图片我们将从上下、上中下、左右、上中（中包括左右）下布局框架来思考。</span></div><div><br></div><div><span>下面通过一个实例讲解下CSS布局分析，我们以DIV CSS5列表页面分析css布局：</span></div><div><br><div style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/image/20161109/1478684038880091.jpg" style="font-size: 13px; line-height: 1.7;" alt="制作DIV CSS网页前思考布局"></div><div style="text-align: center;"><br></div><div style="text-align: left;">首先我们可以分析出我们DIV CSS布局重构此页面结构框架，我们可以看出是上、中、下结构，其中又包括了左右结构。<br><br>由此我们就要写此页面CSS和html时候就先从上到下从外到内原则写CSS与html。<br><br>我们首先建一个web的文件夹并在此文件夹里新建html页面命名为index.html，CSS文件命名为index.css。这里有个诀窍就是可以导入模板方式来建CSS与html初始页面，然后将CSS文件引用到html，再在CSS模板的基础上再写再添加CSS。<br></div><div style="text-align: left;"><br></div><div style="text-align: left;">以下是index.html的html代码：<br></div><span>以下为引用的内容：</span><br></div><div><pre><code class="html hljs xml"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&lt;!DOCTYPEhtmlPUBLIC"-//W3C//DTDXHTML1.0Transitional//EN"  
+ 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">html xml="http:</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">//</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">www.w3.org</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">/</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">1999</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">/</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">xhtml</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">"&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">head</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">meta http-equiv="Content-Type"content="text</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">/</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">html</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">;</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">charset</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">gb2312</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">"/&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">title</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>css布局案例实验页面-www.DIV CSS5.com.cn<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">title</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">link href="index.css"rel="stylesheet"type="text</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">/</span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">css</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">"/&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">head</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>copyrightwww.DIV CSS5.comDIV CSS5  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">body</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div id="header"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>我是头部（上）<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div id="centers"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div class="c_left"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>我是中的左<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div class="c_right"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>我是中的右<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div class="clear"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>&nbsp;<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div id="footer"</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>我是底部（下）<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">body</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">html</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span> 
+</code></pre><br></div><div><span>index.css的CSS代码如下：</span><br><span>以下为引用的内容：</span></div><div><span></span><pre><code class="html hljs xml">body,div,address,blockquote,iframe,ul,ol,dl,dt,dd,li,dl,h1,h2,h3,h4,h5,h6,p,pre,table,  
+ 
+caption,th,td,form,legend,fieldset,input,button,select,textarea{margin:0;padding:0;  
+ 
+font-weight:normal;font-style:normal;font-size:100%;font-family:inherit;}  
+ol,ul,li{list-style:none;}  
+img{border:0;}  
+body{color:#000;background:#FFF;text-align:center;font:12px/1.5Arial,Helvetica,sans-serif;}  
+.clearfix:after{clear:both;content:".";display:block;height:0pt;visibility:hidden;overflow:hidden;}  
+ 
+.clear{clear:both;height:1px;margin-top:-1px;width:100%;}  
+ 
+.dis{display:block;}  
+.undis{display:none;}  
+ 
+/*此上面代码是初始CSS模板，下面是新写CSS布局框架代码*/  
+ 
+#header,#centers,#footer{width:100%;margin:0auto;  
+ 
+clear:both;font-size:18px;line-height:68px;font-weight:bold;}  
+#header{height:68px;border:1pxsolid#CCCCCC;}  
+#centers{padding:8px0;}  
+#footer{border-top:1pxsolid#CCCCCC;background:#F2F2F2;}  
+ 
+#centers.c_left{float:left;width:230px;border:1pxsolid#00CC66;  
+ 
+background:#F7F7F7;margin-right:5px;}  
+#centers.c_right{float:left;width:500px;border:1pxsolid#00CC66;background:#F7F7F7}  
+</code></pre><span>你可以考出此两段代码新建个试试。</span><br></div><div><span><span></span></span><hr><h2><span><span><span>按以下步骤来建设一个网站的页面:</span></span></span></h2><span><span>1、顶部部分，其中包括了LOGO、MENU和一幅Banner图片；</span></span></div><div><span><span><br>2、页面中间部分，那就是我们的主体了，要求打开首页快速，所以我们在网站发布的信息设计为三列。</span></span></div><div><span><span><br>3、底部，包括一些版权信息。</span></span></div><div><span><span><br>根据以上设想，我们定义如下div的结构<br><br></span></span></div><div><span><span>DIV结构如下：<br>　　<br>│body {}　/*这是一个HTML元素*/<br>　　<br>└#Container {}　/*页面层容器*/<br>　　　　　<br>├#Header {}　/*页面头部*/<br>　　　　　<br>├#MianBody {}　/*页面主体*/<br>　　　　　<br>│　├#mainbody-left {}　/*主体页面左边*/<br>　　　　　<br>│　└#mainbody-center {}　/*主体页面中间*/<br>│　└#MainBody -right{}　/*主体页面右边*/<br>　<br>└#footer {}　/*页面底部*/<br><br><br>用DIV+CSS做一个导航栏是非常容易的，而且我们可以通过css来对导航栏的样式方便的作出调整。用div设置导航栏一般就用&lt;ul&gt;和&lt;li&gt;标签。<br><br>4、高度显示效果不同<br>一般情况下只需要使用height: 100px;即可，当显示效果不同时，则可以_height: 100px;来对IE6的高度进行设置。<br><br>5、嵌套效果不不同.<br>有些情况下如果div中嵌套的图片大于外层div的高度，则IE6中对高度的设置始终无效，这时要注意对该css添加overflow属性，overloaw:hidden,则可隐藏超出边界的部分。<br></span></span></div><div><span><span></span></span><hr><h2><span><span>DIV+CSS网页布局常用的一些基础知识整理</span></span></h2></div><div><span><span><br></span></span></div><div><span><span></span></span><p><strong>一．文件命名规范</strong></p><p>全局样式：global.css；<br>框架布局：layout.css；<br>字体样式：font.css；<br>链接样式：link.css；<br>打印样式：print.css；<br><br><strong>二．常用类/ID命名规范</strong></p><p>页　眉：header<br>内　容：content<br>容　器：container<br>页　脚：footer<br>版　权：copyright　<br>导　航：menu<br>主导航：mainMenu<br>子导航：subMenu<br>标　志：logo<br>标　语：banner<br>标　题：title<br>侧边栏：sidebar<br>图　标：Icon<br>注　释：note<br>搜　索：search<br>按　钮：btn<br>登　录：login<br>链　接：link<br>信息框：manage<br>……<br><br>常用类的命名应尽量以常见英文单词为准，做到通俗易懂，并在适当的地方加以注释。对于二级类/ID命名，则采用组合书写的模式，后一个单词的首字母应大写：诸如“搜索框”则应命名为“searchInput”、“搜索图标”命名这“searchIcon”、“搜索按钮”命名为“searchBtn“等等。<br></p><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_161109/201611091801032284.png" style="line-height: 1.7; font-size: 13px;" alt="CSS书写规范"></div><p></p><h2>CSS书写规范及方法</h2><br><strong>一.&nbsp;常规书写规范及方法</strong><br><br>1.&nbsp;选择DOCTYPE：<br><br>XHTML&nbsp;1.0&nbsp;提供了三种<a href="https://www.w3cschool.cn/dtd/dtd-intro.html" target="_blank">DTD声明</a>可供选择：<br><br>过渡的(Transitional):要求非常宽松的DTD，它允许你继续使用HTML4.01的标识(但是要符合xhtml的写法)。完整代码如下：<p></p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd“&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>严格的(Strict):要求严格的DTD，你不能使用任何表现层的标识和属性，例如&lt;br&gt;。完整代码如下：</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd“&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>框架的(Frameset):专门针对框架页面设计使用的DTD，如果你的页面中包含有框架，需要采用这种DTD。完整代码如下：</p><p><br></p><div><div>XML/HTML代码</div></div></div><pre><code class="html hljs xml"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd“&gt;</span></span></span></span></span></span></span> 
+</code></pre><span>理想情况当然是严格的DTD，但对于我们大多数刚接触web标准的设计师来说，过渡的DTD(XHTML&nbsp;1.0&nbsp;Transitional)是目前理想选择(包括本站，使用的也是过渡型DTD)。因为这种DTD还允许我们使用表现层的标识、元素和属性，也比较容易通过W3C的代码校验。</span><br><br></div><div><br></div>2. 指定语言及字符集：<br><br>为文档指定语言：<br><br>XML/HTML代码<br></div><div><span><span></span></span><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">html</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">xmlns</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”http://www.w3.org/1999/xhtml”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">lang</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”en”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>为了被浏览器正确解释和通过W3C代码校验，所有的XHTML文档都必须声明它们所使用的编码语言；</p><p>如常用的语言定义：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">meta</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">http-equiv</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”Content-Type”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">content</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”text/html;</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">charset</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">utf-8″</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> /&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>标准的XML文档语言定义：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta">&lt;?</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="php"><span class="php"><span class="php"><span class="php"><span class="php"><span class="php">xml version=”</span></span></span></span></span></span><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number">1.0</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="php"><span class="php"><span class="php"><span class="php"><span class="php"><span class="php">″ encoding=” utf</span></span></span></span></span></span><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number"><span class="php"><span class="hljs-number">-8</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="php"><span class="php"><span class="php"><span class="php"><span class="php"><span class="php">″</span></span></span></span></span></span><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta"><span class="php"><span class="hljs-meta">?&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span>  
+</code></pre><p>针对老版本的浏览器的语言定义：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">meta</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">http-equiv</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”Content-Language”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">content</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">utf-8</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">″ /&gt;</span></span></span></span></span></span></span>  </code></pre></div><div><span><span></span></span><p>为提高字符集，建议采用“utf-8”。<br><br><br></p><p>3.&nbsp;调用样式表：<br><br>外部样式表调用：<br><br>页面内嵌法：就是将样式表直接写在页面代码的head区。&nbsp;如：</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">style</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">type</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”text/css”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"><span class="css">&lt;!– </span></span></span></span></span></span><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag"><span class="css"><span class="hljs-selector-tag">body</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"> { </span></span></span></span></span></span><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute">background </span></span></span></span></span></span></span></span></span></span></span></span></span><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"><span class="css">: white ; </span></span></span></span></span></span><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute"><span class="css"><span class="hljs-attribute">color </span></span></span></span></span></span></span></span></span></span></span></span></span><span class="css"><span class="css"><span class="css"><span class="css"><span class="css"><span class="css">: black ; } –&gt; </span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">style</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>外部调用法：将样式表写在一个独立的.css文件中，然后在页面head区用类似以下代码调用。</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">link</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">rel</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”stylesheet”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">rev</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”stylesheet”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">href</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”css/style.css”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">type</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”text/css”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">media</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”all”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> /&gt;</span></span></span></span></span></span></span>  
+</code></pre><p>在符合web标准的设计中，推荐使用外部调用法，可以不修改页面只修改.css文件而改变页面的样式。如果所有页面都调用同一个样式表文件，那么改一个样式表文件，可以改变所有文件的样式。<br><br><br>4、选用恰当的元素：<br><br>根据文档的结构来选择HTML元素，而不是根据HTML元素的样式来选择。例如，使用P元素来包含文字段落，而不是为了换行。如果在创建文档时找不到适当的元素，则可以考虑使用通用的div&nbsp;或者是span；<br><br>避免过渡使用div和span。少量、适当的使用div和span元素可以使文档的结构更加清晰合理并且易于使用样式；<br><br>尽可能少地使用标签和结构嵌套，这样不但可以使文档结构清晰，同时也可以保持文件的小巧，在提高用户下载速度的同时，也易于浏览器对文档的解释及呈视；<br><br><br>5、派生选择器：<br><br>可以使用派生选择器给一个元素里的子元素定义样式，在简化命名的同时也使结构更加的清晰化，如：</p><div><div><br></div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">.mainMenu ul li {background:url(images/bg.gif;)}  
+</code></pre><br></div><div><br></div><div><span>6、辅助图片用背影图处理：</span></div><div><p>这里的”辅助图片”是指那些不是作为页面要表达的内容的一部分，而仅仅用于修饰、间隔、提醒的图片。将其做背影图处理，可以在不改动页面的情况下通过CSS样式来进行改动，如：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">#logo {background:url(images/logo.jpg) #FEFEFE no-repeat right bottom;}  
+</code></pre><p><br></p><p><br></p><p>7、结构与样式分离：<br><br>在页面里只写入文档的结构，而将样式写于css文件中，通过外部调用CSS样式表来实现结构与样式的分离。<br><br><br><br>8、文档的结构化书写：<br><br>页面CSS文档都应采用结构化的书写方式，逻辑清晰易于阅读。如：</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">id</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”mainMenu”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">ul</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">href</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”#”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> &gt;</span></span></span></span></span></span></span>首页<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">href</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”#”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> &gt;</span></span></span></span></span></span></span>介绍<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">href</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span></span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">”#”</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> &gt;</span></span></span></span></span></span></span>服务<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">a</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">li</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">ul</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span></span></span></span>  
+  
+/*=====主导航=====*/   
+#mainMenu {   
+width:100%;   
+height:30px;   
+background:url(images/mainMenu_bg.jpg) repeat-x;   
+}   
+#mainMenu ul li {   
+float:left;   
+line-height:30px;   
+margin-right:1px;   
+cursor:pointer;   
+}   
+/*=====主导航结束=====*/  
+</code></pre><p><br></p><p><br></p><p>9、鼠标手势：<br><br>在XHTML标准中，hand只被IE识别，当需要将鼠标手势转换为“手形”时，则将“hand”换为“pointer”，即“cursor:pointer;”<br><br><br><strong>二．注释书写规范<br></strong><br>1、行间注释：<br><br>直接写于属性值后面，如：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">.search{   
+border:1px solid #fff;/*定义搜索输入框边框*/   
+background:url(../images/icon.gif) no-report #333;/*定义搜索框的背景*/   
+}  
+</code></pre><p><br></p><p><br></p><p>2、整段注释：<br><br>分别在开始及结束地方加入注释，如：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">/*=====搜索条=====*/   
+.search {   
+border:1px solid #fff;   
+background:url(../images/icon.gif) no-repeat #333;   
+}   
+/*=====搜索条结束=====*/  
+</code></pre><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_161109/201611091804358722.png" style="font-size: 13px; line-height: 1.7;" alt="css+div样式属性"></div></div><div style="text-align: center;"><br></div><div><br></div><p><strong>三．样式属性代码缩写</strong><br><br>1、不同类有相同属性及属性值的缩写：<br><br>对于两个不同的类，但是其中有部分相同甚至是全部相同的属性及属性值时，应对其加以合并缩写，特别是当有多个不同的类而有相同的属性及属性值时，合并缩写可以减少代码量并易于控制。如：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">#mainMenu {   
+background:url(../images/bg.gif);   
+border:1px solid #333;   
+width:100%;   
+height:30px;   
+overflow:hidden;   
+}   
+#subMenu {   
+background:url(../images/bg.gif);   
+border:1px solid #333;   
+width:100%;   
+height:20px;   
+overflow:hidden;   
+}  
+</code></pre><br></div><p>两个不同类的属性值有重复之处，刚可以缩写为：</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">#mainMenu,#subMenu {   
+background:url(../images/bg.gif);   
+border:1px solid #333;   
+width:100%;   
+overflow:hidden;   
+}   
+#mainMenu {height:30px;}   
+#subMenu {height:20px;}  
+</code></pre><br></div><div><br></div><p>2、同一属性的缩写：<br><br>同一属性根据它的属性值也可以进行简写，如：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">.search {   
+background-color:#333;   
+background-image:url(../images/icon.gif);   
+background-repeat: no-repeat;   
+background-position:50% 50%;   
+}   
+.search {   
+background:#333 url(../images/icon.gif) no-repeat 50% 50%;   
+}  
+</code></pre><br></div><div><br></div><span>3、内外侧边框的缩写：</span><br><br><p>在CSS中关于内外侧边框的距离是按照上、右、下、左的顺序来排列的，当这四个属性值不同时也可直接缩写，如：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.btn {   
+margin-top:10px;   
+margin-right:8px;   
+margin-bottom:12px;   
+margin-left:5px;   
+padding-top:10px;   
+padding-right:8px;   
+padding-bottom:12px;   
+padding-left:8px;   
+}  
+</code></pre><p>则可缩写为：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.btn {   
+Margin:10px 8px 12px 5px;   
+Padding:10px 8px 12px 5px;   
+}  </code></pre></div><div><p>而如果当上边与下边、左边与右边的边框属性值相同时，则属性值可以直接缩写为两个，如：</p><p><br></p><div><div>XML/HTML代码<pre><code class="html hljs xml">.btn {   
+margin-top:10px;   
+margin-right:5px;   
+margin-bottom:10px;   
+margin-left:5px;   
+}  
+</code></pre></div></div><div><p>缩写为：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.btn {margin:10px 5px;}  
+</code></pre><p>而当上下左右四个边框的属性值都相同时，则可以直接缩写成一个，如：</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.btn {   
+margin-top:10px;   
+margin-right:10px;   
+margin-bottom:10px;   
+margin-left:10px;   
+}  
+</code></pre><p>缩写为：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.btn{margin:10px;}  
+</code></pre><br></div><div><br></div><div><p>4、颜色值的缩写：<br><br>当RGB三个颜色值数值相同时，可缩写颜色值代码。如：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.menu { color:#ff3333;}  </code></pre></div><p>可缩写为:</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">.menu {color:#f33;}  
+</code></pre><br></div><div><strong><br></strong></div><span><strong>四．hack书写规范&nbsp;</strong></span><br><br></div><span>因为不同浏览器对W3C标准的支持不一样，各个浏览器对于页面的解释呈视也不尽相同，比如IE在很多情况下就与FF存在3px的差距，对于这些差异性，就需要利用css&nbsp;的hack来进行调整，当然在没有必要的情况下，最好不要写hack来进行调整，避免因为hack而导致页面出现问题。</span><br><br></div><p>1、&nbsp;IE6、IE7、Firefox之间的兼容写法：<br><br>写法一：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">IE都能识别*;标准浏览器(如FF)不能识别*；   
+IE6能识别*，但不能识别 !important,   
+IE7能识别*，也能识别!important;   
+FF不能识别*，但能识别!important;   
+根据上述表达，同一类/ID下的CSS 　hack可写为：   
+.searchInput {   
+background-color:#333;/*三者皆可*/   
+*background-color:#666　!important; /*仅IE7*/   
+*background-color:#999; /*仅IE6及IE6以下*/   
+}  
+</code></pre><p>一般三者的书写顺序为：FF、IE7、IE6.</p><p><br><br>写法二：<br><br>IE6可识别“_”，而IE7及FF皆不能识别，所以当只针对IE6与IE7及FF之间的区别时，可这样书写：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">.searchInput {   
+background-color:#333;/*通用*/   
+_background-color:#666;/*仅IE6可识别*/   
+}  
+</code></pre><p><br></p><p>写法三：</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">*+html 与 *html 是IE特有的标签, Firefox 暂不支持。   
+.searchInput {background-color:#333;}   
+*html .searchInput {background-color:#666;}/*仅IE6*/   
+*+html .searchInput {background-color:#555;}/*仅IE7*/  
+</code></pre><p><br></p><p>屏蔽IE浏览器：<br><br>select是选择符，根据情况更换。第二句是MAC上safari浏览器独有的。</p><div><div><br></div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml">*:lang(zh) select {font:12px  !important;} /*FF的专用*/   
+select:empty {font:12px  !important;} /*safari可见*/  
+</code></pre><p><br></p><p>IE6可识别：<br><br>这里主要是通过CSS注释分开一个属性与值，注释在冒号前。</p><p><br></p><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">select { display /*IE6不识别*/:none;}
+</code></pre><p><br></p><p>IE的if条件hack写法：<br><br>所有的IE可识别：</p><p><br></p><div><div>XML/HTML代码</div></div><div><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+只有IE5.0可以识别:   
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">5.0</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE 5.0 <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+IE5.0包换IE5.5都可以识别:   
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">gt</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">5.0</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE 5.0+ <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+仅IE6可识别:   
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">lt</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">6</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE 6- <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+IE6以及IE6以下的IE5.x都可识别:   
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">gte</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">6</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE 6/+ <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+仅IE7可识别:   
+<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">!–[if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">lte</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">IE</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">7</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]&gt;</span></span></span></span></span></span></span> Only IE 7/- <span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span></span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">![end</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span></span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">]–&gt;</span></span></span></span></span></span></span>  
+</code></pre><br></div><span>2、清除浮动：</span><br><br></div><p>在Firefox中，当子级都为浮动时，那么父级的高度就无法完全的包住整个子级，那么这时用这个清除浮动的HACK来对父级做一次定义，那么就可以解决这个问题。</p><p><br></p><div></div><div><div>XML/HTML代码</div></div><pre><code class="html hljs xml">select:after {   
+content:”.”;   
+display:block;   
+height:0;   
+clear:both;   
+visibility:hidden;   
+}</code></pre></div></div></div></div></div></div></div></div></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="css-hack.html" title="上一篇：你想知道的css hack知识全都帮你整理好了">你想知道的css hack知识全都帮你整理好了</a></div>
+<div class="next-link"><a href="css-basics.html" title="下一篇：初学者必读：CSS是什么？DIV+CSS又是什么？">初学者必读：CSS是什么？DIV+CSS又是什么？</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="css-rwd-intro.html" title="响应式 Web 设计 &#8211; 介绍">响应式 Web 设计 &#8211; 介绍</a></li>
+<li><a href="css-navbar.html" title="CSS 导航栏">CSS 导航栏</a></li>
+<li><a href="css-dropdowns.html" title="CSS 下拉菜单">CSS 下拉菜单</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="css-hack.html" title="上一篇：你想知道的css hack知识全都帮你整理好了" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="css-basics.html" title="下一篇：初学者必读：CSS是什么？DIV+CSS又是什么？" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'css-div',
+pename:'css',
+ismenu:'0',
+ktitle:'DIV+CSS布局基本流程及实例介绍',
+ktype:'kn',
+original:'0',
+uid:'0',
+};
+var book = {
+pename:'css',
+bookname:'CSS教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "83661";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '51';
+var aid   = '83844';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/css/css-div.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:45:57 GMT -->
+</html>

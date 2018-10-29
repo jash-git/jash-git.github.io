@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/css/css-selector.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:44:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>看这一篇就够了,css选择器知识汇总_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="看这一篇就够了,css选择器知识汇总" />
+<meta name="description" content="对大多技术人员来说都比较熟悉CSS选择器，举一例子来说，假设给一个p标签增加一个类（class），可是执行后该class中的有些属性并没有起作用。通过Firebug查看，发现没有起作用的属性被覆盖了，这个时候突然意识到了CSS选择器的优先级问题。严格来讲，选择器的种类可以分为三种：标签名选择器、类选择器和ID选择器。_来自CSS教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'css-selector.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/css" title="CSS教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="CSS教程" src="../attachments/cover/cover_css7d90.png?t=1536043578"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>CSS教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="css问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">css问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="83662" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="1fi5zf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 教程">CSS 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-tutorial.html" title="CSS 教程导读">CSS 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-intro.html" title="CSS 简介">CSS 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-syntax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-syntax.html" title="CSS 语法">CSS 语法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-id-class">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-id-class.html" title="CSS Id 和 Class选择器">CSS Id 和 Class选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-howto">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-howto.html" title="CSS 创建">CSS 创建</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-background">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-background.html" title="CSS Backgrounds(背景)">CSS Backgrounds(背景)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-text">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-text.html" title="CSS Text(文本)">CSS Text(文本)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-font">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-font.html" title="CSS Fonts(字体)">CSS Fonts(字体)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-link">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-link.html" title="CSS 链接(link)">CSS 链接(link)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-list">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-list.html" title="CSS 列表样式(ul)">CSS 列表样式(ul)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-table">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-table.html" title="CSS Table(表格)">CSS Table(表格)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-boxmodel">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-boxmodel.html" title="CSS 盒子模型">CSS 盒子模型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-border">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-border.html" title="CSS Border(边框)">CSS Border(边框)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-outline">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-outline.html" title="CSS 轮廓（outline）属性">CSS 轮廓（outline）属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-margin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-margin.html" title="CSS Margin(外边距)">CSS Margin(外边距)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-padding">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-padding.html" title="CSS Padding（填充）">CSS Padding（填充）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-grouping-nesting">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-grouping-nesting.html" title="CSS 分组和嵌套">CSS 分组和嵌套</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-dimension">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-dimension.html" title="CSS 尺寸 (Dimension)">CSS 尺寸 (Dimension)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-display-visibility">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-display-visibility.html" title="CSS Display(显示) 与 Visibility（可见性）">CSS Display(显示) 与 Visibility（可见性）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-positioning">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-positioning.html" title="CSS Positioning(定位)">CSS Positioning(定位)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-float">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-float.html" title="CSS Float（浮动）">CSS Float（浮动）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-align">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-align.html" title="CSS 水平对齐(Horizontal Align)">CSS 水平对齐(Horizontal Align)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-combinators">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-combinators.html" title="CSS 组合选择符">CSS 组合选择符</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pseudo-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pseudo-classes.html" title="CSS 伪类">CSS 伪类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pseudo-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pseudo-elements.html" title="CSS 伪元素">CSS 伪元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="31tvyfm8">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="31tvyfm8.html" title="CSS 导航栏">CSS 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="xohvqfmc">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="xohvqfmc.html" title="CSS 下拉菜单">CSS 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-gallery">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-gallery.html" title="CSS 图片廊">CSS 图片廊</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-transparency">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-transparency.html" title="CSS 图像透明/不透明">CSS 图像透明/不透明</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-image-sprites">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-image-sprites.html" title="CSS 图像拼合技术">CSS 图像拼合技术</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-mediatypes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-mediatypes.html" title="CSS 媒体类型">CSS 媒体类型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-attribute-selectors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-attribute-selectors.html" title="CSS 属性选择器">CSS 属性选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-summary">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-summary.html" title="CSS 总结">CSS 总结</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-examples.html" title="CSS 实例">CSS 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="zkgy6f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 响应式设计">CSS 响应式设计</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-rwd-viewport">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-viewport.html" title="响应式 Web 设计 – Viewport">响应式 Web 设计 – Viewport</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-grid">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-grid.html" title="响应式 Web 设计 – 网格视图">响应式 Web 设计 – 网格视图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-mediaqueries">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-mediaqueries.html" title="响应式 Web 设计 &#8211; 媒体查询">响应式 Web 设计 &#8211; 媒体查询</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-images.html" title="响应式 Web 设计 – 图片">响应式 Web 设计 – 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-videos">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-videos.html" title="响应式 Web 设计 &#8211; 视频(Video)">响应式 Web 设计 &#8211; 视频(Video)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-rwd-frameworks">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-rwd-frameworks.html" title="响应式 Web 设计 – 框架">响应式 Web 设计 – 框架</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="auqg1214">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS实例">CSS实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-codecamp.html" title="CSS 编程实战闯关">CSS 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-csse_examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-csse_examples.html" title="CSS 实例">CSS 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-css_quiz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-css_quiz.html" title="CSS 测验">CSS 测验</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-t2w822zi">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 相关教程">CSS 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-wcz322wm">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="introduction2mci2080.html" title="CSS 入门教程">CSS 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="pf4u1sjx">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 拓展阅读">CSS 拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="css-selector">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-selector.html" title="看这一篇就够了,css选择器知识汇总">CSS 选择器汇总</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-center">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-center.html" title="学会这几种方法css居中很简单">CSS 居中布局方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-style">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-style.html" title="css样式就得这么写(css参考样式集合)">CSS 样式参考标准</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-transparent">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-transparent.html" title="CSS 透明度设置方法及常见问题解析">CSS 透明度设置方法及常见问题解析</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-hack">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-hack.html" title="你想知道的css hack知识全都帮你整理好了">CSS 浏览器兼容hack汇总</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-div">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-div.html" title="DIV+CSS布局基本流程及实例介绍">DIV+CSS布局基本流程及实例介绍</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-basics">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-basics.html" title="初学者必读：CSS是什么？DIV+CSS又是什么？">DIV+CSS初学必读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-layout">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-layout.html" title="CSS 布局的基础方法及css布局技巧">CSS 布局的基础方法及css布局技巧</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-center2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-center2.html" title="厉害了我的哥,css图片居中原来有这么多种方法">CSS 图片居中的多种方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-taobao">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-taobao.html" title="CSS 淘宝导航代码集合（附使用技巧）">CSS 淘宝导航代码集合（附使用技巧）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="u21y1t7g">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="u21y1t7g.html" title="CSS虚线实现方法及多种应用实例">CSS虚线实现方法及多种应用实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-scrollbar">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-scrollbar.html" title="CSS滚动条实现步骤及美化小技巧">CSS滚动条实现步骤及美化小技巧</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-navigation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-navigation.html" title="详细的css导航条实现代码及素材下载">详细的css导航条实现代码及素材下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-text-justify">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-text-justify.html" title="CSS两端对齐语法及代码实例教学">CSS两端对齐语法及代码实例教学</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-translucent">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-translucent.html" title="CSS半透明属性介绍及代码实例">CSS半透明属性介绍及代码实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-Load">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-Load.html" title="CSS加载失败的6个原因">CSS加载失败的6个原因</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-quote">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-quote.html" title="HTML引入CSS的常见方法及解析">HTML引入CSS的常见方法及解析</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-mouse">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-mouse.html" title="css鼠标样式语法及20种可选值（属性）">css鼠标样式语法及20种可选值（属性）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-sfrk2opy">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-sfrk2opy.html" title="四款好看实用的CSS表格样式分享">CSS表格样式分享</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="css-pf8o2oq1">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="css-pf8o2oq1.html" title="css与html的区别">css与html的区别</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(55525)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">34</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/css/css-selector" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>看这一篇就够了,css选择器知识汇总</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建， 最后一次修改&nbsp;<span>2016-11-08</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><p>对大多技术人员来说都比较熟悉CSS选择器，举一例子来说，假设<span>给一个p标签增加一个类（class），可是执行后该class中的有些属性并没有起作用。通过Firebug查看，发现没有起作用的属性被覆盖了，这个时候突然意识到了CSS选择器的优先级问题。<span>严格来讲，选择器的种类可以分为三种：标签名选择器、类选择器和ID选择器。<span>而所谓的后代选择器和群组选择器只不过是对前三种选择器的扩展应用。而在标签内写入style=""的方式，应该是CSS的一种引入方式，而不是选择器，因为根本就没有用到选择器。而一般人们将上面这几种方式结合在一起，所以就有了5种或6种选择器了。</span></span></span></p><p><span><span><br></span></span></p><div style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_161108/201611081520585048.png" style="line-height: 1.7; font-size: 13px;" alt="css选择器"></div><span><span><br></span><br></span><p>最基本的选择器是元素选择器(比如div),ID选择器(比如#header)还有类选择器(比如.tweet)。</p><span style="line-height: 1.7; font-size: 13px;">一些的不常见的选择器包括伪类选择器(:hover)，很多复杂的CSS3和正则选择器，比如：first-child，class ^= “grid-”。</span><span style="line-height: 1.7; font-size: 13px;">CSS选择器具有高效的继承性，引用Steve Souders的话， CSS选择器效率从高到低的排序如下：</span><div><span><br></span></div><p>1.id选择器（#myid）</p><br><p>2.类选择器（.myclassname）</p><br><p>3.标签选择器（div,h1,p）</p><br><p>4.相邻选择器（h1+p）</p><br><p>5.子选择器（ul &gt; li）</p><br><p>6.后代选择器（li a）</p><br><p>7.通配符选择器（*）</p><br><p>8.属性选择器（a[rel="external"]）</p><br><p>9.伪类选择器（a:hover, li:nth-child）</p><p><br></p><p><span>纵使ID选择器很快、高效，但是它也仅仅如此。从Steve Souders的CSS Test我们可以看出ID选择器和类选择器在速度上的差异很小很小。</span><br><br><span>在Windows系统上的Firefox 6上，我测得了一个简单类选择器的（reflow figure）重绘速度为10.9ms，而ID选择器为12.5ms，所以事实上ID比类选择器重绘要慢一点点。</span><br><br><span>ID选择器和类选择器在速度上的差异基本上没有关系。</span><br><br><span>在一个标签选择器(a)的测试上显示，它比类或ID选择器的速度慢了很多。在一个嵌套很深的后代选择器的测试上，显示数据为440左右！从这里我们可以看出ID/类选择器 和 元素/后代选择器中间的差异较大，但是相互之间的差异较小。</span><br></p><p><span><br></span></p><h2>选择器的优先级是怎么规定的呢？</h2><div><span>一般而言，选择器越特殊，它的优先级越高。也就是选择器指向的越准确，它的优先级就越高。通常我们用1表示标签名选择器的优先级，用10表示类选择器的优先级，用100标示ID选择器的优先级。比如上例当中 .polaris span {color:red;}的选择器优先级是 10 + 1 也就是11；而 .polaris 的优先级是10；浏览器自然会显示红色的字。理解了这个道理之后下面的优先级计算自是易如反掌：</span></div><div><span></span><pre><code class="html hljs xml">div.test1 .span var 优先级 1+10 +10 +1
+span#xxx .songs li 优先级1+100 + 10 + 1<br></code><p>#xxx li 优先级 100 + 1
+</p></pre><span>对于什么情况下使用什么选择器，用不同选择器的原则是：</span></div><div><span><span><br></span></span></div><div><span><span>1、准确的选到要控制的标签；</span></span></div><div><span><span><br></span></span></div><div><span><span>2、使用最合理优先级的选择器；</span></span></div><div><span><span><br></span></span></div><div><span><span>3、HTML和CSS代码尽量简洁美观。通常：</span></span></div><div><span><span><br></span></span></div><div><span></span><p>①最常用的选择器是类选择器。</p><p><br></p><p>②li、td、dd等经常大量连续出现，并且样式相同或者相类似的标签，我们采用类选择器跟标签名选择器结合的后代选择器 .xx li/td/dd {} 的方式选择。</p><p><br></p><p>③极少的情况下会用ID选择器，当然很多前端开发人员喜欢header，footer，banner，conntent设置成ID选择器的，因为相同的样式在一个页面里不可能有第二次。</p><p><br></p><p>在这里不得不提使用在标签内引入CSS的方式来写CSS，即：</p><pre><code class="html hljs xml"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;</span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"> </span></span></span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">style</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">=</span></span></span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"color:red"</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span>polaris<span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span></span></span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span></span></span></span></span><span class="hljs-tag"><span class="hljs-tag"><span class="hljs-tag">&gt;</span></span></span></span> 
+</code></pre><span>这时候的优先级是最高的。我们给它的优先级是1000，这种写法不推荐使用，特别是对新手来说。这也完全违背了内容和显示分离的思想。DIV+CSS的优点也不能再有任何体现。</span><br><hr></div><h2>怎么提升CSS选择器性能？</h2><div><strong>1、避免使用通用选择器</strong><br></div><div><pre><code class="hljs css"><span><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class">.content</span></span></span></span></span></span>  <span>{<span><span><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute">color</span></span></span></span></span></span>:<span> red</span></span>;}</span></code></pre><p>浏览器匹配文档中所有的元素后分别向上逐级匹配 class 为 content 的元素，直到文档的根节点。因此其匹配开销是非常大的，所以应避免使用关键选择器是通配选择器的情况。</p><p><br></p><p><strong>2、避免使用标签或 class 选择器限制 id 选择器</strong></p><pre><code class="hljs nginx"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute">BAD</span></span></span></span></span>
+button<span><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment">#backButton {…}</span></span></span></span></span></span>
+BAD
+<span>.menu</span>-left<span><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment">#newMenuIcon {…}</span></span></span></span></span></span>
+GOOD
+<span><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment">#backButton {…}</span></span></span></span></span></span>
+GOOD
+<span><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment">#newMenuIcon {…}</span></span></span></span></span></span></code></pre><p><strong>3、避免使用标签限制 class 选择器</strong></p><pre><code class="hljs">BAD
+treecell.indented <span>{…}</span>
+GOOD
+.treecell-indented <span>{…}</span>
+BEST
+.hierarchy-deep <span>{…}</span></code></pre><p><strong>4、避免使用多层标签选择器。使用 class 选择器替换，减少css查找</strong></p><pre><code class="hljs javascript">BAD
+treeitem[mailfolder=<span><span class="hljs-string"><span class="hljs-string"><span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"true"</span></span></span></span></span></span>] &gt; treerow &gt; treecell <span>{…}</span>
+GOOD
+.treecell-mailfolder <span>{…}</span></code></pre><p><strong>5、避免使用子选择器</strong></p><pre><code class="hljs">BAD
+treehead treerow treecell <span>{…}</span>
+BETTER, BUT STILL BAD 
+treehead &gt; treerow &gt; treecell <span>{…}</span>
+GOOD
+.treecell-header <span>{…}</span></code></pre><p><strong>6、使用继承</strong></p><pre><code class="hljs css"><span><span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag">BAD</span></span></span></span></span></span> 
+<span><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id">#bookmarkMenuItem</span></span></span></span></span></span> &gt; <span><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class"><span class="hljs-selector-class">.menu-left</span></span></span></span></span></span> <span>{ <span><span><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute">list-style-image</span></span></span></span></span></span>:<span> <span><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in">url</span></span></span></span></span></span>(blah) }
+<span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag"><span class="hljs-selector-tag">GOOD</span></span></span></span></span>
+<span><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id">#b</span></span></span></span></span></span><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id"><span class="hljs-selector-id">ookmarkMenuItem</span></span></span></span></span> { <span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute"><span class="hljs-attribute">list-style-image</span></span></span></span></span>: <span><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in"><span class="hljs-built_in">url</span></span></span></span></span></span>(blah) }</span></span></span></code></pre><hr></div><div><h2><strong>简洁、高效的CSS</strong></h2><span>所谓高效的CSS就是让浏览器在查找style匹配的元素的时候尽量进行少的查找，下面列出一些我们常见的写CSS犯一些低效错误：</span><br><p style="text-align: center;"><br></p><p style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_161108/201611081521457105.png" alt="高效的CSS"><br></p><p style="text-align: center;"><br></p><p><strong>不要在ID选择器前使用标签名</strong></p><p>一般写法：DIV#divBox</p><p>更好写法：#divBox</p><p>解释： 因为ID选择器是唯一的，加上div反而增加不必要的匹配。</p><p><br></p><p><strong>不要再class选择器前使用标签名</strong></p><p>一般写法：span.red</p><p>更好写法：.red</p><p>解释：同第一条，但如果你定义了多个.red，而且在不同的元素下是样式不一样，则不能去掉，比如你css文件中定义如下：</p><pre><ol><li><span>p.red{color:red;}  </span></li><li><span>span.red{color:#ff00ff} </span></li></ol></pre><p>如果是这样定义的就不要去掉，去掉后就会混淆，不过建议最好不要这样写</p><p><br></p><p><strong>尽量少使用层级关系</strong></p><p>一般写法：#divBox p .red{color:red;}</p><p>更好写法：.red{..}</p><p><br></p><p><strong>使用class代替层级关系</strong></p><p>一般写法：#divBox ul li a{display:block;}</p><p>更好写法：.block{display:block;}</p><hr></div><h2>必须记住的30类CSS选择器</h2><div>大概大家都知道“id”,“class”以及“descendant”选择器，并且整体都在使用它们，那么你正在错误拥有更大级别的灵活性的选择方式。下面提到的大部分选择器都是在CSS3标准下的，所以它们只能在相应最新版本的浏览器中才能生效，你完全应该把这些都记在你聪明的脑袋里面。<br></div><div><br></div><div><h2>1.*</h2><pre> {
+  margin: 0;
+  padding: 0;
+}</pre><p>在我们看比较高级的选择器之前，应该认识下这个众所周知的清空选择器。星号呢会将页面上所有每一个元素都选到。许多开发者都用它来清空margin和padding。当然你在练习的时候使用这个没问题，但是我不建议在生产环境中使用它。它会给浏览器凭添许多不必要的东西。*也可以用来选择某元素的所有子元素。</p><pre>#container * {
+  border: 1px solid black;
+}
+</pre><p>它会选中#container下的所有元素。当然，我还是不建议你去使用它，如果可能的话。</p><p>兼容性<br></p><ul><li>IE6+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>2. #X</h2><pre>#container {
+   width: 960px;
+   margin: auto;
+}
+</pre><p>在选择器中使用#可以用id来定位某个元素。大家通常都会这么使用，然后使用的时候大家还是得相当小心的。需要问自己一下：我是不是必须要给这个元素来赋值个id来定位它呢？</p><p>id选择器是很严格的并且你没办法去复用它。如果可能的话，首先试试用标签名字，HTML5中的新元素，或者是伪类。</p><p>兼容性<br></p><ul><li>IE6+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>3. .X</h2><pre>.error {
+  color: red;
+}
+</pre><p>这是个class选择器。它跟id选择器不同的是，它可以定位多个元素。当你想对多个元素进行样式修饰的时候就可以使用class。当你要对某个特定的元素进行修饰那就是用id来定位它。</p><p>兼容性<br></p><ul><li>IE6+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>4. X Y</h2><pre>li a {
+  text-decoration: none;
+}
+</pre><p>下一个常用的就是descendant选择器。如果你想更加具体的去定位元素，你可以使用它。例如，假如，你不需要定位所有的a元素，而只需要定位li标签下的a标签？这时候你就需要使用descendant选择器了。</p><p>专家提示：如果你的选择器像X Y Z A B.error这样，那你就错了。时刻都提醒自己，是否真的需要对那么多元素修饰。</p><p>兼容性<br></p><ul><li>IE6+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>5. X</h2><pre>a { color: red; }
+ul { margin-left: 0; }
+</pre><p>如果你想定位页面上所有的某标签，不是通过id或者是’class’，这简单，直接使用类型选择器。</p><p>兼容性<br></p><ul><li>IE6+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>6. X:visited and X:link</h2><pre>a:link {color:red;}
+a:visited {color: purple;}
+</pre><p>我们使用:link这个伪类来定位所有还没有被访问过的链接。</p><p>另外，我们也使用:visited来定位所有已经被访问过的链接。</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>7. X+Y</h2><pre>ul + p {
+   color: red;
+}
+</pre><p>这个叫相邻选择器。它指挥选中指定元素的直接后继元素。上面那个例子就是选中了所有ul标签后面的第一段，并将它们的颜色都设置为红色。</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>8. X&gt;Y</h2><pre>div#container &gt; ul {
+  border: 1px solid black;
+}
+</pre><p>X Y和X &gt; Y的差别就是后面这个指挥选择它的直接子元素。看下面的例子：</p><pre>&lt;div id="container"&gt;
+   &lt;ul&gt;
+      &lt;li&gt; List Item
+        &lt;ul&gt;
+           &lt;li&gt; Child &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt; List Item &lt;/li&gt;
+      &lt;li&gt; List Item &lt;/li&gt;
+      &lt;li&gt; List Item &lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+</pre><p>#container &gt; ul只会选中id为’container’的div下的所有直接ul元素。它不会定位到如第一个li下的ul元素。</p><p>由于某些原因，使用子节点组合选择器会在性能上有许多的优势。事实上，当在javascript中使用css选择器时候是强烈建议这么做的。</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>9. X ~ Y</h2><pre>ul ~ p {
+  color: red;
+}
+</pre><p>兄弟节点组合选择器跟X+Y很相似，然后它又不是那么的严格。ul + p选择器只会选择紧挨跟着指定元素的那些元素。而这个选择器，会选择跟在目标元素后面的所有匹配的元素。</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>10. X[title]</h2><pre>a[title] {
+  color: green;
+}
+</pre><p>这个叫属性选择器，上面的这个例子中，只会选择有title属性的元素。那些没有此属性的锚点标签将不会被这个代码修饰。那再想想如果你想更加具体的去筛选？那…</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>11. X[href="foo"]</h2><pre>a[href="http://strongme.cn"] {
+  color: #1f6053; /* nettuts green */
+}
+</pre><p>上面这片代码将会把href属性值为<a href="http://strongme.cn/" target="_blank">http://strongme.cn</a>的锚点标签设置为绿色，而其他标签则不受影响。</p><blockquote>注意我们将值用双引号括起来了。那么在使用Javascript的时候也要使用双引号括起来。可以的话，尽量使用标准的CSS3选择器。</blockquote><p>这样可以用了，但是还是有点死，如果不是这个链接，而是类似的链接，那么这时就得用正则表达式了。</p><p>兼容性<br></p><ul><li>IE7+</li><li>Firefox</li><li>Chrome</li><li>Safari</li><li>Opera</li></ul><h2>12. X[href="strongme"]</h2><pre>a[href="strongme"] {
+  color: #1f6053;
+}</pre><p>Tada,正是我们需要的，这样，就指定了<code>strongme</code>这个值必须出现在锚点标签的<code>href</code>属性中，不管是<code>strongme.cn</code>还是<code>strongme.com</code>还是<code>www.strongme.cn</code>都可以被选中。<br>但是记得这是个很宽泛的表达方式。如果锚点标签指向的不是<code>strongme</code>相关的站点，如果要更加具体的限制的话，那就使用<code>^</code>和<code>$</code>，分别表示字符串的开始和结束。</p><p>兼容性</p><ul><li><p>IE7+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>13. X[href^="href"]</h2><pre>a[href^="http"] {
+   background: url(path/to/external/icon.png) no-repeat;
+   padding-left: 10px;
+}</pre><p>大家肯定好奇过，有些站点的锚点标签旁边会有一个外链图标，我也相信大家肯定见过这种情况。这样的设计会很明确的告诉你会跳转到别的网站。<br>用克拉符号就可以轻易做到。它通常使用在正则表达式中标识开头。如果我们想定位锚点属性<code>href</code>中以<code>http</code>开头的标签，那我们就可以用与上面相似的代码。</p><p><span>注意我们没有搜索<a href="http://xn--https-ni1hokp25avtc59jd9nwnm4ju9tu027afr7d2lzaslbz688iga://。" target="_blank">http://，那是没必要的，因为它都不包含https://。</a></span></p><p>那如果我们想找到所有指向一张图片的锚点标签呢？那我们来使用下<code>&</code>字符。</p><p><span>兼容性</span></p><ul><li><p>IE7+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>14. X[href$=".jpg"]</h2><pre>a[href$=".jpg"] {
+  color: red;
+}</pre><p>这次我们又使用了正则表达式<code>$</code>，表示字符串的结尾处。这段代码的意思就是去搜索所有的图片链接，或者其它链接是以<code>.jpg</code>结尾的。但是记住这种写法是不会对<code>gifs</code>和<code>pngs</code>起作用的。</p><p><span>兼容性</span></p><ul><li><p>IE7+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>15. X[data-*="foo"]</h2><pre>a[data-filetype="image"] {
+   color: red;
+}</pre><p>在回到第8条，我们如何把所有的图片类型都选中呢<code>png</code>,<code>jpeg</code>,’jpg’,'gif’？我们可以使用多选择器。看下面：</p><pre>a[href$=".jpg"],
+a[href$=".jpeg"],
+a[href$=".png"],
+a[href$=".gif"] {
+   color: red;
+}</pre><p>但是这样写着很蛋疼啊，而且效率会很低。另外一个办法就是使用自定义属性。我们可以给每个锚点加个属性<code>data-filetype</code>指定这个链接指向的图片类型。<br>[html]<br>Image Link 那有了这个钩子，我们就可以去用标准的办法只去选定文件类型为<code>image</code>的锚点了。<br></p><pre>a[data-filetype="image"] {
+   color: red;
+}</pre><p>兼容性<br></p><ul><li><p>IE7+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>16. X[foo~="bar"]</h2><pre>a[data-info~="external"] {
+   color: red;
+}
+<p>a[data-info~="image"] {
+   border: 1px solid black;
+}</p></pre><p>这个我想会让你的小伙伴惊呼妙极了。很少有人知道这个技巧。这个<code>~</code>符号可以定位那些某属性值是空格分隔多值的标签。<br>继续使用第15条那个例子，我们可以设置一个<code>data-info</code>属性，它可以用来设置任何我们需要的空格分隔的值。这个例子我们将指示它们为外部连接和图片链接。</p><pre><a href="path/to/image.html" data-info="external image"> Click Me, Fool </a></pre><p>给这些元素设置了这个标志之后，我们就可以使用<code>~</code>来定位这些标签了。</p><pre>/ Target data-info attr that contains the value "external" /
+a[data-info~="external"] {
+   color: red;
+}
+<p>/ And which contain the value "image" /
+a[data-info~="image"] {
+  border: 1px solid black;
+}</p></pre><p>## 17. X:checked</p><pre>input[type=radio]:checked {
+   border: 1px solid black;
+}</pre><p>上面这个伪类写法可以定位那些被选中的单选框和多选框，就是这么简单。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>18. X:after</h2><p><code>before</code>和<code>after</code>这俩伪类。好像每天大家都能找到使用它们的创造性方法。它们会在被选中的标签周围生成一些内容。<br>当使用<code>.clear-fix</code>技巧时许多属性都是第一次被使用到里面的。</p><pre>.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+<p>.clearfix { 
+   display: inline-block; 
+   _height: 1%;
+}</p></pre><p>上面这段代码会在目标标签后面补上一段空白，然后将它清除。这个方法你一定得放你的聚宝盆里面。特别是当<code>overflow:hidden</code>方法不顶用的时候，这招就特别管用了。<br><br></p><p><span>根据CSS3标准规定，可以使用两个冒号<code>::</code>。然后为了兼容性，浏览器也会接受一个双引号的写法。其实在这个情况下，用一个冒号还是比较明智的。</span></p><p><span>兼容性</span></p><ul><li><p>IE8+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>19. X:hover</h2><pre>div:hover {
+  background: #e3e3e3;
+}</pre><p>不用说，大家肯定知道它。官方的说法是<code>user action pseudo class</code>.听起来有点儿迷糊，其实还好。如果想在用户鼠标飘过的地方涂点儿彩，那这个伪类写法可以办到。</p><p><span>注意旧版本的IE只会对加在锚点<code>a</code>标签上的<code>:hover</code>伪类起作用。</span></p><p>通常大家在鼠标飘过锚点链接时候加下边框的时候用到它。</p><pre>a:hover {
+ border-bottom: 1px solid black;
+}</pre><p><span>专家提示：border-bottom:1px solid black;比text-decoration:underline;要好看很多。</span></p><p><span>兼容性</span></p><ul><li><p>IE6+(IE6只能在锚点标签上起作用)</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>20. X:not(selector)</h2><pre>div:not(#container) {
+   color: blue;
+}</pre><p><code>取反</code>伪类是相当有用的，假设我们要把除<code>id</code>为<code>container</code>之外的所有<code>div</code>标签都选中。那上面那么代码就可以做到。</p><p>或者说我想选中所有出段落标签之外的所有标签。</p><pre>:not(p) {
+  color: green;
+}</pre><p>兼容性<br></p><ul><li><p>IE9+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>21. X::pseudoElement</h2><pre>p::first-line {
+  font-weight: bold;
+  font-size:1.2em;
+}</pre><p>我们可以使用<code>::</code>来选中某标签的部分内容，如第一段，或者是第一个字没有。但是记得必须使用在块式标签上才起作用。</p><p>伪标签是由两个冒号 :: 组成的。</p><p><span>定位第一个字</span></p><pre>p::first-letter {
+   float: left;
+   font-size: 2em;
+   font-weight: bold;
+   font-family: cursive;
+   padding-right: 2px;
+}</pre><p>上面这段代码会找到页面上所有段落，并且指定为每一段的第一个字。</p><p>它通常在一些新闻报刊内容的重点突出会使用到。</p><p>定位某段的第一行</p><pre>p::first-line {
+   font-weight: bold;
+   font-size: 1.2em;
+}</pre><p>跟<code>::first-line</code>相似，会选中段落的第一行 。</p><p>为了兼容性，之前旧版浏览器也会兼容单冒号的写法，例如<code>:first-line</code>,<code>:first-letter</code>,<code>:before</code>,<code>:after</code>.但是这个兼容对新介绍的特性不起作用。</p><p>兼容性</p><ul><li><p>IE6+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>22. X:nth-child(n)</h2><pre>li:nth-child(3) {
+   color: red;
+}</pre><p>还记得我们面对如何取到推跌式标签的第几个元素是无处下手的时光么，有了<code>nth-child</code>那日子就一去不复返了。</p><p>请注意<code>nth-child</code>接受一个整形参数，然后它不是从0开始的。如果你想获取第二个元素那么你传的值就是<code>li:nth-child(2)</code>.</p><p>我们甚至可以获取到由变量名定义的个数个子标签。例如我们可以用<code>li:nth-child(4n)</code>去每隔3个元素获取一次标签。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li></ul><h2>23. X:nth-last-child(n)</h2><pre>li:nth-last-child(2) {
+   color: red;
+}</pre><p>假设你在一个<code>ul</code>标签中有N多的元素，而你只想获取最后三个元素，甚至是这样<code>li:nth-child(397)</code>，你可以用<code>nth-last-child</code>伪类去代替它。</p><p>这个技巧可以很正确的代替第16个TIP，不同的就是它是从结尾处开始的，倒回去的。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>24. X:nth-of-type(n)</h2><pre>ul:nth-of-type(3) {
+   border: 1px solid black;
+}</pre><p>曾几何时，我们不想去选择子节点，而是想根据元素的类型来进行选择。</p><p>想象一下有5个<code>ul</code>标签。如果你只想对其中的第三个进行修饰，而且你也不想使用<code>id</code>属性，那你就可以使用<code>nth-of-type(n)</code>伪类来实现了，上面的那个代码，只有第三个<code>ul</code>标签会被设置边框。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li></ul><h2>25. X:nth-last-of-type(n)</h2><pre>ul:nth-last-of-type(3) {
+   border: 1px solid black;
+}</pre><p>同样，也可以类似的使用<code>nth-last-of-type</code>来倒序的获取标签。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>26. X:first-child</h2><pre>ul li:first-child {
+   border-top: none;
+}</pre><p>这个结构性的伪类可以选择到第一个子标签，你会经常使用它来取出第一个和最后一个的边框。</p><p>假设有个列表，每个标签都有上下边框，那么效果就是第一个和最后一个就会看起来有点奇怪。这时候就可以使用这个伪类来处理这种情况了。</p><p><span>兼容性</span></p><ul><li><p>IE7+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>27. X:last-child</h2><pre>ul &gt; li:last-child {
+   color: green;
+}</pre><p>跟<code>first-child</code>相反，<code>last-child</code>取的是父标签的最后一个标签。</p><p><span>例如</span><br><span>标签</span></p><pre><ul>
+   <li> List Item </li>
+   <li> List Item </li>
+   <li> List Item </li>
+</ul></pre><p>这里没啥内容，就是一个了 List。</p><pre>ul {
+ width: 200px;
+ background: #292929;
+ color: white;
+ list-style: none;
+ padding-left: 0;
+}
+<p>li {
+ padding: 10px;
+ border-bottom: 1px solid black;
+ border-top: 1px solid #3c3c3c;
+}</p></pre><p>上面的代码将设置背景色，移除浏览器默认的内边距，为每个<code>li</code>设置边框以凸显一定的深度。</p><p style="text-align: center;"><img alt="背景色" src="../../7n.w3cschool.cn/attachments/day_161108/201611081507131880.jpg"></p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>28. X:only-child</h2><pre>div p:only-child {
+   color: red;
+}</pre><p>说实话，你会发现你几乎都不会用到这个伪类。然而，它是可用的，有会需要它的。</p><p>它允许你获取到那些只有一个子标签的父标签。就像上面那段代码，只有一个段落标签的<code>div</code>才被着色。</p><pre><div><p> My paragraph here. </p></div>
+<div>
+   <p> Two paragraphs total. </p>
+   <p> Two paragraphs total. </p>
+</div></pre><p>上面例子中，第二个<code>div</code>不会被选中。一旦第一个<code>div</code>有了多个子段落，那这个就不再起作用了。</p><p>兼容性</p><ul><li><p>IE9+</p></li><li><p>Firefox</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>29. X:only-of-type</h2><pre>li:only-of-type {
+   font-weight: bold;
+}</pre><p>结构性伪类可以用的很聪明。它会定位某标签只有一个子标签的目标。设想你想获取到只有一个子标签的<code>ul</code>标签？</p><p>使用<code>ul li</code>会选中所有<code>li</code>标签。这时候就要使用<code>only-of-type</code>了。</p><pre>ul &gt; li:only-of-type {
+   font-weight: bold;
+}</pre><p>兼容性<br></p><ul><li><p>IE9+</p></li><li><p>Firefox 3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><p><strong><br></strong></p><p><strong>30. X:first-of-type <code>first-of-type</code></strong></p><p>伪类可以选择指定标签的第一个兄弟标签。</p><p><span>测试</span></p><pre><div>
+   <p> My paragraph here. </p>
+   <ul>
+      <li> List Item 1 </li>
+      <li> List Item 2 </li>
+   </ul>
+
+   <ul>
+      <li> List Item 3 </li>
+      <li> List Item 4 </li>
+   </ul>
+</div></pre><p>来你把List Item 2取出来，如果你已经取出来或者是放弃了，来继续。</p><p>解决办法1<br>办法很多，我们看一些比较方便的。首先是<code>first-of-type</code>。</p><pre>ul:first-of-type &gt; li:nth-child(2) {
+   font-weight: bold;
+}</pre><p>找到第一个<code>ul</code>标签，然后找到直接子标签<code>li</code>，然后找到第二个子节点。<br><span>解决办法2</span><br>另一个解决办法就是邻近选择器。</p><pre>p + ul li:last-child {
+   font-weight: bold;
+}</pre><p>这种情况下，找到<code>p</code>下的直接<code>ul</code>标签，然后找到它的最后一个直接子标签。</p><p><span>解决办法3</span><br>我们可以随便玩耍这些选择器。来看看：</p><pre>ul:first-of-type li:nth-last-child(1) {
+   font-weight: bold;
+}</pre><p>先获取到页面上第一个<code>ul</code>标签，然后找到最后一个子标签。</p><p><span>兼容性</span></p><ul><li><p>IE9+</p></li><li><p>Firefox 3.5+</p></li><li><p>Chrome</p></li><li><p>Safari</p></li><li><p>Opera</p></li></ul><h2>结论</h2><p>如果你想向旧版本浏览器妥协，比如IE6，那你用这些新的选择器的时候还是得小心点。但别让IE6阻止你去学这些新的技能。那你就对自己太残忍了。记得多查查<a href="http://www.quirksmode.org/css/contents.html" target="_blank">兼容性列表</a>，或者使用<a href="http://code.google.com/p/ie7-js/" target="_blank">Dean Edward's excellent IE9.js script </a>来让你的浏览器具有这些特性。</p><p>第二个，使用向jQuery的时候，尽量使用原生的CSS3选择器。可能 活让你的代码跑的很快。这样选择器引擎就可以使用浏览器原生解析器，而不是选择器自己的。</p><br></div><div><span style="font-size: 13px; line-height: 1.7;"></span></div><p><br></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="pf4u1sjx.html" title="上一篇：CSS 拓展阅读">CSS 拓展阅读</a></div>
+<div class="next-link"><a href="css-center.html" title="下一篇：学会这几种方法css居中很简单">学会这几种方法css居中很简单</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="css-rwd-intro.html" title="响应式 Web 设计 &#8211; 介绍">响应式 Web 设计 &#8211; 介绍</a></li>
+<li><a href="css-navbar.html" title="CSS 导航栏">CSS 导航栏</a></li>
+<li><a href="css-dropdowns.html" title="CSS 下拉菜单">CSS 下拉菜单</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="pf4u1sjx.html" title="上一篇：CSS 拓展阅读" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="css-center.html" title="下一篇：学会这几种方法css居中很简单" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'css-selector',
+pename:'css',
+ismenu:'0',
+ktitle:'看这一篇就够了,css选择器知识汇总',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'css',
+bookname:'CSS教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "83661";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '51';
+var aid   = '83662';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/css/css-selector.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:45:10 GMT -->
+</html>

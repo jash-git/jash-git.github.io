@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/css/html-css-colors.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:47:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>CSS 颜色_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="CSS 颜色" />
+<meta name="description" content="CSS 颜色使用CSS时，您可以指定不同方式范围内的颜色。我们可以使用预定义的颜色名称。或者我们可以为每个红色，绿色和蓝色组件使用十进制或十六进制值。十进制值由逗号分隔，十六进制值为通常以＃为前缀，如 #ffffff ，表示白色。下表具有一些预定义的颜色名称及其十进制和十六进制等效值。颜色名称十六进_来自CSS教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'html-css-colors.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/css" title="CSS教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="CSS教程" src="../attachments/cover/cover_css7d90.png?t=1536043578"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>CSS教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="css问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">css问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="93462" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="css-2ysh2041">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 介绍">CSS 介绍</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="introduction2mci2080">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="introduction2mci2080.html" title="CSS 简介">CSS 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-syntax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-syntax.html" title="CSS 语法">CSS 语法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-comments">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-comments.html" title="CSS 注释">CSS 注释</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-inclusion">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-inclusion.html" title="CSS 包含">CSS 包含</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-character-encoding">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-character-encoding.html" title="CSS 字符编码">CSS 字符编码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-styles-cascade">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-styles-cascade.html" title="CSS 样式级联">CSS 样式级联</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-id3m2045">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 值">CSS 值</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-colors">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-colors.html" title="CSS 颜色">CSS 颜色</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-lengths">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-lengths.html" title="CSS 长度">CSS 长度</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-values">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-values.html" title="CSS 值">CSS 值</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-o2ae204a">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 基本样式">CSS 基本样式</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-selector">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-selector.html" title="CSS 选择器">CSS 选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-background">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-background.html" title="CSS 背景">CSS 背景</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-text">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-text.html" title="CSS 文本">CSS 文本</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-font">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-font.html" title="CSS 字体">CSS 字体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-links">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-links.html" title="CSS 链接">CSS 链接</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-lists">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-lists.html" title="CSS 列表">CSS 列表</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="table2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="table2.html" title="CSS 表格">CSS 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-kqte204i">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 盒模型">CSS 盒模型</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-box-model">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-box-model.html" title="CSS 盒模型">CSS 盒模型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-border">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-border.html" title="CSS 边框">CSS 边框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-outline">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-outline.html" title="CSS Outline轮廓">CSS Outline轮廓</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-margin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-margin.html" title="CSS Margin外边距">CSS Margin外边距</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-padding">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-padding.html" title="CSS Padding填充">CSS Padding填充</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-size">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-size.html" title="CSS Size尺寸">CSS Size尺寸</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-lvih204m">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 布局">CSS 布局</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-display">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-display.html" title="CSS display显示">CSS display显示</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-position">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-position.html" title="CSS Position定位">CSS Position定位</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-float">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-float.html" title="CSS Float浮动">CSS Float浮动</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-23st204v">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS 进阶">CSS 进阶</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css-pseudo-class">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-pseudo-class.html" title="CSS 伪类">CSS 伪类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css-media-type">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-media-type.html" title="CSS 媒体类型">CSS 媒体类型</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="css-plvk204s">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="CSS3 教程">CSS3 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="html-css3-border">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-border.html" title="CSS3 边框">CSS3 边框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-backgrounds">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-backgrounds.html" title="CSS3 背景">CSS3 背景</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-gradients">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-gradients.html" title="CSS3 渐变">CSS3 渐变</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-text-effects">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-text-effects.html" title="CSS3 文本效果">CSS3 文本效果</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-web-fonts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-web-fonts.html" title="CSS3 Web字体">CSS3 Web字体</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-transforms">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-transforms.html" title="CSS3 2D变换">CSS3 2D变换</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-transitions">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-transitions.html" title="CSS3 过渡">CSS3 过渡</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-animation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-animation.html" title="CSS3 动画">CSS3 动画</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="html-css3-column-layout">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css3-column-layout.html" title="CSS3 列布局">CSS3 列布局</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(4139)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">6</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/css/html-css-colors" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>CSS 颜色</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>bjcl</span>&nbsp;创建，Loen 最后一次修改&nbsp;<span>2017-01-05</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><div class="row"><div class="col-lg-12"><h2>CSS 颜色</h2><p><span>使用CSS时，您可以指定不同方式范围内的颜色。</span></p><p trans_replace="0" trans="1"><span>我们可以使用预定义的颜色名称。或者我们可以为每个红色，绿色和蓝色组件使用十进制或十六进制值。</span></p><p trans_replace="0" trans="1">十进制值由逗号分隔，十六进制值为通常以＃为前缀，如<code> #ffffff </code>，表示白色。</p><p trans_replace="0" trans="1"><span>下表具有一些预定义的颜色名称及其十进制和十六进制等效值。</span></p><table class="table table-bordered table-striped          "><thead><tr><th trans_replace="0" trans="1">颜色名称</th><th trans_replace="0" trans="1">十六进制</th><th trans_replace="0" trans="1">十进制</th></tr></thead><tbody><tr><td style="background:black" trans="1">black</td><td trans="1">#000000</td><td trans="1">0,0,0</td></tr><tr><td style="background:green" trans="1">green</td><td trans="1">#008000</td><td trans="1">0,128,0</td></tr><tr><td style="background:silver" trans="1">silver</td><td trans="1">#C0C0C0</td><td trans="1">192,192,192</td></tr><tr><td style="background:lime" trans="1">lime</td><td trans="1">#00FF00</td><td trans="1">0,255,0</td></tr><tr><td style="background:gray" trans="1">gray</td><td trans="1">#808080</td><td trans="1">128,128,128</td></tr><tr><td style="background:olive" trans="1">olive</td><td trans="1">#808000</td><td trans="1">128,128,0</td></tr><tr><td style="background:white" trans="1">white</td><td trans="1">#FFFFFF</td><td trans="1">255,255,255</td></tr><tr><td style="background:yellow" trans="1">yellow</td><td trans="1">#FFFF00</td><td trans="1">255,255,0</td></tr><tr><td style="background:maroon" trans="1">maroon</td><td trans="1">#800000</td><td trans="1">128,0,0</td></tr><tr><td style="background:navy" trans="1">navy</td><td trans="1">#000080</td><td trans="1">0,0,128</td></tr><tr><td style="background:red" trans="1">red</td><td trans="1">#FF0000</td><td trans="1">255,0,0</td></tr><tr><td style="background:blue" trans="1">blue</td><td trans="1">#0000FF</td><td trans="1">0,0,255</td></tr><tr><td style="background:purple" trans="1">purple</td><td trans="1">#800080</td><td trans="1">128,0,128</td></tr><tr><td style="background:teal" trans="1">teal</td><td trans="1">#008080</td><td trans="1">0,128,128</td></tr><tr><td style="background:aqua" trans="1">aqua</td><td trans="1">#00FFFF</td><td trans="1">0,255,255</td></tr></tbody></table><p trans_replace="0" trans="1">这些被称为基本颜色名称。</p><p trans_replace="0" trans="1"><span>下表显示了可以使用的扩展灰度阴影。</span></p><table class="table table-bordered table-striped          "><thead><tr><th trans_replace="0" trans="1">颜色名称</th><th trans_replace="0" trans="1">十六进制</th><th trans_replace="0" trans="1">十进制</th></tr></thead><tbody><tr><td style="background:darkgray" trans="1">darkgray</td><td trans="1">#a9a9a9</td><td trans="1">169,169,169</td></tr><tr><td style="background:darkslategray" trans="1">darkslategray</td><td trans="1">#2f4f4f</td><td trans="1">47,79,79</td></tr><tr><td style="background:dimgray" trans="1">dimgray</td><td trans="1">#696969</td><td trans="1">105,105,105</td></tr><tr><td style="background:gray" trans="1">gray</td><td trans="1">#808080</td><td trans="1">128,128,128</td></tr><tr><td style="background:lightgray" trans="1">lightgray</td><td trans="1">#d3d3d3</td><td trans="1">211,211,211</td></tr><tr><td style="background:lightslategray" trans="1">lightslategray</td><td trans="1">#778899</td><td trans="1">119,136,153</td></tr><tr><td style="background:slategray" trans="1">slategray</td><td trans="1">#708090</td><td trans="1">112,128,144</td></tr></tbody></table><div><br></div><h2 id="RGB_value_short_form" trans_replace="0" trans="1">RGB值简写</h2><p trans_replace="0" trans="1"><span>对红色，绿色和蓝色分量使用十六进制值。每对都是十六进制符号，范围为00 - FF。</span></p><p trans_replace="0" trans="1"><span>十六进制值通常以＃作为前缀，如#ffffff，表示白色。 “纯”蓝色将被写入＃0000FF，“纯”红色被写入＃FF0000。</span></p><p trans_replace="0" trans="1"><code> #RGB </code><span>是上述六位数符号的较短形式。在此格式中，每个数字都被复制以获得等效的六位数值，例如＃F7C变为＃FF77CC。</span></p><pre lang="html" style="max-width: 100%;"><code class="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+body {
+    background-color: yellow;
+}
+
+div#one {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 5px;
+    float: left;
+    background-color: #000;
+}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="one"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><div><br></div><h2 id="Color_Function" trans_replace="0" trans="1">颜色函数</h2><p trans_replace="0" trans="1"><span>颜色名称和简单的十六进制值不是您可以指定颜色的唯一方法。</span></p><p trans_replace="0" trans="1"><span>有许多函数允许您选择颜色。</span></p><ul><li>rgb（r，g，b）使用RGB模型指定颜色。<br>示例：rgb（112，128，144）</li><li>rgba（r，g，b，a）使用RGB模型指定颜色，添加了alpha值以指定不透明度。 值为0是完全透明的; 值为1是完全不透明的。<br>示例：rgba（112，128，144，0.4）</li><li>hsl（h，s，l）使用色相，饱和度和亮度（HSL）模型指定颜色。<br>示例：hsl（120,100％，22％）</li><li>hsla（h，s，l，a）使用alpha值来指定不透明度。<br>示例：hsla（120,100％，22％，0.4）</li></ul><p trans_replace="0" trans="1"><code> rgb(rrr.rr％，ggg.gg％，bbb.bb％)</code><span>使用0％到100％范围内的RGB值，允许十进制值（例如75.5％）。因此，黑色的值将是rgb（0％，0％，0％），而蓝色将是rgb（0％，0％，100％）。</span></p><p trans_replace="0" trans="1">在<code> rgb(rrr，ggg，bbb)</code>中，<span>接受的值范围是0-255。范围是十六进制的00-FF的十进制等效值。在此格式中，绿色将为rgb（0,255,0），白色将表示为rgb（255,255,255）。</span></p><p trans_replace="0" trans="1"><span>下表列出了颜色名称，十六进制颜色值和rgb颜色值。</span></p><table class="table table-bordered table-striped          "><thead><tr><th trans_replace="0" trans="1">颜色</th><th trans_replace="0" trans="1">HEXCOLOR</th><th trans_replace="0" trans="1">RGB颜色</th></tr></thead><tbody><tr><td trans="1">Black</td><td trans="1">#000000</td><td trans="1">rgb(0,0,0)</td></tr><tr><td trans="1">Red</td><td trans="1">#FF0000</td><td trans="1">rgb(255,0,0)</td></tr><tr><td trans="1">Green</td><td trans="1">#00FF00</td><td trans="1">rgb(0,255,0)</td></tr><tr><td trans="1">Blue</td><td trans="1">#0000FF</td><td trans="1">rgb(0,0,255)</td></tr><tr><td trans="1">Yellow</td><td trans="1">#FFFF00</td><td trans="1">rgb(255,255,0)</td></tr><tr><td trans="1">Cyan</td><td trans="1">#00FFFF</td><td trans="1">rgb(0,255,255)</td></tr><tr><td trans="1">Magenta</td><td trans="1">#FF00FF</td><td trans="1">rgb(255,0,255)</td></tr><tr><td trans="1">Gray</td><td trans="1">#C0C0C0</td><td trans="1">rgb(192,192,192)</td></tr><tr><td trans="1">White</td><td trans="1">#FFFFFF</td><td trans="1">rgb(255,255,255)</td></tr></tbody></table><p trans_replace="0" trans="1">以下代码显示如何使用色彩函数。</p><pre lang="html" style="max-width: 100%;"><code class="html">&lt;!DOCTYPE HTML&gt; 
+&lt;html&gt; 
+&lt;body&gt; 
+    &lt;p style="background-color:#C0C0C0"&gt; 
+    Color set by using hex value 
+    &lt;/p&gt; 
+    &lt;p style="background-color:rgb(192,192,192)"&gt; 
+    Color set by using rgb value 
+    &lt;/p&gt; 
+    &lt;p style="background-color:gray"&gt; 
+    Color set by using color name 
+    &lt;/p&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;</code></pre><p trans="1"><a href="https://www.w3cschool.cn/statics/demosource/css_colors_color_function.html" target="_black">点击查看演示</a></p><p trans_replace="0" trans="1"><span>在上面的代码中，我们使用各种形式的颜色值来设置段落的背景颜色。</span></p><p trans_replace="0" trans="1"><br></p><h2 id="Extended_Color_Keywords_in_CSS3" trans_replace="0" trans="1"><span>CSS3中的扩展颜色关键字</span></h2><table class="table table-bordered          "><tbody><tr><th trans_replace="0" trans="1">颜色</th>        <th trans_replace="0" trans="1">名称</th>        <th trans_replace="0" trans="1">十六进制</th>        <th trans_replace="0" trans="1">RGB</th>    </tr><tr><td style="background-color:aliceblue" trans="1">&nbsp;</td>        <td trans="1">aliceblue</td>        <td trans="1">#f0f8ff</td>        <td trans_replace="0" trans="1">240，248，255</td>    </tr><tr><td style="background-color:antiquewhite" trans="1">&nbsp;</td>        <td trans="1">antiquewhite</td>        <td trans="1">#faebd7</td>        <td trans_replace="0" trans="1">250，235，215</td>    </tr><tr><td style="background-color:aqua" trans="1">&nbsp;</td>        <td trans="1">aqua</td>        <td trans="1">#00ffff</td>        <td trans_replace="0" trans="1">0，255，255</td>    </tr><tr><td style="background-color:aquamarine" trans="1">&nbsp;</td>        <td trans="1">aquamarine</td>        <td trans="1">#7fffd4</td>        <td trans_replace="0" trans="1">127，255，212</td>    </tr><tr><td style="background-color:azure" trans="1">&nbsp;</td>        <td trans="1">azure</td>        <td trans="1">#f0ffff</td>        <td trans_replace="0" trans="1">240，255，255</td>    </tr><tr><td style="background-color:beige" trans="1">&nbsp;</td>        <td trans="1">beige</td>        <td trans="1">#f5f5dc</td>        <td trans_replace="0" trans="1">245，245，220</td>    </tr><tr><td style="background-color:bisque" trans="1">&nbsp;</td>        <td trans="1">bisque</td>        <td trans="1">#ffe4c4</td>        <td trans_replace="0" trans="1">255，228，196</td>    </tr><tr><td style="background-color:black" trans="1">&nbsp;</td>        <td trans="1">black</td>        <td trans="1">#000000</td>        <td trans_replace="0" trans="1">0，0，0</td>    </tr><tr><td style="background-color:blanchedalmond" trans="1">&nbsp;</td>        <td trans="1">blanchedalmond</td>        <td trans="1">#ffebcd</td>        <td trans_replace="0" trans="1">255，235，205</td>    </tr><tr><td style="background-color:blue" trans="1">&nbsp;</td>        <td trans="1">blue</td>        <td trans="1">#0000ff</td>        <td trans_replace="0" trans="1">0，0，255</td>    </tr><tr><td style="background-color:blueviolet" trans="1">&nbsp;</td>        <td trans="1">blueviolet</td>        <td trans="1">#8a2be2</td>        <td trans_replace="0" trans="1">138，43，226</td>    </tr><tr><td style="background-color:brown" trans="1">&nbsp;</td>        <td trans="1">brown</td>        <td trans="1">#a52a2a</td>        <td trans_replace="0" trans="1">165，42，42</td>    </tr><tr><td style="background-color:burlywood" trans="1">&nbsp;</td>        <td trans="1">burlywood</td>        <td trans="1">#deb887</td>        <td trans_replace="0" trans="1">222，184，135</td>    </tr><tr><td style="background-color:cadetblue" trans="1">&nbsp;</td>        <td trans="1">cadetblue</td>        <td trans="1">#5f9ea0</td>        <td trans_replace="0" trans="1">95，158，160</td>    </tr><tr><td style="background-color:chartreuse" trans="1">&nbsp;</td>        <td trans="1">chartreuse</td>        <td trans="1">#7fff00</td>        <td trans_replace="0" trans="1">127，255，0</td>    </tr><tr><td style="background-color:chocolate" trans="1">&nbsp;</td>        <td trans="1">chocolate</td>        <td trans="1">#d2691e</td>        <td trans_replace="0" trans="1">210，105，30</td>    </tr><tr><td style="background-color:coral" trans="1">&nbsp;</td>        <td trans="1">coral</td>        <td trans="1">#ff7f50</td>        <td trans_replace="0" trans="1">255，127，80</td>    </tr><tr><td style="background-color:cornflowerblue" trans="1">&nbsp;</td>        <td trans="1">cornflowerblue</td>        <td trans="1">#6495ed</td>        <td trans_replace="0" trans="1">100，149，237</td>    </tr><tr><td style="background-color:cornsilk" trans="1">&nbsp;</td>        <td trans="1">cornsilk</td>        <td trans="1">#fff8dc</td>        <td trans_replace="0" trans="1">255，248，220</td>    </tr><tr><td style="background-color:crimson" trans="1">&nbsp;</td>        <td trans="1">crimson</td>        <td trans="1">#dc143c</td>        <td trans_replace="0" trans="1">220，20，60</td>    </tr><tr><td style="background-color:cyan" trans="1">&nbsp;</td>        <td trans="1">cyan</td>        <td trans="1">#00ffff</td>        <td trans_replace="0" trans="1">0，255，255</td>    </tr><tr><td style="background-color:darkblue" trans="1">&nbsp;</td>        <td trans="1">darkblue</td>        <td trans="1">#00008b</td>        <td trans_replace="0" trans="1">0，0，139</td>    </tr><tr><td style="background-color:darkcyan" trans="1">&nbsp;</td>        <td trans="1">darkcyan</td>        <td trans="1">#008b8b</td>        <td trans_replace="0" trans="1">0，139，139</td>    </tr><tr><td style="background-color:darkgoldenrod" trans="1">&nbsp;</td>        <td trans="1">darkgoldenrod</td>        <td trans="1">#b8860b</td>        <td trans_replace="0" trans="1">184，134，11</td>    </tr><tr><td style="background-color:darkgray" trans="1">&nbsp;</td>        <td trans="1">darkgray</td>        <td trans="1">#a9a9a9</td>        <td trans_replace="0" trans="1">169，169，169</td>    </tr><tr><td style="background-color:darkgreen" trans="1">&nbsp;</td>        <td trans="1">darkgreen</td>        <td trans="1">#006400</td>        <td trans_replace="0" trans="1">0，100，0</td>    </tr><tr><td style="background-color:darkgrey" trans="1">&nbsp;</td>        <td trans="1">darkgrey</td>        <td trans="1">#a9a9a9</td>        <td trans_replace="0" trans="1">169，169，169</td>    </tr><tr><td style="background-color:darkkhaki" trans="1">&nbsp;</td>        <td trans="1">darkkhaki</td>        <td trans="1">#bdb76b</td>        <td trans_replace="0" trans="1">189，183，107</td>    </tr><tr><td style="background-color:darkmagenta" trans="1">&nbsp;</td>        <td trans="1">darkmagenta</td>        <td trans="1">#8b008b</td>        <td trans_replace="0" trans="1">139，0，139</td>    </tr><tr><td style="background-color:darkolivegreen" trans="1">&nbsp;</td>        <td trans="1">darkolivegreen</td>        <td trans="1">#556b2f</td>        <td trans_replace="0" trans="1">85，107，47</td>    </tr><tr><td style="background-color:darkorange" trans="1">&nbsp;</td>        <td trans="1">darkorange</td>        <td trans="1">#ff8c00</td>        <td trans_replace="0" trans="1">255，140，0</td>    </tr><tr><td style="background-color:darkorchid" trans="1">&nbsp;</td>        <td trans="1">darkorchid</td>        <td trans="1">#9932cc</td>        <td trans_replace="0" trans="1">153，50，204</td>    </tr><tr><td style="background-color:darkred" trans="1">&nbsp;</td>        <td trans="1">darkred</td>        <td trans="1">#8b0000</td>        <td trans_replace="0" trans="1">139，0，0</td>    </tr><tr><td style="background-color:darksalmon" trans="1">&nbsp;</td>        <td trans="1">darksalmon</td>        <td trans="1">#e9967a</td>        <td trans_replace="0" trans="1">233，150，122</td>    </tr><tr><td style="background-color:darkseagreen" trans="1">&nbsp;</td>        <td trans="1">darkseagreen</td>        <td trans="1">#8fbc8f</td>        <td trans_replace="0" trans="1">143，188，143</td>    </tr><tr><td style="background-color:darkslateblue" trans="1">&nbsp;</td>        <td trans="1">darkslateblue</td>        <td trans="1">#483d8b</td>        <td trans_replace="0" trans="1">72，61，139</td>    </tr><tr><td style="background-color:darkslategray" trans="1">&nbsp;</td>        <td trans="1">darkslategray</td>        <td trans="1">#2f4f4f</td>        <td trans_replace="0" trans="1">47，79，79</td>    </tr><tr><td style="background-color:darkslategrey" trans="1">&nbsp;</td>        <td trans="1">darkslategrey</td>        <td trans="1">#2f4f4f</td>        <td trans_replace="0" trans="1">47，79，79</td>    </tr><tr><td style="background-color:darkturquoise" trans="1">&nbsp;</td>        <td trans="1">darkturquoise</td>        <td trans="1">#00ced1</td>        <td trans_replace="0" trans="1">0，206，209</td>    </tr><tr><td style="background-color:darkviolet" trans="1">&nbsp;</td>        <td trans="1">darkviolet</td>        <td trans="1">#9400d3</td>        <td trans_replace="0" trans="1">148，0，211</td>    </tr><tr><td style="background-color:deeppink" trans="1">&nbsp;</td>        <td trans="1">deeppink</td>        <td trans="1">#ff1493</td>        <td trans_replace="0" trans="1">255，20，147</td>    </tr><tr><td style="background-color:deepskyblue" trans="1">&nbsp;</td>        <td trans="1">deepskyblue</td>        <td trans="1">#00bfff</td>        <td trans_replace="0" trans="1">0，191，255</td>    </tr><tr><td style="background-color:dimgray" trans="1">&nbsp;</td>        <td trans="1">dimgray</td>        <td trans="1">#696969</td>        <td trans_replace="0" trans="1">105，105，105</td>    </tr><tr><td style="background-color:dimgrey" trans="1">&nbsp;</td>        <td trans="1">dimgrey</td>        <td trans="1">#696969</td>        <td trans_replace="0" trans="1">105，105，105</td>    </tr><tr><td style="background-color:dodgerblue" trans="1">&nbsp;</td>        <td trans="1">dodgerblue</td>        <td trans="1">#1e90ff</td>        <td trans_replace="0" trans="1">30，144，255</td>    </tr><tr><td style="background-color:firebrick" trans="1">&nbsp;</td>        <td trans="1">firebrick</td>        <td trans="1">#b22222</td>        <td trans_replace="0" trans="1">178，34，34</td>    </tr><tr><td style="background-color:floralwhite" trans="1">&nbsp;</td>        <td trans="1">floralwhite</td>        <td trans="1">#fffaf0</td>        <td trans_replace="0" trans="1">255，250，240</td>    </tr><tr><td style="background-color:forestgreen" trans="1">&nbsp;</td>        <td trans="1">forestgreen</td>        <td trans="1">#228b22</td>        <td trans_replace="0" trans="1">34，139，34</td>    </tr><tr><td style="background-color:fuchsia" trans="1">&nbsp;</td>        <td trans="1">fuchsia</td>        <td trans="1">#ff00ff</td>        <td trans_replace="0" trans="1">255，0，255</td>    </tr><tr><td style="background-color:gainsboro" trans="1">&nbsp;</td>        <td trans="1">gainsboro</td>        <td trans="1">#dcdcdc</td>        <td trans_replace="0" trans="1">220，220，220</td>    </tr><tr><td style="background-color:ghostwhite" trans="1">&nbsp;</td>        <td trans="1">ghostwhite</td>        <td trans="1">#f8f8ff</td>        <td trans_replace="0" trans="1">248，248，255</td>    </tr><tr><td style="background-color:gold" trans="1">&nbsp;</td>        <td trans="1">gold</td>        <td trans="1">#ffd700</td>        <td trans_replace="0" trans="1">255，215，0</td>    </tr><tr><td style="background-color:goldenrod" trans="1">&nbsp;</td>        <td trans="1">goldenrod</td>        <td trans="1">#daa520</td>        <td trans_replace="0" trans="1">218，165，32</td>    </tr><tr><td style="background-color:gray" trans="1">&nbsp;</td>        <td trans="1">gray</td>        <td trans="1">#808080</td>        <td trans_replace="0" trans="1">128，128，128</td>    </tr><tr><td style="background-color:green" trans="1">&nbsp;</td>        <td trans="1">green</td>        <td trans="1">#008000</td>        <td trans_replace="0" trans="1">0，128，0</td>    </tr><tr><td style="background-color:greenyellow" trans="1">&nbsp;</td>        <td trans="1">greenyellow</td>        <td trans="1">#adff2f</td>        <td trans_replace="0" trans="1">173，255，47</td>    </tr><tr><td style="background-color:grey" trans="1">&nbsp;</td>        <td trans="1">grey</td>        <td trans="1">#808080</td>        <td trans_replace="0" trans="1">128，128，128</td>    </tr><tr><td style="background-color:honeydew" trans="1">&nbsp;</td>        <td trans="1">honeydew</td>        <td trans="1">#f0fff0</td>        <td trans_replace="0" trans="1">240，255，240</td>    </tr><tr><td style="background-color:hotpink" trans="1">&nbsp;</td>        <td trans="1">hotpink</td>        <td trans="1">#ff69b4</td>        <td trans_replace="0" trans="1">255，105，180</td>    </tr><tr><td style="background-color:indianred" trans="1">&nbsp;</td>        <td trans="1">indianred</td>        <td trans="1">#cd5c5c</td>        <td trans_replace="0" trans="1">205，92，92</td>    </tr><tr><td style="background-color:indigo" trans="1">&nbsp;</td>        <td trans="1">indigo</td>        <td trans="1">#4b0082</td>        <td trans_replace="0" trans="1">75，0，130</td>    </tr><tr><td style="background-color:ivory" trans="1">&nbsp;</td>        <td trans="1">ivory</td>        <td trans="1">#fffff0</td>        <td trans_replace="0" trans="1">255，255，240</td>    </tr><tr><td style="background-color:khaki" trans="1">&nbsp;</td>        <td trans="1">khaki</td>        <td trans="1">#f0e68c</td>        <td trans_replace="0" trans="1">240，230，140</td>    </tr><tr><td style="background-color:lavender" trans="1">&nbsp;</td>        <td trans="1">lavender</td>        <td trans="1">#e6e6fa</td>        <td trans_replace="0" trans="1">230，230，250</td>    </tr><tr><td style="background-color:lavenderblush" trans="1">&nbsp;</td>        <td trans="1">lavenderblush</td>        <td trans="1">#fff0f5</td>        <td trans_replace="0" trans="1">255，240，245</td>    </tr><tr><td style="background-color:lawngreen" trans="1">&nbsp;</td>        <td trans="1">lawngreen</td>        <td trans="1">#7cfc00</td>        <td trans_replace="0" trans="1">124，252，0</td>    </tr><tr><td style="background-color:lemonchiffon" trans="1">&nbsp;</td>        <td trans="1">lemonchiffon</td>        <td trans="1">#fffacd</td>        <td trans_replace="0" trans="1">255，250，205</td>    </tr><tr><td style="background-color:lightblue" trans="1">&nbsp;</td>        <td trans="1">lightblue</td>        <td trans="1">#add8e6</td>        <td trans_replace="0" trans="1">173，216，230</td>    </tr><tr><td style="background-color:lightcoral" trans="1">&nbsp;</td>        <td trans="1">lightcoral</td>        <td trans="1">#f08080</td>        <td trans_replace="0" trans="1">240，128，128</td>    </tr><tr><td style="background-color:lightcyan" trans="1">&nbsp;</td>        <td trans="1">lightcyan</td>        <td trans="1">#e0ffff</td>        <td trans_replace="0" trans="1">224，255，255</td>    </tr><tr><td style="background-color:lightgoldenrodyellow" trans="1">&nbsp;</td>        <td trans="1">lightgoldenrodyellow</td>        <td trans="1">#fafad2</td>        <td trans_replace="0" trans="1">250，250，210</td>    </tr><tr><td style="background-color:lightgray" trans="1">&nbsp;</td>        <td trans="1">lightgray</td>        <td trans="1">#d3d3d3</td>        <td trans_replace="0" trans="1">211，211，211</td>    </tr><tr><td style="background-color:lightgreen" trans="1">&nbsp;</td>        <td trans="1">lightgreen</td>        <td trans="1">#90ee90</td>        <td trans_replace="0" trans="1">144，238，144</td>    </tr><tr><td style="background-color:lightgrey" trans="1">&nbsp;</td>        <td trans="1">lightgrey</td>        <td trans="1">#d3d3d3</td>        <td trans_replace="0" trans="1">211，211，211</td>    </tr><tr><td style="background-color:lightpink" trans="1">&nbsp;</td>        <td trans="1">lightpink</td>        <td trans="1">#ffb6c1</td>        <td trans_replace="0" trans="1">255，182，193</td>    </tr><tr><td style="background-color:lightsalmon" trans="1">&nbsp;</td>        <td trans="1">lightsalmon</td>        <td trans="1">#ffa07a</td>        <td trans_replace="0" trans="1">255，160，122</td>    </tr><tr><td style="background-color:lightseagreen" trans="1">&nbsp;</td>        <td trans="1">lightseagreen</td>        <td trans="1">#20b2aa</td>        <td trans_replace="0" trans="1">32，178，170</td>    </tr><tr><td style="background-color:lightskyblue" trans="1">&nbsp;</td>        <td trans="1">lightskyblue</td>        <td trans="1">#87cefa</td>        <td trans_replace="0" trans="1">135，206，250</td>    </tr><tr><td style="background-color:lightslategray" trans="1">&nbsp;</td>        <td trans="1">lightslategray</td>        <td trans="1">#778899</td>        <td trans_replace="0" trans="1">119，136，153</td>    </tr><tr><td style="background-color:lightslategrey" trans="1">&nbsp;</td>        <td trans="1">lightslategrey</td>        <td trans="1">#778899</td>        <td trans_replace="0" trans="1">119，136，153</td>    </tr><tr><td style="background-color:lightsteelblue" trans="1">&nbsp;</td>        <td trans="1">lightsteelblue</td>        <td trans="1">#b0c4de</td>        <td trans_replace="0" trans="1">176，196，222</td>    </tr><tr><td style="background-color:lightyellow" trans="1">&nbsp;</td>        <td trans="1">lightyellow</td>        <td trans="1">#ffffe0</td>        <td trans_replace="0" trans="1">255，255，224</td>    </tr><tr><td style="background-color:lime" trans="1">&nbsp;</td>        <td trans="1">lime</td>        <td trans="1">#00ff00</td>        <td trans_replace="0" trans="1">0，255，0</td>    </tr><tr><td style="background-color:limegreen" trans="1">&nbsp;</td>        <td trans="1">limegreen</td>        <td trans="1">#32cd32</td>        <td trans_replace="0" trans="1">50，205，50</td>    </tr><tr><td style="background-color:linen" trans="1">&nbsp;</td>        <td trans="1">linen</td>        <td trans="1">#faf0e6</td>        <td trans_replace="0" trans="1">250，240，230</td>    </tr><tr><td style="background-color:magenta" trans="1">&nbsp;</td>        <td trans="1">magenta</td>        <td trans="1">#ff00ff</td>        <td trans_replace="0" trans="1">255，0，255</td>    </tr><tr><td style="background-color:maroon" trans="1">&nbsp;</td>        <td trans="1">maroon</td>        <td trans="1">#800000</td>        <td trans_replace="0" trans="1">128，0，0</td>    </tr><tr><td style="background-color:mediumaquamarine" trans="1">&nbsp;</td>        <td trans="1">mediumaquamarine</td>        <td trans="1">#66cdaa</td>        <td trans_replace="0" trans="1">102，205，170</td>    </tr><tr><td style="background-color:mediumblue" trans="1">&nbsp;</td>        <td trans="1">mediumblue</td>        <td trans="1">#0000cd</td>        <td trans_replace="0" trans="1">0，0，205</td>    </tr><tr><td style="background-color:mediumorchid" trans="1">&nbsp;</td>        <td trans="1">mediumorchid</td>        <td trans="1">#ba55d3</td>        <td trans_replace="0" trans="1">186，85，211</td>    </tr><tr><td style="background-color:mediumpurple" trans="1">&nbsp;</td>        <td trans="1">mediumpurple</td>        <td trans="1">#9370db</td>        <td trans_replace="0" trans="1">147，112，219</td>    </tr><tr><td style="background-color:mediumseagreen" trans="1">&nbsp;</td>        <td trans="1">mediumseagreen</td>        <td trans="1">#3cb371</td>        <td trans_replace="0" trans="1">60，179，113</td>    </tr><tr><td style="background-color:mediumslateblue" trans="1">&nbsp;</td>        <td trans="1">mediumslateblue</td>        <td trans="1">#7b68ee</td>        <td trans_replace="0" trans="1">123，104，238</td>    </tr><tr><td style="background-color:mediumspringgreen" trans="1">&nbsp;</td>        <td trans="1">mediumspringgreen</td>        <td trans="1">#00fa9a</td>        <td trans_replace="0" trans="1">0，250，154</td>    </tr><tr><td style="background-color:mediumturquoise" trans="1">&nbsp;</td>        <td trans="1">mediumturquoise</td>        <td trans="1">#48d1cc</td>        <td trans_replace="0" trans="1">72，209，204</td>    </tr><tr><td style="background-color:mediumvioletred" trans="1">&nbsp;</td>        <td trans="1">mediumvioletred</td>        <td trans="1">#c71585</td>        <td trans_replace="0" trans="1">199，21，133</td>    </tr><tr><td style="background-color:midnightblue" trans="1">&nbsp;</td>        <td trans="1">midnightblue</td>        <td trans="1">#191970</td>        <td trans_replace="0" trans="1">25，25，112</td>    </tr><tr><td style="background-color:mintcream" trans="1">&nbsp;</td>        <td trans="1">mintcream</td>        <td trans="1">#f5fffa</td>        <td trans_replace="0" trans="1">245，255，250</td>    </tr><tr><td style="background-color:mistyrose" trans="1">&nbsp;</td>        <td trans="1">mistyrose</td>        <td trans="1">#ffe4e1</td>        <td trans_replace="0" trans="1">255，228，225</td>    </tr><tr><td style="background-color:moccasin" trans="1">&nbsp;</td>        <td trans="1">moccasin</td>        <td trans="1">#ffe4b5</td>        <td trans_replace="0" trans="1">255，228，181</td>    </tr><tr><td style="background-color:navajowhite" trans="1">&nbsp;</td>        <td trans="1">navajowhite</td>        <td trans="1">#ffdead</td>        <td trans_replace="0" trans="1">255，222，173</td>    </tr><tr><td style="background-color:navy" trans="1">&nbsp;</td>        <td trans="1">navy</td>        <td trans="1">#000080</td>        <td trans_replace="0" trans="1">0，0，128</td>    </tr><tr><td style="background-color:oldlace" trans="1">&nbsp;</td>        <td trans="1">oldlace</td>        <td trans="1">#fdf5e6</td>        <td trans_replace="0" trans="1">253，245，230</td>    </tr><tr><td style="background-color:olive" trans="1">&nbsp;</td>        <td trans="1">olive</td>        <td trans="1">#808000</td>        <td trans_replace="0" trans="1">128，128，0</td>    </tr><tr><td style="background-color:olivedrab" trans="1">&nbsp;</td>        <td trans="1">olivedrab</td>        <td trans="1">#6b8e23</td>        <td trans_replace="0" trans="1">107，142，35</td>    </tr><tr><td style="background-color:orange" trans="1">&nbsp;</td>        <td trans="1">orange</td>        <td trans="1">#ffa500</td>        <td trans_replace="0" trans="1">255，165，0</td>    </tr><tr><td style="background-color:orangered" trans="1">&nbsp;</td>        <td trans="1">orangered</td>        <td trans="1">#ff4500</td>        <td trans_replace="0" trans="1">255，69，0</td>    </tr><tr><td style="background-color:orchid" trans="1">&nbsp;</td>        <td trans="1">orchid</td>        <td trans="1">#da70d6</td>        <td trans_replace="0" trans="1">218，112，214</td>    </tr><tr><td style="background-color:palegoldenrod" trans="1">&nbsp;</td>        <td trans="1">palegoldenrod</td>        <td trans="1">#eee8aa</td>        <td trans_replace="0" trans="1">238，232，170</td>    </tr><tr><td style="background-color:palegreen" trans="1">&nbsp;</td>        <td trans="1">palegreen</td>        <td trans="1">#98fb98</td>        <td trans_replace="0" trans="1">152，251，152</td>    </tr><tr><td style="background-color:paleturquoise" trans="1">&nbsp;</td>        <td trans="1">paleturquoise</td>        <td trans="1">#afeeee</td>        <td trans_replace="0" trans="1">175，238，238</td>    </tr><tr><td style="background-color:palevioletred" trans="1">&nbsp;</td>        <td trans="1">palevioletred</td>        <td trans="1">#db7093</td>        <td trans_replace="0" trans="1">219，112，147</td>    </tr><tr><td style="background-color:papayawhip" trans="1">&nbsp;</td>        <td trans="1">papayawhip</td>        <td trans="1">#ffefd5</td>        <td trans_replace="0" trans="1">255，239，213</td>    </tr><tr><td style="background-color:peachpuff" trans="1">&nbsp;</td>        <td trans="1">peachpuff</td>        <td trans="1">#ffdab9</td>        <td trans_replace="0" trans="1">255，218，185</td>    </tr><tr><td style="background-color:peru" trans="1">&nbsp;</td>        <td trans="1">peru</td>        <td trans="1">#cd853f</td>        <td trans_replace="0" trans="1">205，133，63</td>    </tr><tr><td style="background-color:pink" trans="1">&nbsp;</td>        <td trans="1">pink</td>        <td trans="1">#ffc0cb</td>        <td trans_replace="0" trans="1">255，192，203</td>    </tr><tr><td style="background-color:plum" trans="1">&nbsp;</td>        <td trans="1">plum</td>        <td trans="1">#dda0dd</td>        <td trans_replace="0" trans="1">221，160，221</td>    </tr><tr><td style="background-color:powderblue" trans="1">&nbsp;</td>        <td trans="1">powderblue</td>        <td trans="1">#b0e0e6</td>        <td trans_replace="0" trans="1">176，224，230</td>    </tr><tr><td style="background-color:purple" trans="1">&nbsp;</td>        <td trans="1">purple</td>        <td trans="1">#800080</td>        <td trans_replace="0" trans="1">128，0，128</td>    </tr><tr><td style="background-color:red" trans="1">&nbsp;</td>        <td trans="1">red</td>        <td trans="1">#ff0000</td>        <td trans_replace="0" trans="1">255，0，0</td>    </tr><tr><td style="background-color:rosybrown" trans="1">&nbsp;</td>        <td trans="1">rosybrown</td>        <td trans="1">#bc8f8f</td>        <td trans_replace="0" trans="1">188，143，143</td>    </tr><tr><td style="background-color:royalblue" trans="1">&nbsp;</td>        <td trans="1">royalblue</td>        <td trans="1">#4169e1</td>        <td trans_replace="0" trans="1">65，105，225</td>    </tr><tr><td style="background-color:saddlebrown" trans="1">&nbsp;</td>        <td trans="1">saddlebrown</td>        <td trans="1">#8b4513</td>        <td trans_replace="0" trans="1">139，69，19</td>    </tr><tr><td style="background-color:salmon" trans="1">&nbsp;</td>        <td trans="1">salmon</td>        <td trans="1">#fa8072</td>        <td trans_replace="0" trans="1">250，128，114</td>    </tr><tr><td style="background-color:sandybrown" trans="1">&nbsp;</td>        <td trans="1">sandybrown</td>        <td trans="1">#f4a460</td>        <td trans_replace="0" trans="1">244，164，96</td>    </tr><tr><td style="background-color:seagreen" trans="1">&nbsp;</td>        <td trans="1">seagreen</td>        <td trans="1">#2e8b57</td>        <td trans_replace="0" trans="1">46，139，87</td>    </tr><tr><td style="background-color:seashell" trans="1">&nbsp;</td>        <td trans="1">seashell</td>        <td trans="1">#fff5ee</td>        <td trans_replace="0" trans="1">255，245，238</td>    </tr><tr><td style="background-color:sienna" trans="1">&nbsp;</td>        <td trans="1">sienna</td>        <td trans="1">#a0522d</td>        <td trans_replace="0" trans="1">160，82，45</td>    </tr><tr><td style="background-color:silver" trans="1">&nbsp;</td>        <td trans="1">silver</td>        <td trans="1">#c0c0c0</td>        <td trans_replace="0" trans="1">192，192，192</td>    </tr><tr><td style="background-color:skyblue" trans="1">&nbsp;</td>        <td trans="1">skyblue</td>        <td trans="1">#87ceeb</td>        <td trans_replace="0" trans="1">135，206，235</td>    </tr><tr><td style="background-color:slateblue" trans="1">&nbsp;</td>        <td trans="1">slateblue</td>        <td trans="1">#6a5acd</td>        <td trans_replace="0" trans="1">106，90，205</td>    </tr><tr><td style="background-color:slategray" trans="1">&nbsp;</td>        <td trans="1">slategray</td>        <td trans="1">#708090</td>        <td trans_replace="0" trans="1">112，128，144</td>    </tr><tr><td style="background-color:slategrey" trans="1">&nbsp;</td>        <td trans="1">slategrey</td>        <td trans="1">#708090</td>        <td trans_replace="0" trans="1">112，128，144</td>    </tr><tr><td style="background-color:snow" trans="1">&nbsp;</td>        <td trans="1">snow</td>        <td trans="1">#fffafa</td>        <td trans_replace="0" trans="1">255，250，250</td>    </tr><tr><td style="background-color:springgreen" trans="1">&nbsp;</td>        <td trans="1">springgreen</td>        <td trans="1">#00ff7f</td>        <td trans_replace="0" trans="1">0，255，127</td>    </tr><tr><td style="background-color:steelblue" trans="1">&nbsp;</td>        <td trans="1">steelblue</td>        <td trans="1">#4682b4</td>        <td trans_replace="0" trans="1">70，130，180</td>    </tr><tr><td style="background-color:tan" trans="1">&nbsp;</td>        <td trans="1">tan</td>        <td trans="1">#d2b48c</td>        <td trans_replace="0" trans="1">210，180，140</td>    </tr><tr><td style="background-color:teal" trans="1">&nbsp;</td>        <td trans="1">teal</td>        <td trans="1">#008080</td>        <td trans_replace="0" trans="1">0，128，128</td>    </tr><tr><td style="background-color:thistle" trans="1">&nbsp;</td>        <td trans="1">thistle</td>        <td trans="1">#d8bfd8</td>        <td trans_replace="0" trans="1">216，191，216</td>    </tr><tr><td style="background-color:tomato" trans="1">&nbsp;</td>        <td trans="1">tomato</td>        <td trans="1">#ff6347</td>        <td trans_replace="0" trans="1">255，99，71</td>    </tr><tr><td style="background-color:turquoise" trans="1">&nbsp;</td>        <td trans="1">turquoise</td>        <td trans="1">#40e0d0</td>        <td trans_replace="0" trans="1">64，224，208</td>    </tr><tr><td style="background-color:violet" trans="1">&nbsp;</td>        <td trans="1">violet</td>        <td trans="1">#ee82ee</td>        <td trans_replace="0" trans="1">238，130，238</td>    </tr><tr><td style="background-color:wheat" trans="1">&nbsp;</td>        <td trans="1">wheat</td>        <td trans="1">#f5deb3</td>        <td trans_replace="0" trans="1">245，222，179</td>    </tr><tr><td style="background-color:white" trans="1">&nbsp;</td>        <td trans="1">white</td>        <td trans="1">#ffffff</td>        <td trans_replace="0" trans="1">255，255，255</td>    </tr><tr><td style="background-color:whitesmoke" trans="1">&nbsp;</td>        <td trans="1">whitesmoke</td>        <td trans="1">#f5f5f5</td>        <td trans_replace="0" trans="1">245，245，245</td>    </tr><tr><td style="background-color:yellow" trans="1">&nbsp;</td>        <td trans="1">yellow</td>        <td trans="1">#ffff00</td>        <td trans_replace="0" trans="1">255，255，0</td>    </tr><tr><td style="background-color:yellowgreen" trans="1">&nbsp;</td>        <td trans="1">yellowgreen</td>        <td trans="1">#9acd32</td>        <td trans_replace="0" trans="1">154，205，50</td>    </tr></tbody></table><h2 id="Example" trans_replace="0" trans="1">例子</h2><p trans_replace="0" trans="1"><span>以下代码显示如何使用颜色名称及其相应的RGB值和十六进制等效值。</span></p><pre><code class="hljs xml">
+<span class="r"><span class="hljs-meta">&lt;</span></span><span class="r"><span class="hljs-meta">!</span></span><span class="r"><span class="hljs-meta">DOCTYPE</span></span><span class="r"><span class="hljs-meta"> </span></span><span class="r"><span class="hljs-meta">HTML</span></span><span class="r"><span class="hljs-meta">&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">html</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">head</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">title</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>Named colors in CSS<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">style</span></span></span><span class="hljs-tag"> <span class="hljs-attr">type</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"text/css"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span><span class="css">
+<span class="hljs-selector-tag">table</span> {</span><span style="color:#99b999;"></span><span class="css">
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">border</span></span></strong></span><span class="css"><span class="hljs-attribute">-spacing</span>: <span class="hljs-number">2em</span> <span class="hljs-number">1em</span>;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">margin</span></span></strong></span><span class="css">:<span class="hljs-number">25px</span> auto;
+}
+<span class="hljs-selector-tag">caption</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-family</span>:Tahoma, Geneva, sans-serif;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-weight</span>:bold;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-size</span>:<span class="hljs-number">20px</span>;
+}
+<span class="hljs-selector-tag">td</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">border</span></span></strong></span><span class="css">: <span class="hljs-number">#000</span> solid <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">text-align</span>:center;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">padding</span></span></strong></span><span class="css">:<span class="hljs-number">10px</span>;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-family</span>:Tahoma, Geneva, sans-serif;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-size</span>:<span class="hljs-number">14px</span>;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">font</span></span></strong></span><span class="css"><span class="hljs-attribute">-weight</span>:bold;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:<span class="hljs-number">#FFF</span>;
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">width</span></span></strong></span><span class="css">:<span class="hljs-number">7em</span>;
+  <span class="hljs-attribute">white-space</span>: pre;
+}
+<span class="hljs-selector-id">#aqua</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:aqua;
+}
+<span class="hljs-selector-id">#black</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:black;
+}
+<span class="hljs-selector-id">#blue</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:blue;
+}
+<span class="hljs-selector-id">#fuchsia</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:fuchsia;
+}
+<span class="hljs-selector-id">#gray</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:gray;
+}
+<span class="hljs-selector-id">#green</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:green;
+}
+<span class="hljs-selector-id">#lime</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:lime;
+}
+<span class="hljs-selector-id">#maroon</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:maroon;
+}
+<span class="hljs-selector-id">#navy</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:navy;
+}
+<span class="hljs-selector-id">#olive</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:olive;
+}
+<span class="hljs-selector-id">#purple</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:purple;
+}
+<span class="hljs-selector-id">#red</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:red;
+}
+<span class="hljs-selector-id">#silver</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:silver;
+}
+<span class="hljs-selector-id">#teal</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:teal;
+}
+<span class="hljs-selector-id">#white</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:white;
+}
+<span class="hljs-selector-id">#yellow</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">background</span></span></strong></span><span class="css"><span class="hljs-attribute">-</span></span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:yellow;
+}
+<span class="hljs-selector-id">#aqua</span>, <span class="hljs-selector-id">#fuchsia</span>, <span class="hljs-selector-id">#lime</span>, <span class="hljs-selector-id">#red</span>, <span class="hljs-selector-id">#silver</span>, <span class="hljs-selector-id">#white</span>, <span class="hljs-selector-id">#yellow</span> {
+  </span><span style="color:green;"><strong><span class="css"><span class="hljs-attribute">color</span></span></strong></span><span class="css">:black;
+}
+</span><span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span>
+
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">body</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">table</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">caption</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+    Basic Color Keywords
+    <span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">tr</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"aqua"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>aqua
+#00FFFF
+0, 255, 255<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"black"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>black
+#000000
+0, 0, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"blue"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>blue
+#0000FF
+0, 0, 255<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"fuchsia"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>fuchsia
+#FF00FF
+255, 0, 255<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">tr</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"gray"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>gray
+#808080
+128, 128, 128<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"green"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>green
+#008000
+0, 128, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"lime"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>lime
+#00FF00
+0, 255, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"maroon"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>maroon
+#800000
+128, 0, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">tr</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"navy"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>navy
+#000080
+0, 0, 128<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"olive"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>olive
+#808000
+128, 128, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"purple"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>purple
+#800080
+128, 0, 128<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"red"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>red
+#FF0000
+255, 0, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">tr</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"silver"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>silver
+#C0C0C0
+192, 192, 192<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"teal"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>teal
+#008080
+0, 128, 128<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"white"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>white
+#FFFFFF
+255, 255, 255<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+        <span class="r"><span class="hljs-tag">&lt;</span></span><span class="r"><span class="hljs-tag"><span class="hljs-name">td</span></span></span><span class="hljs-tag"> <span class="hljs-attr">id</span>=</span><span class="q"><span class="hljs-tag"><span class="hljs-string">"yellow"</span></span></span><span class="r"><span class="hljs-tag">&gt;</span></span>yellow
+#FFFF00
+255, 255, 0<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+    <span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span>
+<span class="r"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+</code></pre><p trans_replace="0" trans="1">上面的代码呈现如下：</p><p trans_replace="0" trans="1" style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_170106/201701061524568261.png" alt="css"><br></p><p trans_replace="0" trans="1" style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_170106/201701061525211239.png" alt="颜色"><br></p><p trans_replace="0" trans="1" style="text-align: center;"><img src="../../7n.w3cschool.cn/attachments/day_170106/201701061525424467.png" alt="扩展颜色关键字"><br></p></div></div><p><br></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="css-id3m2045.html" title="上一篇：CSS 值">CSS 值</a></div>
+<div class="next-link"><a href="html-css-lengths.html" title="下一篇：CSS 长度">CSS 长度</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="css-rwd-intro.html" title="响应式 Web 设计 &#8211; 介绍">响应式 Web 设计 &#8211; 介绍</a></li>
+<li><a href="css-navbar.html" title="CSS 导航栏">CSS 导航栏</a></li>
+<li><a href="css-dropdowns.html" title="CSS 下拉菜单">CSS 下拉菜单</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="css-id3m2045.html" title="上一篇：CSS 值" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="html-css-lengths.html" title="下一篇：CSS 长度" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'html-css-colors',
+pename:'css',
+ismenu:'0',
+ktitle:'CSS 颜色',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'css',
+bookname:'CSS教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/css.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "93461";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '51';
+var aid   = '93462';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/css/html-css-colors.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Oct 2018 06:47:31 GMT -->
+</html>
