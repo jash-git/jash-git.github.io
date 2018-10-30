@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/jquery/kv69gfnm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 00:36:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>jQuery Validate_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="jQuery Validate" />
+<meta name="description" content="jQuery Validate
+
+
+    jQuery Validate 插件为表单提供了强大的验证功能，让客户端表单验证变得更简单，同时提供了大量的定制选项，满足应用程序各种需求。该插件捆绑了一套有用的验证方法，包括 URL 和电子邮件验证，同时提供了一个用来编写用户自定义方法的 API。所有的_来自jQuery教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a></li>
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'kv69gfnm.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/jquery" title="jQuery教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="jQuery教程" src="../attachments/cover/cover_jquery.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>jQuery教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="jquery问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">jquery问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="20290" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="9mzx1f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 教程">jQuery 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="rdl9cfnk">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="rdl9cfnk.html" title="jQuery 教程导读">jQuery 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-intro.html" title="jQuery 简介">jQuery 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-install">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-install.html" title="jQuery 安装">jQuery 安装</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-syntax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-syntax.html" title="jQuery 语法">jQuery 语法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="xs75ofnl">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="xs75ofnl.html" title="jQuery 选择器">jQuery 选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-events">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-events.html" title="jQuery 事件">jQuery 事件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="pxu61f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 效果">jQuery 效果</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-hide-show">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-hide-show.html" title="jQuery 效果 – 隐藏和显示">jQuery 效果 – 隐藏和显示</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-fade">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-fade.html" title="jQuery 效果 – 淡入淡出">jQuery 效果 – 淡入淡出</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-slide">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-slide.html" title="jQuery 效果 &#8211; 滑动">jQuery 效果 &#8211; 滑动</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-animate">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-animate.html" title="jQuery 效果 – 动画">jQuery 效果 – 动画</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-stop">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-stop.html" title="jQuery 效果 &#8211; 停止动画">jQuery 效果 &#8211; 停止动画</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-callback">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-callback.html" title="jQuery Callback 方法">jQuery Callback 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-chaining">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-chaining.html" title="jQuery Chaining">jQuery Chaining</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="r1uo2f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery HTML">jQuery HTML</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-dom-get">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-dom-get.html" title="jQuery 捕获">jQuery 获取</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-dom-set">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-dom-set.html" title="jQuery 设置">jQuery 设置</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-dom-add">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-dom-add.html" title="jQuery 添加元素">jQuery 添加元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-dom-remove">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-dom-remove.html" title="jQuery 删除元素">jQuery 删除元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-css-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-css-classes.html" title="jQuery CSS 类">jQuery CSS 类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-css">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-css.html" title="jQuery css() 方法">jQuery css() 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-dimensions">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-dimensions.html" title="jQuery 尺寸">jQuery 尺寸</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="s9fh7f21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 遍历">jQuery 遍历</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-traversing">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-traversing.html" title="jQuery 遍历">jQuery 遍历</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-traversing-ancestors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-traversing-ancestors.html" title="jQuery 遍历 &#8211; 祖先">jQuery 遍历 &#8211; 祖先</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-traversing-descendants">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-traversing-descendants.html" title="jQuery 遍历 &#8211; 后代">jQuery 遍历 &#8211; 后代</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-traversing-siblings">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-traversing-siblings.html" title="jQuery 遍历 &#8211; 同胞(siblings)">jQuery 遍历 &#8211; 同胞(siblings)</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-traversing-filtering">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-traversing-filtering.html" title="jQuery 遍历 &#8211; 过滤">jQuery 遍历 &#8211; 过滤</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="xcsguf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery Ajax">jQuery Ajax</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-ajax-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ajax-intro.html" title="jQuery AJAX 简介">jQuery AJAX 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ajax-load">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ajax-load.html" title="jQuery &#8211; AJAX load() 方法">jQuery &#8211; AJAX load() 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ajax-get-post">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ajax-get-post.html" title="jQuery &#8211; AJAX get() 和 post() 方法">jQuery &#8211; AJAX get() 和 post() 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="b9u2ff21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 其他">jQuery 其他</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-noconflict">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-noconflict.html" title="jQuery noConflict() 方法">jQuery noConflict() 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="ajxusf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 实例">jQuery 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-examples">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-examples.html" title="jQuery 实例">jQuery 实例</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-codecamp.html" title="jQuery 编程实战闯关">jQuery 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="xq7pif21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 参考手册">jQuery 参考手册</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-ref-selectors">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-selectors.html" title="jQuery 选择器">jQuery 选择器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-events">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-events.html" title="jQuery 事件方法">jQuery 事件方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-effects">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-effects.html" title="jQuery 效果方法">jQuery 效果方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-html.html" title="jQuery HTML / CSS 方法">jQuery HTML / CSS 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-traversing">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-traversing.html" title="jQuery 遍历方法">jQuery 遍历方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-ajax">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-ajax.html" title="jQuery AJAX 方法">jQuery AJAX 方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-misc">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-misc.html" title="jQuery 杂项方法">jQuery 杂项方法</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-ref-prop">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-ref-prop.html" title="jQuery 属性">jQuery 属性</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="hdweaf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="jQuery 插件">jQuery 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="kv69gfnm">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="kv69gfnm.html" title="jQuery Validate">jQuery Validate</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="urwo2fnn">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="urwo2fnn.html" title="jQuery Accordion">jQuery Accordion</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="lbu6efno">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="lbu6efno.html" title="jQuery Autocomplete">jQuery Autocomplete</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-plugin-message">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-plugin-message.html" title="jQuery Message">jQuery Message</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-plugin-password-validation">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-plugin-password-validation.html" title="jQuery Password Validation（密码验证）">jQuery Password Validation（密码验证）</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-plugin-prettydate">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-plugin-prettydate.html" title="jQuery Prettydate">jQuery Prettydate</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="oavjnfnr">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="oavjnfnr.html" title="jQuery Tooltip">jQuery Tooltip</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-plugin-treeview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-plugin-treeview.html" title="jQuery Treeview">jQuery Treeview</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="73ud1ug7">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="拓展阅读">拓展阅读</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="jquery-loading">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-loading.html" title="多个精美的jquery进度条代码素材下载">多个精美的jquery进度条代码素材下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-menu">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-menu.html" title="jquery下拉菜单（导航）代码汇总下载">jquery下拉菜单（导航）代码汇总下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-form">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-form.html" title="12个方便易用的jquery表单验证插件推荐下载">12个方便易用的jquery表单验证插件推荐下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-paging">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-paging.html" title="8个优质jquery分页插件推荐下载">8个优质jquery分页插件推荐下载</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="jquery-jquery3newfeature">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="jquery-jquery3newfeature.html" title="jQuery 3.0 新增了哪些特性？(jQuery 3 所引入的那些最重要的变化)">jQuery 3.0 新特性</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(64131)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">14</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/jquery/kv69gfnm" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>jQuery Validate</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，w3cschool官方 最后一次修改&nbsp;<span>2016-02-25</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><h2>jQuery <span class="color_h1">Validate</span></h2>
+
+<div class="tutintro">
+    <p>jQuery Validate 插件为表单提供了强大的验证功能，让客户端表单验证变得更简单，同时提供了大量的定制选项，满足应用程序各种需求。该插件捆绑了一套有用的验证方法，包括 URL 和电子邮件验证，同时提供了一个用来编写用户自定义方法的 API。所有的捆绑方法默认使用英语作为错误信息，且已翻译成其他 37 种语言。</p>
+    <p>该插件是由 Jörn Zaefferer 编写和维护的，他是 jQuery 团队的一名成员，是 jQuery UI 团队的主要开发人员，是 QUnit 的维护人员。该插件在 2006 年 jQuery 早期的时候就已经开始出现，并一直更新至今。目前版本是 <strong>1.14.0</strong>。</p>
+    <p>访问 <a href="http://jqueryvalidation.org/" target="_blank">jQuery Validate 官网</a>，下载最新版的 jQuery Validate 插件。</p>
+    <p>w3cschool在线教程推荐的 1.14.0 版本下载地址：<a href="http://libs.cdnjs.net/jquery-validate/1.14.0/" target="_blank">http://libs.cdnjs.net/jquery-validate/1.14.0/</a>
+
+    </p>
+</div>
+
+<h2>导入 js 库（使用w3cschool在线教程推荐的CDN）</h2><pre lang="javascript" style="max-width: 100%;"><code class="javascript">&lt;script src="http://libs.cdnjs.net/jquery/2.2.1/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="http://libs.cdnjs.net/jquery-validate/1.14.0/jquery.validate.min.js"&gt;&lt;/script&gt;</code></pre>
+
+
+<h2>默认校验规则</h2>
+
+<table class="reference">
+    <tbody>
+        <tr>
+            <th width="10%">序号</th>
+            <th width="30%">规则</th>
+            <th width="60%">描述</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>required:true</td>
+            <td>必须输入的字段。</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>remote:"check.php"</td>
+            <td>使用 ajax 方法调用 check.php 验证输入值。</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>email:true</td>
+            <td>必须输入正确格式的电子邮件。</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>url:true</td>
+            <td>必须输入正确格式的网址。</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>date:true</td>
+            <td>必须输入正确格式的日期。日期校验 ie6 出错，慎用。</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>dateISO:true</td>
+            <td>必须输入正确格式的日期（ISO），例如：2009-06-23，1998/01/22。只验证格式，不验证有效性。</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>number:true</td>
+            <td>必须输入合法的数字（负数，小数）。</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>digits:true</td>
+            <td>必须输入整数。</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>creditcard:</td>
+            <td>必须输入合法的信用卡号。</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>equalTo:"#field"</td>
+            <td>输入值必须和 #field 相同。</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>accept:</td>
+            <td>输入拥有合法后缀名的字符串（上传文件的后缀）。</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>maxlength:5</td>
+            <td>输入长度最多是 5 的字符串（汉字算一个字符）。</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>minlength:10</td>
+            <td>输入长度最小是 10 的字符串（汉字算一个字符）。</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>rangelength:[5,10]</td>
+            <td>输入长度必须介于 5 和 10 之间的字符串（汉字算一个字符）。</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>range:[5,10]</td>
+            <td>输入值必须介于 5 和 10 之间。</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>max:5</td>
+            <td>输入值不能大于 5。</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>min:10</td>
+            <td>输入值不能小于 10。</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>默认提示</h2><pre lang="javascript" style="max-width: 100%;"><code class="javascript">messages: {
+    required: "This field is required.",
+    remote: "Please fix this field.",
+    email: "Please enter a valid email address.",
+    url: "Please enter a valid URL.",
+    date: "Please enter a valid date.",
+    dateISO: "Please enter a valid date ( ISO ).",
+    number: "Please enter a valid number.",
+    digits: "Please enter only digits.",
+    creditcard: "Please enter a valid credit card number.",
+    equalTo: "Please enter the same value again.",
+    maxlength: $.validator.format( "Please enter no more than {0} characters." ),
+    minlength: $.validator.format( "Please enter at least {0} characters." ),
+    rangelength: $.validator.format( "Please enter a value between {0} and {1} characters long." ),
+    range: $.validator.format( "Please enter a value between {0} and {1}." ),
+    max: $.validator.format( "Please enter a value less than or equal to {0}." ),
+    min: $.validator.format( "Please enter a value greater than or equal to {0}." )
+}</code></pre>
+
+<p>jQuery Validate提供了中文信息提示包，位于下载包的 /localization/messages_zh.js，内容如下：</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">(function( factory ) {
+    if ( typeof define === "function" &amp;&amp; define.amd ) {
+        define( ["jquery", "../jquery.validate"], factory );
+    } else {
+        factory( jQuery );
+    }
+}(function( $ ) {
+
+/*
+ * Translated default messages for the jQuery validation plugin.
+ * Locale: ZH (Chinese, 中文 (Zhōngwén), 汉语, 漢語)
+ */
+$.extend($.validator.messages, {
+    required: "这是必填字段",
+    remote: "请修正此字段",
+    email: "请输入有效的电子邮件地址",
+    url: "请输入有效的网址",
+    date: "请输入有效的日期",
+    dateISO: "请输入有效的日期 (YYYY-MM-DD)",
+    number: "请输入有效的数字",
+    digits: "只能输入数字",
+    creditcard: "请输入有效的信用卡号码",
+    equalTo: "你的输入不相同",
+    extension: "请输入有效的后缀",
+    maxlength: $.validator.format("最多可以输入 {0} 个字符"),
+    minlength: $.validator.format("最少要输入 {0} 个字符"),
+    rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串"),
+    range: $.validator.format("请输入范围在 {0} 到 {1} 之间的数值"),
+    max: $.validator.format("请输入不大于 {0} 的数值"),
+    min: $.validator.format("请输入不小于 {0} 的数值")
+});
+
+}));</code></pre>
+
+<p>你可以将该本地化信息文件 /localization/messages_zh.js 引入到页面：</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">&lt;script src="http://libs.cdnjs.net/jquery-validate/1.14.0/localization/messages_zh.js"&gt;&lt;/script&gt;</code></pre>
+
+
+<h2>使用方式</h2>
+
+
+<h3>1、将校验规则写到控件中</h3><pre lang="html" style="max-width: 100%;"><code class="html">&lt;script src="http://libs.cdnjs.net/jquery/2.2.1/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="http://libs.cdnjs.net/jquery-validate/1.14.0/jquery.validate.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://libs.cdnjs.net/jquery-validate/1.14.0/localization/messages_zh.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$.validator.setDefaults({
+    submitHandler: function() {
+      alert("提交事件!");
+    }
+});
+$().ready(function() {
+    $("#commentForm").validate();
+});
+&lt;/script&gt;
+
+&lt;form class="cmxform" id="commentForm" method="get" action=""&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;输入您的名字，邮箱，URL，备注。&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="cname"&gt;Name (必需, 最小两个字母)&lt;/label&gt;
+      &lt;input id="cname" name="name" minlength="2" type="text" required&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="cemail"&gt;E-Mail (必需)&lt;/label&gt;
+      &lt;input id="cemail" type="email" name="email" required&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="curl"&gt;URL (可选)&lt;/label&gt;
+      &lt;input id="curl" type="url" name="url"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="ccomment"&gt;备注 (必需)&lt;/label&gt;
+      &lt;textarea id="ccomment" name="comment" required&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input class="submit" type="submit" value="Submit"&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+
+<p>
+<a target="_blank" href="https://www.w3cschool.cn/tryrun/showhtml/jquery_validate_demo" class="tryitbtn">尝试一下 »</a>
+
+</p>
+
+<h3>2、将校验规则写到 js 代码中</h3><pre lang="javascript" style="max-width: 100%;"><code class="javascript">$().ready(function() {
+// 在键盘按下并释放及提交后验证提交表单
+  $("#signupForm").validate({
+    rules: {
+      firstname: "required",
+      lastname: "required",
+      username: {
+        required: true,
+        minlength: 2
+      },
+      password: {
+        required: true,
+        minlength: 5
+      },
+      confirm_password: {
+        required: true,
+        minlength: 5,
+        equalTo: "#password"
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      topic: {
+        required: "#newsletter:checked",
+        minlength: 2
+      },
+      agree: "required"
+    },
+    messages: {
+      firstname: "请输入您的名字",
+      lastname: "请输入您的姓氏",
+      username: {
+        required: "请输入用户名",
+        minlength: "用户名必需由两个字母组成"
+      },
+      password: {
+        required: "请输入密码",
+        minlength: "密码长度不能小于 5 个字母"
+      },
+      confirm_password: {
+        required: "请输入密码",
+        minlength: "密码长度不能小于 5 个字母",
+        equalTo: "两次密码输入不一致"
+      },
+      email: "请输入一个正确的邮箱",
+      agree: "请接受我们的声明",
+      topic: "请选择两个主题"
+     }
+    })
+});</code></pre>
+
+<p>messages 处，如果某个控件没有 message，将调用默认的信息</p><pre lang="html" style="max-width: 100%;"><code class="html">&lt;form class="cmxform" id="signupForm" method="get" action=""&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;验证完整的表单&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="firstname"&gt;名字&lt;/label&gt;
+      &lt;input id="firstname" name="firstname" type="text"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="lastname"&gt;姓氏&lt;/label&gt;
+      &lt;input id="lastname" name="lastname" type="text"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="username"&gt;用户名&lt;/label&gt;
+      &lt;input id="username" name="username" type="text"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="password"&gt;密码&lt;/label&gt;
+      &lt;input id="password" name="password" type="password"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="confirm_password"&gt;验证密码&lt;/label&gt;
+      &lt;input id="confirm_password" name="confirm_password" type="password"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;input id="email" name="email" type="email"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="agree"&gt;请同意我们的声明&lt;/label&gt;
+      &lt;input type="checkbox" class="checkbox" id="agree" name="agree"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="newsletter"&gt;我乐意接收新信息&lt;/label&gt;
+      &lt;input type="checkbox" class="checkbox" id="newsletter" name="newsletter"&gt;
+    &lt;/p&gt;
+    &lt;fieldset id="newsletter_topics"&gt;
+      &lt;legend&gt;主题 (至少选择两个) - 注意：如果没有勾选“我乐意接收新信息”以下选项会隐藏，但我们这里作为演示让它可见&lt;/legend&gt;
+      &lt;label for="topic_marketflash"&gt;
+        &lt;input type="checkbox" id="topic_marketflash" value="marketflash" name="topic"&gt;Marketflash
+      &lt;/label&gt;
+      &lt;label for="topic_fuzz"&gt;
+        &lt;input type="checkbox" id="topic_fuzz" value="fuzz" name="topic"&gt;Latest fuzz
+      &lt;/label&gt;
+      &lt;label for="topic_digester"&gt;
+        &lt;input type="checkbox" id="topic_digester" value="digester" name="topic"&gt;Mailing list digester
+      &lt;/label&gt;
+      &lt;label for="topic" class="error"&gt;Please select at least two topics you'd like to receive.&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;p&gt;
+      &lt;input class="submit" type="submit" value="提交"&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+
+<p>
+<a target="_blank" href="https://www.w3cschool.cn/tryrun/showhtml/jquery_validate_demo1" class="tryitbtn">尝试一下 »</a>
+
+</p>
+<p>
+<b>required: true</b> 值是必须的。
+    <br>
+<b>required: "#aa:checked"</b> 表达式的值为真，则需要验证。
+    <br>
+<b>required: function(){}</b> 返回为真，表示需要验证。</p>
+<p>后边两种常用于，表单中需要同时填或不填的元素。</p>
+
+<h2>常用方法及注意问题</h2>
+
+
+<h3>1、用其他方式替代默认的 SUBMIT</h3><pre lang="javascript" style="max-width: 100%;"><code class="javascript">$().ready(function() {
+ $("#signupForm").validate({
+        submitHandler:function(form){
+            alert("提交事件!");   
+            form.submit();
+        }    
+    });
+});</code></pre>
+
+<p>使用 ajax 方式</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">$(".selector").validate({     
+ submitHandler: function(form) 
+   {      
+      $(form).ajaxSubmit();     
+   }  
+ }) </code></pre>
+
+<p>可以设置 validate 的默认值，写法如下：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">$</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">setDefaults</span><span class="pun">({</span><span class="pln">
+  submitHandler</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">form</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">"提交事件!"</span><span class="pun">);</span><span class="pln">form</span><span class="pun">.</span><span class="pln">submit</span><span class="pun">();</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span></pre>
+
+<p>如果想提交表单, 需要使用 form.submit()，而不要使用 $(form).submit()。</p>
+
+<h3>2、debug，只验证不提交表单</h3>
+
+<p>如果这个参数为true，那么表单不会提交，只进行检查，调试时十分方便。</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">$().ready(function() {
+ $("#signupForm").validate({
+        debug:true
+    });
+});</code></pre>
+
+<p>如果一个页面中有多个表单都想设置成为 debug，则使用：</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">$.validator.setDefaults({
+   debug: true
+})</code></pre>
+
+
+<h3>3、ignore：忽略某些元素不验证</h3><pre lang="javascript" style="max-width: 100%;"><code class="javascript">ignore: ".ignore"</code></pre>
+
+
+<h3>4、更改错误信息显示的位置</h3><pre lang="javascript" style="max-width: 100%;"><code class="javascript">errorPlacement：Callback</code></pre>
+
+<p>指明错误放置的位置，默认情况是：error.appendTo(element.parent());即把错误信息放在验证的元素后面。</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">errorPlacement: function(error, element) {  
+    error.appendTo(element.parent());  
+}</code></pre>
+
+<p><b>实例</b></p><pre lang="html" style="max-width: 100%;"><code class="html">&lt;p&gt;将错误信息放在 label 元素后并使用 span 元素包裹它&lt;/p&gt;
+
+&lt;form method="get" class="cmxform" id="form1" action=""&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Login Form&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="user"&gt;Username&lt;/label&gt;
+      &lt;input id="user" name="user" required minlength="3"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;input id="password" type="password" maxlength="12" name="password" required minlength="5"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input class="submit" type="submit" value="Login"&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+
+<p>
+<a target="_blank" href="https://www.w3cschool.cn/tryrun/showhtml/jquery_validate_demo2" class="tryitbtn">尝试一下 »</a>
+
+</p>
+<p>代码的作用是：一般情况下把错误信息显示在 &lt;td class="status"&gt;&lt;/td&gt; 中，如果是 radio 则显示在 &lt;td&gt;&lt;/td&gt; 中，如果是 checkbox 则显示在内容的后面。</p>
+<table class="reference notranslate">
+    <tbody>
+        <tr>
+            <th width="15%">参数</th>
+            <th width="15%">类型</th>
+            <th width="60%">描述</th>
+            <th width="10%">默认值</th>
+        </tr>
+        <tr>
+            <td>errorClass</td>
+            <td>String</td>
+            <td>指定错误提示的 css 类名，可以自定义错误提示的样式。</td>
+            <td>"error"</td>
+        </tr>
+        <tr>
+            <td>errorElement</td>
+            <td>String</td>
+            <td>用什么标签标记错误，默认是 label，可以改成 em。</td>
+            <td>"label"</td>
+        </tr>
+        <tr>
+            <td>errorContainer</td>
+            <td>Selector</td>
+            <td>显示或者隐藏验证信息，可以自动实现有错误信息出现时把容器属性变为显示，无错误时隐藏，用处不大。
+                <br>errorContainer: "#messageBox1, #messageBox2"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>errorLabelContainer</td>
+            <td>Selector</td>
+            <td>把错误信息统一放在一个容器里面。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>wrapper</td>
+            <td>String</td>
+            <td>用什么标签再把上边的 errorELement 包起来。</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p>一般这三个属性同时使用，实现在一个容器内显示所有错误提示的功能，并且没有信息时自动隐藏。</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">errorContainer: "div.error",
+errorLabelContainer: $("#signupForm div.error"),
+wrapper: "li"</code></pre>
+
+
+<h3>5、更改错误信息显示的样式</h3>
+
+<p>设置错误提示的样式，可以增加图标显示，在该系统中已经建立了一个 validation.css，专门用于维护校验文件的样式。</p><pre lang="css" style="max-width: 100%;"><code class="css">input.error { border: 1px solid red; }
+label.error {
+  background:url("./demo/images/unchecked.gif") no-repeat 0px 0px;
+
+  padding-left: 16px;
+
+  padding-bottom: 2px;
+
+  font-weight: bold;
+
+  color: #EA5200;
+}
+label.checked {
+  background:url("./demo/images/checked.gif") no-repeat 0px 0px;
+}</code></pre>
+
+
+<h3>6、每个字段验证通过执行函数</h3><p><br></p>
+
+<p>要验证的元素通过验证后的动作，如果跟一个字符串，会当作一个 css 类，也可跟一个函数。</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">success: function(label) {
+    // set &amp;nbsp; as text for IE
+    label.html("&amp;nbsp;").addClass("checked");
+    //label.addClass("valid").text("Ok!")
+}</code></pre>
+
+<p>添加 "valid" 到验证元素，在 CSS 中定义的样式 &lt;style&gt;label.valid {}&lt;/style&gt;。</p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">success: "valid"</code></pre>
+
+
+<h3>7、验证的触发方式修改</h3>
+
+<p>下面的虽然是 boolean 型的，但建议除非要改为 false，否则别乱添加。</p>
+<table class="reference notranslate">
+    <tbody>
+        <tr>
+            <th width="15%">触发方式</th>
+            <th width="15%">类型</th>
+            <th width="60%">描述</th>
+            <th width="10%">默认值</th>
+        </tr>
+        <tr>
+            <td>onsubmit</td>
+            <td>Boolean</td>
+            <td>提交时验证。设置为 false 就用其他方法去验证。</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>onfocusout</td>
+            <td>Boolean</td>
+            <td>失去焦点时验证（不包括复选框/单选按钮）。</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>onkeyup</td>
+            <td>Boolean</td>
+            <td>在 keyup 时验证。</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>onclick</td>
+            <td>Boolean</td>
+            <td>在点击复选框和单选按钮时验证。</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>focusInvalid</td>
+            <td>Boolean</td>
+            <td>提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点。</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>focusCleanup</td>
+            <td>Boolean</td>
+            <td>如果是 true 那么当未通过验证的元素获得焦点时，移除错误提示。避免和 focusInvalid 一起用。</td>
+            <td>false</td>
+        </tr>
+    </tbody>
+</table><p><br></p><pre lang="javascript" style="max-width: 100%;"><code class="javascript">// 重置表单
+$().ready(function() {
+ var validator = $("#signupForm").validate({
+        submitHandler:function(form){
+            alert("submitted");   
+            form.submit();
+        }    
+    });
+    $("#reset").click(function() {
+        validator.resetForm();
+    });
+
+});</code></pre>
+
+
+<h3><br>8、异步验证</h3>
+
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted"><span class="pln">remote</span><span class="pun">：</span><span class="pln">URL</span></pre>
+
+<p>使用 ajax 方式进行验证，默认会提交当前验证的值到远程地址，如果需要提交其他的值，可以使用 data 选项。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="pln">remote</span><span class="pun">:</span><span class="pln"> </span><span class="str">"check-email.php"</span></code></pre>
+
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="pln">remote</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    url</span><span class="pun">:</span><span class="pln"> </span><span class="str">"check-email.php"</span><span class="pun">,</span><span class="pln">     </span><span class="com">//后台处理程序</span><span class="pln">
+    type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"post"</span><span class="pun">,</span><span class="pln">               </span><span class="com">//数据发送方式</span><span class="pln">
+    dataType</span><span class="pun">:</span><span class="pln"> </span><span class="str">"json"</span><span class="pun">,</span><span class="pln">           </span><span class="com">//接受数据格式   </span><span class="pln">
+    data</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">                     </span><span class="com">//要传递的数据</span><span class="pln">
+        username</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> $</span><span class="pun">(</span><span class="str">"#username"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">();</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span>
+
+    </code></pre>
+    <p>远程地址只能输出 "true" 或 "false"，不能有其他输出。</p>
+    
+<h3>9、添加自定义校验</h3>
+
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html hljs"><span class="pln">addMethod</span><span class="pun">：</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> method</span><span class="pun">,</span><span class="pln"> message</span></code></pre>
+
+    <p>自定义验证方法</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="com">// 中文字两个字节</span><span class="pln">
+jQuery</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">addMethod</span><span class="pun">(</span><span class="str">"byteRangeLength"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">value</span><span class="pun">,</span><span class="pln"> element</span><span class="pun">,</span><span class="pln"> param</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> length </span><span class="pun">=</span><span class="pln"> value</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> value</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++){</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">value</span><span class="pun">.</span><span class="pln">charCodeAt</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">127</span><span class="pun">){</span><span class="pln">
+            length</span><span class="pun">++;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">optional</span><span class="pun">(</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> length </span><span class="pun">&gt;=</span><span class="pln"> param</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> length </span><span class="pun">&lt;=</span><span class="pln"> param</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">);</span><span class="pln">   
+</span><span class="pun">},</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="str">"请确保输入的值在{0}-{1}个字节之间(一个中文字算2个字节)"</span><span class="pun">));</span><span class="pln">
+
+</span><span class="com">// 邮政编码验证   </span><span class="pln">
+jQuery</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">addMethod</span><span class="pun">(</span><span class="str">"isZipCode"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">value</span><span class="pun">,</span><span class="pln"> element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">   
+    </span><span class="kwd">var</span><span class="pln"> tel </span><span class="pun">=</span><span class="pln"> </span><span class="str">/^[0-9]{6}$/</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">optional</span><span class="pun">(</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tel</span><span class="pun">.</span><span class="pln">test</span><span class="pun">(</span><span class="pln">value</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">},</span><span class="pln"> </span><span class="str">"请正确填写您的邮政编码"</span><span class="pun">);</span></code></pre>
+
+    <p><b>注意</b>：要在 additional-methods.js 文件中添加或者在 jquery.validate.js 文件中添加。建议一般写在 additional-methods.js 文件中。</p>
+    <p><b>注意</b>：在 messages_cn.js 文件中添加：isZipCode: "只能包括中文字、英文字母、数字和下划线"。调用前要添加对 additional-methods.js 文件的引用。</p>
+    
+<h3>10、radio 和 checkbox、select 的验证</h3>
+
+    <p>radio 的 required 表示必须选中一个。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="tag">&lt;input</span><span class="pln">  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"radio"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"gender_male"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"m"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"gender"</span><span class="pln"> </span><span class="atn">required</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln">  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"radio"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"gender_female"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"f"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"gender"</span><span class="tag">/&gt;</span></code></pre>
+
+    <p>checkbox 的 required 表示必须选中。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"agree"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"agree"</span><span class="pln"> </span><span class="atn">required</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+
+    <p>checkbox 的 minlength 表示必须选中的最小个数，maxlength 表示最大的选中个数，rangelength:[2,3] 表示选中个数区间。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"spam_email"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"email"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"spam[]"</span><span class="pln"> </span><span class="atn">required</span><span class="pln"> </span><span class="atn">minlength</span><span class="pun">=</span><span class="atv">"2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"spam_phone"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"phone"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"spam[]"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"spam_mail"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"mail"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"spam[]"</span><span class="pln"> </span><span class="tag">/&gt;</span></code></pre>
+
+    <p>select 的 required 表示选中的 value 不能为空。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"jungle"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"jungle"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Please select something!"</span><span class="pln"> </span><span class="atn">required</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"1"</span><span class="tag">&gt;</span><span class="pln">Buga</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"2"</span><span class="tag">&gt;</span><span class="pln">Baga</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"3"</span><span class="tag">&gt;</span><span class="pln">Oi</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+</span><span class="tag">&lt;/select&gt;</span></code></pre>
+
+    <p>select 的 minlength 表示选中的最小个数（可多选的 select），maxlength 表示最大的选中个数，rangelength:[2,3] 表示选中个数区间。</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"fruit"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"fruit"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Please select at least two fruits"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"{required:true, minlength:2}"</span><span class="pln"> </span><span class="atn">multiple</span><span class="pun">=</span><span class="atv">"multiple"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"b"</span><span class="tag">&gt;</span><span class="pln">Banana</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"a"</span><span class="tag">&gt;</span><span class="pln">Apple</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"p"</span><span class="tag">&gt;</span><span class="pln">Peach</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+    </span><span class="tag">&lt;option</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"t"</span><span class="tag">&gt;</span><span class="pln">Turtle</span><span class="tag">&lt;/option&gt;</span><span class="pln">
+</span><span class="tag">&lt;/select&gt;</span></code></pre>
+
+    
+<h2>jQuery.validate 中文 API</h2>
+
+    <table class="reference notranslate">
+        <tbody>
+            <tr>
+                <th width="20%">名称</th>
+                <th width="20%">返回类型</th>
+                <th width="60%">描述</th>
+            </tr>
+            <tr>
+                <td>validate(options)</td>
+                <td>Validator</td>
+                <td>验证所选的 FORM。</td>
+            </tr>
+            <tr>
+                <td>valid()</td>
+                <td>Boolean</td>
+                <td>检查是否验证通过。</td>
+            </tr>
+            <tr>
+                <td>rules()</td>
+                <td>Options</td>
+                <td>返回元素的验证规则。</td>
+            </tr>
+            <tr>
+                <td>rules("add",rules)</td>
+                <td>Options</td>
+                <td>增加验证规则。</td>
+            </tr>
+            <tr>
+                <td>rules("remove",rules)</td>
+                <td>Options</td>
+                <td>删除验证规则。</td>
+            </tr>
+            <tr>
+                <td>removeAttrs(attributes)</td>
+                <td>Options</td>
+                <td>删除特殊属性并且返回它们。</td>
+            </tr>
+            <tr>
+                <td colspan="3">自定义选择器</td>
+            </tr>
+            <tr>
+                <td>:blank</td>
+                <td>Validator</td>
+                <td>没有值的筛选器。</td>
+            </tr>
+            <tr>
+                <td>:filled</td>
+                <td>Array &lt;Element&gt;</td>
+                <td>有值的筛选器。</td>
+            </tr>
+            <tr>
+                <td>:unchecked</td>
+                <td>Array &lt;Element&gt;</td>
+                <td>没选择的元素的筛选器。</td>
+            </tr>
+            <tr>
+                <td colspan="3">实用工具</td>
+            </tr>
+            <tr>
+                <td>jQuery.format(template,argument,argumentN...)</td>
+                <td>String</td>
+                <td>用参数代替模板中的 {n}。</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<h3>Validator</h3>
+
+    <p>validate 方法返回一个 Validator 对象。Validator 对象有很多方法可以用来引发校验程序或者改变 form 的内容，下面列出几个常用的方法。</p>
+    <table class="reference notranslate">
+        <tbody>
+            <tr>
+                <th width="20%">名称</th>
+                <th width="20%">返回类型</th>
+                <th width="60%">描述</th>
+            </tr>
+            <tr>
+                <td>form()</td>
+                <td>Boolean</td>
+                <td>验证 form 返回成功还是失败。</td>
+            </tr>
+            <tr>
+                <td>element(element)</td>
+                <td>Boolean</td>
+                <td>验证单个元素是成功还是失败。</td>
+            </tr>
+            <tr>
+                <td>resetForm()</td>
+                <td>undefined</td>
+                <td>把前面验证的 FORM 恢复到验证前原来的状态。</td>
+            </tr>
+            <tr>
+                <td>showErrors(errors)</td>
+                <td>undefined</td>
+                <td>显示特定的错误信息。</td>
+            </tr>
+            <tr>
+                <td colspan="3">Validator 函数</td>
+            </tr>
+            <tr>
+                <td>setDefaults(defaults)</td>
+                <td>undefined</td>
+                <td>改变默认的设置。</td>
+            </tr>
+            <tr>
+                <td>addMethod(name,method,message)</td>
+                <td>undefined</td>
+                <td>添加一个新的验证方法。必须包括一个独一无二的名字，一个 JAVASCRIPT 的方法和一个默认的信息。</td>
+            </tr>
+            <tr>
+                <td>addClassRules(name,rules)</td>
+                <td>undefined</td>
+                <td>增加组合验证类型，在一个类里面用多种验证方法时比较有用。</td>
+            </tr>
+            <tr>
+                <td>addClassRules(rules)</td>
+                <td>undefined</td>
+                <td>增加组合验证类型，在一个类里面用多种验证方法时比较有用。这个是同时加多个验证方法。</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<h3>内置验证方式</h3>
+
+    <table class="reference notranslate">
+        <tbody>
+            <tr>
+                <th width="20%">名称</th>
+                <th width="20%">返回类型</th>
+                <th width="60%">描述</th>
+            </tr>
+            <tr>
+                <td>required()</td>
+                <td>Boolean</td>
+                <td>必填验证元素。</td>
+            </tr>
+            <tr>
+                <td>required(dependency-expression)</td>
+                <td>Boolean</td>
+                <td>必填元素依赖于表达式的结果。</td>
+            </tr>
+            <tr>
+                <td>required(dependency-callback)</td>
+                <td>Boolean</td>
+                <td>必填元素依赖于回调函数的结果。</td>
+            </tr>
+            <tr>
+                <td>remote(url)</td>
+                <td>Boolean</td>
+                <td>请求远程校验。url 通常是一个远程调用方法。</td>
+            </tr>
+            <tr>
+                <td>minlength(length)</td>
+                <td>Boolean</td>
+                <td>设置最小长度。</td>
+            </tr>
+            <tr>
+                <td>maxlength(length)</td>
+                <td>Boolean</td>
+                <td>设置最大长度。</td>
+            </tr>
+            <tr>
+                <td>rangelength(range)</td>
+                <td>Boolean</td>
+                <td>设置一个长度范围 [min,max]。</td>
+            </tr>
+            <tr>
+                <td>min(value)</td>
+                <td>Boolean</td>
+                <td>设置最小值。</td>
+            </tr>
+            <tr>
+                <td>max(value)</td>
+                <td>Boolean</td>
+                <td>设置最大值。</td>
+            </tr>
+            <tr>
+                <td>email()</td>
+                <td>Boolean</td>
+                <td>验证电子邮箱格式。</td>
+            </tr>
+            <tr>
+                <td>range(range)</td>
+                <td>Boolean</td>
+                <td>设置值的范围。</td>
+            </tr>
+            <tr>
+                <td>url()</td>
+                <td>Boolean</td>
+                <td>验证 URL 格式。</td>
+            </tr>
+            <tr>
+                <td>date()</td>
+                <td>Boolean</td>
+                <td>验证日期格式（类似 30/30/2008 的格式，不验证日期准确性只验证格式）。</td>
+            </tr>
+            <tr>
+                <td>dateISO()</td>
+                <td>Boolean</td>
+                <td>验证 ISO 类型的日期格式。</td>
+            </tr>
+            <tr>
+                <td>dateDE()</td>
+                <td>Boolean</td>
+                <td>验证德式的日期格式（29.04.1994 或 1.1.2006）。</td>
+            </tr>
+            <tr>
+                <td>number()</td>
+                <td>Boolean</td>
+                <td>验证十进制数字（包括小数的）。</td>
+            </tr>
+            <tr>
+                <td>digits()</td>
+                <td>Boolean</td>
+                <td>验证整数。</td>
+            </tr>
+            <tr>
+                <td>creditcard()</td>
+                <td>Boolean</td>
+                <td>验证信用卡号。</td>
+            </tr>
+            <tr>
+                <td>accept(extension)</td>
+                <td>Boolean</td>
+                <td>验证相同后缀名的字符串。</td>
+            </tr>
+            <tr>
+                <td>equalTo(other)</td>
+                <td>Boolean</td>
+                <td>验证两个输入框的内容是否相同。</td>
+            </tr>
+            <tr>
+                <td>phoneUS()</td>
+                <td>Boolean</td>
+                <td>验证美式的电话号码。</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<h3>validate ()的可选项</h3>
+
+    <table class="reference notranslate">
+        <tbody>
+            <tr>
+                <th width="30%">描述</th>
+                <th width="70%">代码</th>
+            </tr>
+            <tr>
+                <td>debug：进行调试模式（表单不提交）。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate
+</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;debug</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>把调试设置为默认。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">setDefaults</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;debug</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>submitHandler：通过验证后运行的函数，里面要加上表单提交的函数，否则表单不会提交。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;submitHandler</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">form</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span><span class="pun">(</span><span class="pln">form</span><span class="pun">).</span><span class="pln">ajaxSubmit</span><span class="pun">();</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>ignore：对某些元素不进行验证。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;ignore</span><span class="pun">:</span><span class="str">".ignore"</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>rules：自定义规则，key:value 的形式，key 是要验证的元素，value 可以是字符串或对象。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;rules</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</span><span class="pun">:</span><span class="str">"required"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>messages：自定义的提示信息，key:value 的形式，key 是要验证的元素，value 可以是字符串或函数。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;rules</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</span><span class="pun">:</span><span class="str">"required"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">},</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;messages</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</span><span class="pun">:</span><span class="str">"Name不能为空"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:{</span><span class="pln">       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</span><span class="pun">:</span><span class="str">"E-mail不能为空"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email</span><span class="pun">:</span><span class="str">"E-mail地址不正确"</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>groups：对一组元素的验证，用一个错误提示，用 errorPlacement 控制把出错信息放在哪里。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;groups</span><span class="pun">:{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;username</span><span class="pun">:</span><span class="str">"fname 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lname"</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">},</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;errorPlacement</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">,</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">element</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">"name"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">"fname"</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">"name"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">"lname"</span><span class="pun">)</span><span class="pln">   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error</span><span class="pun">.</span><span class="pln">insertAfter</span><span class="pun">(</span><span class="str">"#lastname"</span><span class="pun">);</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">else</span><span class="pln">    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error</span><span class="pun">.</span><span class="pln">insertAfter</span><span class="pun">(</span><span class="pln">element</span><span class="pun">);</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">},</span><span class="pln">
+   debug</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>OnSubmit：类型 Boolean，默认 true，指定是否提交时验证。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">  
+&nbsp;&nbsp;&nbsp;&nbsp;onsubmit</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>onfocusout：类型 Boolean，默认 true，指定是否在获取焦点时验证。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">   
+&nbsp;&nbsp;&nbsp;&nbsp;onfocusout</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>onkeyup：类型 Boolean，默认 true，指定是否在敲击键盘时验证。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+   onkeyup</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>onclick：类型 Boolean，默认 true，指定是否在鼠标点击时验证（一般验证 checkbox、radiobox）。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+   onclick</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>focusInvalid：类型 Boolean，默认 true。提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+   focusInvalid</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>focusCleanup：类型 Boolean，默认 false。当未通过验证的元素获得焦点时，移除错误提示（避免和 focusInvalid 一起使用）。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+   focusCleanup</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>errorClass：类型 String，默认 "error"。指定错误提示的 css 类名，可以自定义错误提示的样式。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln"> 
+&nbsp;&nbsp;&nbsp;&nbsp;errorClass</span><span class="pun">:</span><span class="str">"invalid"</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>errorElement：类型 String，默认 "label"。指定使用什么标签标记错误。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate
+   errorElement</span><span class="pun">:</span><span class="str">"em"</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>wrapper：类型 String，指定使用什么标签再把上边的 errorELement 包起来。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+   wrapper</span><span class="pun">:</span><span class="str">"li"</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>errorLabelContainer：类型 Selector，把错误信息统一放在一个容器里面。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">   
+&nbsp;&nbsp;&nbsp;&nbsp;errorLabelContainer</span><span class="pun">:</span><span class="str">"#messageBox"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;wrapper</span><span class="pun">:</span><span class="str">"li"</span><span class="pun">,</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;submitHandler</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert</span><span class="pun">(</span><span class="str">"Submitted!"</span><span class="pun">)</span><span class="pln"> 
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>showErrors：跟一个函数，可以显示总共有多少个未通过验证的元素。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">".selector"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">  
+&nbsp;&nbsp;&nbsp;&nbsp;showErrors</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">errorMap</span><span class="pun">,</span><span class="pln">errorList</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#summary"</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="str">"Your form contains "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">numberOfInvalids</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">" errors,see details below."</span><span class="pun">);</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">defaultShowErrors</span><span class="pun">();</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>errorPlacement：跟一个函数，可以自定义错误放到哪里。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">  
+&nbsp;&nbsp;&nbsp;&nbsp;errorPlacement</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">,</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error</span><span class="pun">.</span><span class="pln">appendTo</span><span class="pun">(</span><span class="pln">element</span><span class="pun">.</span><span class="pln">parent</span><span class="pun">(</span><span class="str">"td"</span><span class="pun">).</span><span class="kwd">next</span><span class="pun">(</span><span class="str">"td"</span><span class="pun">));</span><span class="pln">
+   </span><span class="pun">},</span><span class="pln">
+   debug</span><span class="pun">:</span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>success：要验证的元素通过验证后的动作，如果跟一个字符串，会当作一个 css 类，也可跟一个函数。</td>
+                <td>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">        
+&nbsp;&nbsp;&nbsp;&nbsp;success</span><span class="pun">:</span><span class="str">"valid"</span><span class="pun">,</span><span class="pln">
+        submitHandler</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert</span><span class="pun">(</span><span class="str">"Submitted!"</span><span class="pun">)</span><span class="pln"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span></code></pre>
+
+                </td>
+            </tr>
+            <tr>
+                <td>highlight：可以给未通过验证的元素加效果、闪烁等。</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+<h3>addMethod(name,method,message)方法</h3>
+
+    <p>参数 name 是添加的方法的名字。</p>
+    <p>参数 method 是一个函数，接收三个参数 (value,element,param) 。
+        <br>value 是元素的值，element 是元素本身，param 是参数。</p>
+    <p>我们可以用 addMethod 来添加除内置的 Validation 方法之外的验证方法。比如有一个字段，只能输一个字母，范围是 a-f，写法如下：</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="html"><code class="html hljs"><span class="pln">$</span><span class="pun">.</span><span class="pln">validator</span><span class="pun">.</span><span class="pln">addMethod</span><span class="pun">(</span><span class="str">"af"</span><span class="pun">,</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">value</span><span class="pun">,</span><span class="pln">element</span><span class="pun">,</span><span class="kwd">params</span><span class="pun">){</span><span class="pln">  
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">value</span><span class="pun">.</span><span class="pln">length</span><span class="pun">&gt;</span><span class="lit">1</span><span class="pun">){</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">value</span><span class="pun">&gt;=</span><span class="kwd">params</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> value</span><span class="pun">&lt;=</span><span class="kwd">params</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]){</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="kwd">else</span><span class="pun">{</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">},</span><span class="str">"必须是一个字母,且a-f"</span><span class="pun">);</span></code></pre>
+
+    <p>如果有个表单字段的 name="username"，则在 rules 中写：</p>
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">username</span><span class="pun">:{</span><span class="pln">
+   af</span><span class="pun">:[</span><span class="str">"a"</span><span class="pun">,</span><span class="str">"f"</span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+    <p>addMethod 的第一个参数，是添加的验证方法的名字，这时是 af。
+        <br>addMethod 的第三个参数，是自定义的错误提示，这里的提示为:"必须是一个字母,且a-f"。
+        <br>addMethod 的第二个参数，是一个函数，这个比较重要，决定了用这个验证方法时的写法。</p>
+    <p>如果只有一个参数，直接写，比如 af:"a"，那么 a 就是这个唯一的参数，如果多个参数，则写在 [] 里，用逗号分开。</p>
+    
+<h3>meta String 方式</h3>
+
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="pln">$</span><span class="pun">(</span><span class="str">"#myform"</span><span class="pun">).</span><span class="pln">validate</span><span class="pun">({</span><span class="pln">
+
+   meta</span><span class="pun">:</span><span class="str">"validate"</span><span class="pun">,</span><span class="pln">
+
+   submitHandler</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+alert</span><span class="pun">(</span><span class="str">"Submitted!"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">})</span></code></pre>
+
+<pre style="white-space: pre-wrap;" class="prettyprint prettyprinted" lang="javascript"><code class="javascript"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> 
+</span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/jquery.metadata.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> 
+</span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/jquery.validate.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"myform"</span><span class="tag">&gt;</span><span class="pln">
+
+  </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> 
+</span><span class="atn">name</span><span class="pun">=</span><span class="atv">"email"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"{validate:{ required:true,email:true }}"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+  </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> 
+</span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Submit"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/form&gt;</span></code></pre>
+
+    <hr>
+    
+<h2>实例演示</h2>
+
+    
+<h3>虚构的实例</h3>
+
+    <ul>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-errorcontainer" target="_blank">错误消息容器</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-custom-messages-data" target="_blank">自定义消息作为元素数据</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-radio-checkbox-select" target="_blank">radio（单选按钮）、checkbox（复选按钮）和 select（下拉框）</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-ajaxSubmit-integration" target="_blank">与表单（Form）插件的交互（AJAX 提交）</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-custom-methods" target="_blank">自定义方法和消息显示</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-dynamic-totals" target="_blank">动态表单</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-themerollered" target="_blank">使用 jQuery UI Themeroller 定义表单样式</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-tinymce" target="_blank">TinyMCE - 一个轻量级的基于浏览器的所见即所得编辑器</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-file-input" target="_blank">文件输入框</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-jquerymobile" target="_blank">jQuery Mobile 表单验证</a>
+
+        </li>
+    </ul>
+    
+<h3>现实世界的实例</h3>
+
+    <ul>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-milk" target="_blank">Milk 注册表单</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-marketo-step1" target="_blank">Marketo 注册表单</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-multipart" target="_blank">房屋买卖折叠面板表单</a>
+
+        </li>
+        <li><a href="https://www.w3cschool.cn/tryrun/showhtml/jquery-plugin-captcha" target="_blank">远程 CAPTCHA（验证码）验证</a></li></ul><p><br></p></div>
+<style>
+pre.prettyprint {
+    padding: 10px 15px;
+}
+</style><div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="hdweaf21.html" title="上一篇：jQuery 插件">jQuery 插件</a></div>
+<div class="next-link"><a href="urwo2fnn.html" title="下一篇：jQuery Accordion">jQuery Accordion</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="dom-element-methods-toarray.html" title="jQuery DOM 元素方法 - toArray() 方法">jQuery DOM 元素方法 - toArray() 方法</a></li>
+<li><a href="dom-element-methods-size.html" title="jQuery DOM 元素方法 - size() 方法">jQuery DOM 元素方法 - size() 方法</a></li>
+<li><a href="dom-element-methods-index.html" title="jQuery DOM 元素方法 - index() 方法">jQuery DOM 元素方法 - index() 方法</a></li>
+<li><a href="dom-element-methods-get.html" title="jQuery DOM 元素方法 - get() 方法">jQuery DOM 元素方法 - get() 方法</a></li>
+<li><a href="event-unload.html" title="jQuery unload() 方法">jQuery unload() 方法</a></li>
+<li><a href="jquery-reference.html" title="jQuery 参考手册">jQuery 参考手册</a></li>
+<li><a href="event-focusout.html" title="jQuery focusout() 方法">jQuery focusout() 方法</a></li>
+<li><a href="event-load.html" title="jQuery load() 方法">jQuery load() 方法</a></li>
+<li><a href="jquery-ref-core.html" title="jQuery 参考手册 - 核心">jQuery 参考手册 - 核心</a></li>
+<li><a href="sel-multiple-elements.html" title="jQuery 多个 Elements 选择器">jQuery 多个 Elements 选择器</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="hdweaf21.html" title="上一篇：jQuery 插件" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="urwo2fnn.html" title="下一篇：jQuery Accordion" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'kv69gfnm',
+pename:'jquery',
+ismenu:'0',
+ktitle:'jQuery Validate',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'jquery',
+bookname:'jQuery教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/jquery.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/jquery.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "15450";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '56';
+var aid   = '20290';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/jquery/kv69gfnm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 00:36:57 GMT -->
+</html>

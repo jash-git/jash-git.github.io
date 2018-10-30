@@ -1,0 +1,10 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.w3cschool.cn	TRUE	/	FALSE	1999999999	PHPSESSID	m9ve2ni8ofq7bdk8sohr9fj5s5
+.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_uid	deleted
+www.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_uid	deleted
+.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_auth	deleted
+www.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_auth	deleted
+.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_sauth	deleted
+www.w3cschool.cn	TRUE	/	FALSE	1999999999	ypre_sauth	deleted
+
