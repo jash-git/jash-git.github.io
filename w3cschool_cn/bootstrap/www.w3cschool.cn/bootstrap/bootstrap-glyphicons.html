@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-glyphicons.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:11:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>Bootstrap 字体图标(Glyphicons)_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="Bootstrap 字体图标(Glyphicons)" />
+<meta name="description" content="Bootstrap 字体图标(Glyphicons)  本章将讲解字体图标(Glyphicons)，并通过一些实例了解它的使用。Bootstrap 捆绑了 200 多种字体格式的字形。首先让我们先来理解一下什么是字体图标。   什么是字体图标？ 字体图标是在 Web 项目中使用的图标字体。虽然，Gl_来自bootstrap教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/courses/" title="编程课程">编程课程</a></li> 
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a>
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'bootstrap-glyphicons.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/bootstrap" title="bootstrap教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="bootstrap教程" src="../attachments/cover/cover_bootstrap.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>bootstrap教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="bootstrap问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">bootstrap问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="4677" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="jqxmwf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 教程">Bootstrap 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tutorial.html" title="Bootstrap 教程导读">Bootstrap 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-intro.html" title="Bootstrap 简介">Bootstrap 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-environment-setup">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-environment-setup.html" title="Bootstrap 环境安装">Bootstrap 环境安装</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-codecamp.html" title="Bootstrap 编程实战闯关">Bootstrap 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="m471bf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap CSS">Bootstrap CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-css-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-overview.html" title="Bootstrap CSS 概览">Bootstrap CSS 概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-grid-system">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-grid-system.html" title="Bootstrap 网格系统">Bootstrap 网格系统</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-typography">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-typography.html" title="Bootstrap 排版">Bootstrap 排版</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-code.html" title="Bootstrap 代码">Bootstrap 代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tables.html" title="Bootstrap 表格">Bootstrap 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-forms">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-forms.html" title="Bootstrap 表单">Bootstrap 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-button-plugin.html" title="Bootstrap 按钮">Bootstrap 按钮</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-images.html" title="Bootstrap 图片">Bootstrap 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-helper-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-helper-classes.html" title="Bootstrap 辅助类">Bootstrap 辅助类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-responsive-utilities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-responsive-utilities.html" title="Bootstrap 响应式实用工具">Bootstrap 响应式实用工具</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="sknxvf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 布局组件">Bootstrap 布局组件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="2emf1fn9">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="2emf1fn9.html" title="Bootstrap 字体图标">Bootstrap 字体图标</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-dropdown-plugin.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-groups.html" title="Bootstrap 按钮组">Bootstrap 按钮组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-dropdowns">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-dropdowns.html" title="Bootstrap 按钮下拉菜单">Bootstrap 按钮下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-input-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-input-groups.html" title="Bootstrap 输入框组">Bootstrap 输入框组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-navigation-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-navigation-elements.html" title="Bootstrap 导航元素">Bootstrap 导航元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="cqye4fnh">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="cqye4fnh.html" title="Bootstrap 导航栏">Bootstrap 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-breadcrumbs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-breadcrumbs.html" title="Bootstrap 面包屑导航">Bootstrap 面包屑导航</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-pagination">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-pagination.html" title="Bootstrap 分页">Bootstrap 分页</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-labels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-labels.html" title="Bootstrap 标签">Bootstrap 标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-badges">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-badges.html" title="Bootstrap 徽章">Bootstrap 徽章</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-jumbotron">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-jumbotron.html" title="Bootstrap 超大屏幕">Bootstrap 超大屏幕</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-page-header">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-page-header.html" title="Bootstrap 页面标题">Bootstrap 页面标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-thumbnails">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-thumbnails.html" title="Bootstrap 缩略图">Bootstrap 缩略图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alerts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alerts.html" title="Bootstrap 警告">Bootstrap 警告</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-progress-bars">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-media-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-media-object.html" title="Bootstrap 多媒体对象">Bootstrap 多媒体对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-list-group">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-list-group.html" title="Bootstrap 列表组">Bootstrap 列表组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-panels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-panels.html" title="Bootstrap 面板">Bootstrap 面板</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="9jto5fni">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="9jto5fni.html" title="Bootstrap Well">Bootstrap Well</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="evsruf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 插件">Bootstrap 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-plugins-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-plugins-overview.html" title="Bootstrap 插件概览">Bootstrap 插件概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-transition-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-transition-plugin.html" title="Bootstrap 过渡效果（Transition）插件">Bootstrap 过渡效果（Transition）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-modal-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-modal-plugin.html" title="Bootstrap 模态框（Modal）插件">Bootstrap 模态框（Modal）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-dropdown-plugin.html" title="Bootstrap 下拉菜单（Dropdown）插件">Bootstrap 下拉菜单（Dropdown）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-scrollspy-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-scrollspy-plugin.html" title="Bootstrap 滚动监听（Scrollspy）插件">Bootstrap 滚动监听（Scrollspy）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-tab-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tab-plugin.html" title="Bootstrap 标签页（Tab）插件">Bootstrap 标签页（Tab）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="5pj86fnj">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="5pj86fnj.html" title="Bootstrap 提示工具（Tooltip）插件">Bootstrap 提示工具（Tooltip）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-popover-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-popover-plugin.html" title="Bootstrap 弹出框（Popover）插件">Bootstrap 弹出框（Popover）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alert-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alert-plugin.html" title="Bootstrap 警告框">Bootstrap 警告框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-plugin.html" title="Bootstrap 按钮（Button）插件">Bootstrap 按钮（Button）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-collapse-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-collapse-plugin.html" title="Bootstrap 折叠（Collapse）插件">Bootstrap 折叠（Collapse）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-carousel-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-carousel-plugin.html" title="Bootstrap 轮播（Carousel）插件">Bootstrap 轮播（Carousel）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-affix-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-affix-plugin.html" title="Bootstrap 附加导航（Affix）插件">Bootstrap 附加导航（Affix）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="89qvef21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 其他">Bootstrap 其他</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-ui-editor">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-ui-editor.html" title="Bootstrap UI 编辑器">Bootstrap UI 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tutorial.html" title="Bootstrap v2 教程">Bootstrap v2 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-html-codeguide">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-html-codeguide.html" title="Bootstrap HTML编码规范">Bootstrap HTML编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-css-codeguide-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-codeguide-html.html" title="Bootstrap CSS编码规范">Bootstrap CSS编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-b4v222x8">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 相关教程">Bootstrap 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-eg6822xa">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-bootstrap-setup.html" title="Bootstrap 入门教程">Bootstrap 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-o38d28im">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 版本更新">Bootstrap 版本更新</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-raxz28in">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-raxz28in.html" title="Bootstrap4 首个Beta版发布：距上次发布已7月之久！">Bootstrap4 首个Beta版发布：距上次发布已7月之久！</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-uow62fyg">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-uow62fyg.html" title="Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架">Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(1544)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">0</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/bootstrap/bootstrap-glyphicons" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>Bootstrap 字体图标(Glyphicons)</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建， 最后一次修改&nbsp;<span>2015-09-15</span>    
+</div>          
+</div>          
+<div class="hb-wiki content-bg">
+<div class="content-intro view-box "><h2>Bootstrap <span class="color_h1">字体图标(Glyphicons)</span></h2> <div class="tutintro"> <p>本章将讲解字体图标(Glyphicons)，并通过一些实例了解它的使用。Bootstrap 捆绑了 200 多种字体格式的字形。首先让我们先来理解一下什么是字体图标。</p> </div> <hr> <h2>什么是字体图标？</h2> <p>字体图标是在 Web 项目中使用的图标字体。虽然，<a target="_blank" rel="nofollow" href="http://glyphicons.com/">Glyphicons Halflings</a> 需要商业许可，但是您可以通过基于项目的 Bootstrap 来免费使用这些图标。</p> <p>为了表示对图标作者的感谢，希望您在使用时加上 GLYPHICONS 网站的链接。 </p> <hr> <h2>获取字体图标</h2> <p>我们已经在 <a target="_blank" href="bootstrap-environment-setup.html">环境安装</a> 章节下载了 Bootstrap 3.x 版本，并理解了它的目录结构。在 <i>fonts</i> 文件夹内可以找到字体图标，它包含了下列这些文件：</p> <ul class="list"> <li>glyphicons-halflings-regular.eot</li> <li>glyphicons-halflings-regular.svg</li> <li>glyphicons-halflings-regular.ttf</li> <li>glyphicons-halflings-regular.woff</li> </ul> <p>相关的 CSS 规则写在 <i>dist</i> 文件夹内的 css 文件夹内的 <i>bootstrap.css</i> 和 <i>bootstrap-min.css</i> 文件上。</p> <h3>字体图标列表</h3> <p><a target="_blank" href="https://www.w3cschool.cn/statics/demosource/bootstrap3-glyph-icons.htm">点击这里，查看可用的字体图标列表。</a></p> <hr> <h2>CSS 规则解释</h2> <p>下面的 CSS 规则构成 glyphicon class。</p> <pre class="css">
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+</pre> <p>所以 font-face 规则实际上是在找到 glyphicons 地方声明 font-family 和位置。</p> <p><em>.glyphicon</em> class 声明一个从顶部偏移 1px 的相对位置，呈现为 inline-block，声明字体，规定 font-style 和 font-weight 为 normal，设置行高为 1。除此之外，使用 <em>-webkit-font-smoothing: antialiased</em> 和 <em>-moz-osx-font-smoothing: grayscale;</em> 获得跨浏览器的一致性。</p> <p>然后，这里的 <p> <pre class="css">
+.glyphicon:empty {
+  width: 1em;
+}
+</pre> <p>是空的 glyphicon。</p> <p>这里有 200 个 class，每个 class 针对一个图标。这些 class 的常见格式如下：</p> <pre class="css">
+.glyphicon-keyword:before {
+  content: "hexvalue";
+}
+</pre> <p>比如，使用的 user 图标，它的 class 如下：</p> <pre class="css">
+.glyphicon-user:before {
+  content: "\e008";
+}
+</pre> <hr> <h2>用法</h2> <p>如需使用图标，只需要简单地使用下面的代码即可。请在图标和文本之间保留适当的空间。</p> <pre class="prettyprint">
+&lt;span class="glyphicon glyphicon-search"&gt;&lt;/span&gt;
+</pre> <p>下面的实例演示了如何使用字体图标：</p> <pre class="prettyprint tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Bootstrap 实例 - 如何使用字体图标&lt;/title&gt;
+   &lt;link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"&gt;
+   &lt;script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
+   &lt;script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;
+   &lt;button type="button" class="btn btn-default"&gt;
+      &lt;span class="glyphicon glyphicon-sort-by-attributes"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   &lt;button type="button" class="btn btn-default"&gt;
+      &lt;span class="glyphicon glyphicon-sort-by-attributes-alt"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   &lt;button type="button" class="btn btn-default"&gt;
+      &lt;span class="glyphicon glyphicon-sort-by-order"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   &lt;button type="button" class="btn btn-default"&gt;
+      &lt;span class="glyphicon glyphicon-sort-by-order-alt"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+&lt;/p&gt;
+&lt;button type="button" class="btn btn-default btn-lg"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-sm"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-xs"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre> <p><a showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap3-glyphicons" target="_blank"><button class="btn example-btn">尝试一下 »</button></a></p> <p>结果如下所示：</p> <div class="cover" style="border: 1px solid #D6D6D6;padding: 5px"> <img src="../../7n.w3cschool.cn/attachments/uploads/2014/06/glyphicon_demo.jpg" alt="如何使用字体图标" /> </div> <hr> <h2>带有导航栏的字体图标</h2> <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;导航栏的字体图标&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="//apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+    body {
+    padding-top: 50px;
+    padding-left: 50px;
+    }
+    &lt;/style&gt;
+    &lt;!--[if lt IE 9]&gt;       &lt;script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"&gt;&lt;/script&gt;     &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="navbar navbar-fixed-top navbar-inverse" role="navigation"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="navbar-header"&gt;
+          &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"&gt;
+            &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+            &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;span class="icon-bar"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse navbar-collapse"&gt;
+          &lt;ul class="nav navbar-nav"&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;span class="glyphicon glyphicon-home"&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#shop"&gt;&lt;span class="glyphicon glyphicon-shopping-cart"&gt;Shop&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#support"&gt;&lt;span class="glyphicon glyphicon-headphones"&gt;Support&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;&lt;!-- /.nav-collapse --&gt;
+      &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/div&gt;
+    &lt;!-- jQuery (Bootstrap 插件需要引入) --&gt;
+    &lt;script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;!-- 包含了所有编译插件 --&gt;
+    &lt;script src="//apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;      
+</pre> <p><a showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap-using-glyphicons-navbar" target="_blank"><button class="btn example-btn">尝试一下 »</button></a></p> <hr> <h2>定制字体图标</h2> <p>我们已经看到如何使用字体图标，接下来我们看看如何定制字体图标。</p> <p>我们将以上面的实例开始，并通过改变字体尺寸、颜色和应用文本阴影来进行定制图标。</p> <p>下面是开始的代码：</p> <pre class="html">
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+</pre> <p>效果如下所示：</p>  <h3>定制字体尺寸</h3> <p>通过增加或减少图标的字体尺寸，您可以让图标看起来更大或更小。</p> <pre class="html">
+&lt;button type="button" class="btn btn-primary btn-lg" style="font-size: 60px"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+</pre>  <h3>定制字体颜色</h3> <pre class="html">
+&lt;button type="button" class="btn btn-primary btn-lg" style="color: rgb(212, 106, 64);"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+</pre>  <h3>应用文本阴影</h3> <pre>
+&lt;button type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;"&gt;
+  &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; User
+&lt;/button&gt;
+</pre>  <h3>在线定制字体图标</h3> <p><a href="https://www.w3cschool.cn/statics/demosource/bootstrap-glyph-customization.htm" target="_blank"><button class="btn example-btn">点击这里，定制字体图标 »</button></a></p> <hr> <h2>图标列表</h2> <table class="reference notranslate"> <tbody><tr> <th style="width:20%">图标</th> <th style="width:73%">类名</th> <th style="width:7%">实例</th> </tr> <tr> <td><span class="glyphicon glyphicon-asterisk"></span></td> <td>glyphicon glyphicon-asterisk</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_asterisk&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-plus"></span></td> <td>glyphicon glyphicon-plus</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_plus&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-minus"></span></td> <td>glyphicon glyphicon-minus</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_minus&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-euro"></span></td> <td>glyphicon glyphicon-euro</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_euro&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-cloud"></span></td> <td>glyphicon glyphicon-cloud</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_cloud&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-envelope"></span></td> <td>glyphicon glyphicon-envelope</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_envelope&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-pencil"></span></td> <td>glyphicon glyphicon-pencil</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_pencil&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-glass"></span></td> <td>glyphicon glyphicon-glass</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_glass&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-music"></span></td> <td>glyphicon glyphicon-music</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_music&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-search"></span></td> <td>glyphicon glyphicon-search</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_search&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-heart"></span></td> <td>glyphicon glyphicon-heart</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_heart&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-star"></span></td> <td>glyphicon glyphicon-star</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_star&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-star-empty"></span></td> <td>glyphicon glyphicon-star-empty</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_star-empty&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-user"></span></td> <td>glyphicon glyphicon-user</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_user&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-film"></span></td> <td>glyphicon glyphicon-film</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_film&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-th-large"></span></td> <td>glyphicon glyphicon-th-large</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_th-large&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-th"></span></td> <td>glyphicon glyphicon-th</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_th&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-th-list"></span></td> <td>glyphicon glyphicon-th-list</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_th-list&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-ok"></span></td> <td>glyphicon glyphicon-ok</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_ok&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-remove"></span></td> <td>glyphicon glyphicon-remove</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_remove&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-zoom-in"></span></td> <td>glyphicon glyphicon-zoom-in</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_zoom-in&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-zoom-out"></span></td> <td>glyphicon glyphicon-zoom-out</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_zoom-out&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-off"></span></td> <td>glyphicon glyphicon-off</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_off&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-signal"></span></td> <td>glyphicon glyphicon-signal</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_signal&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-cog"></span></td> <td>glyphicon glyphicon-cog</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_cog&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-trash"></span></td> <td>glyphicon glyphicon-trash</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_trash&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-home"></span></td> <td>glyphicon glyphicon-home</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_home&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-file"></span></td> <td>glyphicon glyphicon-file</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_file&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-time"></span></td> <td>glyphicon glyphicon-time</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_time&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-road"></span></td> <td>glyphicon glyphicon-road</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_road&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-download-alt"></span></td> <td>glyphicon glyphicon-download-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_download-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-download"></span></td> <td>glyphicon glyphicon-download</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_download&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-upload"></span></td> <td>glyphicon glyphicon-upload</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_upload&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-inbox"></span></td> <td>glyphicon glyphicon-inbox</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_inbox&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-play-circle"></span></td> <td>glyphicon glyphicon-play-circle</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_play-circle&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-repeat"></span></td> <td>glyphicon glyphicon-repeat</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_repeat&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-refresh"></span></td> <td>glyphicon glyphicon-refresh</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_refresh&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-list-alt"></span></td> <td>glyphicon glyphicon-list-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_list-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-lock"></span></td> <td>glyphicon glyphicon-lock</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_lock&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-flag"></span></td> <td>glyphicon glyphicon-flag</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_flag&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-headphones"></span></td> <td>glyphicon glyphicon-headphones</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_headphones&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-volume-off"></span></td> <td>glyphicon glyphicon-volume-off</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_volume-off&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-volume-down"></span></td> <td>glyphicon glyphicon-volume-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_volume-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-volume-up"></span></td> <td>glyphicon glyphicon-volume-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_volume-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-qrcode"></span></td> <td>glyphicon glyphicon-qrcode</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_qrcode&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-barcode"></span></td> <td>glyphicon glyphicon-barcode</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_barcode&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tag"></span></td> <td>glyphicon glyphicon-tag</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tag&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tags"></span></td> <td>glyphicon glyphicon-tags</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tags&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-book"></span></td> <td>glyphicon glyphicon-book</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_book&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-bookmark"></span></td> <td>glyphicon glyphicon-bookmark</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_book&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-print"></span></td> <td>glyphicon glyphicon-print</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_print&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-camera"></span></td> <td>glyphicon glyphicon-camera</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_camera&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-font"></span></td> <td>glyphicon glyphicon-font</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_font&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-bold"></span></td> <td>glyphicon glyphicon-bold</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_bold&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-italic"></span></td> <td>glyphicon glyphicon-italic</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_italic&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-text-height"></span></td> <td>glyphicon glyphicon-text-height</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_text-height&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-text-width"></span></td> <td>glyphicon glyphicon-text-width</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_text-width&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-align-left"></span></td> <td>glyphicon glyphicon-align-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_align-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-align-center"></span></td> <td>glyphicon glyphicon-align-center</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_align-center&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-align-right"></span></td> <td>glyphicon glyphicon-align-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_align-right&amp;stacked=h">尝试一下</a></td> </tr><tr> <td><span class="glyphicon glyphicon-align-justify"></span></td> <td>glyphicon glyphicon-align-justify</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_align-justify&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-list"></span></td> <td>glyphicon glyphicon-list</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_list&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-indent-left"></span></td> <td>glyphicon glyphicon-indent-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_indent-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-indent-right"></span></td> <td>glyphicon glyphicon-indent-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_indent-right&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-facetime-video"></span></td> <td>glyphicon glyphicon-facetime-video</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_facetime-video&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-picture"></span></td> <td>glyphicon glyphicon-picture</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_picture&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-map-marker"></span></td> <td>glyphicon glyphicon-map-marker</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_map-marker&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-adjust"></span></td> <td>glyphicon glyphicon-adjust</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_adjust&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tint"></span></td> <td>glyphicon glyphicon-tint</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tint&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-edit"></span></td> <td>glyphicon glyphicon-edit</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_edit&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-share"></span></td> <td>glyphicon glyphicon-share</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_share&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-check"></span></td> <td>glyphicon glyphicon-check</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_check&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-move"></span></td> <td>glyphicon glyphicon-move</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_move&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-step-backward"></span></td> <td>glyphicon glyphicon-step-backward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_step-backward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-fast-backward"></span></td> <td>glyphicon glyphicon-fast-backward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_fast-backward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-backward"></span></td> <td>glyphicon glyphicon-backward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_backward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-play"></span></td> <td>glyphicon glyphicon-play</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_play&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-pause"></span></td> <td>glyphicon glyphicon-pause</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_pause&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-stop"></span></td> <td>glyphicon glyphicon-stop</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_stop&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-forward"></span></td> <td>glyphicon glyphicon-forward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_forward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-fast-forward"></span></td> <td>glyphicon glyphicon-fast-forward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_fast-forward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-step-forward"></span></td> <td>glyphicon glyphicon-step-forward</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_step-forward&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-eject"></span></td> <td>glyphicon glyphicon-eject</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_eject&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-chevron-left"></span></td> <td>glyphicon glyphicon-chevron-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_chevron-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-chevron-right"></span></td> <td>glyphicon glyphicon-chevron-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_chevron-right&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-plus-sign"></span></td> <td>glyphicon glyphicon-plus-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_plus-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-minus-sign"></span></td> <td>glyphicon glyphicon-minus-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_minus-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-remove-sign"></span></td> <td>glyphicon glyphicon-remove-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_remove-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-ok-sign"></span></td> <td>glyphicon glyphicon-ok-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_ok-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-question-sign"></span></td> <td>glyphicon glyphicon-question-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_question-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-info-sign"></span></td> <td>glyphicon glyphicon-info-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_info-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-screenshot"></span></td> <td>glyphicon glyphicon-screenshot</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_screenshot&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-remove-circle"></span></td> <td>glyphicon glyphicon-remove-circle</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_remove-circle&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-ok-circle"></span></td> <td>glyphicon glyphicon-ok-circle</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_ok-circle&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-ban-circle"></span></td> <td>glyphicon glyphicon-ban-circle</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_ban-circle&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-arrow-left"></span></td> <td>glyphicon glyphicon-arrow-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_arrow-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-arrow-right"></span></td> <td>glyphicon glyphicon-arrow-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_arrow-right&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-arrow-up"></span></td> <td>glyphicon glyphicon-arrow-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_arrow-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-arrow-down"></span></td> <td>glyphicon glyphicon-arrow-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_arrow-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-share-alt"></span></td> <td>glyphicon glyphicon-share-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_share-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-resize-full"></span></td> <td>glyphicon glyphicon-resize-full</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_resize-full&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-resize-small"></span></td> <td>glyphicon glyphicon-resize-small</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_resize-small&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-exclamation-sign"></span></td> <td>glyphicon glyphicon-exclamation-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_exclamation-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-gift"></span></td> <td>glyphicon glyphicon-gift</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_gift&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-leaf"></span></td> <td>glyphicon glyphicon-leaf</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_leaf&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-fire"></span></td> <td>glyphicon glyphicon-fire</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_fire&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-eye-open"></span></td> <td>glyphicon glyphicon-eye-open</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_eye-open&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-eye-close"></span></td> <td>glyphicon glyphicon-eye-close</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_eye-close&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-warning-sign"></span></td> <td>glyphicon glyphicon-warning-sign</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_warning-sign&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-plane"></span></td> <td>glyphicon glyphicon-plane</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_plane&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-calendar"></span></td> <td>glyphicon glyphicon-calendar</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_calendar&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-random"></span></td> <td>glyphicon glyphicon-random</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_random&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-comment"></span></td> <td>glyphicon glyphicon-comment</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_comment&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-magnet"></span></td> <td>glyphicon glyphicon-magnet</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_magnet&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-chevron-up"></span></td> <td>glyphicon glyphicon-chevron-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_chevron-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-chevron-down"></span></td> <td>glyphicon glyphicon-chevron-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_chevron-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-retweet"></span></td> <td>glyphicon glyphicon-retweet</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_retweet&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-shopping-cart"></span></td> <td>glyphicon glyphicon-shopping-cart</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_shopping-cart&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-folder-close"></span></td> <td>glyphicon glyphicon-folder-close</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_folder-close&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-folder-open"></span></td> <td>glyphicon glyphicon-folder-open</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_folder-open&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-resize-vertical"></span></td> <td>glyphicon glyphicon-resize-vertical</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_resize-vertical&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-resize-horizontal"></span></td> <td>glyphicon glyphicon-resize-horizontal</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_resize-horizontal&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hdd"></span></td> <td>glyphicon glyphicon-hdd</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hdd&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-bullhorn"></span></td> <td>glyphicon glyphicon-bullhorn</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_bullhorn&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-bell"></span></td> <td>glyphicon glyphicon-bell</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_bell&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-certificate"></span></td> <td>glyphicon glyphicon-certificate</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_certificate&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-thumbs-up"></span></td> <td>glyphicon glyphicon-thumbs-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_thumbs-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-thumbs-down"></span></td> <td>glyphicon glyphicon-thumbs-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_thumbs-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hand-right"></span></td> <td>glyphicon glyphicon-hand-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hand-right&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hand-left"></span></td> <td>glyphicon glyphicon-hand-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hand-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hand-up"></span></td> <td>glyphicon glyphicon-hand-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hand-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hand-down"></span></td> <td>glyphicon glyphicon-hand-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hand-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-circle-arrow-right"></span></td> <td>glyphicon glyphicon-circle-arrow-right</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_circle-arrow-right&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-circle-arrow-left"></span></td> <td>glyphicon glyphicon-circle-arrow-left</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_circle-arrow-left&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-circle-arrow-up"></span></td> <td>glyphicon glyphicon-circle-arrow-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_circle-arrow-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-circle-arrow-down"></span></td> <td>glyphicon glyphicon-circle-arrow-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_circle-arrow-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-globe"></span></td> <td>glyphicon glyphicon-globe</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_globe&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-wrench"></span></td> <td>glyphicon glyphicon-wrench</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_wrench&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tasks"></span></td> <td>glyphicon glyphicon-tasks</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tasks&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-filter"></span></td> <td>glyphicon glyphicon-filter</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_filter&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-briefcase"></span></td> <td>glyphicon glyphicon-briefcase</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_briefcase&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-fullscreen"></span></td> <td>glyphicon glyphicon-fullscreen</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_fullscreen&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-dashboard"></span></td> <td>glyphicon glyphicon-dashboard</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_dashboard&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-paperclip"></span></td> <td>glyphicon glyphicon-paperclip</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_paperclip&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-heart-empty"></span></td> <td>glyphicon glyphicon-heart-empty</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_heart-empty&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-link"></span></td> <td>glyphicon glyphicon-link</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_link&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-phone"></span></td> <td>glyphicon glyphicon-phone</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_phone&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-pushpin"></span></td> <td>glyphicon glyphicon-pushpin</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_pushpin&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-usd"></span></td> <td>glyphicon glyphicon-usd</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_usd&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-gbp"></span></td> <td>glyphicon glyphicon-gbp</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_gbp&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort"></span></td> <td>glyphicon glyphicon-sort</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-alphabet"></span></td> <td>glyphicon glyphicon-sort-by-alphabet</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-alphabet&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-alphabet-alt"></span></td> <td>glyphicon glyphicon-sort-by-alphabet-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-alphabet-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-order"></span></td> <td>glyphicon glyphicon-sort-by-order</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-order&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-order-alt"></span></td> <td>glyphicon glyphicon-sort-by-order-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-order-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-attributes"></span></td> <td>glyphicon glyphicon-sort-by-attributes</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-attributes&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sort-by-attributes-alt"></span></td> <td>glyphicon glyphicon-sort-by-attributes-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sort-by-attributes-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-unchecked"></span></td> <td>glyphicon glyphicon-unchecked</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_unchecked&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-expand"></span></td> <td>glyphicon glyphicon-expand</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_expand&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-collapse-down"></span></td> <td>glyphicon glyphicon-collapse-down</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_collapse-down&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-collapse-up"></span></td> <td>glyphicon glyphicon-collapse-up</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_collapse-up&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-log-in"></span></td> <td>glyphicon glyphicon-log-in</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_log-in&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-flash"></span></td> <td>glyphicon glyphicon-flash</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_flash&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-log-out"></span></td> <td>glyphicon glyphicon-log-out</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_log-out&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-new-window"></span></td> <td>glyphicon glyphicon-new-window</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_new-window&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-record"></span></td> <td>glyphicon glyphicon-record</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_record&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-save"></span></td> <td>glyphicon glyphicon-save</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_save&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-open"></span></td> <td>glyphicon glyphicon-open</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_open&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-saved"></span></td> <td>glyphicon glyphicon-saved</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_saved&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-import"></span></td> <td>glyphicon glyphicon-import</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_import&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-export"></span></td> <td>glyphicon glyphicon-export</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_export&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-send"></span></td> <td>glyphicon glyphicon-send</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_send&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-floppy-disk"></span></td> <td>glyphicon glyphicon-floppy-disk</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_floppy-disk&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-floppy-saved"></span></td> <td>glyphicon glyphicon-floppy-saved</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_floppy-saved&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-floppy-remove"></span></td> <td>glyphicon glyphicon-floppy-remove</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_floppy-remove&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-floppy-save"></span></td> <td>glyphicon glyphicon-floppy-save</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_floppy-save&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-floppy-open"></span></td> <td>glyphicon glyphicon-floppy-open</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_floppy-open&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-credit-card"></span></td> <td>glyphicon glyphicon-credit-card</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_credit-card&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-transfer"></span></td> <td>glyphicon glyphicon-transfer</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_transfer&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-cutlery"></span></td> <td>glyphicon glyphicon-cutlery</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_cutlery&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-header"></span></td> <td>glyphicon glyphicon-header</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_header&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-compressed"></span></td> <td>glyphicon glyphicon-compressed</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_compressed&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-earphone"></span></td> <td>glyphicon glyphicon-earphone</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_earphone&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-phone-alt"></span></td> <td>glyphicon glyphicon-phone-alt</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_phone-alt&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tower"></span></td> <td>glyphicon glyphicon-tower</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tower&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-stats"></span></td> <td>glyphicon glyphicon-stats</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_stats&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sd-video"></span></td> <td>glyphicon glyphicon-sd-video</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sd-video&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-hd-video"></span></td> <td>glyphicon glyphicon-hd-video</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_hd-video&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-subtitles"></span></td> <td>glyphicon glyphicon-subtitles</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_subtitles&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sound-stereo"></span></td> <td>glyphicon glyphicon-sound-stereo</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sound-stereo&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sound-dolby"></span></td> <td>glyphicon glyphicon-sound-dolby</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sound-dolby&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sound-5-1"></span></td> <td>glyphicon glyphicon-sound-5-1</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sound-5-1&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sound-6-1"></span></td> <td>glyphicon glyphicon-sound-6-1</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sound-6-1&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-sound-7-1"></span></td> <td>glyphicon glyphicon-sound-7-1</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_sound-7-1&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-copyright-mark"></span></td> <td>glyphicon glyphicon-copyright-mark</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_copyright-mark&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-registration-mark"></span></td> <td>glyphicon glyphicon-registration-mark</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_registration-mark&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-cloud-download"></span></td> <td>glyphicon glyphicon-cloud-download</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_cloud-download&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-cloud-upload"></span></td> <td>glyphicon glyphicon-cloud-upload</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_cloud-upload&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tree-conifer"></span></td> <td>glyphicon glyphicon-tree-conifer</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tree-conifer&amp;stacked=h">尝试一下</a></td> </tr> <tr> <td><span class="glyphicon glyphicon-tree-deciduous"></span></td> <td>glyphicon glyphicon-tree-deciduous</td> <td><a target="_blank" class="playitbtn tryitbtnsyntax" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/trybs_ref_glyph_tree-deciduous&amp;stacked=h">尝试一下</a></td> </tr> </tbody></table></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="bootstrap-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a></li>
+<li><a href="bootstrap-grid-system-example1.html" title="Bootstrap 网格系统实例：堆叠的水平">Bootstrap 网格系统实例：堆叠的水平</a></li>
+<li><a href="bootstrap-dropdowns.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a></li>
+<li><a href="bootstrap-tables.html" title="Bootstrap 表格">Bootstrap 表格</a></li>
+<li><a href="bootstrap-intro.html" title="Bootstrap 简介">Bootstrap 简介</a></li>
+<li><a href="bootstrap-grid-system-example3.html" title="Bootstrap 网格系统实例：手机、平板电脑、台式电脑">Bootstrap 网格系统实例：手机、平板电脑、台式电脑</a></li>
+<li><a href="bootstrap-grid-system-example2.html" title="Bootstrap 网格系统实例：中型和大型设备">Bootstrap 网格系统实例：中型和大型设备</a></li>
+<li><a href="bootstrap-v2-layout.html" title="Bootstrap 布局">Bootstrap 布局</a></li>
+<li><a href="bootstrap-v2-glyphicons.html" title="Bootstrap Glyphicons">Bootstrap Glyphicons</a></li>
+<li><a href="bootstrap-v2-icons.html" title="Bootstrap 图标">Bootstrap 图标</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'bootstrap-glyphicons',
+pename:'bootstrap',
+ismenu:'0',
+ktitle:'Bootstrap 字体图标(Glyphicons)',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'bootstrap',
+bookname:'bootstrap教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "-1";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '53';
+var aid   = '4677';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-glyphicons.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:11:03 GMT -->
+</html>

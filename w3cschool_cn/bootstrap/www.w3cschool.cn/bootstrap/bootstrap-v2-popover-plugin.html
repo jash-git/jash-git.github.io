@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-v2-popover-plugin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:10:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>Bootstrap 弹出框_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="Bootstrap 弹出框" />
+<meta name="description" content="Bootstrap Popover（弹出框） 描述 Bootstrap Popover（弹出框）是使用定制的 Jquery 插件创建的。它可以用来显示任何元素的一些信息。 在本教程中，您将看到如何使用 Bootstrap Popover，以及如何使用一些可用选项进行定制。 什么是必需的 您必须饮用 _来自bootstrap教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/courses/" title="编程课程">编程课程</a></li> 
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a>
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'bootstrap-v2-popover-plugin.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/bootstrap" title="bootstrap教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="bootstrap教程" src="../attachments/cover/cover_bootstrap.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>bootstrap教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="bootstrap问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">bootstrap问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="3046" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="jqxmwf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 教程">Bootstrap 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tutorial.html" title="Bootstrap 教程导读">Bootstrap 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-intro.html" title="Bootstrap 简介">Bootstrap 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-environment-setup">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-environment-setup.html" title="Bootstrap 环境安装">Bootstrap 环境安装</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-codecamp.html" title="Bootstrap 编程实战闯关">Bootstrap 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="m471bf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap CSS">Bootstrap CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-css-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-overview.html" title="Bootstrap CSS 概览">Bootstrap CSS 概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-grid-system">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-grid-system.html" title="Bootstrap 网格系统">Bootstrap 网格系统</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-typography">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-typography.html" title="Bootstrap 排版">Bootstrap 排版</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-code.html" title="Bootstrap 代码">Bootstrap 代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tables.html" title="Bootstrap 表格">Bootstrap 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-forms">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-forms.html" title="Bootstrap 表单">Bootstrap 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-button-plugin.html" title="Bootstrap 按钮">Bootstrap 按钮</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-images.html" title="Bootstrap 图片">Bootstrap 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-helper-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-helper-classes.html" title="Bootstrap 辅助类">Bootstrap 辅助类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-responsive-utilities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-responsive-utilities.html" title="Bootstrap 响应式实用工具">Bootstrap 响应式实用工具</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="sknxvf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 布局组件">Bootstrap 布局组件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="2emf1fn9">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="2emf1fn9.html" title="Bootstrap 字体图标">Bootstrap 字体图标</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-dropdown-plugin.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-groups.html" title="Bootstrap 按钮组">Bootstrap 按钮组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-dropdowns">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-dropdowns.html" title="Bootstrap 按钮下拉菜单">Bootstrap 按钮下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-input-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-input-groups.html" title="Bootstrap 输入框组">Bootstrap 输入框组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-navigation-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-navigation-elements.html" title="Bootstrap 导航元素">Bootstrap 导航元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="cqye4fnh">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="cqye4fnh.html" title="Bootstrap 导航栏">Bootstrap 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-breadcrumbs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-breadcrumbs.html" title="Bootstrap 面包屑导航">Bootstrap 面包屑导航</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-pagination">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-pagination.html" title="Bootstrap 分页">Bootstrap 分页</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-labels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-labels.html" title="Bootstrap 标签">Bootstrap 标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-badges">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-badges.html" title="Bootstrap 徽章">Bootstrap 徽章</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-jumbotron">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-jumbotron.html" title="Bootstrap 超大屏幕">Bootstrap 超大屏幕</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-page-header">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-page-header.html" title="Bootstrap 页面标题">Bootstrap 页面标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-thumbnails">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-thumbnails.html" title="Bootstrap 缩略图">Bootstrap 缩略图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alerts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alerts.html" title="Bootstrap 警告">Bootstrap 警告</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-progress-bars">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-media-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-media-object.html" title="Bootstrap 多媒体对象">Bootstrap 多媒体对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-list-group">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-list-group.html" title="Bootstrap 列表组">Bootstrap 列表组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-panels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-panels.html" title="Bootstrap 面板">Bootstrap 面板</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="9jto5fni">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="9jto5fni.html" title="Bootstrap Well">Bootstrap Well</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="evsruf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 插件">Bootstrap 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-plugins-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-plugins-overview.html" title="Bootstrap 插件概览">Bootstrap 插件概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-transition-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-transition-plugin.html" title="Bootstrap 过渡效果（Transition）插件">Bootstrap 过渡效果（Transition）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-modal-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-modal-plugin.html" title="Bootstrap 模态框（Modal）插件">Bootstrap 模态框（Modal）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-dropdown-plugin.html" title="Bootstrap 下拉菜单（Dropdown）插件">Bootstrap 下拉菜单（Dropdown）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-scrollspy-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-scrollspy-plugin.html" title="Bootstrap 滚动监听（Scrollspy）插件">Bootstrap 滚动监听（Scrollspy）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-tab-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tab-plugin.html" title="Bootstrap 标签页（Tab）插件">Bootstrap 标签页（Tab）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="5pj86fnj">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="5pj86fnj.html" title="Bootstrap 提示工具（Tooltip）插件">Bootstrap 提示工具（Tooltip）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-popover-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-popover-plugin.html" title="Bootstrap 弹出框（Popover）插件">Bootstrap 弹出框（Popover）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alert-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alert-plugin.html" title="Bootstrap 警告框">Bootstrap 警告框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-plugin.html" title="Bootstrap 按钮（Button）插件">Bootstrap 按钮（Button）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-collapse-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-collapse-plugin.html" title="Bootstrap 折叠（Collapse）插件">Bootstrap 折叠（Collapse）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-carousel-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-carousel-plugin.html" title="Bootstrap 轮播（Carousel）插件">Bootstrap 轮播（Carousel）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-affix-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-affix-plugin.html" title="Bootstrap 附加导航（Affix）插件">Bootstrap 附加导航（Affix）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="89qvef21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 其他">Bootstrap 其他</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-ui-editor">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-ui-editor.html" title="Bootstrap UI 编辑器">Bootstrap UI 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tutorial.html" title="Bootstrap v2 教程">Bootstrap v2 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-html-codeguide">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-html-codeguide.html" title="Bootstrap HTML编码规范">Bootstrap HTML编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-css-codeguide-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-codeguide-html.html" title="Bootstrap CSS编码规范">Bootstrap CSS编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-b4v222x8">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 相关教程">Bootstrap 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-eg6822xa">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-bootstrap-setup.html" title="Bootstrap 入门教程">Bootstrap 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-o38d28im">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 版本更新">Bootstrap 版本更新</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-raxz28in">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-raxz28in.html" title="Bootstrap4 首个Beta版发布：距上次发布已7月之久！">Bootstrap4 首个Beta版发布：距上次发布已7月之久！</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-uow62fyg">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-uow62fyg.html" title="Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架">Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(3795)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">0</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/bootstrap/bootstrap-v2-popover-plugin" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>Bootstrap 弹出框</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，小路依依 最后一次修改&nbsp;<span>2015-09-19</span>    
+</div>          
+</div>          
+<div class="hb-wiki content-bg">
+<div class="content-intro view-box "><h2>Bootstrap <span class="color_h1">Popover（弹出框）</span></h2> <h2 class="tutheader">描述</h2> <p>Bootstrap Popover（弹出框）是使用定制的 Jquery 插件创建的。它可以用来显示任何元素的一些信息。</p> <p>在本教程中，您将看到如何使用 Bootstrap Popover，以及如何使用一些可用选项进行定制。</p> <h2 class="tutheader">什么是必需的</h2> <p>您必须饮用 Jquery、Bootstrap CSS 和两个 JavaScript files - 一个用于 Bootstrap Tooltip（工具提示插件），一个用于 Bootstrap Popover（弹出框）。</p> <p>用于 Tooltip（工具提示插件）的 JS 文件位于您的 Bootstrap 文件夹中的 js 文件夹下，名为 bootstrap-tooltip.js。用于 Popover（弹出框）的 JS 文件位于您的 Bootstrap 主文件夹中的 js 文件夹下，名为 bootstrap-popover.js。Jquery 位于您的 Bootstrap 主文件夹中的 docs &gt; assets &gt; js 下，名为 jquery.js。或者您可以直接访问 https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js 下载 Jquery。</p> <p>请确保您在下载 bootstrap-popover.js 之前先下载 bootstrap-tooltip.js。弹出框依赖工具提示插件，因此需要先加载工具提示插件。</p> <h2 class="tutheader">在您的网站中使用 Bootstrap Popover（弹出框）</h2><div class="example"><h2 class="example">实例</h2><div class="example_code">&lt;div class=&quot;container&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;使用Bootstrap创建弹出框&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example&quot; class=&quot;btn btn-danger&quot; rel=&quot;popover&quot; data-content=&quot;It&#39;s so simple to create a tooltop for my website!&quot; data-original-title=&quot;Twitter Bootstrap Popover&quot;&gt;hover for popover&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js&quot;&gt;&lt;/script&gt;<br />&lt;script&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;$(function ()<br />&nbsp;&nbsp;&nbsp;&nbsp;{ $(&quot;#example&quot;).popover();<br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&lt;/script&gt;</div><br /><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap-popover" class="tryitbtn">在线查看实例</a></div><h2 class="tutheader">解释</h2> <p>下面的表格解释了上面的代码。它将帮助您理解如何使用 Bootstrap Popover（弹出框）。</p> <table class="reference notranslate       "> <tbody> <tr> <th>代码</th> <th>解释</th> </tr> <tr> <td>id=&quot;example&quot;</td> <td>分配给相关锚的 id，id 的值指向后边要实现 popover（弹出框）的 JavaScript。</td> </tr> <tr> <td>class=&quot;btn btn-danger&quot;</td> <td>创建一个按钮。btn btn-danger 是实例中使用的 class。您可以使用 Bootstrap CSS 中任何其他的 class，或者使用您自己定义的 class。</td> </tr> <tr> <td>data-content=&quot;It&#39;s so simple to create a tooltip for my website!&quot;</td> <td>data-content 的值显示在 popover（弹出框）的主体中。</td> </tr> <tr> <td>data-original-title=&quot;Bootstrap Popover&quot;</td> <td>data-original-title 的值显示为 popover（弹出框）的标题。</td> </tr> <tr> <td>hover for popover</td> <td>锚文本。</td> </tr> <tr> <td>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/ jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;</td> <td>引用 Jquery。</td> </tr> <tr> <td>&lt;script src=&quot;../bootstrap/twitter-bootstrap-v2/ js/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;</td> <td>引用 Bootstrap Tooltip（工具提示插件）的 JS 文件。</td> </tr> <tr> <td>&lt;script src=&quot;../bootstrap/twitter-bootstrap-v2/js/ bootstrap-popover.js&quot;&gt;&lt;/script&gt;</td> <td>引用 Bootstrap Popover（弹出框）的 JS 文件。</td> </tr> <tr> <td>$(function ()</td> <td>准备文档。Jquery 命令。</td> </tr> <tr> <td>$(&quot;#example&quot;).popover();</td> <td>访问 id example，并在上面实现 popover()。</td> </tr> </tbody> </table> <p>这里我们没有在 box 外创建 popover（弹出框），不通过任何的定制，即没有通过 popover() 使用任何的选项。</p> <h2 class="tutheader">用法</h2> <p>所以，我们可以总结出 Bootstrap Popover（弹出框）的用法是：</p> <pre name="code" class="js">$(function ()  
+{ $(&quot;identifier&quot;).popover(options);  
+}); 
+</pre> <p>其中 <em>identifier</em> 是一个 Jquery 选择器，用于标识相关的容器元素。接下来，我们来看看 <em>options</em> 都有哪些。</p> <h2 class="tutheader">选项</h2> <p>下面是一些通过 popover() 定制 Popover（弹出框）外观和感观时可能使用到的选项。</p> <h2 class="subheading">animation</h2> <p>animation 值的类型是 boolean，默认值是 true。用于给 tooltip（工具提示插件）带来 css 渐变过渡效果。</p> <h2 class="subheading">placement</h2> <p>placement 值的类型可以是 string 或者 function，默认值是 &#39;right&#39;，top、bottom 和 left 是其他几个可以使用的值。这个选项用于决定环绕锚文本周围的 Popover（弹出框）是位置。下面是一个使用 placement 选项的实例。</p><div class="example"><h2 class="example">实例</h2><div class="example_code">&lt;!DOCTYPE html&gt; <br />&lt;html lang=&quot;en&quot;&gt;<br />&lt;head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Bootstrap 弹出框位置选择的实例&lt;/title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;description&quot; content=&quot;Creating Modal Window with Twitter Bootstrap&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;link href=&quot;/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-left : 400px;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;div class=&quot;container&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;使用Bootstrap plcement 选项创建弹出框&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot; data-content=&quot;为我的网站创建一个提示框如此简单！&quot; data-original-title=&quot;Twitter Bootstrap 弹出框&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example_left&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot; data-content=&quot;为我的网站创建一个提示框如此简单！&quot; data-original-title=&quot;Twitter Bootstrap 弹出框&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example_top&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot; data-content=&quot;为我的网站创建一个提示框如此简单！&quot; data-original-title=&quot;Twitter Bootstrap 弹出框&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example_bottom&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot; data-content=&quot;为我的网站创建一个提示框如此简单！&quot; data-original-title=&quot;Twitter Bootstrap 弹出框&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js&quot;&gt;&lt;/script&gt;<br />&lt;script&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;$(function ()<br />&nbsp;&nbsp;&nbsp;&nbsp;{ $(&quot;#example&quot;).popover();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;#example_left&quot;).popover({placement:&#39;left&#39;});<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;#example_top&quot;).popover({placement:&#39;top&#39;});<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;#example_bottom&quot;).popover({placement:&#39;bottom&#39;});<br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&lt;/script&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</div><br /><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap-popover-placement" class="tryitbtn">在线查看实例</a></div><h2 class="subheading">selector</h2> <p>selector 值的类型是 string，默认值是 false。通过使用该选项可以把 Tooltip 对象授权给定的目标。</p> <h2 class="subheading">trigger </h2> <p>trigger 值的类型可以是 string，默认值是 &#39;hover&#39;，focus 和 manual 是其他可以使用的值。这个选项用于决定 tooltip（工具提示插件）如何开始。下面的实例演示了如何使用 focus 选项触发 Popover（弹出框）。</p><div class="example"><h2 class="example">实例</h2><div class="example_code">&lt;div class=&quot;container&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;使用Bootstrap trigger 选项创建弹出框&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot; data-content=&quot;为我的网站创建一个提示框如此简单！&quot; data-original-title=&quot;Twitter Bootstrap 弹出框&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js&quot;&gt;&lt;/script&gt;<br />&lt;script&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;$(function ()<br />&nbsp;&nbsp;&nbsp;&nbsp;{ $(&quot;#example&quot;).popover({trigger: &#39;focus&#39;});<br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&lt;/script&gt;</div><br /><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap-popover-trigger" class="tryitbtn">在线查看实例</a></div><h2 class="subheading">title</h2> <p>title 值的类型可以是 string 或 function，默认值是 &#39;&#39;。即默认不显示 title 属性的值。</p> <h2 class="subheading">content</h2> <p>content 值的类型可以是 string 或 function，默认值是 &#39;&#39;。即默认不显示 data-content 属性的值。下面是一个使用 title 和 data-content 选项的实例。该实例也演示了如何把多个选项一起使用。</p><div class="example"><h2 class="example">实例</h2><div class="example_code">&lt;div class=&quot;container&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Bootstrap弹出框使用title和content选项&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;well&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#&quot; id=&quot;example&quot; class=&quot;btn btn-success&quot; rel=&quot;popover&quot;&gt;悬停弹出&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js&quot;&gt;&lt;/script&gt;<br />&lt;script src=&quot;/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js&quot;&gt;&lt;/script&gt;<br />&lt;script&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;$(function ()<br />&nbsp;&nbsp;&nbsp;&nbsp;{ $(&quot;#example&quot;).popover({title: &#39;Twitter Bootstrap Popover&#39;, content: &quot;为我的网站创建一个提示框如此简单！&quot;});<br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&lt;/script&gt;</div><br /><a target="_blank" showtry="1" href="https://www.w3cschool.cn/tryrun/showhtml/bootstrap-popover-title-and-content" class="tryitbtn">在线查看实例</a></div><h2 class="subheading">delay </h2> <p>delay 值的类型可以是 number 或 object，默认值是 0。这决定了显示和隐藏 popover（弹出框）的等待时间，以毫秒为单位。如果值设置为一个数字，则等待时间会应用于显示和隐藏。如果值设置为一个对象，则结构为 delay: { show: 500, hide: 100}，其中 500 和 100 是以毫秒为单位的。</p> <h2 class="tutheader">改变 popover（弹出框）的默认标记和样式</h2> <p>Popover 弹出窗口的默认标记是位于 bootstrap-popover.js 文件的行号 92。如下所示：</p> <pre name="code" class="html">template: &#39;&lt;div class=&quot;popover&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;&lt;div class=&quot;popover-inner&quot;&gt;&lt;h3 class=&quot;popover-title&quot;&gt;&lt;/h3&gt;&lt;div class=&quot;popover-content&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&#39;
+            
+</pre> <p>您可以更改它，放上您自己的标记。</p> <p>Popover 弹出窗口的默认样式位于行号 3027 到 3118。您可以修改它，放上您自己的样式。</p> <p><a href="https://www.w3cschool.cn/statics/demosource/twitter-bootstrap.zip" target="_blank">点击这里，下载本教程中使用到的所有 HTML、CSS、JS 和图片文件。</a></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="bootstrap-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a></li>
+<li><a href="bootstrap-grid-system-example1.html" title="Bootstrap 网格系统实例：堆叠的水平">Bootstrap 网格系统实例：堆叠的水平</a></li>
+<li><a href="bootstrap-dropdowns.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a></li>
+<li><a href="bootstrap-tables.html" title="Bootstrap 表格">Bootstrap 表格</a></li>
+<li><a href="bootstrap-intro.html" title="Bootstrap 简介">Bootstrap 简介</a></li>
+<li><a href="bootstrap-grid-system-example3.html" title="Bootstrap 网格系统实例：手机、平板电脑、台式电脑">Bootstrap 网格系统实例：手机、平板电脑、台式电脑</a></li>
+<li><a href="bootstrap-grid-system-example2.html" title="Bootstrap 网格系统实例：中型和大型设备">Bootstrap 网格系统实例：中型和大型设备</a></li>
+<li><a href="bootstrap-v2-layout.html" title="Bootstrap 布局">Bootstrap 布局</a></li>
+<li><a href="bootstrap-v2-glyphicons.html" title="Bootstrap Glyphicons">Bootstrap Glyphicons</a></li>
+<li><a href="bootstrap-v2-icons.html" title="Bootstrap 图标">Bootstrap 图标</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'bootstrap-v2-popover-plugin',
+pename:'bootstrap',
+ismenu:'0',
+ktitle:'Bootstrap 弹出框',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'bootstrap',
+bookname:'bootstrap教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "-1";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '53';
+var aid   = '3046';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-v2-popover-plugin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:10:40 GMT -->
+</html>

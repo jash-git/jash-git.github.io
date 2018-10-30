@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-v2-less.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:10:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>Bootstrap LESS_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="Bootstrap LESS" />
+<meta name="description" content="Bootstrap LESS 简介  Less 是一个 CSS 预处理器，让 CSS 具有动态性。 另一方面，Bootstrap 是一个快速开发 Web App 和站点的工具包。 在本教程中，我们将讨论了有关使用带有 Less CSS 的 Bootstrap 知识。这样，您可以在 CSS 中使用 B_来自bootstrap教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/courses/" title="编程课程">编程课程</a></li> 
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a>
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'bootstrap-v2-less.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/bootstrap" title="bootstrap教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="bootstrap教程" src="../attachments/cover/cover_bootstrap.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>bootstrap教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="bootstrap问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">bootstrap问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="3050" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="jqxmwf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 教程">Bootstrap 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tutorial.html" title="Bootstrap 教程导读">Bootstrap 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-intro.html" title="Bootstrap 简介">Bootstrap 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-environment-setup">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-environment-setup.html" title="Bootstrap 环境安装">Bootstrap 环境安装</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-codecamp.html" title="Bootstrap 编程实战闯关">Bootstrap 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="m471bf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap CSS">Bootstrap CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-css-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-overview.html" title="Bootstrap CSS 概览">Bootstrap CSS 概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-grid-system">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-grid-system.html" title="Bootstrap 网格系统">Bootstrap 网格系统</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-typography">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-typography.html" title="Bootstrap 排版">Bootstrap 排版</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-code.html" title="Bootstrap 代码">Bootstrap 代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tables.html" title="Bootstrap 表格">Bootstrap 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-forms">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-forms.html" title="Bootstrap 表单">Bootstrap 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-button-plugin.html" title="Bootstrap 按钮">Bootstrap 按钮</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-images.html" title="Bootstrap 图片">Bootstrap 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-helper-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-helper-classes.html" title="Bootstrap 辅助类">Bootstrap 辅助类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-responsive-utilities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-responsive-utilities.html" title="Bootstrap 响应式实用工具">Bootstrap 响应式实用工具</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="sknxvf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 布局组件">Bootstrap 布局组件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="2emf1fn9">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="2emf1fn9.html" title="Bootstrap 字体图标">Bootstrap 字体图标</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-dropdown-plugin.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-groups.html" title="Bootstrap 按钮组">Bootstrap 按钮组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-dropdowns">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-dropdowns.html" title="Bootstrap 按钮下拉菜单">Bootstrap 按钮下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-input-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-input-groups.html" title="Bootstrap 输入框组">Bootstrap 输入框组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-navigation-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-navigation-elements.html" title="Bootstrap 导航元素">Bootstrap 导航元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="cqye4fnh">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="cqye4fnh.html" title="Bootstrap 导航栏">Bootstrap 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-breadcrumbs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-breadcrumbs.html" title="Bootstrap 面包屑导航">Bootstrap 面包屑导航</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-pagination">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-pagination.html" title="Bootstrap 分页">Bootstrap 分页</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-labels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-labels.html" title="Bootstrap 标签">Bootstrap 标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-badges">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-badges.html" title="Bootstrap 徽章">Bootstrap 徽章</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-jumbotron">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-jumbotron.html" title="Bootstrap 超大屏幕">Bootstrap 超大屏幕</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-page-header">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-page-header.html" title="Bootstrap 页面标题">Bootstrap 页面标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-thumbnails">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-thumbnails.html" title="Bootstrap 缩略图">Bootstrap 缩略图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alerts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alerts.html" title="Bootstrap 警告">Bootstrap 警告</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-progress-bars">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-media-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-media-object.html" title="Bootstrap 多媒体对象">Bootstrap 多媒体对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-list-group">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-list-group.html" title="Bootstrap 列表组">Bootstrap 列表组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-panels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-panels.html" title="Bootstrap 面板">Bootstrap 面板</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="9jto5fni">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="9jto5fni.html" title="Bootstrap Well">Bootstrap Well</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="evsruf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 插件">Bootstrap 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-plugins-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-plugins-overview.html" title="Bootstrap 插件概览">Bootstrap 插件概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-transition-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-transition-plugin.html" title="Bootstrap 过渡效果（Transition）插件">Bootstrap 过渡效果（Transition）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-modal-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-modal-plugin.html" title="Bootstrap 模态框（Modal）插件">Bootstrap 模态框（Modal）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-dropdown-plugin.html" title="Bootstrap 下拉菜单（Dropdown）插件">Bootstrap 下拉菜单（Dropdown）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-scrollspy-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-scrollspy-plugin.html" title="Bootstrap 滚动监听（Scrollspy）插件">Bootstrap 滚动监听（Scrollspy）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-tab-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tab-plugin.html" title="Bootstrap 标签页（Tab）插件">Bootstrap 标签页（Tab）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="5pj86fnj">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="5pj86fnj.html" title="Bootstrap 提示工具（Tooltip）插件">Bootstrap 提示工具（Tooltip）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-popover-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-popover-plugin.html" title="Bootstrap 弹出框（Popover）插件">Bootstrap 弹出框（Popover）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alert-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alert-plugin.html" title="Bootstrap 警告框">Bootstrap 警告框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-plugin.html" title="Bootstrap 按钮（Button）插件">Bootstrap 按钮（Button）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-collapse-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-collapse-plugin.html" title="Bootstrap 折叠（Collapse）插件">Bootstrap 折叠（Collapse）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-carousel-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-carousel-plugin.html" title="Bootstrap 轮播（Carousel）插件">Bootstrap 轮播（Carousel）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-affix-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-affix-plugin.html" title="Bootstrap 附加导航（Affix）插件">Bootstrap 附加导航（Affix）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="89qvef21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 其他">Bootstrap 其他</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-ui-editor">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-ui-editor.html" title="Bootstrap UI 编辑器">Bootstrap UI 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tutorial.html" title="Bootstrap v2 教程">Bootstrap v2 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-html-codeguide">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-html-codeguide.html" title="Bootstrap HTML编码规范">Bootstrap HTML编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-css-codeguide-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-codeguide-html.html" title="Bootstrap CSS编码规范">Bootstrap CSS编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-b4v222x8">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 相关教程">Bootstrap 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-eg6822xa">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-bootstrap-setup.html" title="Bootstrap 入门教程">Bootstrap 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-o38d28im">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 版本更新">Bootstrap 版本更新</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-raxz28in">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-raxz28in.html" title="Bootstrap4 首个Beta版发布：距上次发布已7月之久！">Bootstrap4 首个Beta版发布：距上次发布已7月之久！</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-uow62fyg">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-uow62fyg.html" title="Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架">Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(4468)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">0</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/bootstrap/bootstrap-v2-less" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>Bootstrap LESS</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，小路依依 最后一次修改&nbsp;<span>2015-09-15</span>    
+</div>          
+</div>          
+<div class="hb-wiki content-bg">
+<div class="content-intro view-box "><h2>Bootstrap <span class="color_h1">LESS</span></h2> <h2 class="tutheader">简介</h2> <div class="tutintro"> <p>Less 是一个 CSS 预处理器，让 CSS 具有动态性。</p> <p>另一方面，Bootstrap 是一个快速开发 Web App 和站点的工具包。</p><p> 在本教程中，我们将讨论了有关使用带有 Less CSS 的 Bootstrap 知识。这样，您可以在 CSS 中使用 Bootstrap 的 Less 变量、混合（mixins）和嵌套（ nesting）。</p> <p><a href="https://www.w3cschool.cn/manual/lessguide/" target="_blank"><strong>查看 Less 入门教程</strong></a></p> </div> <h2 class="tutheader">获取 Bootstrap 和 Less CSS</h2> <p>Bootstrap 官网：<a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></p> <p>Less 官网：<a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></p> <h2 class="tutheader">包含哪些内容</h2> <p>下载 Bootstrap，解压缩文件。Bootstrap 的 Less 组件位于 &#39;lib&#39; 目录下。自 Bootstrap v1.4.0 版本起，就包含有九个 less 文件。下面我们一起来看看这九个文件分别包含什么。</p> <h3 class="subheading">bootstrap.less</h3> <p>这是主要的 Less 文件。该文件中导入了一些其他的 less 文件。该文件中没有任何代码。</p> <h3 class="subheading">forms.less</h3> <p>这个 Less 文件包含了表单布局、输入框类型的样式。</p> <h3 class="subheading">mixins.less</h3> <p>这个 Less 文件让 CSS 代码可重复使用。</p> <h3 class="subheading">patterns.less</h3> <p>这个 Less 文件包含了重复的用户界面元素的 CSS 代码，不会被位于 scaffolding Less 文件中的基本样式覆盖。</p> <h3 class="subheading">reset.less</h3> <p>这个 Less 文件包含了 CSS 重置。这是 Eric Meyer 的 CSS 重置的一个更新。一些 HTML 元素比如 dfn、samp 等的重置被免除。</p> <h3 class="subheading">scaffolding.less</h3> <p>这个 Less 文件保存了创建网格系统、结构化布局、页面模板所需的基本样式。</p> <h3 class="subheading">tables.less</h3> <p>这个 Less 文件包含了创建表格的样式。</p> <h3 class="subheading">type.less</h3> <p>这个 Less 文件下可找到排版相关的样式。标题、段落、列表、代码等的样式位于这个文件里边。</p> <h3 class="subheading">variables.less</h3> <p>这个 Less 文件包含了要定制 Bootstrap 外观和感观的变量。</p> <h3 class="tutheader">如何使用</h3> <p>如果要使用它，请在您的 HTML 页面包含下面代码：</p> <div class="code"> &lt;link rel=&quot;stylesheet/less&quot; href=&quot;lib/bootstrap.less&quot; media=&quot;all&quot; /&gt;<br /> &lt;script src=&quot;js/less-1.1.5.min.js&quot;&gt;&lt;/script&gt; </div> <p>请注意，less-1.1.5.min.js 不在 js 文件夹内，您需要下载并把它放置在指定的文件夹下。</p> <hr /><h2> LESS变量和变量值，以及用法指南 </h2> <h3>超链接</h3> <table class="reference    "> <tbody> <tr> <td class="span2"><code>@linkColor</code></td> <td>#08c</td> <td>默认的链接颜色</td> <td class="swatch-col"><span class="swatch" style="background-color: #08c;"></span></td> </tr> <tr> <td><code>@linkColorHover</code></td> <td><code>darken(@linkColor, 15%)</code></td> <td>默认悬停时的链接颜色</td> <td><span class="swatch" style="background-color: #005580;"></span></td> </tr> </tbody> </table> <h3>灰度色</h3> <table class="reference    "> <tbody> <tr> <td class="span2"><code>@black</code></td> <td>#000</td> <td class="swatch-col"><span class="swatch" style="background-color: #000;"></span></td> </tr> <tr> <td><code>@grayDarker</code></td> <td>#222</td> <td><span class="swatch" style="background-color: #222;"></span></td> </tr> <tr> <td><code>@grayDark</code></td> <td>#333</td> <td><span class="swatch" style="background-color: #333;"></span></td> </tr> <tr> <td><code>@gray</code></td> <td>#555</td> <td><span class="swatch" style="background-color: #555;"></span></td> </tr> <tr> <td><code>@grayLight</code></td> <td>#999</td> <td><span class="swatch" style="background-color: #999;"></span></td> </tr> <tr> <td><code>@grayLighter</code></td> <td>#eee</td> <td><span class="swatch" style="background-color: #eee;"></span></td> </tr> <tr> <td><code>@white</code></td> <td>#fff</td> <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td> </tr> </tbody> </table> <h3>强调色</h3> <table class="reference    "> <tbody> <tr> <td class="span2"><code>@blue</code></td> <td>#049cdb</td> <td class="swatch-col"><span class="swatch" style="background-color: #049cdb;"></span></td> </tr> <tr> <td><code>@green</code></td> <td>#46a546</td> <td><span class="swatch" style="background-color: #46a546;"></span></td> </tr> <tr> <td><code>@red</code></td> <td>#9d261d</td> <td><span class="swatch" style="background-color: #9d261d;"></span></td> </tr> <tr> <td><code>@yellow</code></td> <td>#ffc40d</td> <td><span class="swatch" style="background-color: #ffc40d;"></span></td> </tr> <tr> <td><code>@orange</code></td> <td>#f89406</td> <td><span class="swatch" style="background-color: #f89406;"></span></td> </tr> <tr> <td><code>@pink</code></td> <td>#c3325f</td> <td><span class="swatch" style="background-color: #c3325f;"></span></td> </tr> <tr> <td><code>@purple</code></td> <td>#7a43b6</td> <td><span class="swatch" style="background-color: #7a43b6;"></span></td> </tr> </tbody> </table> <h3>按钮</h3> <table class="reference    "> <tbody> <tr> <td class="span3"><code>@primaryButtonBackground</code></td> <td><code>@linkColor</code></td> <td class="swatch-col"><span class="swatch" style="background-color: #08c;"></span></td> </tr> </tbody> </table> <h3>表单</h3> <table class="reference    "> <tbody> <tr> <td class="span3"><code>@placeholderText</code></td> <td><code>@grayLight</code></td> <td class="swatch-col"><span class="swatch" style="background-color: #999;"></span></td> </tr> </tbody> </table> <h3>导航栏</h3> <table class="reference    "> <tbody> <tr> <td class="span3"><code>@navbarHeight</code></td> <td>40px</td> <td class="swatch-col">&nbsp;</td> </tr> <tr> <td><code>@navbarBackground</code></td> <td><code>@grayDarker</code></td> <td><span class="swatch" style="background-color: #222;"></span></td> </tr> <tr> <td><code>@navbarBackgroundHighlight</code></td> <td><code>@grayDark</code></td> <td><span class="swatch" style="background-color: #333;"></span></td> </tr> <tr> <td><code>@navbarText</code></td> <td><code>@grayLight</code></td> <td><span class="swatch" style="background-color: #999;"></span></td> </tr> <tr> <td><code>@navbarLinkColor</code></td> <td><code>@grayLight</code></td> <td><span class="swatch" style="background-color: #999;"></span></td> </tr> <tr> <td><code>@navbarLinkColorHover</code></td> <td><code>@white</code></td> <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td> </tr> </tbody> </table> <h3>表单状态和通知</h3> <table class="reference    "> <tbody> <tr> <td class="span3"><code>@warningText</code></td> <td>#c09853</td> <td><span class="swatch" style="background-color: #c09853;"></span></td> </tr> <tr> <td><code>@warningBackground</code></td> <td>#f3edd2</td> <td class="swatch-col"><span class="swatch" style="background-color: #f3edd2;"></span></td> </tr> <tr> <td><code>@errorText</code></td> <td>#b94a48</td> <td><span class="swatch" style="background-color: #b94a48;"></span></td> </tr> <tr> <td><code>@errorBackground</code></td> <td>#f2dede</td> <td><span class="swatch" style="background-color: #f2dede;"></span></td> </tr> <tr> <td><code>@successText</code></td> <td>#468847</td> <td><span class="swatch" style="background-color: #468847;"></span></td> </tr> <tr> <td><code>@successBackground</code></td> <td>#dff0d8</td> <td><span class="swatch" style="background-color: #dff0d8;"></span></td> </tr> <tr> <td><code>@infoText</code></td> <td>#3a87ad</td> <td><span class="swatch" style="background-color: #3a87ad;"></span></td> </tr> <tr> <td><code>@infoBackground</code></td> <td>#d9edf7</td> <td><span class="swatch" style="background-color: #d9edf7;"></span></td> </tr> </tbody> </table> <hr /> <h2>Bootstrap 混合</h2> <h3>基本的混合</h3> <p> 基本的混合从本质上来说，就是包括整个或是部分代码片段。写法类似一个CSS类，可以随处调用。 </p> <pre>.element {
+  .clearfix();
+}
+</pre> <h3>带参数的混合</h3> <p> 带参数的混合和基本混合很像，不同之处是前者可以接收参数(根据名称)，参数可以有默认值。 </p> <pre>.element {
+  .border-radius(4px);
+}
+</pre> <h3>易于定制</h3> <p> 基本上Bootstrap所有的混合都保存在mixins.less， 这是一个出色的工具类.less文件，我们可以在任何一个.less文件中使用其中的混合。 </p> <p> 因此，直接使用已有的混合或是自定义一个新混合皆可。 </p> <h2>包含混合</h2> <h3>实用工具</h3> <table class="reference    "> <thead> <tr> <th class="span4">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>.clearfix()</code></td> <td><em class="muted">无</em></td> <td>清除浮动</td> </tr> <tr> <td><code>.tab-focus()</code></td> <td><em class="muted">无</em></td> <td>添加类似Webkit获得焦点的风格和类似Firefox的的外包线</td> </tr> <tr> <td><code>.center-block()</code></td> <td><em class="muted">无</em></td> <td>使用<code>margin: auto</code>把块级元素自动居中</td> </tr> <tr> <td><code>.ie7-inline-block()</code></td> <td><em class="muted">无</em></td> <td>添加规则的 <code>display: inline-block</code> 以支持IE7</td> </tr> <tr> <td><code>.size()</code></td> <td><code>@height: 5px, @width: 5px</code></td> <td>快速设置行高和行宽</td> </tr> <tr> <td><code>.square()</code></td> <td><code>@size: 5px</code></td> <td>基于<code>.size()</code> 设置正方形区域</td> </tr> <tr> <td><code>.opacity()</code></td> <td><code>@opacity: 100</code></td> <td>设置透明度的百分比 (比如 &quot;50&quot; 或 &quot;75&quot;)</td> </tr> </tbody> </table> <h3>表单</h3> <table class="reference    "> <thead> <tr> <th class="span4">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>.placeholder()</code></td> <td><code>@color: @placeholderText</code></td> <td>设置输入框中 <code>placeholder</code> 的字体颜色</td> </tr> </tbody> </table> <h3>排版</h3> <table class="reference    "> <thead> <tr> <th class="span4">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>#font &gt; #family &gt; .serif()</code></td> <td><em class="muted">无</em></td> <td>对某个元素应用一系列serif衬线字体</td> </tr> <tr> <td><code>#font &gt; #family &gt; .sans-serif()</code></td> <td><em class="muted">无</em></td> <td>对某个元素应用一系列sans-serif字体</td> </tr> <tr> <td><code>#font &gt; #family &gt; .monospace()</code></td> <td><em class="muted">无</em></td> <td>对某个元素应用一系列monospace字体</td> </tr> <tr> <td><code>#font &gt; .shorthand()</code></td> <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td> <td>方便设置字体大小，粗细和行间距</td> </tr> <tr> <td><code>#font &gt; .serif()</code></td> <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td> <td>设置衬线字体族serif，字体大小，粗细和行间距</td> </tr> <tr> <td><code>#font &gt; .sans-serif()</code></td> <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td> <td>设置sans-serif字体族，字体大小，粗细和行间距</td> </tr> <tr> <td><code>#font &gt; .monospace()</code></td> <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td> <td>设置monospace字体族，字体大小，粗细和行间距</td> </tr> </tbody> </table> <h3>栅格系统</h3> <table class="reference    "> <thead> <tr> <th class="span4">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>.container-fixed()</code></td> <td><em class="muted">无</em></td> <td>创建一个水平居中的容器，用以容纳内容</td> </tr> <tr> <td><code>#grid &gt; .core()</code></td> <td><code>@gridColumnWidth, @gridGutterWidth</code></td> <td>使用 <em>n</em> 列和 <em>x</em> 像素间距宽度，生成一个象素栅格系统(容器，行，列)</td> </tr> <tr> <td><code>#grid &gt; .fluid()</code></td> <td><code>@fluidGridColumnWidth, @fluidGridGutterWidth</code></td> <td>使用 <em>n</em> 列和 <em>x</em> % 间距宽度，生成一个百分比栅格系统</td> </tr> </tbody> </table> <h3>CSS3属性</h3> <table class="reference    "> <thead> <tr> <th class="span3">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>.border-radius()</code></td> <td><code>@radius: 5px</code></td> <td>元素圆角化，可以是一个单独的值，也可以分别是四个角的值</td> </tr> <tr> <td><code>.box-shadow()</code></td> <td><code>@shadow: 0 1px 3px rgba(0,0,0,.25)</code></td> <td>对元素应用阴影</td> </tr> <tr> <td><code>.transition()</code></td> <td><code>@transition</code></td> <td>添加CSS3过渡效果(比如， <code>all .2s linear</code>)</td> </tr> <tr> <td><code>.rotate()</code></td> <td><code>@degrees</code></td> <td>旋转一个元素 <em>n</em> 度</td> </tr> <tr> <td><code>.scale()</code></td> <td><code>@ratio</code></td> <td>对一个元素缩放原有大小的 <em>n</em> 倍</td> </tr> <tr> <td><code>.translate()</code></td> <td><code>@x: 0, @y: 0</code></td> <td>在平面上移动x和y个像素</td> </tr> <tr> <td><code>.background-clip()</code></td> <td><code>@clip</code></td> <td>裁剪一个元素的背景 (用于 <code>border-radius</code>)</td> </tr> <tr> <td><code>.background-size()</code></td> <td><code>@size</code></td> <td>通过CSS3更改背景图片的大小</td> </tr> <tr> <td><code>.box-sizing()</code></td> <td><code>@boxmodel</code></td> <td>改变一个元素的盒(box)模型 (比如，用在100%宽度 <code>input</code> 上的 <code>border-box</code> )</td> </tr> <tr> <td><code>.user-select()</code></td> <td><code>@select</code></td> <td>更改页面文本的选择光标</td> </tr> <tr> <td><code>.resizable()</code></td> <td><code>@direction: both</code></td> <td>改变右下角坐标以重置元素大小</td> </tr> <tr> <td><code>.content-columns()</code></td> <td><code>@columnCount, @columnGap: @gridColumnGutter</code></td> <td>让元素中的内容使用CSS3的列</td> </tr> </tbody> </table> <h3>背景和渐变</h3> <table class="reference    "> <thead> <tr> <th class="span4">混合</th> <th>参数</th> <th>用法</th> </tr> </thead> <tbody> <tr> <td><code>#translucent &gt; .background()</code></td> <td><code>@color: @white, @alpha: 1</code></td> <td>设置一个元素的背景色和透明度</td> </tr> <tr> <td><code>#translucent &gt; .border()</code></td> <td><code>@color: @white, @alpha: 1</code></td> <td>设置一个元素的边框的颜色和透明度</td> </tr> <tr> <td><code>#gradient &gt; .vertical()</code></td> <td><code>@startColor, @endColor</code></td> <td>创建一个跨浏览器的垂直背景渐变</td> </tr> <tr> <td><code>#gradient &gt; .horizontal()</code></td> <td><code>@startColor, @endColor</code></td> <td>创建一个跨浏览器的水平背景渐变</td> </tr> <tr> <td><code>#gradient &gt; .directional()</code></td> <td><code>@startColor, @endColor, @deg</code></td> <td>创建一个跨浏览器的有斜度的背景渐变</td> </tr> <tr> <td><code>#gradient &gt; .vertical-three-colors()</code></td> <td><code>@startColor, @midColor, @colorStop, @endColor</code></td> <td>创建一个跨浏览器的三色背景渐变</td> </tr> <tr> <td><code>#gradient &gt; .radial()</code></td> <td><code>@innerColor, @outerColor</code></td> <td>创建一个跨浏览器的放射背景渐变</td> </tr> <tr> <td><code>#gradient &gt; .striped()</code></td> <td><code>@color, @angle</code></td> <td>创建一个跨浏览器的条纹背景渐变</td> </tr> <tr> <td><code>#gradientBar()</code></td> <td><code>@primaryColor, @secondaryColor</code></td> <td>用于给按钮指定渐变背景和浅暗的边框</td> </tr> </tbody> </table> <h2 class="tutheader">如何编译</h2> <h3>带有makefile的Node.js </h3> <p> 运行下列命令，利用npm在全局环境下安装LESS命令行编译器和uglify-js： </p> <pre>$ npm install -g less uglify-js
+</pre> <p> 安装成功后，在您的Bootstrap的根目录下运行 make 即可编译CSS。 </p> <p> 此外，如果您已经安装了 watchr ，您可以运行 make watch ， 这样您每次修改Bootstrap后，就会自动重编译Bootstrap。（不是必须运行，这样做仅仅是出于方便。）</p> <h3>使用 JavaScript</h3> <p>只需要简单的引用 less.js 文件(<a href="http://lesscss.org/">下载最新的 Less.js</a> )并重新加载页面。</p> <p> js 文件就会编译 less。</p> <pre>&lt;link rel=&quot;stylesheet/less&quot; href=&quot;/path/to/bootstrap.less&quot;&gt;
+&lt;script src=&quot;/path/to/less.js&quot;&gt;&lt;/script&gt;
+</pre> <h2 class="subheading">命令行</h2> <p>如果您已经安装了 Less 命令行（Command Line），原型下面要编译的命令：</p> <pre>$ lessc ./lib/bootstrap.less &gt; bootstrap.css
+</pre> <p>如果您想要一个压缩的编译，可以使用 --compress 命令。</p> <h2 class="subheading">Less Mac app</h2> <p>虽然是非官方的，但是这里有一个可用的 Less Mac 应用程序可用于编译。</p> <p><a href="https://www.w3cschool.cn/statics/demosource/twitter-bootstrap.zip" target="_blank">点击这里，下载本教程中使用到的所有 HTML、CSS、JS 和图片文件。</a></p></div>
+<style>
+.swatch {
+display: inline-block;
+width: 30px;
+height: 20px;
+margin: -6px 0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+</style><div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="bootstrap-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a></li>
+<li><a href="bootstrap-grid-system-example1.html" title="Bootstrap 网格系统实例：堆叠的水平">Bootstrap 网格系统实例：堆叠的水平</a></li>
+<li><a href="bootstrap-dropdowns.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a></li>
+<li><a href="bootstrap-tables.html" title="Bootstrap 表格">Bootstrap 表格</a></li>
+<li><a href="bootstrap-intro.html" title="Bootstrap 简介">Bootstrap 简介</a></li>
+<li><a href="bootstrap-grid-system-example3.html" title="Bootstrap 网格系统实例：手机、平板电脑、台式电脑">Bootstrap 网格系统实例：手机、平板电脑、台式电脑</a></li>
+<li><a href="bootstrap-grid-system-example2.html" title="Bootstrap 网格系统实例：中型和大型设备">Bootstrap 网格系统实例：中型和大型设备</a></li>
+<li><a href="bootstrap-v2-layout.html" title="Bootstrap 布局">Bootstrap 布局</a></li>
+<li><a href="bootstrap-v2-glyphicons.html" title="Bootstrap Glyphicons">Bootstrap Glyphicons</a></li>
+<li><a href="bootstrap-v2-icons.html" title="Bootstrap 图标">Bootstrap 图标</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'bootstrap-v2-less',
+pename:'bootstrap',
+ismenu:'0',
+ktitle:'Bootstrap LESS',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'bootstrap',
+bookname:'bootstrap教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "-1";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '53';
+var aid   = '3050';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-v2-less.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:10:39 GMT -->
+</html>

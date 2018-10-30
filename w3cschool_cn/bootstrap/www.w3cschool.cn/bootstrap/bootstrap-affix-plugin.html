@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-affix-plugin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>Bootstrap 附加导航（Affix）插件_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="Bootstrap 附加导航（Affix）插件" />
+<meta name="description" content="Bootstrap 附加导航（Affix）插件附加导航（Affix）插件允许某个 &lt;div&gt; 
+固定在页面的某个位置。您也可以在打开或关闭使用该插件之间进行切换。一个常见的例子是社交图标。它们将在某个位置开始，但当页面点击某个标记，该 
+&lt;div&gt; 会锁定在某个位置，不会随着_来自bootstrap教程，w3cschool。" />
+<link href="../statics/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../statics/css/w3.css" />
+<link rel="stylesheet" href="../statics/css/style-kn-project-view.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/style-theme.css" type="text/css" />
+<link rel="stylesheet" href="../statics/css/project.css" />
+<link href="../plugins/highlight/styles/default.css" rel="stylesheet" type="text/css"/>
+<script src="../plugins/highlight/highlight.pack.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="http://www.w3cschool.cn/statics/images/favicon.ico"/>
+<script src="../statics/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../statics/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../statics/js/project.leftbox.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+/*点赞*/
+.islike{
+float: right;
+display: inline-block;
+line-height: 30px;
+padding: 0 5px;
+vertical-align: middle;
+color: #333
+}
+.islike a{
+color: #3a3838;
+text-decoration: none;
+}
+.isdone{
+color: #ed9c28;
+}
+
+/*点赞结束*/
+</style>
+<body>
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!--header start--> 
+<div id="header">
+<div id="header_item">
+<div id="header_index">
+<div id="header-l">
+<a href="http://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="../../7nsts.w3cschool.cn/images/w3c/header-logo.png" alt="W3Cschool" /></a>
+<ul class="header-menu">
+<li><a href="http://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="http://www.w3cschool.cn/courses/" title="编程课程">编程课程</a></li> 
+<li><a href="http://www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li> 
+<li class="dropdown"><a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://www.w3cschool.cn/minicourse/" title="编程微课">编程微课</a>
+<a href="http://www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+<a href="http://www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+<a href="http://www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+<a href="http://www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+<a href="http://www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+</div> 
+</li>
+<li class="dropdown"><a href="#" class="dropbtn">百宝箱<i class="down-icon1 angle-down-icon"></i></a>
+<div class="dropdown-content">
+<a href="http://123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a>
+<a href="http://123.w3cschool.cn/" target="_blank" title="W3Cschool极客导航">极客导航</a>
+<a href="http://www.w3cschool.cn/dict/" title="速查词典">速查词典</a>
+<a href="http://www.w3cschool.cn/group/" title="群组">群组</a>
+<a href="http://www.w3cschool.cn/position/paths" title="职业路径">职业路径</a>
+<a href="http://www.w3cschool.cn/popularuser" title="排行榜">排行榜</a>
+<!-- <a href="//www.w3cschool.cn/activity/" title="活动">活动</a> -->
+</div> 
+</li>
+<li><a href="http://www.w3cschool.cn/vip" title="会员">会员<i class="hot-icon"></i></a></li>
+</ul>
+</div>
+<div id="header-r">
+<div class="sig-box" >
+<a href="https://www.w3cschool.cn/register?refer=/" rel="nofollow">注册</a><!-- href="/register?refer=/" --> | 
+<a href="https://www.w3cschool.cn/login?refer=/" rel="nofollow">登录</a>
+</div>
+<a href="http://www.w3cschool.cn/download" target="_blank" class="header-app" title="w3cschool移动端">移动端
+<div class="dropdown-content qrcode-box">
+<span class="j"></span>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
+<p>扫码下载APP</p>
+</div>
+<div class="qrcode-img">
+<img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.png" alt="w3cschool公众号" width="150" height="150">
+<p>w3cschool公众号</p>
+</div>
+</div>
+</a>
+<div class="searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索..."/>
+<button type="submit" class="button"/></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="../../7n.w3cschool.cn/attachments/avatar2/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = 'bootstrap-affix-plugin.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container">
+<div class="fixed-sidebar mscroller" style="width:100%;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/bootstrap" title="bootstrap教程">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="bootstrap教程" src="../attachments/cover/cover_bootstrap.png"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>bootstrap教程</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()" >
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>    
+<li class="nav-item"><a href="list/index.html" title="wiki列表"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">Wiki列表</span></a></li>                     
+<li class="nav-item"><a href="topic.html" target="_blank" title="bootstrap问答讨论区"><i class="icon-question-sign"></i> <span class="nav-item-label">bootstrap问答讨论区</span></a></li></ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">                                          
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="4705" data-id="handbook">
+<ol class="dd-list">
+
+
+    
+<li class="dd-item" data-id="jqxmwf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 教程">Bootstrap 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tutorial.html" title="Bootstrap 教程导读">Bootstrap 教程导读</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-intro">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-intro.html" title="Bootstrap 简介">Bootstrap 简介</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-environment-setup">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-environment-setup.html" title="Bootstrap 环境安装">Bootstrap 环境安装</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-codecamp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-codecamp.html" title="Bootstrap 编程实战闯关">Bootstrap 编程实战闯关</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="m471bf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap CSS">Bootstrap CSS</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-css-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-overview.html" title="Bootstrap CSS 概览">Bootstrap CSS 概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-grid-system">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-grid-system.html" title="Bootstrap 网格系统">Bootstrap 网格系统</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-typography">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-typography.html" title="Bootstrap 排版">Bootstrap 排版</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-code">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-code.html" title="Bootstrap 代码">Bootstrap 代码</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tables">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tables.html" title="Bootstrap 表格">Bootstrap 表格</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-forms">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-forms.html" title="Bootstrap 表单">Bootstrap 表单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-button-plugin.html" title="Bootstrap 按钮">Bootstrap 按钮</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-images">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-images.html" title="Bootstrap 图片">Bootstrap 图片</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-helper-classes">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-helper-classes.html" title="Bootstrap 辅助类">Bootstrap 辅助类</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-responsive-utilities">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-responsive-utilities.html" title="Bootstrap 响应式实用工具">Bootstrap 响应式实用工具</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="sknxvf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 布局组件">Bootstrap 布局组件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="2emf1fn9">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="2emf1fn9.html" title="Bootstrap 字体图标">Bootstrap 字体图标</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-dropdown-plugin.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-groups.html" title="Bootstrap 按钮组">Bootstrap 按钮组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-dropdowns">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-dropdowns.html" title="Bootstrap 按钮下拉菜单">Bootstrap 按钮下拉菜单</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-input-groups">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-input-groups.html" title="Bootstrap 输入框组">Bootstrap 输入框组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-navigation-elements">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-navigation-elements.html" title="Bootstrap 导航元素">Bootstrap 导航元素</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="cqye4fnh">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="cqye4fnh.html" title="Bootstrap 导航栏">Bootstrap 导航栏</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-breadcrumbs">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-breadcrumbs.html" title="Bootstrap 面包屑导航">Bootstrap 面包屑导航</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-pagination">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-pagination.html" title="Bootstrap 分页">Bootstrap 分页</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-labels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-labels.html" title="Bootstrap 标签">Bootstrap 标签</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-badges">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-badges.html" title="Bootstrap 徽章">Bootstrap 徽章</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-jumbotron">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-jumbotron.html" title="Bootstrap 超大屏幕">Bootstrap 超大屏幕</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-page-header">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-page-header.html" title="Bootstrap 页面标题">Bootstrap 页面标题</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-thumbnails">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-thumbnails.html" title="Bootstrap 缩略图">Bootstrap 缩略图</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alerts">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alerts.html" title="Bootstrap 警告">Bootstrap 警告</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-progress-bars">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-media-object">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-media-object.html" title="Bootstrap 多媒体对象">Bootstrap 多媒体对象</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-list-group">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-list-group.html" title="Bootstrap 列表组">Bootstrap 列表组</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-panels">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-panels.html" title="Bootstrap 面板">Bootstrap 面板</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="9jto5fni">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="9jto5fni.html" title="Bootstrap Well">Bootstrap Well</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="evsruf21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 插件">Bootstrap 插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-plugins-overview">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-plugins-overview.html" title="Bootstrap 插件概览">Bootstrap 插件概览</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-transition-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-transition-plugin.html" title="Bootstrap 过渡效果（Transition）插件">Bootstrap 过渡效果（Transition）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-modal-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-modal-plugin.html" title="Bootstrap 模态框（Modal）插件">Bootstrap 模态框（Modal）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-dropdown-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-dropdown-plugin.html" title="Bootstrap 下拉菜单（Dropdown）插件">Bootstrap 下拉菜单（Dropdown）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-scrollspy-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-scrollspy-plugin.html" title="Bootstrap 滚动监听（Scrollspy）插件">Bootstrap 滚动监听（Scrollspy）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-tab-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-tab-plugin.html" title="Bootstrap 标签页（Tab）插件">Bootstrap 标签页（Tab）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="5pj86fnj">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="5pj86fnj.html" title="Bootstrap 提示工具（Tooltip）插件">Bootstrap 提示工具（Tooltip）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-popover-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-popover-plugin.html" title="Bootstrap 弹出框（Popover）插件">Bootstrap 弹出框（Popover）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-alert-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-alert-plugin.html" title="Bootstrap 警告框">Bootstrap 警告框</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-button-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-button-plugin.html" title="Bootstrap 按钮（Button）插件">Bootstrap 按钮（Button）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-collapse-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-collapse-plugin.html" title="Bootstrap 折叠（Collapse）插件">Bootstrap 折叠（Collapse）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-carousel-plugin">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-carousel-plugin.html" title="Bootstrap 轮播（Carousel）插件">Bootstrap 轮播（Carousel）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-affix-plugin">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-affix-plugin.html" title="Bootstrap 附加导航（Affix）插件">Bootstrap 附加导航（Affix）插件</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="89qvef21">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 其他">Bootstrap 其他</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-ui-editor">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-ui-editor.html" title="Bootstrap UI 编辑器">Bootstrap UI 编辑器</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-v2-tutorial">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-v2-tutorial.html" title="Bootstrap v2 教程">Bootstrap v2 教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-html-codeguide">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-html-codeguide.html" title="Bootstrap HTML编码规范">Bootstrap HTML编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-css-codeguide-html">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-css-codeguide-html.html" title="Bootstrap CSS编码规范">Bootstrap CSS编码规范</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-b4v222x8">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 相关教程">Bootstrap 相关教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-eg6822xa">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="html-css-bootstrap-setup.html" title="Bootstrap 入门教程">Bootstrap 入门教程</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li></ol></li>
+    
+<li class="dd-item" data-id="bootstrap-o38d28im">
+<div class="dd-content folder-open ">
+<i class="folder icon-folder-open"></i>
+                                 
+<a   title="Bootstrap 版本更新">Bootstrap 版本更新</a>
+</div>
+<ol class="dd-list">
+                          
+
+
+    
+<li class="dd-item" data-id="bootstrap-raxz28in">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-raxz28in.html" title="Bootstrap4 首个Beta版发布：距上次发布已7月之久！">Bootstrap4 首个Beta版发布：距上次发布已7月之久！</a>
+</div>
+<ol class="dd-list">
+                          
+
+</ol></li>
+
+    
+<li class="dd-item" data-id="bootstrap-uow62fyg">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+                                 
+<a  href="bootstrap-uow62fyg.html" title="Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架">Bootstrap v4.0.0-beta.2 发布，Web 前端 UI 框架</a>
+</div>
+<ol class="dd-list">
+                          
+</ol></li>
+</ol>
+</li>
+</ol>
+</div>  
+</div>                                
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>                    
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">                  
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>                    
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div>
+</div>
+<div class="splitter-handle left-drager">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" >
+<div class="project-body">
+<div class="portlet-title pro-title">
+<div class="set-btn-group font-settings pull-left">
+<a href="javascript:;" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="javascript:;" class="toggle-dropdown" title="视觉主题设置"><i class="icon-font"></i></a>
+<div class="set-dropdown-menu docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+<div class="buttons bg-color">
+<button class="button theme" color="color-theme-white" title="日间模式">White</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">Sepia</button>
+<button class="button theme" color="color-theme-night" title="夜间模式">Night</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">            
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(38826)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star" ><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">7</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox" data-cmd="more" data-bd-bind="1472196006351"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/bootstrap/bootstrap-affix-plugin" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>Bootstrap 附加导航（Affix）插件</h1>
+</div>
+<div class="kn-infomation">
+由&nbsp;<span>youj</span>&nbsp;创建，Carrie 最后一次修改&nbsp;<span>2015-09-06</span>    
+</div>          
+</div>          
+<div class="content-bg">
+<div class="content-intro view-box "><h2>Bootstrap <span class="color_h1">附加导航（Affix）插件</span></h2><p>附加导航（Affix）插件允许某个 &lt;div&gt; 
+固定在页面的某个位置。您也可以在打开或关闭使用该插件之间进行切换。一个常见的例子是社交图标。它们将在某个位置开始，但当页面点击某个标记，该 
+&lt;div&gt; 会锁定在某个位置，不会随着页面其他部分一起滚动。</p><blockquote><img src="../../7n.w3cschool.cn/attachments/image/20160225/1456386704494513.png">如果您想要单独引用该插件的功能，那么您需要引用 <strong>affix.js</strong>。或者，正如 <a target="_top" href="bootstrap-plugins-overview.html">Bootstrap 插件概览</a> 一章中所提到，您可以引用 <em>bootstrap.js</em> 或压缩版的 <em>bootstrap.min.js</em>。</blockquote><h2>用法</h2><p>您可以通过 data 属性或者通过 JavaScript 来使用附加导航（Affix）插件。</p><ul class="list list-paddingleft-2"><li><p><strong>通过 data 属性</strong>：如需向元素添加附加导航（Affix）行为，只需要向需要监听的元素添加 <strong>data-spy="affix"</strong> 即可。请使用偏移来定义何时切换元素的锁定和移动。</p><h3>实例</h3><p>下面的实例演示了通过 data 属性使用附加导航（Affix）插件的用法：</p><pre style="" class="prettyprint tryit prettyprinted" lang="html"><code class="html">&lt;!DOCTYPE&nbsp;html&gt;&lt;html&gt;&lt;head&gt;&lt;meta&nbsp;charset="UTF-8"&gt;&lt;title&gt;Bootstrap&nbsp;附加导航（Affix）插件&lt;/title&gt;&lt;link&nbsp;href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css"&nbsp;rel="stylesheet"&gt;&lt;script&nbsp;src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;&lt;script&nbsp;src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;&lt;style&nbsp;type="text/css"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;Custom&nbsp;Styles&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;140px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;20px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;4px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#ddd;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;4px&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.067);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top:&nbsp;1px&nbsp;solid&nbsp;#ddd;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:first-child{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top:&nbsp;none;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li.active&nbsp;a,&nbsp;ul.nav-tabs&nbsp;li.active&nbsp;a:hover{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#0088cc;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#0088cc;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:first-child&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;4px&nbsp;4px&nbsp;0&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:last-child&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;0&nbsp;0&nbsp;4px&nbsp;4px;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs.affix{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;30px;&nbsp;/*&nbsp;Set&nbsp;the&nbsp;top&nbsp;position&nbsp;of&nbsp;pinned&nbsp;element&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;}&lt;/style&gt;&lt;/head&gt;&lt;body&nbsp;data-spy="scroll"&nbsp;data-target="#myScrollspy"&gt;&lt;div&nbsp;class="container"&gt;
+	&lt;div&nbsp;class="jumbotron"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bootstrap&nbsp;Affix&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="row"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="col-xs-3"&nbsp;id="myScrollspy"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class="nav&nbsp;nav-tabs&nbsp;nav-stacked"&nbsp;data-spy="affix"&nbsp;data-offset-top="125"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class="active"&gt;&lt;a&nbsp;href="#section-1"&gt;第一部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-2"&gt;第二部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-3"&gt;第三部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-4"&gt;第四部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-5"&gt;第五部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="col-xs-9"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-1"&gt;第一部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Nam&nbsp;eu&nbsp;sem&nbsp;tempor,&nbsp;varius&nbsp;quam&nbsp;at,&nbsp;luctus&nbsp;dui.&nbsp;Mauris&nbsp;magna&nbsp;metus,&nbsp;dapibus&nbsp;nec&nbsp;turpis&nbsp;vel,&nbsp;semper&nbsp;malesuada&nbsp;ante.&nbsp;Vestibulum&nbsp;id&nbsp;metus&nbsp;ac&nbsp;nisl&nbsp;bibendum&nbsp;scelerisque&nbsp;non&nbsp;non&nbsp;purus.&nbsp;Suspendisse&nbsp;varius&nbsp;nibh&nbsp;non&nbsp;aliquet&nbsp;sagittis.&nbsp;In&nbsp;tincidunt&nbsp;orci&nbsp;sit&nbsp;amet&nbsp;elementum&nbsp;vestibulum.&nbsp;Vivamus&nbsp;fermentum&nbsp;in&nbsp;arcu&nbsp;in&nbsp;aliquam.&nbsp;Quisque&nbsp;aliquam&nbsp;porta&nbsp;odio&nbsp;in&nbsp;fringilla.&nbsp;Vivamus&nbsp;nisl&nbsp;leo,&nbsp;blandit&nbsp;at&nbsp;bibendum&nbsp;eu,&nbsp;tristique&nbsp;eget&nbsp;risus.&nbsp;Integer&nbsp;aliquet&nbsp;quam&nbsp;ut&nbsp;elit&nbsp;suscipit,&nbsp;id&nbsp;interdum&nbsp;neque&nbsp;porttitor.&nbsp;Integer&nbsp;faucibus&nbsp;ligula.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;quis&nbsp;quam&nbsp;ut&nbsp;magna&nbsp;consequat&nbsp;faucibus.&nbsp;Pellentesque&nbsp;eget&nbsp;nisi&nbsp;a&nbsp;mi&nbsp;suscipit&nbsp;tincidunt.&nbsp;Ut&nbsp;tempus&nbsp;dictum&nbsp;risus.&nbsp;Pellentesque&nbsp;viverra&nbsp;sagittis&nbsp;quam&nbsp;at&nbsp;mattis.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Aliquam&nbsp;sit&nbsp;amet&nbsp;gravida&nbsp;nibh,&nbsp;facilisis&nbsp;gravida&nbsp;odio.&nbsp;Phasellus&nbsp;auctor&nbsp;velit&nbsp;at&nbsp;lacus&nbsp;blandit,&nbsp;commodo&nbsp;iaculis&nbsp;justo&nbsp;viverra.&nbsp;Etiam&nbsp;vitae&nbsp;est&nbsp;arcu.&nbsp;Mauris&nbsp;vel&nbsp;congue&nbsp;dolor.&nbsp;Aliquam&nbsp;eget&nbsp;mi&nbsp;mi.&nbsp;Fusce&nbsp;quam&nbsp;tortor,&nbsp;commodo&nbsp;ac&nbsp;dui&nbsp;quis,&nbsp;bibendum&nbsp;viverra&nbsp;erat.&nbsp;Maecenas&nbsp;mattis&nbsp;lectus&nbsp;enim,&nbsp;quis&nbsp;tincidunt&nbsp;dui&nbsp;molestie&nbsp;euismod.&nbsp;Curabitur&nbsp;et&nbsp;diam&nbsp;tristique,&nbsp;accumsan&nbsp;nunc&nbsp;eu,&nbsp;hendrerit&nbsp;tellus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-2"&gt;第二部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Nullam&nbsp;hendrerit&nbsp;justo&nbsp;non&nbsp;leo&nbsp;aliquet&nbsp;imperdiet.&nbsp;Etiam&nbsp;in&nbsp;sagittis&nbsp;lectus.&nbsp;Suspendisse&nbsp;ultrices&nbsp;placerat&nbsp;accumsan.&nbsp;Mauris&nbsp;quis&nbsp;dapibus&nbsp;orci.&nbsp;In&nbsp;dapibus&nbsp;velit&nbsp;blandit&nbsp;pharetra&nbsp;tincidunt.&nbsp;Quisque&nbsp;non&nbsp;sapien&nbsp;nec&nbsp;lacus&nbsp;condimentum&nbsp;facilisis&nbsp;ut&nbsp;iaculis&nbsp;enim.&nbsp;Sed&nbsp;viverra&nbsp;interdum&nbsp;bibendum.&nbsp;Donec&nbsp;ac&nbsp;sollicitudin&nbsp;dolor.&nbsp;Sed&nbsp;fringilla&nbsp;vitae&nbsp;lacus&nbsp;at&nbsp;rutrum.&nbsp;Phasellus&nbsp;congue&nbsp;vestibulum&nbsp;ligula&nbsp;sed&nbsp;consequat.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;consectetur&nbsp;scelerisque&nbsp;lacus,&nbsp;ac&nbsp;fermentum&nbsp;lorem&nbsp;convallis&nbsp;sed.&nbsp;Nam&nbsp;odio&nbsp;tortor,&nbsp;dictum&nbsp;quis&nbsp;malesuada&nbsp;at,&nbsp;pellentesque&nbsp;vitae&nbsp;orci.&nbsp;Vivamus&nbsp;elementum,&nbsp;felis&nbsp;eu&nbsp;auctor&nbsp;lobortis,&nbsp;diam&nbsp;velit&nbsp;egestas&nbsp;lacus,&nbsp;quis&nbsp;fermentum&nbsp;metus&nbsp;ante&nbsp;quis&nbsp;urna.&nbsp;Sed&nbsp;at&nbsp;facilisis&nbsp;libero.&nbsp;Cum&nbsp;sociis&nbsp;natoque&nbsp;penatibus&nbsp;et&nbsp;magnis&nbsp;dis&nbsp;parturient&nbsp;montes,&nbsp;nascetur&nbsp;ridiculus&nbsp;mus.&nbsp;Vestibulum&nbsp;bibendum&nbsp;blandit&nbsp;dolor.&nbsp;Nunc&nbsp;orci&nbsp;dolor,&nbsp;molestie&nbsp;nec&nbsp;nibh&nbsp;in,&nbsp;hendrerit&nbsp;tincidunt&nbsp;ante.&nbsp;Vivamus&nbsp;sem&nbsp;augue,&nbsp;hendrerit&nbsp;non&nbsp;sapien&nbsp;in,&nbsp;mollis&nbsp;ornare&nbsp;augue.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-3"&gt;第三部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Integer&nbsp;pulvinar&nbsp;leo&nbsp;id&nbsp;risus&nbsp;pellentesque&nbsp;vestibulum.&nbsp;Sed&nbsp;diam&nbsp;libero,&nbsp;sodales&nbsp;eget&nbsp;sapien&nbsp;vel,&nbsp;porttitor&nbsp;bibendum&nbsp;enim.&nbsp;Donec&nbsp;sed&nbsp;nibh&nbsp;vitae&nbsp;lorem&nbsp;porttitor&nbsp;blandit&nbsp;in&nbsp;nec&nbsp;ante.&nbsp;Pellentesque&nbsp;vitae&nbsp;metus&nbsp;ipsum.&nbsp;Phasellus&nbsp;sed&nbsp;nunc&nbsp;ac&nbsp;sem&nbsp;malesuada&nbsp;condimentum.&nbsp;Etiam&nbsp;in&nbsp;aliquam&nbsp;lectus.&nbsp;Nam&nbsp;vel&nbsp;sapien&nbsp;diam.&nbsp;Donec&nbsp;pharetra&nbsp;id&nbsp;arcu&nbsp;eget&nbsp;blandit.&nbsp;Proin&nbsp;imperdiet&nbsp;mattis&nbsp;augue&nbsp;in&nbsp;porttitor.&nbsp;Quisque&nbsp;tempus&nbsp;enim&nbsp;id&nbsp;lobortis&nbsp;feugiat.&nbsp;Suspendisse&nbsp;tincidunt&nbsp;risus&nbsp;quis&nbsp;dolor&nbsp;fringilla&nbsp;blandit.&nbsp;Ut&nbsp;sed&nbsp;sapien&nbsp;at&nbsp;purus&nbsp;lacinia&nbsp;porttitor.&nbsp;Nullam&nbsp;iaculis,&nbsp;felis&nbsp;a&nbsp;pretium&nbsp;ornare,&nbsp;dolor&nbsp;nisl&nbsp;semper&nbsp;tortor,&nbsp;vel&nbsp;sagittis&nbsp;lacus&nbsp;est&nbsp;consequat&nbsp;eros.&nbsp;Sed&nbsp;id&nbsp;pretium&nbsp;nisl.&nbsp;Curabitur&nbsp;dolor&nbsp;nisl,&nbsp;laoreet&nbsp;vitae&nbsp;aliquam&nbsp;id,&nbsp;tincidunt&nbsp;sit&nbsp;amet&nbsp;mauris.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Phasellus&nbsp;vitae&nbsp;suscipit&nbsp;justo.&nbsp;Mauris&nbsp;pharetra&nbsp;feugiat&nbsp;ante&nbsp;id&nbsp;lacinia.&nbsp;Etiam&nbsp;faucibus&nbsp;mauris&nbsp;id&nbsp;tempor&nbsp;egestas.&nbsp;Duis&nbsp;luctus&nbsp;turpis&nbsp;at&nbsp;accumsan&nbsp;tincidunt.&nbsp;Phasellus&nbsp;risus&nbsp;risus,&nbsp;volutpat&nbsp;vel&nbsp;tellus&nbsp;ac,&nbsp;tincidunt&nbsp;fringilla&nbsp;massa.&nbsp;Etiam&nbsp;hendrerit&nbsp;dolor&nbsp;eget&nbsp;ante&nbsp;rutrum&nbsp;adipiscing.&nbsp;Cras&nbsp;interdum&nbsp;ipsum&nbsp;mattis,&nbsp;tempus&nbsp;mauris&nbsp;vel,&nbsp;semper&nbsp;ipsum.&nbsp;Duis&nbsp;sed&nbsp;dolor&nbsp;ut&nbsp;enim&nbsp;lobortis&nbsp;pellentesque&nbsp;ultricies&nbsp;ac&nbsp;ligula.&nbsp;Pellentesque&nbsp;convallis&nbsp;elit&nbsp;nisi,&nbsp;id&nbsp;vulputate&nbsp;ipsum&nbsp;ullamcorper&nbsp;ut.&nbsp;Cras&nbsp;ac&nbsp;pulvinar&nbsp;purus,&nbsp;ac&nbsp;viverra&nbsp;est.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Integer&nbsp;pellentesque&nbsp;neque&nbsp;et&nbsp;elementum&nbsp;tempus.&nbsp;Curabitur&nbsp;bibendum&nbsp;in&nbsp;ligula&nbsp;ut&nbsp;rhoncus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Quisque&nbsp;pharetra&nbsp;velit&nbsp;id&nbsp;velit&nbsp;iaculis&nbsp;pretium.&nbsp;Nullam&nbsp;a&nbsp;justo&nbsp;sed&nbsp;ligula&nbsp;porta&nbsp;semper&nbsp;eu&nbsp;quis&nbsp;enim.&nbsp;Pellentesque&nbsp;pellentesque,&nbsp;metus&nbsp;at&nbsp;facilisis&nbsp;hendrerit,&nbsp;lectus&nbsp;velit&nbsp;facilisis&nbsp;leo,&nbsp;quis&nbsp;volutpat&nbsp;turpis&nbsp;arcu&nbsp;quis&nbsp;enim.&nbsp;Nulla&nbsp;viverra&nbsp;lorem&nbsp;elementum&nbsp;interdum&nbsp;ultricies.&nbsp;Suspendisse&nbsp;accumsan&nbsp;quam&nbsp;nec&nbsp;ante&nbsp;mollis&nbsp;tempus.&nbsp;Morbi&nbsp;vel&nbsp;accumsan&nbsp;diam,&nbsp;eget&nbsp;convallis&nbsp;tellus.&nbsp;Suspendisse&nbsp;potenti.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-4"&gt;第四部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Suspendisse&nbsp;a&nbsp;orci&nbsp;facilisis,&nbsp;dignissim&nbsp;tortor&nbsp;vitae,&nbsp;ultrices&nbsp;mi.&nbsp;Vestibulum&nbsp;a&nbsp;iaculis&nbsp;lacus.&nbsp;Phasellus&nbsp;vitae&nbsp;convallis&nbsp;ligula,&nbsp;nec&nbsp;volutpat&nbsp;tellus.&nbsp;Vivamus&nbsp;scelerisque&nbsp;mollis&nbsp;nisl,&nbsp;nec&nbsp;vehicula&nbsp;elit&nbsp;egestas&nbsp;a.&nbsp;Sed&nbsp;luctus&nbsp;metus&nbsp;id&nbsp;mi&nbsp;gravida,&nbsp;faucibus&nbsp;convallis&nbsp;neque&nbsp;pretium.&nbsp;Maecenas&nbsp;quis&nbsp;sapien&nbsp;ut&nbsp;leo&nbsp;fringilla&nbsp;tempor&nbsp;vitae&nbsp;sit&nbsp;amet&nbsp;leo.&nbsp;Donec&nbsp;imperdiet&nbsp;tempus&nbsp;placerat.&nbsp;Pellentesque&nbsp;pulvinar&nbsp;ultrices&nbsp;nunc&nbsp;sed&nbsp;ultrices.&nbsp;Morbi&nbsp;vel&nbsp;mi&nbsp;pretium,&nbsp;fermentum&nbsp;lacus&nbsp;et,&nbsp;viverra&nbsp;tellus.&nbsp;Phasellus&nbsp;sodales&nbsp;libero&nbsp;nec&nbsp;dui&nbsp;convallis,&nbsp;sit&nbsp;amet&nbsp;fermentum&nbsp;sapien&nbsp;auctor.&nbsp;Vestibulum&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus&nbsp;orci&nbsp;luctus&nbsp;et&nbsp;ultrices&nbsp;posuere&nbsp;cubilia&nbsp;Curae;&nbsp;Sed&nbsp;eu&nbsp;elementum&nbsp;nibh,&nbsp;quis&nbsp;varius&nbsp;libero.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;quis&nbsp;quam&nbsp;ut&nbsp;magna&nbsp;consequat&nbsp;faucibus.&nbsp;Pellentesque&nbsp;eget&nbsp;nisi&nbsp;a&nbsp;mi&nbsp;suscipit&nbsp;tincidunt.&nbsp;Ut&nbsp;tempus&nbsp;dictum&nbsp;risus.&nbsp;Pellentesque&nbsp;viverra&nbsp;sagittis&nbsp;quam&nbsp;at&nbsp;mattis.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Aliquam&nbsp;sit&nbsp;amet&nbsp;gravida&nbsp;nibh,&nbsp;facilisis&nbsp;gravida&nbsp;odio.&nbsp;Phasellus&nbsp;auctor&nbsp;velit&nbsp;at&nbsp;lacus&nbsp;blandit,&nbsp;commodo&nbsp;iaculis&nbsp;justo&nbsp;viverra.&nbsp;Etiam&nbsp;vitae&nbsp;est&nbsp;arcu.&nbsp;Mauris&nbsp;vel&nbsp;congue&nbsp;dolor.&nbsp;Aliquam&nbsp;eget&nbsp;mi&nbsp;mi.&nbsp;Fusce&nbsp;quam&nbsp;tortor,&nbsp;commodo&nbsp;ac&nbsp;dui&nbsp;quis,&nbsp;bibendum&nbsp;viverra&nbsp;erat.&nbsp;Maecenas&nbsp;mattis&nbsp;lectus&nbsp;enim,&nbsp;quis&nbsp;tincidunt&nbsp;dui&nbsp;molestie&nbsp;euismod.&nbsp;Curabitur&nbsp;et&nbsp;diam&nbsp;tristique,&nbsp;accumsan&nbsp;nunc&nbsp;eu,&nbsp;hendrerit&nbsp;tellus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Phasellus&nbsp;fermentum,&nbsp;neque&nbsp;sit&nbsp;amet&nbsp;sodales&nbsp;tempor,&nbsp;enim&nbsp;ante&nbsp;interdum&nbsp;eros,&nbsp;eget&nbsp;luctus&nbsp;ipsum&nbsp;eros&nbsp;ut&nbsp;ligula.&nbsp;Nunc&nbsp;ornare&nbsp;erat&nbsp;quis&nbsp;faucibus&nbsp;molestie.&nbsp;Proin&nbsp;malesuada&nbsp;consequat&nbsp;commodo.&nbsp;Mauris&nbsp;iaculis,&nbsp;eros&nbsp;ut&nbsp;dapibus&nbsp;luctus,&nbsp;massa&nbsp;enim&nbsp;elementum&nbsp;purus,&nbsp;sit&nbsp;amet&nbsp;tristique&nbsp;purus&nbsp;purus&nbsp;nec&nbsp;felis.&nbsp;Morbi&nbsp;vestibulum&nbsp;sapien&nbsp;eget&nbsp;porta&nbsp;pulvinar.&nbsp;Nam&nbsp;at&nbsp;quam&nbsp;diam.&nbsp;Proin&nbsp;rhoncus,&nbsp;felis&nbsp;elementum&nbsp;accumsan&nbsp;dictum,&nbsp;felis&nbsp;nisi&nbsp;vestibulum&nbsp;tellus,&nbsp;et&nbsp;ultrices&nbsp;risus&nbsp;felis&nbsp;in&nbsp;orci.&nbsp;Quisque&nbsp;vestibulum&nbsp;sem&nbsp;nisl,&nbsp;vel&nbsp;congue&nbsp;leo&nbsp;dictum&nbsp;nec.&nbsp;Cras&nbsp;eget&nbsp;est&nbsp;at&nbsp;velit&nbsp;sagittis&nbsp;ullamcorper&nbsp;vel&nbsp;et&nbsp;lectus.&nbsp;In&nbsp;hac&nbsp;habitasse&nbsp;platea&nbsp;dictumst.&nbsp;Etiam&nbsp;interdum&nbsp;iaculis&nbsp;velit,&nbsp;vel&nbsp;sollicitudin&nbsp;lorem&nbsp;feugiat&nbsp;sit&nbsp;amet.&nbsp;Etiam&nbsp;luctus,&nbsp;quam&nbsp;sed&nbsp;sodales&nbsp;aliquam,&nbsp;lorem&nbsp;libero&nbsp;hendrerit&nbsp;urna,&nbsp;faucibus&nbsp;rhoncus&nbsp;massa&nbsp;nibh&nbsp;at&nbsp;felis.&nbsp;Curabitur&nbsp;ac&nbsp;tempus&nbsp;nulla,&nbsp;ut&nbsp;semper&nbsp;erat.&nbsp;Vivamus&nbsp;porta&nbsp;ullamcorper&nbsp;sem,&nbsp;ornare&nbsp;egestas&nbsp;mauris&nbsp;facilisis&nbsp;id.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ut&nbsp;ut&nbsp;risus&nbsp;nisl.&nbsp;Fusce&nbsp;porttitor&nbsp;eros&nbsp;at&nbsp;magna&nbsp;luctus,&nbsp;non&nbsp;congue&nbsp;nulla&nbsp;eleifend.&nbsp;Aenean&nbsp;porttitor&nbsp;feugiat&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;facilisis.&nbsp;Pellentesque&nbsp;venenatis&nbsp;magna&nbsp;et&nbsp;risus&nbsp;commodo,&nbsp;a&nbsp;commodo&nbsp;turpis&nbsp;gravida.&nbsp;Nam&nbsp;mollis&nbsp;massa&nbsp;dapibus&nbsp;urna&nbsp;aliquet,&nbsp;quis&nbsp;iaculis&nbsp;elit&nbsp;sodales.&nbsp;Sed&nbsp;eget&nbsp;ornare&nbsp;orci,&nbsp;eu&nbsp;malesuada&nbsp;justo.&nbsp;Nunc&nbsp;lacus&nbsp;augue,&nbsp;dictum&nbsp;quis&nbsp;dui&nbsp;id,&nbsp;lacinia&nbsp;congue&nbsp;quam.&nbsp;Nulla&nbsp;sem&nbsp;sem,&nbsp;aliquam&nbsp;nec&nbsp;dolor&nbsp;ac,&nbsp;tempus&nbsp;convallis&nbsp;nunc.&nbsp;Interdum&nbsp;et&nbsp;malesuada&nbsp;fames&nbsp;ac&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus.&nbsp;Nulla&nbsp;suscipit&nbsp;convallis&nbsp;iaculis.&nbsp;Quisque&nbsp;eget&nbsp;commodo&nbsp;ligula.&nbsp;Praesent&nbsp;leo&nbsp;dui,&nbsp;facilisis&nbsp;quis&nbsp;eleifend&nbsp;in,&nbsp;aliquet&nbsp;vitae&nbsp;nunc.&nbsp;Suspendisse&nbsp;fermentum&nbsp;odio&nbsp;ac&nbsp;massa&nbsp;ultricies&nbsp;pellentesque.&nbsp;Fusce&nbsp;eu&nbsp;suscipit&nbsp;massa.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-5"&gt;第五部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Nam&nbsp;eget&nbsp;purus&nbsp;nec&nbsp;est&nbsp;consectetur&nbsp;vehicula.&nbsp;Nullam&nbsp;ultrices&nbsp;nisl&nbsp;risus,&nbsp;in&nbsp;viverra&nbsp;libero&nbsp;egestas&nbsp;sit&nbsp;amet.&nbsp;Etiam&nbsp;porttitor&nbsp;dolor&nbsp;non&nbsp;eros&nbsp;pulvinar&nbsp;malesuada.&nbsp;Vestibulum&nbsp;sit&nbsp;amet&nbsp;est&nbsp;mollis&nbsp;nulla&nbsp;tempus&nbsp;aliquet.&nbsp;Praesent&nbsp;luctus&nbsp;hendrerit&nbsp;arcu&nbsp;non&nbsp;laoreet.&nbsp;Morbi&nbsp;consequat&nbsp;placerat&nbsp;magna,&nbsp;ac&nbsp;ornare&nbsp;odio&nbsp;sagittis&nbsp;sed.&nbsp;Donec&nbsp;vitae&nbsp;ullamcorper&nbsp;purus.&nbsp;Vivamus&nbsp;non&nbsp;metus&nbsp;ac&nbsp;justo&nbsp;porta&nbsp;volutpat.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vivamus&nbsp;mattis&nbsp;accumsan&nbsp;erat,&nbsp;vel&nbsp;convallis&nbsp;risus&nbsp;pretium&nbsp;nec.&nbsp;Integer&nbsp;nunc&nbsp;nulla,&nbsp;viverra&nbsp;ut&nbsp;sem&nbsp;non,&nbsp;scelerisque&nbsp;vehicula&nbsp;arcu.&nbsp;Fusce&nbsp;bibendum&nbsp;convallis&nbsp;augue&nbsp;sit&nbsp;amet&nbsp;lobortis.&nbsp;Cras&nbsp;porta&nbsp;urna&nbsp;turpis,&nbsp;sodales&nbsp;lobortis&nbsp;purus&nbsp;adipiscing&nbsp;id.&nbsp;Maecenas&nbsp;ullamcorper,&nbsp;turpis&nbsp;suscipit&nbsp;pellentesque&nbsp;fringilla,&nbsp;massa&nbsp;lacus&nbsp;pulvinar&nbsp;mi,&nbsp;nec&nbsp;dignissim&nbsp;velit&nbsp;arcu&nbsp;eget&nbsp;purus.&nbsp;Nam&nbsp;at&nbsp;dapibus&nbsp;tellus,&nbsp;eget&nbsp;euismod&nbsp;nisl.&nbsp;Ut&nbsp;eget&nbsp;venenatis&nbsp;sapien.&nbsp;Vivamus&nbsp;vulputate&nbsp;varius&nbsp;mauris,&nbsp;vel&nbsp;varius&nbsp;nisl&nbsp;facilisis&nbsp;ac.&nbsp;Nulla&nbsp;aliquet&nbsp;justo&nbsp;a&nbsp;nibh&nbsp;ornare,&nbsp;eu&nbsp;congue&nbsp;neque&nbsp;rutrum.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Suspendisse&nbsp;a&nbsp;orci&nbsp;facilisis,&nbsp;dignissim&nbsp;tortor&nbsp;vitae,&nbsp;ultrices&nbsp;mi.&nbsp;Vestibulum&nbsp;a&nbsp;iaculis&nbsp;lacus.&nbsp;Phasellus&nbsp;vitae&nbsp;convallis&nbsp;ligula,&nbsp;nec&nbsp;volutpat&nbsp;tellus.&nbsp;Vivamus&nbsp;scelerisque&nbsp;mollis&nbsp;nisl,&nbsp;nec&nbsp;vehicula&nbsp;elit&nbsp;egestas&nbsp;a.&nbsp;Sed&nbsp;luctus&nbsp;metus&nbsp;id&nbsp;mi&nbsp;gravida,&nbsp;faucibus&nbsp;convallis&nbsp;neque&nbsp;pretium.&nbsp;Maecenas&nbsp;quis&nbsp;sapien&nbsp;ut&nbsp;leo&nbsp;fringilla&nbsp;tempor&nbsp;vitae&nbsp;sit&nbsp;amet&nbsp;leo.&nbsp;Donec&nbsp;imperdiet&nbsp;tempus&nbsp;placerat.&nbsp;Pellentesque&nbsp;pulvinar&nbsp;ultrices&nbsp;nunc&nbsp;sed&nbsp;ultrices.&nbsp;Morbi&nbsp;vel&nbsp;mi&nbsp;pretium,&nbsp;fermentum&nbsp;lacus&nbsp;et,&nbsp;viverra&nbsp;tellus.&nbsp;Phasellus&nbsp;sodales&nbsp;libero&nbsp;nec&nbsp;dui&nbsp;convallis,&nbsp;sit&nbsp;amet&nbsp;fermentum&nbsp;sapien&nbsp;auctor.&nbsp;Vestibulum&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus&nbsp;orci&nbsp;luctus&nbsp;et&nbsp;ultrices&nbsp;posuere&nbsp;cubilia&nbsp;Curae;&nbsp;Sed&nbsp;eu&nbsp;elementum&nbsp;nibh,&nbsp;quis&nbsp;varius&nbsp;libero.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi&nbsp;sed&nbsp;fermentum&nbsp;ipsum.&nbsp;Morbi&nbsp;a&nbsp;orci&nbsp;vulputate&nbsp;tortor&nbsp;ornare&nbsp;blandit&nbsp;a&nbsp;quis&nbsp;orci.&nbsp;Donec&nbsp;aliquam&nbsp;sodales&nbsp;gravida.&nbsp;In&nbsp;ut&nbsp;ullamcorper&nbsp;nisi,&nbsp;ac&nbsp;pretium&nbsp;velit.&nbsp;Vestibulum&nbsp;vitae&nbsp;lectus&nbsp;volutpat,&nbsp;consequat&nbsp;lorem&nbsp;sit&nbsp;amet,&nbsp;pulvinar&nbsp;tellus.&nbsp;In&nbsp;tincidunt&nbsp;vel&nbsp;leo&nbsp;eget&nbsp;pulvinar.&nbsp;Curabitur&nbsp;a&nbsp;eros&nbsp;non&nbsp;lacus&nbsp;malesuada&nbsp;aliquam.&nbsp;Praesent&nbsp;et&nbsp;tempus&nbsp;odio.&nbsp;Integer&nbsp;a&nbsp;quam&nbsp;nunc.&nbsp;In&nbsp;hac&nbsp;habitasse&nbsp;platea&nbsp;dictumst.&nbsp;Aliquam&nbsp;porta&nbsp;nibh&nbsp;nulla,&nbsp;et&nbsp;mattis&nbsp;turpis&nbsp;placerat&nbsp;eget.&nbsp;Pellentesque&nbsp;dui&nbsp;diam,&nbsp;pellentesque&nbsp;vel&nbsp;gravida&nbsp;id,&nbsp;accumsan&nbsp;eu&nbsp;magna.&nbsp;Sed&nbsp;a&nbsp;semper&nbsp;arcu,&nbsp;ut&nbsp;dignissim&nbsp;leo.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Sed&nbsp;vitae&nbsp;lobortis&nbsp;diam,&nbsp;id&nbsp;molestie&nbsp;magna.&nbsp;Aliquam&nbsp;consequat&nbsp;ipsum&nbsp;quis&nbsp;est&nbsp;dictum&nbsp;ultrices.&nbsp;Aenean&nbsp;nibh&nbsp;velit,&nbsp;fringilla&nbsp;in&nbsp;diam&nbsp;id,&nbsp;blandit&nbsp;hendrerit&nbsp;lacus.&nbsp;Donec&nbsp;vehicula&nbsp;rutrum&nbsp;tellus&nbsp;eget&nbsp;fermentum.&nbsp;Pellentesque&nbsp;ac&nbsp;erat&nbsp;et&nbsp;arcu&nbsp;ornare&nbsp;tincidunt.&nbsp;Aliquam&nbsp;erat&nbsp;volutpat.&nbsp;Vivamus&nbsp;lobortis&nbsp;urna&nbsp;quis&nbsp;gravida&nbsp;semper.&nbsp;In&nbsp;condimentum,&nbsp;est&nbsp;a&nbsp;faucibus&nbsp;luctus,&nbsp;mi&nbsp;dolor&nbsp;cursus&nbsp;mi,&nbsp;id&nbsp;vehicula&nbsp;arcu&nbsp;risus&nbsp;a&nbsp;nibh.&nbsp;Pellentesque&nbsp;blandit&nbsp;sapien&nbsp;lacus,&nbsp;vel&nbsp;vehicula&nbsp;nunc&nbsp;feugiat&nbsp;sit&nbsp;amet.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre></li></ul><div class="article-intro" id="content"><ul class=" list-paddingleft-2"><li><p>结果如下所示：</p><div class="cover" style="border: 1px solid #D6D6D6;padding: 5px;"><img src="../../7n.w3cschool.cn/attachments/image/20160225/1456386704112680.jpg" alt="附加导航（Affix）插件 Data 属性"></div></li><li><p><strong>通过 JavaScript</strong>：您可以通过 JavaScript 手动为某个元素添加附加导航（Affix），如下所示：</p><pre style="" class="prettyprint prettyprinted">$(&#39;#myAffix&#39;).affix({
+&nbsp;&nbsp;&nbsp;offset:&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;100,&nbsp;bottom:&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(this.bottom&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&#39;.bs-footer&#39;).outerHeight(true))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}})</pre><h3>实例</h3><p>下面的实例演示了通过 JavaScript 使用附加导航（Affix）插件的用法：</p><pre style="" class="prettyprint tryit prettyprinted" lang="html"><code class="html">&lt;!DOCTYPE&nbsp;html&gt;&lt;html&gt;&lt;head&gt;&lt;meta&nbsp;charset="UTF-8"&gt;&lt;title&gt;Bootstrap&nbsp;附加导航（Affix）插件&lt;/title&gt;&lt;link&nbsp;href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css"&nbsp;rel="stylesheet"&gt;&lt;script&nbsp;src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;&lt;script&nbsp;src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;&lt;style&nbsp;type="text/css"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;Custom&nbsp;Styles&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;140px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;20px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;4px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#ddd;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;4px&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.067);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top:&nbsp;1px&nbsp;solid&nbsp;#ddd;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:first-child{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top:&nbsp;none;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li.active&nbsp;a,&nbsp;ul.nav-tabs&nbsp;li.active&nbsp;a:hover{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#0088cc;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#0088cc;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:first-child&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;4px&nbsp;4px&nbsp;0&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs&nbsp;li:last-child&nbsp;a{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;0&nbsp;0&nbsp;4px&nbsp;4px;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ul.nav-tabs.affix{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;30px;&nbsp;/*&nbsp;Set&nbsp;the&nbsp;top&nbsp;position&nbsp;of&nbsp;pinned&nbsp;element&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;}&lt;/style&gt;&lt;script&nbsp;type="text/javascript"&gt;$(document).ready(function(){
+&nbsp;&nbsp;&nbsp;&nbsp;$("#myNav").affix({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset:&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;125&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	}
+&nbsp;&nbsp;&nbsp;&nbsp;});});&lt;/script&gt;&lt;/head&gt;&lt;body&nbsp;data-spy="scroll"&nbsp;data-target="#myScrollspy"&gt;&lt;div&nbsp;class="container"&gt;
+	&lt;div&nbsp;class="jumbotron"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bootstrap&nbsp;Affix&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="row"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="col-xs-3"&nbsp;id="myScrollspy"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class="nav&nbsp;nav-tabs&nbsp;nav-stacked"&nbsp;id="myNav"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class="active"&gt;&lt;a&nbsp;href="#section-1"&gt;第一部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-2"&gt;第二部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-3"&gt;第三部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-4"&gt;第四部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#section-5"&gt;第五部分&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="col-xs-9"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-1"&gt;第一部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Nam&nbsp;eu&nbsp;sem&nbsp;tempor,&nbsp;varius&nbsp;quam&nbsp;at,&nbsp;luctus&nbsp;dui.&nbsp;Mauris&nbsp;magna&nbsp;metus,&nbsp;dapibus&nbsp;nec&nbsp;turpis&nbsp;vel,&nbsp;semper&nbsp;malesuada&nbsp;ante.&nbsp;Vestibulum&nbsp;id&nbsp;metus&nbsp;ac&nbsp;nisl&nbsp;bibendum&nbsp;scelerisque&nbsp;non&nbsp;non&nbsp;purus.&nbsp;Suspendisse&nbsp;varius&nbsp;nibh&nbsp;non&nbsp;aliquet&nbsp;sagittis.&nbsp;In&nbsp;tincidunt&nbsp;orci&nbsp;sit&nbsp;amet&nbsp;elementum&nbsp;vestibulum.&nbsp;Vivamus&nbsp;fermentum&nbsp;in&nbsp;arcu&nbsp;in&nbsp;aliquam.&nbsp;Quisque&nbsp;aliquam&nbsp;porta&nbsp;odio&nbsp;in&nbsp;fringilla.&nbsp;Vivamus&nbsp;nisl&nbsp;leo,&nbsp;blandit&nbsp;at&nbsp;bibendum&nbsp;eu,&nbsp;tristique&nbsp;eget&nbsp;risus.&nbsp;Integer&nbsp;aliquet&nbsp;quam&nbsp;ut&nbsp;elit&nbsp;suscipit,&nbsp;id&nbsp;interdum&nbsp;neque&nbsp;porttitor.&nbsp;Integer&nbsp;faucibus&nbsp;ligula.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;quis&nbsp;quam&nbsp;ut&nbsp;magna&nbsp;consequat&nbsp;faucibus.&nbsp;Pellentesque&nbsp;eget&nbsp;nisi&nbsp;a&nbsp;mi&nbsp;suscipit&nbsp;tincidunt.&nbsp;Ut&nbsp;tempus&nbsp;dictum&nbsp;risus.&nbsp;Pellentesque&nbsp;viverra&nbsp;sagittis&nbsp;quam&nbsp;at&nbsp;mattis.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Aliquam&nbsp;sit&nbsp;amet&nbsp;gravida&nbsp;nibh,&nbsp;facilisis&nbsp;gravida&nbsp;odio.&nbsp;Phasellus&nbsp;auctor&nbsp;velit&nbsp;at&nbsp;lacus&nbsp;blandit,&nbsp;commodo&nbsp;iaculis&nbsp;justo&nbsp;viverra.&nbsp;Etiam&nbsp;vitae&nbsp;est&nbsp;arcu.&nbsp;Mauris&nbsp;vel&nbsp;congue&nbsp;dolor.&nbsp;Aliquam&nbsp;eget&nbsp;mi&nbsp;mi.&nbsp;Fusce&nbsp;quam&nbsp;tortor,&nbsp;commodo&nbsp;ac&nbsp;dui&nbsp;quis,&nbsp;bibendum&nbsp;viverra&nbsp;erat.&nbsp;Maecenas&nbsp;mattis&nbsp;lectus&nbsp;enim,&nbsp;quis&nbsp;tincidunt&nbsp;dui&nbsp;molestie&nbsp;euismod.&nbsp;Curabitur&nbsp;et&nbsp;diam&nbsp;tristique,&nbsp;accumsan&nbsp;nunc&nbsp;eu,&nbsp;hendrerit&nbsp;tellus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-2"&gt;第二部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Nullam&nbsp;hendrerit&nbsp;justo&nbsp;non&nbsp;leo&nbsp;aliquet&nbsp;imperdiet.&nbsp;Etiam&nbsp;in&nbsp;sagittis&nbsp;lectus.&nbsp;Suspendisse&nbsp;ultrices&nbsp;placerat&nbsp;accumsan.&nbsp;Mauris&nbsp;quis&nbsp;dapibus&nbsp;orci.&nbsp;In&nbsp;dapibus&nbsp;velit&nbsp;blandit&nbsp;pharetra&nbsp;tincidunt.&nbsp;Quisque&nbsp;non&nbsp;sapien&nbsp;nec&nbsp;lacus&nbsp;condimentum&nbsp;facilisis&nbsp;ut&nbsp;iaculis&nbsp;enim.&nbsp;Sed&nbsp;viverra&nbsp;interdum&nbsp;bibendum.&nbsp;Donec&nbsp;ac&nbsp;sollicitudin&nbsp;dolor.&nbsp;Sed&nbsp;fringilla&nbsp;vitae&nbsp;lacus&nbsp;at&nbsp;rutrum.&nbsp;Phasellus&nbsp;congue&nbsp;vestibulum&nbsp;ligula&nbsp;sed&nbsp;consequat.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;consectetur&nbsp;scelerisque&nbsp;lacus,&nbsp;ac&nbsp;fermentum&nbsp;lorem&nbsp;convallis&nbsp;sed.&nbsp;Nam&nbsp;odio&nbsp;tortor,&nbsp;dictum&nbsp;quis&nbsp;malesuada&nbsp;at,&nbsp;pellentesque&nbsp;vitae&nbsp;orci.&nbsp;Vivamus&nbsp;elementum,&nbsp;felis&nbsp;eu&nbsp;auctor&nbsp;lobortis,&nbsp;diam&nbsp;velit&nbsp;egestas&nbsp;lacus,&nbsp;quis&nbsp;fermentum&nbsp;metus&nbsp;ante&nbsp;quis&nbsp;urna.&nbsp;Sed&nbsp;at&nbsp;facilisis&nbsp;libero.&nbsp;Cum&nbsp;sociis&nbsp;natoque&nbsp;penatibus&nbsp;et&nbsp;magnis&nbsp;dis&nbsp;parturient&nbsp;montes,&nbsp;nascetur&nbsp;ridiculus&nbsp;mus.&nbsp;Vestibulum&nbsp;bibendum&nbsp;blandit&nbsp;dolor.&nbsp;Nunc&nbsp;orci&nbsp;dolor,&nbsp;molestie&nbsp;nec&nbsp;nibh&nbsp;in,&nbsp;hendrerit&nbsp;tincidunt&nbsp;ante.&nbsp;Vivamus&nbsp;sem&nbsp;augue,&nbsp;hendrerit&nbsp;non&nbsp;sapien&nbsp;in,&nbsp;mollis&nbsp;ornare&nbsp;augue.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-3"&gt;第三部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Integer&nbsp;pulvinar&nbsp;leo&nbsp;id&nbsp;risus&nbsp;pellentesque&nbsp;vestibulum.&nbsp;Sed&nbsp;diam&nbsp;libero,&nbsp;sodales&nbsp;eget&nbsp;sapien&nbsp;vel,&nbsp;porttitor&nbsp;bibendum&nbsp;enim.&nbsp;Donec&nbsp;sed&nbsp;nibh&nbsp;vitae&nbsp;lorem&nbsp;porttitor&nbsp;blandit&nbsp;in&nbsp;nec&nbsp;ante.&nbsp;Pellentesque&nbsp;vitae&nbsp;metus&nbsp;ipsum.&nbsp;Phasellus&nbsp;sed&nbsp;nunc&nbsp;ac&nbsp;sem&nbsp;malesuada&nbsp;condimentum.&nbsp;Etiam&nbsp;in&nbsp;aliquam&nbsp;lectus.&nbsp;Nam&nbsp;vel&nbsp;sapien&nbsp;diam.&nbsp;Donec&nbsp;pharetra&nbsp;id&nbsp;arcu&nbsp;eget&nbsp;blandit.&nbsp;Proin&nbsp;imperdiet&nbsp;mattis&nbsp;augue&nbsp;in&nbsp;porttitor.&nbsp;Quisque&nbsp;tempus&nbsp;enim&nbsp;id&nbsp;lobortis&nbsp;feugiat.&nbsp;Suspendisse&nbsp;tincidunt&nbsp;risus&nbsp;quis&nbsp;dolor&nbsp;fringilla&nbsp;blandit.&nbsp;Ut&nbsp;sed&nbsp;sapien&nbsp;at&nbsp;purus&nbsp;lacinia&nbsp;porttitor.&nbsp;Nullam&nbsp;iaculis,&nbsp;felis&nbsp;a&nbsp;pretium&nbsp;ornare,&nbsp;dolor&nbsp;nisl&nbsp;semper&nbsp;tortor,&nbsp;vel&nbsp;sagittis&nbsp;lacus&nbsp;est&nbsp;consequat&nbsp;eros.&nbsp;Sed&nbsp;id&nbsp;pretium&nbsp;nisl.&nbsp;Curabitur&nbsp;dolor&nbsp;nisl,&nbsp;laoreet&nbsp;vitae&nbsp;aliquam&nbsp;id,&nbsp;tincidunt&nbsp;sit&nbsp;amet&nbsp;mauris.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Phasellus&nbsp;vitae&nbsp;suscipit&nbsp;justo.&nbsp;Mauris&nbsp;pharetra&nbsp;feugiat&nbsp;ante&nbsp;id&nbsp;lacinia.&nbsp;Etiam&nbsp;faucibus&nbsp;mauris&nbsp;id&nbsp;tempor&nbsp;egestas.&nbsp;Duis&nbsp;luctus&nbsp;turpis&nbsp;at&nbsp;accumsan&nbsp;tincidunt.&nbsp;Phasellus&nbsp;risus&nbsp;risus,&nbsp;volutpat&nbsp;vel&nbsp;tellus&nbsp;ac,&nbsp;tincidunt&nbsp;fringilla&nbsp;massa.&nbsp;Etiam&nbsp;hendrerit&nbsp;dolor&nbsp;eget&nbsp;ante&nbsp;rutrum&nbsp;adipiscing.&nbsp;Cras&nbsp;interdum&nbsp;ipsum&nbsp;mattis,&nbsp;tempus&nbsp;mauris&nbsp;vel,&nbsp;semper&nbsp;ipsum.&nbsp;Duis&nbsp;sed&nbsp;dolor&nbsp;ut&nbsp;enim&nbsp;lobortis&nbsp;pellentesque&nbsp;ultricies&nbsp;ac&nbsp;ligula.&nbsp;Pellentesque&nbsp;convallis&nbsp;elit&nbsp;nisi,&nbsp;id&nbsp;vulputate&nbsp;ipsum&nbsp;ullamcorper&nbsp;ut.&nbsp;Cras&nbsp;ac&nbsp;pulvinar&nbsp;purus,&nbsp;ac&nbsp;viverra&nbsp;est.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Integer&nbsp;pellentesque&nbsp;neque&nbsp;et&nbsp;elementum&nbsp;tempus.&nbsp;Curabitur&nbsp;bibendum&nbsp;in&nbsp;ligula&nbsp;ut&nbsp;rhoncus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Quisque&nbsp;pharetra&nbsp;velit&nbsp;id&nbsp;velit&nbsp;iaculis&nbsp;pretium.&nbsp;Nullam&nbsp;a&nbsp;justo&nbsp;sed&nbsp;ligula&nbsp;porta&nbsp;semper&nbsp;eu&nbsp;quis&nbsp;enim.&nbsp;Pellentesque&nbsp;pellentesque,&nbsp;metus&nbsp;at&nbsp;facilisis&nbsp;hendrerit,&nbsp;lectus&nbsp;velit&nbsp;facilisis&nbsp;leo,&nbsp;quis&nbsp;volutpat&nbsp;turpis&nbsp;arcu&nbsp;quis&nbsp;enim.&nbsp;Nulla&nbsp;viverra&nbsp;lorem&nbsp;elementum&nbsp;interdum&nbsp;ultricies.&nbsp;Suspendisse&nbsp;accumsan&nbsp;quam&nbsp;nec&nbsp;ante&nbsp;mollis&nbsp;tempus.&nbsp;Morbi&nbsp;vel&nbsp;accumsan&nbsp;diam,&nbsp;eget&nbsp;convallis&nbsp;tellus.&nbsp;Suspendisse&nbsp;potenti.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-4"&gt;第四部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Suspendisse&nbsp;a&nbsp;orci&nbsp;facilisis,&nbsp;dignissim&nbsp;tortor&nbsp;vitae,&nbsp;ultrices&nbsp;mi.&nbsp;Vestibulum&nbsp;a&nbsp;iaculis&nbsp;lacus.&nbsp;Phasellus&nbsp;vitae&nbsp;convallis&nbsp;ligula,&nbsp;nec&nbsp;volutpat&nbsp;tellus.&nbsp;Vivamus&nbsp;scelerisque&nbsp;mollis&nbsp;nisl,&nbsp;nec&nbsp;vehicula&nbsp;elit&nbsp;egestas&nbsp;a.&nbsp;Sed&nbsp;luctus&nbsp;metus&nbsp;id&nbsp;mi&nbsp;gravida,&nbsp;faucibus&nbsp;convallis&nbsp;neque&nbsp;pretium.&nbsp;Maecenas&nbsp;quis&nbsp;sapien&nbsp;ut&nbsp;leo&nbsp;fringilla&nbsp;tempor&nbsp;vitae&nbsp;sit&nbsp;amet&nbsp;leo.&nbsp;Donec&nbsp;imperdiet&nbsp;tempus&nbsp;placerat.&nbsp;Pellentesque&nbsp;pulvinar&nbsp;ultrices&nbsp;nunc&nbsp;sed&nbsp;ultrices.&nbsp;Morbi&nbsp;vel&nbsp;mi&nbsp;pretium,&nbsp;fermentum&nbsp;lacus&nbsp;et,&nbsp;viverra&nbsp;tellus.&nbsp;Phasellus&nbsp;sodales&nbsp;libero&nbsp;nec&nbsp;dui&nbsp;convallis,&nbsp;sit&nbsp;amet&nbsp;fermentum&nbsp;sapien&nbsp;auctor.&nbsp;Vestibulum&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus&nbsp;orci&nbsp;luctus&nbsp;et&nbsp;ultrices&nbsp;posuere&nbsp;cubilia&nbsp;Curae;&nbsp;Sed&nbsp;eu&nbsp;elementum&nbsp;nibh,&nbsp;quis&nbsp;varius&nbsp;libero.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vestibulum&nbsp;quis&nbsp;quam&nbsp;ut&nbsp;magna&nbsp;consequat&nbsp;faucibus.&nbsp;Pellentesque&nbsp;eget&nbsp;nisi&nbsp;a&nbsp;mi&nbsp;suscipit&nbsp;tincidunt.&nbsp;Ut&nbsp;tempus&nbsp;dictum&nbsp;risus.&nbsp;Pellentesque&nbsp;viverra&nbsp;sagittis&nbsp;quam&nbsp;at&nbsp;mattis.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Aliquam&nbsp;sit&nbsp;amet&nbsp;gravida&nbsp;nibh,&nbsp;facilisis&nbsp;gravida&nbsp;odio.&nbsp;Phasellus&nbsp;auctor&nbsp;velit&nbsp;at&nbsp;lacus&nbsp;blandit,&nbsp;commodo&nbsp;iaculis&nbsp;justo&nbsp;viverra.&nbsp;Etiam&nbsp;vitae&nbsp;est&nbsp;arcu.&nbsp;Mauris&nbsp;vel&nbsp;congue&nbsp;dolor.&nbsp;Aliquam&nbsp;eget&nbsp;mi&nbsp;mi.&nbsp;Fusce&nbsp;quam&nbsp;tortor,&nbsp;commodo&nbsp;ac&nbsp;dui&nbsp;quis,&nbsp;bibendum&nbsp;viverra&nbsp;erat.&nbsp;Maecenas&nbsp;mattis&nbsp;lectus&nbsp;enim,&nbsp;quis&nbsp;tincidunt&nbsp;dui&nbsp;molestie&nbsp;euismod.&nbsp;Curabitur&nbsp;et&nbsp;diam&nbsp;tristique,&nbsp;accumsan&nbsp;nunc&nbsp;eu,&nbsp;hendrerit&nbsp;tellus.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Phasellus&nbsp;fermentum,&nbsp;neque&nbsp;sit&nbsp;amet&nbsp;sodales&nbsp;tempor,&nbsp;enim&nbsp;ante&nbsp;interdum&nbsp;eros,&nbsp;eget&nbsp;luctus&nbsp;ipsum&nbsp;eros&nbsp;ut&nbsp;ligula.&nbsp;Nunc&nbsp;ornare&nbsp;erat&nbsp;quis&nbsp;faucibus&nbsp;molestie.&nbsp;Proin&nbsp;malesuada&nbsp;consequat&nbsp;commodo.&nbsp;Mauris&nbsp;iaculis,&nbsp;eros&nbsp;ut&nbsp;dapibus&nbsp;luctus,&nbsp;massa&nbsp;enim&nbsp;elementum&nbsp;purus,&nbsp;sit&nbsp;amet&nbsp;tristique&nbsp;purus&nbsp;purus&nbsp;nec&nbsp;felis.&nbsp;Morbi&nbsp;vestibulum&nbsp;sapien&nbsp;eget&nbsp;porta&nbsp;pulvinar.&nbsp;Nam&nbsp;at&nbsp;quam&nbsp;diam.&nbsp;Proin&nbsp;rhoncus,&nbsp;felis&nbsp;elementum&nbsp;accumsan&nbsp;dictum,&nbsp;felis&nbsp;nisi&nbsp;vestibulum&nbsp;tellus,&nbsp;et&nbsp;ultrices&nbsp;risus&nbsp;felis&nbsp;in&nbsp;orci.&nbsp;Quisque&nbsp;vestibulum&nbsp;sem&nbsp;nisl,&nbsp;vel&nbsp;congue&nbsp;leo&nbsp;dictum&nbsp;nec.&nbsp;Cras&nbsp;eget&nbsp;est&nbsp;at&nbsp;velit&nbsp;sagittis&nbsp;ullamcorper&nbsp;vel&nbsp;et&nbsp;lectus.&nbsp;In&nbsp;hac&nbsp;habitasse&nbsp;platea&nbsp;dictumst.&nbsp;Etiam&nbsp;interdum&nbsp;iaculis&nbsp;velit,&nbsp;vel&nbsp;sollicitudin&nbsp;lorem&nbsp;feugiat&nbsp;sit&nbsp;amet.&nbsp;Etiam&nbsp;luctus,&nbsp;quam&nbsp;sed&nbsp;sodales&nbsp;aliquam,&nbsp;lorem&nbsp;libero&nbsp;hendrerit&nbsp;urna,&nbsp;faucibus&nbsp;rhoncus&nbsp;massa&nbsp;nibh&nbsp;at&nbsp;felis.&nbsp;Curabitur&nbsp;ac&nbsp;tempus&nbsp;nulla,&nbsp;ut&nbsp;semper&nbsp;erat.&nbsp;Vivamus&nbsp;porta&nbsp;ullamcorper&nbsp;sem,&nbsp;ornare&nbsp;egestas&nbsp;mauris&nbsp;facilisis&nbsp;id.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ut&nbsp;ut&nbsp;risus&nbsp;nisl.&nbsp;Fusce&nbsp;porttitor&nbsp;eros&nbsp;at&nbsp;magna&nbsp;luctus,&nbsp;non&nbsp;congue&nbsp;nulla&nbsp;eleifend.&nbsp;Aenean&nbsp;porttitor&nbsp;feugiat&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;facilisis.&nbsp;Pellentesque&nbsp;venenatis&nbsp;magna&nbsp;et&nbsp;risus&nbsp;commodo,&nbsp;a&nbsp;commodo&nbsp;turpis&nbsp;gravida.&nbsp;Nam&nbsp;mollis&nbsp;massa&nbsp;dapibus&nbsp;urna&nbsp;aliquet,&nbsp;quis&nbsp;iaculis&nbsp;elit&nbsp;sodales.&nbsp;Sed&nbsp;eget&nbsp;ornare&nbsp;orci,&nbsp;eu&nbsp;malesuada&nbsp;justo.&nbsp;Nunc&nbsp;lacus&nbsp;augue,&nbsp;dictum&nbsp;quis&nbsp;dui&nbsp;id,&nbsp;lacinia&nbsp;congue&nbsp;quam.&nbsp;Nulla&nbsp;sem&nbsp;sem,&nbsp;aliquam&nbsp;nec&nbsp;dolor&nbsp;ac,&nbsp;tempus&nbsp;convallis&nbsp;nunc.&nbsp;Interdum&nbsp;et&nbsp;malesuada&nbsp;fames&nbsp;ac&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus.&nbsp;Nulla&nbsp;suscipit&nbsp;convallis&nbsp;iaculis.&nbsp;Quisque&nbsp;eget&nbsp;commodo&nbsp;ligula.&nbsp;Praesent&nbsp;leo&nbsp;dui,&nbsp;facilisis&nbsp;quis&nbsp;eleifend&nbsp;in,&nbsp;aliquet&nbsp;vitae&nbsp;nunc.&nbsp;Suspendisse&nbsp;fermentum&nbsp;odio&nbsp;ac&nbsp;massa&nbsp;ultricies&nbsp;pellentesque.&nbsp;Fusce&nbsp;eu&nbsp;suscipit&nbsp;massa.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;id="section-5"&gt;第五部分&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Nam&nbsp;eget&nbsp;purus&nbsp;nec&nbsp;est&nbsp;consectetur&nbsp;vehicula.&nbsp;Nullam&nbsp;ultrices&nbsp;nisl&nbsp;risus,&nbsp;in&nbsp;viverra&nbsp;libero&nbsp;egestas&nbsp;sit&nbsp;amet.&nbsp;Etiam&nbsp;porttitor&nbsp;dolor&nbsp;non&nbsp;eros&nbsp;pulvinar&nbsp;malesuada.&nbsp;Vestibulum&nbsp;sit&nbsp;amet&nbsp;est&nbsp;mollis&nbsp;nulla&nbsp;tempus&nbsp;aliquet.&nbsp;Praesent&nbsp;luctus&nbsp;hendrerit&nbsp;arcu&nbsp;non&nbsp;laoreet.&nbsp;Morbi&nbsp;consequat&nbsp;placerat&nbsp;magna,&nbsp;ac&nbsp;ornare&nbsp;odio&nbsp;sagittis&nbsp;sed.&nbsp;Donec&nbsp;vitae&nbsp;ullamcorper&nbsp;purus.&nbsp;Vivamus&nbsp;non&nbsp;metus&nbsp;ac&nbsp;justo&nbsp;porta&nbsp;volutpat.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Vivamus&nbsp;mattis&nbsp;accumsan&nbsp;erat,&nbsp;vel&nbsp;convallis&nbsp;risus&nbsp;pretium&nbsp;nec.&nbsp;Integer&nbsp;nunc&nbsp;nulla,&nbsp;viverra&nbsp;ut&nbsp;sem&nbsp;non,&nbsp;scelerisque&nbsp;vehicula&nbsp;arcu.&nbsp;Fusce&nbsp;bibendum&nbsp;convallis&nbsp;augue&nbsp;sit&nbsp;amet&nbsp;lobortis.&nbsp;Cras&nbsp;porta&nbsp;urna&nbsp;turpis,&nbsp;sodales&nbsp;lobortis&nbsp;purus&nbsp;adipiscing&nbsp;id.&nbsp;Maecenas&nbsp;ullamcorper,&nbsp;turpis&nbsp;suscipit&nbsp;pellentesque&nbsp;fringilla,&nbsp;massa&nbsp;lacus&nbsp;pulvinar&nbsp;mi,&nbsp;nec&nbsp;dignissim&nbsp;velit&nbsp;arcu&nbsp;eget&nbsp;purus.&nbsp;Nam&nbsp;at&nbsp;dapibus&nbsp;tellus,&nbsp;eget&nbsp;euismod&nbsp;nisl.&nbsp;Ut&nbsp;eget&nbsp;venenatis&nbsp;sapien.&nbsp;Vivamus&nbsp;vulputate&nbsp;varius&nbsp;mauris,&nbsp;vel&nbsp;varius&nbsp;nisl&nbsp;facilisis&nbsp;ac.&nbsp;Nulla&nbsp;aliquet&nbsp;justo&nbsp;a&nbsp;nibh&nbsp;ornare,&nbsp;eu&nbsp;congue&nbsp;neque&nbsp;rutrum.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Suspendisse&nbsp;a&nbsp;orci&nbsp;facilisis,&nbsp;dignissim&nbsp;tortor&nbsp;vitae,&nbsp;ultrices&nbsp;mi.&nbsp;Vestibulum&nbsp;a&nbsp;iaculis&nbsp;lacus.&nbsp;Phasellus&nbsp;vitae&nbsp;convallis&nbsp;ligula,&nbsp;nec&nbsp;volutpat&nbsp;tellus.&nbsp;Vivamus&nbsp;scelerisque&nbsp;mollis&nbsp;nisl,&nbsp;nec&nbsp;vehicula&nbsp;elit&nbsp;egestas&nbsp;a.&nbsp;Sed&nbsp;luctus&nbsp;metus&nbsp;id&nbsp;mi&nbsp;gravida,&nbsp;faucibus&nbsp;convallis&nbsp;neque&nbsp;pretium.&nbsp;Maecenas&nbsp;quis&nbsp;sapien&nbsp;ut&nbsp;leo&nbsp;fringilla&nbsp;tempor&nbsp;vitae&nbsp;sit&nbsp;amet&nbsp;leo.&nbsp;Donec&nbsp;imperdiet&nbsp;tempus&nbsp;placerat.&nbsp;Pellentesque&nbsp;pulvinar&nbsp;ultrices&nbsp;nunc&nbsp;sed&nbsp;ultrices.&nbsp;Morbi&nbsp;vel&nbsp;mi&nbsp;pretium,&nbsp;fermentum&nbsp;lacus&nbsp;et,&nbsp;viverra&nbsp;tellus.&nbsp;Phasellus&nbsp;sodales&nbsp;libero&nbsp;nec&nbsp;dui&nbsp;convallis,&nbsp;sit&nbsp;amet&nbsp;fermentum&nbsp;sapien&nbsp;auctor.&nbsp;Vestibulum&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus&nbsp;orci&nbsp;luctus&nbsp;et&nbsp;ultrices&nbsp;posuere&nbsp;cubilia&nbsp;Curae;&nbsp;Sed&nbsp;eu&nbsp;elementum&nbsp;nibh,&nbsp;quis&nbsp;varius&nbsp;libero.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi&nbsp;sed&nbsp;fermentum&nbsp;ipsum.&nbsp;Morbi&nbsp;a&nbsp;orci&nbsp;vulputate&nbsp;tortor&nbsp;ornare&nbsp;blandit&nbsp;a&nbsp;quis&nbsp;orci.&nbsp;Donec&nbsp;aliquam&nbsp;sodales&nbsp;gravida.&nbsp;In&nbsp;ut&nbsp;ullamcorper&nbsp;nisi,&nbsp;ac&nbsp;pretium&nbsp;velit.&nbsp;Vestibulum&nbsp;vitae&nbsp;lectus&nbsp;volutpat,&nbsp;consequat&nbsp;lorem&nbsp;sit&nbsp;amet,&nbsp;pulvinar&nbsp;tellus.&nbsp;In&nbsp;tincidunt&nbsp;vel&nbsp;leo&nbsp;eget&nbsp;pulvinar.&nbsp;Curabitur&nbsp;a&nbsp;eros&nbsp;non&nbsp;lacus&nbsp;malesuada&nbsp;aliquam.&nbsp;Praesent&nbsp;et&nbsp;tempus&nbsp;odio.&nbsp;Integer&nbsp;a&nbsp;quam&nbsp;nunc.&nbsp;In&nbsp;hac&nbsp;habitasse&nbsp;platea&nbsp;dictumst.&nbsp;Aliquam&nbsp;porta&nbsp;nibh&nbsp;nulla,&nbsp;et&nbsp;mattis&nbsp;turpis&nbsp;placerat&nbsp;eget.&nbsp;Pellentesque&nbsp;dui&nbsp;diam,&nbsp;pellentesque&nbsp;vel&nbsp;gravida&nbsp;id,&nbsp;accumsan&nbsp;eu&nbsp;magna.&nbsp;Sed&nbsp;a&nbsp;semper&nbsp;arcu,&nbsp;ut&nbsp;dignissim&nbsp;leo.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Sed&nbsp;vitae&nbsp;lobortis&nbsp;diam,&nbsp;id&nbsp;molestie&nbsp;magna.&nbsp;Aliquam&nbsp;consequat&nbsp;ipsum&nbsp;quis&nbsp;est&nbsp;dictum&nbsp;ultrices.&nbsp;Aenean&nbsp;nibh&nbsp;velit,&nbsp;fringilla&nbsp;in&nbsp;diam&nbsp;id,&nbsp;blandit&nbsp;hendrerit&nbsp;lacus.&nbsp;Donec&nbsp;vehicula&nbsp;rutrum&nbsp;tellus&nbsp;eget&nbsp;fermentum.&nbsp;Pellentesque&nbsp;ac&nbsp;erat&nbsp;et&nbsp;arcu&nbsp;ornare&nbsp;tincidunt.&nbsp;Aliquam&nbsp;erat&nbsp;volutpat.&nbsp;Vivamus&nbsp;lobortis&nbsp;urna&nbsp;quis&nbsp;gravida&nbsp;semper.&nbsp;In&nbsp;condimentum,&nbsp;est&nbsp;a&nbsp;faucibus&nbsp;luctus,&nbsp;mi&nbsp;dolor&nbsp;cursus&nbsp;mi,&nbsp;id&nbsp;vehicula&nbsp;arcu&nbsp;risus&nbsp;a&nbsp;nibh.&nbsp;Pellentesque&nbsp;blandit&nbsp;sapien&nbsp;lacus,&nbsp;vel&nbsp;vehicula&nbsp;nunc&nbsp;feugiat&nbsp;sit&nbsp;amet.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;	</code></pre></li><ul style="list-style-type: square;" class="list list-paddingleft-2"><li><p>结果如下所示：</p><div class="cover" style="border: 1px solid #D6D6D6;padding: 5px;"><img src="../../7n.w3cschool.cn/attachments/image/20160225/1456386704112680.jpg" alt="附加导航（Affix）插件 Javascript"></div></li></ul><h2>通过 CSS 定位</h2><p>在上面两种使用附加导航（Affix）插件的方式中，您都必须通过 CSS 定位内容。附加导航（Affix）插件在三种 class 之间切换，每种 class 都呈现了特定的状态：<em> .affix、.affix-top 和 .affix-bottom</em>。请按照下面的步骤，来为这三种状态设置您自己的 CSS（不依赖此插件）。</p><ul style="list-style-type: square;" class="list list-paddingleft-2"><li><p>在开始时，插件添加 <strong>.affix-top</strong> 来指示元素在它的最顶端位置。这个时候不需要任何的 CSS 定位。</p></li><li><p>当滚动经过添加了附加导航（Affix）的元素时，应触发实际的附加导航（Affix）。此时 <strong>.affix</strong> 会替代 <strong>.affix-top</strong>，同时设置 <strong>position: fixed;</strong>（由 Bootstrap 的 CSS 代码提供）。</p></li><li><p>如果定义了底部偏移，当滚动到达该位置时，应把 <strong>.affix</strong> 替换为 <strong>.affix-bottom</strong>。由于偏移是可选的，假如设置了该偏移，则要求同时设置适当的 CSS。在这种情况下，请在必要的时候添加 <strong>position: absolute;</strong>。</p></li></ul><h2>选项</h2><p>有一些选项是通过 data 属性或 JavaScript 来传递的。下表列出了这些选项：</p><table class="reference notranslate"><tbody><tr class="firstRow"><th>选项名称</th><th>类型/默认值</th><th>Data 属性名称</th><th>描述</th></tr><tr><td>offset</td><td>number | function | object<br> <em>默认值：10</em></td><td>data-offset</td><td>当
+计算滚动位置时，距离顶部的偏移像素。如果设置了一个数字，则该偏移量的值将被应用在顶部和底部。如果设置了一个对象偏移，则其值形如 offset: {
+ top: 10 } 或 offset: { top: 10, bottom: 5 }。如果需要动态计算偏移，请使用函数。</td></tr></tbody></table></ul></div><p>&nbsp; &nbsp; &nbsp;在您学完本教程之后，建议您进行<a href="https://www.w3cschool.cn/codecamp/list?pename=responsive_design_with_bootstrap_camp" target="_blank"><b>Bootstrap实战</b></a>练习来巩固您刚学到的新知识。<br></p><h2>相关阅读</h2><p><a href="https://www.w3cschool.cn/css/css-positioning.html" target="_blank">CSS&nbsp;Positioning(定位)</a></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"></span></div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="bootstrap-carousel-plugin.html" title="上一篇：Bootstrap 轮播（Carousel）插件">Bootstrap 轮播（Carousel）插件</a></div>
+<div class="next-link"><a href="89qvef21.html" title="下一篇：Bootstrap 其他">Bootstrap 其他</a> →</div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div class="pull-center">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item">    <div class="abox-content">        <a href="http://www.w3cschool.cn/adlog?w3ctype=index&amp;url=https://www.w3cschool.cn/minicourse/play/flexcolumn" target="_blank"><img src="../attachments/image/20181019/1539919615700323.png" alt="前端工作常用布局完全指南" /></a>     </div>                            </div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;" >
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<div class="maylike">
+<h2 class="project-maylike-info">您可能还喜欢：</h2>
+<ul class="project-maylike-ul">
+<li><a href="bootstrap-progress-bars.html" title="Bootstrap 进度条">Bootstrap 进度条</a></li>
+<li><a href="bootstrap-grid-system-example1.html" title="Bootstrap 网格系统实例：堆叠的水平">Bootstrap 网格系统实例：堆叠的水平</a></li>
+<li><a href="bootstrap-dropdowns.html" title="Bootstrap 下拉菜单">Bootstrap 下拉菜单</a></li>
+<li><a href="bootstrap-tables.html" title="Bootstrap 表格">Bootstrap 表格</a></li>
+<li><a href="bootstrap-intro.html" title="Bootstrap 简介">Bootstrap 简介</a></li>
+<li><a href="bootstrap-grid-system-example3.html" title="Bootstrap 网格系统实例：手机、平板电脑、台式电脑">Bootstrap 网格系统实例：手机、平板电脑、台式电脑</a></li>
+<li><a href="bootstrap-grid-system-example2.html" title="Bootstrap 网格系统实例：中型和大型设备">Bootstrap 网格系统实例：中型和大型设备</a></li>
+<li><a href="bootstrap-v2-layout.html" title="Bootstrap 布局">Bootstrap 布局</a></li>
+<li><a href="bootstrap-v2-glyphicons.html" title="Bootstrap Glyphicons">Bootstrap Glyphicons</a></li>
+<li><a href="bootstrap-v2-icons.html" title="Bootstrap 图标">Bootstrap 图标</a></li>
+</ul>
+</div>
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="bootstrap-carousel-plugin.html" title="上一篇：Bootstrap 轮播（Carousel）插件" class="navigation navigation-prev"><i class="icon-chevron-left"></i></a>
+<a href="89qvef21.html" title="下一篇：Bootstrap 其他" class="navigation navigation-next"><i class="icon-chevron-right"></i></a>
+</div>
+  </div>
+<div id="pro-footer">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright &copy; 2018 <a href="http://www.w3cschool.cn/" title="w3cschool">w3cschool.cn </a> All Rights Reserved. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-tools" style="bottom: 40px;">
+<a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+<a class="onlinenote" style="display: none;" title="在线笔记" href="javascript:;" data-module="page">在线笔记</a>
+<div class="qr-tool">二维码</div>
+<a id="feedback" class="webjy" title="建议反馈" href="javascript:;" data-module="page" onclick="showDialogBox(this)">建议反馈</a>    
+<div class="qr-img"><img src="../../7nsts.w3cschool.cn/images/w3c/w3cschool.jpg" alt="二维码"></div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box" >
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea  name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog" >
+<div class="note-Box-content" >
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle" >
+</div>
+<div id="editorarea">
+<textarea  name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;" ></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank" >查看完整版笔记</a>
+<button class="notesubmit"  id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0" >关闭</button>
+</div>
+</div>
+</div>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked" /> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2" /> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3" /> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4" /> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0" /> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+<script src="../plugins/ueditor/third-party/SyntaxHighlighter/shCore.min.js" type="text/javascript"></script>
+<script src="../statics/js/commonfooter.js" type="text/javascript"></script>
+<script src="../statics/js/project.view.js" type="text/javascript"></script>
+<script src="../statics/core/ajaxdo.core.js" type="text/javascript"></script>
+<script src="../statics/js/paypraise.js" type="text/javascript"></script>
+<script>
+var kn = {
+kename:'bootstrap-affix-plugin',
+pename:'bootstrap',
+ismenu:'0',
+ktitle:'Bootstrap 附加导航（Affix）插件',
+ktype:'kn',
+original:'1',
+uid:'0',
+};
+var book = {
+pename:'bootstrap',
+bookname:'bootstrap教程'
+};
+
+var Gvar = {
+activityflag: ''
+};
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="/u/' + data.data + '" title="' + data.data + '"><img src="/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/bootstrap.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "15430";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../plugins/baidushare/js/share6e53.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();    
+}else{
+$(this).next().hide();     
+}
+});
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+}); 
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+  // 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){      
+//生成5个星星
+for(var i=0;i<5;i++){
+var _html = '<span title="'+parseInt(i+1)+'分"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1,tourist);
+})
+})
+function evaluate(scores,tourist){
+var pid   = '53';
+var aid   = '4705';
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid, 
+aid   : aid,
+uid   : tourist,
+title : book.bookname,
+mintitle:kn.ktitle,
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}
+}
+});
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+} 
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+  //   function getNotelist(){
+  //    $.ajax({
+// url:"/index/getNotelist",
+// type:"post",
+// data:{
+// pename:book.pename,
+// kename:kn.kename,
+// },
+// dataType:"json",
+// success:function(msg){
+//  var ob = eval(msg.data.notelist);
+//  if(ob.length>0){
+//     $('#notelist_content').show();
+//       $('.notelist-box').show();
+//    var str='<ul>';
+ //              for(var o in ob){  
+ //                str+='<li class="notelist-item"><div class="notelist-author"><a href="/u/'+ob[o].uid+'"><img src="/attachments/avatar2/avatar_'+ob[o].uid+'.jpg" class="avatar"><span class="name">'+ob[o].creator+'</span></a></div><div class="notelist-wrap content-intro">'+ob[o].kcontent+'</div></li>';
+ //              }
+ //              str+='</ul>';  
+ //              $("#notelist_content").html(str);
+  //                 AjaxDo.bindDialog();
+//  }else{
+//   $('.notelist-box').hide();
+//  }
+//    }
+// });
+  //   }
+</script>
+</body>
+
+<!-- Mirrored from www.w3cschool.cn/bootstrap/bootstrap-affix-plugin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 07:08:18 GMT -->
+</html>
