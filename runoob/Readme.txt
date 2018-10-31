@@ -1,1 +1,1 @@
-http://www.runoob.com/jqueryui/
+http://www.runoob.com/

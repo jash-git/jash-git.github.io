@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.jeasyui.net/plugins/155.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:51:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF8"><title>Easyui Pagination 分页_EasyUI 插件</title><meta name="keywords" content="Pagination 分页,EasyUI 插件"><meta name="description" content=""><style>#right{min-height:2035px;}
+</style><link href="../Public/index/css/bootstrap.min.css" rel="stylesheet"><link href="../Public/index/css/style.css" rel="stylesheet"><link href="../Public/js/google-code-prettify/prettify.css" rel="stylesheet"><link rel="shortcut icon" href="../Public/index/img/favicon.ico" type="image/x-icon" /></head><body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()"><header class="navbar  navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><a href="../index.html" class="navbar-brand">Jquery EasyUI中文网</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li ><a href="../index.html">首页</a></li><li 		><a href="../demo/380.html">EasyUI Demo</a></li><li 		><a href="../tutorial/index.html">EasyUI 教程</a></li><li class="active"		><a href="index.html">EasyUI 插件</a></li><li 		><a href="../extension/index.html">EasyUI 扩展</a></li><li 		><a href="../download/index.html">EasyUI下载</a></li><li><a href="https://s.click.taobao.com/vouVNUw" target="_blank" >Ecs推荐</a></li><li><a href="http://wulv5.com/index/keCourse06.html" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'web前端'])" target="_blank" >Web前端免费课</a></li><li><a href="http://demo.topjui.com/?from=jeasyui" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'TopJUI'])" target="_blank" >综合演示</a></li><li ><a href="../hongbao/index.html" >领红包</a></li></ul></nav></div></header><main id="banner" role="main"><div class="container" ><div class="row"><div class="col-md-3 item1"><a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=iuvvbh9n" target="_blank"><p class="p1">阿里云￥1888</p><p class="p2">零门槛，领取阿里云1888元代金券</p></a></div><div class="col-md-3 item2"><a href="https://cloud.tencent.com/redirect.php?redirect=1014&amp;cps_key=788ce861399613ebaa86cab488aeca4c&amp;from=console" target="_blank"><p class="p1">腾讯云 3折</p><p class="p2">热卖云产品3折起，低至22.22元/月</p></a></div><div class="col-md-3 item1"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DJ1gv%2BO2qLD4cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQhB1t7n5FeOY%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZTX1BBitdF6TsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0lpa1ptKO5BLRDASZ17VUv3T6N01Hh6CoJ7Qo28KjBySXJyCdRhTxYn8P%2FHYXvjWwxg5p7bh%2BFbQ%3D" target="_blank"><p class="p1">阿里云ecs 2折</p><p class="p2">全民云计算，1核1G仅需293元/年</p></a></div><div class="col-md-3 item2"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DGrmOw6nfc1ocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQlNvQJ6gy1mU%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZfDZCapcWphDsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0TXcy3f2zBgfXb7YcYklj7N47SHQYF9SBXa2mv8pFwnUjuFEs%2B0GyeRBHlJ5PMn6aCf4WzR8RYpEMlu5kMKse3g%3D%3D" target="_blank"><p class="p1">阿里云免备案</p><p class="p2">海外免备案云服务器2折起，低至293元/年</p></a></div></div></div></main><style>#banner{
+	background:#2d3e50;
+	padding:0;
+	margin-bottom:10px;
+	color:#fff;
+}
+#banner a{
+	color:#fff;
+	text-decoration:none;
+}
+#banner .p1{
+	font-size:15px;
+}
+#banner .p2{
+	font-size:12px;
+	color:#f7f7f7;
+
+}
+#banner .col-md-3{
+	padding:40px 20px;
+}
+#banner .item1{
+	background:#2d3e50;	
+}
+#banner .item2{
+	background:#27384b;
+}
+
+</style><div class="container bs-docs-container" style="margin-top:20px;"><div id="left"><div class="bs-docs-sidebar" role="complementary" id="list"><ul class="nav bs-docs-sidenav"><li class="active"><a href="#">Base（基础）</a><ul class="nav"><li ><a href="150.html">Parser 解析器</a></li><li ><a href="151.html">Easyloader 加载器</a></li><li ><a href="152.html">Draggable 可拖动</a></li><li ><a href="153.html">Droppable 可放置</a></li><li ><a href="154.html">Resizable 可调整尺寸</a></li><li class="active"><a href="155.html">Pagination 分页</a></li><li ><a href="156.html">Searchbox 搜索框</a></li><li ><a href="157.html">Progressbar 进度条</a></li><li ><a href="158.html">Tooltip 提示框</a></li></ul></li><li class="active"><a href="#">Layout（布局）</a><ul class="nav"><li ><a href="159.html">Panel 面板</a></li><li ><a href="160.html">Tabs 标签页/选项卡</a></li><li ><a href="161.html">Accordion 折叠面板</a></li><li ><a href="162.html">Layout 布局</a></li></ul></li><li class="active"><a href="#">Menu（菜单）与 Button（按钮）</a><ul class="nav"><li ><a href="163.html">Menu 菜单</a></li><li ><a href="187.html">Linkbutton 链接按钮</a></li><li ><a href="164.html">Menubutton 菜单按钮</a></li><li ><a href="165.html">Splitbutton 分割按钮</a></li></ul></li><li class="active"><a href="#">Form（表单）</a><ul class="nav"><li ><a href="166.html">Form 表单</a></li><li ><a href="167.html">Validatebox 验证框</a></li><li ><a href="169.html">Combobox 组合框</a></li><li ><a href="168.html">Combo 组合</a></li><li ><a href="170.html">Combotree 组合树</a></li><li ><a href="171.html">Combogrid 组合网格</a></li><li ><a href="172.html">Numberbox 数字框</a></li><li ><a href="173.html">Datebox 日期框</a></li><li ><a href="174.html">Datetimebox 日期时间框</a></li><li ><a href="175.html">Calendar 日历</a></li><li ><a href="176.html">Spinner 微调器</a></li><li ><a href="177.html">Numberspinner 数值微调器</a></li><li ><a href="178.html">Timespinner 时间微调器</a></li><li ><a href="179.html">Slider 滑块</a></li></ul></li><li class="active"><a href="#">Window（窗口）</a><ul class="nav"><li ><a href="180.html">Window 窗口</a></li><li ><a href="181.html">Dialog 对话框</a></li><li ><a href="182.html">Messager 消息框</a></li></ul></li><li class="active"><a href="#">DataGrid（数据网格）与 Tree（树）</a><ul class="nav"><li ><a href="183.html">Datagrid 数据网格</a></li><li ><a href="184.html">Propertygrid 属性网格</a></li><li ><a href="185.html">Tree 树</a></li><li ><a href="186.html">Treegrid 树形网格</a></li></ul></li><li></ul></div><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300*600 --><ins class="adsbygoogle"   style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="1805384745"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;" id="ad"><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div id="right"><div id="right-main"><div class="page-header" style="margin:10px 0;"><h1>EasyUI Pagination 分页</h1></div><div style="margin-bottom:10px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script> <div class="tutintro"> <p>通过 $.fn.pagination.defaults 重写默认的 defaults。</p> <p>分页（pagination）允许用户通过翻页导航数据。它支持页面导航和页面长度选择的可配置选项。用户可以在分页的右侧添加自定义按钮来增强功能。</p> </div> <img src="../Uploads/images/pagination.png"/> <h2>依赖</h2> <ul> <li>linkbutton</li> </ul> <h2>用法</h2> <p>通过标记创建分页（pagination）。</p> <pre class="prettyprint linenums">&lt;div id="pp" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;"
+    data-options="total:2000,pageSize:10"&gt;
+&lt;/div&gt;
+</pre> <p>使用 javascript 创建分页（pagination）。</p> <pre class="prettyprint linenums">&lt;div id="pp" style="background:#efefef;border:1px solid #ccc;"&gt;&lt;/div&gt;
+</pre> <pre class="prettyprint linenums">$('#pp').pagination({
+    total:2000,
+    pageSize:10
+});
+</pre> <p>让我们通过面板（panel）和分页（pagination）插件创建 ajax 分页（pagination）。当用户选择一个新的页面时，面板（panel）将显示指定页面的相应内容。</p> <pre class="prettyprint linenums">&lt;div id="content" class="easyui-panel" style="height:200px"
+    data-options="href:'show_content.php?page=1'"&gt;
+&lt;/div&gt;
+&lt;div class="easyui-pagination" style="border:1px solid #ccc;"
+    data-options="
+    total: 2000,
+    pageSize: 10,
+    onSelectPage: function(pageNumber, pageSize){
+    $('#content').panel('refresh', 'show_content.php?page='+pageNumber);
+    }"&gt;
+&lt;/div&gt;
+</pre> <p>顶部的面板（panel）默认显示第一个页面的内容。当用户导航页面时，'onSelectPage' 事件将被触发，该事件为内容面板（panel）调用 'refresh' 方法来加载带有一个新的 URL 参数的新页面内容。</p> <h2>属性</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">类型</th> <th align="left">描述</th> <th align="left">默认值</th> </tr> <tr> <td>total</td> <td>number</td> <td>记录总数，应该在创建分页（pagination）时设置。</td> <td>1</td> </tr> <tr> <td>pageSize</td> <td>number</td> <td>页面尺寸。（注：每页显示的最大记录数）</td> <td>10</td> </tr> <tr> <td>pageNumber</td> <td>number</td> <td>创建分页（pagination）时显示的页码。</td> <td>1</td> </tr> <tr> <td>pageList</td> <td>array</td> <td>用户能改变页面尺寸。pageList 属性定义了能改成多大的尺寸。<br> 代码实例： <pre class="prettyprint linenums">$('#pp').pagination({
+	pageList: [10,20,50,100]
+});
+</pre> </td> <td>[10,20,30,50]</td> </tr> <tr> <td>loading</td> <td>boolean</td> <td>定义数据是否正在加载。</td> <td>false</td> </tr> <tr> <td>buttons</td> <td>array,selector</td> <td>定义自定义按钮，可能的值：<br> 1、数组，每个按钮包含两个属性：<br> iconCls：CSS class，它将显示一个背景图片<br> handler：当按钮被点击时的处理函数<br> 2、选择器，指示按钮。<br> <br> 按钮可通过标记声明： <pre class="prettyprint linenums">&lt;div class="easyui-pagination" style="border:1px solid #ccc" data-options="
+		total: 114,
+		buttons: [{
+			iconCls:'icon-add',
+			handler:function(){alert('add')}
+		},'-',{
+			iconCls:'icon-save',
+			handler:function(){alert('save')}
+		}]"&gt;
+&lt;/div&gt;
+</pre> 按钮也可以使用 javascript 创建： <pre class="prettyprint linenums">$('#pp').pagination({
+	total: 114,
+	buttons: [{
+		iconCls:'icon-add',
+		handler:function(){alert('add')}
+	},'-',{
+		iconCls:'icon-save',
+		handler:function(){alert('save')}
+	}]
+});
+</pre> </td> <td>null</td> </tr> <tr> <td>layout</td> <td>array</td> <td>分页布局定义。该属性自版本 1.3.5 起可用。<br> 布局项目包括一个或多个下列值：<br> 1、list：页面尺寸列表。<br> 2、sep：页面按钮分割。<br> 3、first：第一个按钮。<br> 4、prev：前一个按钮。<br> 5、next：后一个按钮。<br> 6、last：最后一个按钮。<br> 7、efresh：刷新按钮。<br> 8、manual：允许输入域页码的手动页码输入框。<br> 9、links：页码链接。<br> <br> 代码实例： <pre class="prettyprint linenums">$('#pp').pagination({
+	layout:['first','links','last']
+});
+</pre> </td> <td> </td> </tr> <tr> <td>links</td> <td>number</td> <td>链接数量，只有当 'links' 项包含在 'layout' 中时才是有效的。该属性自版本 1.3.5 起可用。</td> <td>10</td> </tr> <tr> <td>showPageList</td> <td>boolean</td> <td>定义是否显示页面列表。</td> <td>true</td> </tr> <tr> <td>showRefresh</td> <td>boolean</td> <td>定义是否显示刷新按钮。</td> <td>true</td> </tr> <tr> <td>beforePageText</td> <td>string</td> <td>在 input 组件之前显示 label。</td> <td>Page</td> </tr> <tr> <td>afterPageText</td> <td>string</td> <td>在 input 组件之后显示 label。</td> <td>of {pages}</td> </tr> <tr> <td>displayMsg</td> <td>string</td> <td>Display a page information.</td> <td>显示 {from} to {to} of {total} 页面信息。</td> </tr> </table></div> <h2>事件</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>onSelectPage</td> <td>pageNumber, pageSize</td> <td>当用户选择新的页面时触发。回调函数包含两个参数：<br> pageNumber：新的页码<br> pageSize：新的页面尺寸<br> <br> 代码实例： <pre class="prettyprint linenums">$('#pp').pagination({
+	onSelectPage:function(pageNumber, pageSize){
+		$(this).pagination('loading');
+		alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
+		$(this).pagination('loaded');
+	}
+});
+</pre> </td> </tr> <tr> <td>onBeforeRefresh</td> <td>pageNumber, pageSize</td> <td>刷新按钮点击之前触发，返回 false 就取消刷新动作。</td> </tr> <tr> <td>onRefresh</td> <td>pageNumber, pageSize</td> <td>刷新之后触发。</td> </tr> <tr> <td>onChangePageSize</td> <td>pageSize</td> <td>当用户改变页面尺寸时触发。</td> </tr> </table></div> <h2>方法</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>options</td> <td>none</td> <td>返回选项（options）对象。</td> </tr> <tr> <td>loading</td> <td>none</td> <td>把分页（pagination）变成正在加载（loading）状态。</td> </tr> <tr> <td>loaded</td> <td>none</td> <td>把分页（pagination）变成加载完成（loaded）状态。</td> </tr> <tr> <td>refresh</td> <td>options</td> <td>刷新并显示分页信息。该方法自版本 1.3 起可用。<br> 代码实例： <pre class="prettyprint linenums">$('#pp').pagination('refresh');	// 刷新分页栏信息
+$('#pp').pagination('refresh',{	// 改变选项，并刷新分页栏信息
+	total: 114,
+	pageNumber: 6
+});
+</pre> </td> </tr> <tr> <td>select</td> <td>page</td> <td>选择一个新页面。页面索引从 1 开始。该方法从版本 1.3 起可用。<br> 代码实例： <pre class="prettyprint linenums">$('#pp').pagination('select');	// 刷新当前页面
+$('#pp').pagination('select', 2);	// 选择第二页
+</pre> </td> </tr> </table></div> <script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="page"><ul><li><a href="154.html">上一篇：EasyUI Resizable 可调整尺寸</a></li><li style="text-align:right;"><a href="156.html">下一篇：EasyUI Searchbox 搜索框</a></li><div class="clear"></div></ul></div></div></div></div><div class="container" style="margin-top:20px;"><div style="float:right;width:200px" ><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 200*90 --><ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-6117966252207595"
+     data-ad-slot="3373881537"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 970x90 --><ins class="adsbygoogle"    style="display:inline-block;width:970px;height:90px"  data-ad-client="ca-pub-6117966252207595" data-ad-slot="2920092348"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><footer><div class="container"><p><a href="../index.html">Jquery EasyUI中文网</a>内容基于<a href="http://www.jeasyui.com/">EasyUI官网</a>，由EasyUI中文小组翻译整理，完全遵循官方Free - Non-commercial 及<a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议。</p><p>Copyright © 2014 - 2015 Jquery EasyUI中文网, <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14024044号-2</a>, All Rights Reserved.</p><ul class="bs-docs-footer-links muted"><li><a href="http://www.jqueryui.org.cn/" target="_blank">Jquery UI中文网</a></li><li>·</li><li><a href="http://www.redis.net.cn/" target="_blank">Redis中文网</a></li><li>·</li><li><a href="https://www.zuijuzi.com/" target="_blank">最句子</a></li><li>·</li><li><a href="../ad/index.html">广告合作</a></li><li>·</li><li><a href="../hongbao/index.html">关注我们</a></li><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm2aef.js?e5fb31febce575aa5e2a1e32ee7bb7c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></ul></div></footer><script src="../Public/js/jquery.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/google-code-prettify/prettify.js"></script><script type="text/javascript">    /*图+推广*/
+    /*建议投放在200*300以上的图片*/
+    var cpro_id = "u1948815";
+</script><script type="text/javascript" src="../../cpro.baidustatic.com/cpro/ui/i.js"></script><script>$(document).ready(function(){
+
+	if($("#ad").offset()){
+		var origin_top= $("#ad").offset().top;
+		$(window).scroll(function(event){
+			var top = $("#ad").offset().top - $(window).scrollTop();
+			if(top < 55){
+				$("#ad").addClass('fixed');
+			}
+			if($("#ad").offset().top < origin_top){
+
+				$("#ad").removeClass('fixed');
+			}
+		});
+	}
+});
+
+
+</script></body>
+<!-- Mirrored from www.jeasyui.net/plugins/155.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:51:00 GMT -->
+</html>

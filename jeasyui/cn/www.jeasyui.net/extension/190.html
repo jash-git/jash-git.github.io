@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.jeasyui.net/extension/190.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:53:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF8"><title>Easyui 可编辑的数据网格（Editable DataGrid）_EasyUI 扩展</title><meta name="keywords" content="可编辑的数据网格（Editable DataGrid）,EasyUI 扩展"><meta name="description" content=""><style>#right{min-height:1460px;}
+</style><link href="../Public/index/css/bootstrap.min.css" rel="stylesheet"><link href="../Public/index/css/style.css" rel="stylesheet"><link href="../Public/js/google-code-prettify/prettify.css" rel="stylesheet"><link rel="shortcut icon" href="../Public/index/img/favicon.ico" type="image/x-icon" /></head><body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()"><header class="navbar  navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><a href="../index.html" class="navbar-brand">Jquery EasyUI中文网</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li ><a href="../index.html">首页</a></li><li 		><a href="../demo/380.html">EasyUI Demo</a></li><li 		><a href="../tutorial/index.html">EasyUI 教程</a></li><li 		><a href="../plugins/index.html">EasyUI 插件</a></li><li class="active"		><a href="index.html">EasyUI 扩展</a></li><li 		><a href="../download/index.html">EasyUI下载</a></li><li><a href="https://s.click.taobao.com/vouVNUw" target="_blank" >Ecs推荐</a></li><li><a href="http://wulv5.com/index/keCourse06.html" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'web前端'])" target="_blank" >Web前端免费课</a></li><li><a href="http://demo.topjui.com/?from=jeasyui" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'TopJUI'])" target="_blank" >综合演示</a></li><li ><a href="../hongbao/index.html" >领红包</a></li></ul></nav></div></header><main id="banner" role="main"><div class="container" ><div class="row"><div class="col-md-3 item1"><a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=iuvvbh9n" target="_blank"><p class="p1">阿里云￥1888</p><p class="p2">零门槛，领取阿里云1888元代金券</p></a></div><div class="col-md-3 item2"><a href="https://cloud.tencent.com/redirect.php?redirect=1014&amp;cps_key=788ce861399613ebaa86cab488aeca4c&amp;from=console" target="_blank"><p class="p1">腾讯云 3折</p><p class="p2">热卖云产品3折起，低至22.22元/月</p></a></div><div class="col-md-3 item1"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DJ1gv%2BO2qLD4cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQhB1t7n5FeOY%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZTX1BBitdF6TsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0lpa1ptKO5BLRDASZ17VUv3T6N01Hh6CoJ7Qo28KjBySXJyCdRhTxYn8P%2FHYXvjWwxg5p7bh%2BFbQ%3D" target="_blank"><p class="p1">阿里云ecs 2折</p><p class="p2">全民云计算，1核1G仅需293元/年</p></a></div><div class="col-md-3 item2"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DGrmOw6nfc1ocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQlNvQJ6gy1mU%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZfDZCapcWphDsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0TXcy3f2zBgfXb7YcYklj7N47SHQYF9SBXa2mv8pFwnUjuFEs%2B0GyeRBHlJ5PMn6aCf4WzR8RYpEMlu5kMKse3g%3D%3D" target="_blank"><p class="p1">阿里云免备案</p><p class="p2">海外免备案云服务器2折起，低至293元/年</p></a></div></div></div></main><style>#banner{
+	background:#2d3e50;
+	padding:0;
+	margin-bottom:10px;
+	color:#fff;
+}
+#banner a{
+	color:#fff;
+	text-decoration:none;
+}
+#banner .p1{
+	font-size:15px;
+}
+#banner .p2{
+	font-size:12px;
+	color:#f7f7f7;
+
+}
+#banner .col-md-3{
+	padding:40px 20px;
+}
+#banner .item1{
+	background:#2d3e50;	
+}
+#banner .item2{
+	background:#27384b;
+}
+
+</style><div class="container bs-docs-container" style="margin-top:20px;"><div id="left"><div class="bs-docs-sidebar" role="complementary" id="list"><ul class="nav bs-docs-sidenav"><li class="active"><a href="#">EasyUI扩展</a><ul class="nav"><li ><a href="106.html">Portal（制作图表、列表、球形图等）</a></li><li ><a href="189.html">数据网格视图（DataGrid View）</a></li><li class="active"><a href="190.html">可编辑的数据网格（Editable DataGrid）</a></li><li ><a href="191.html">可编辑的树（Editable Tree）</a></li><li ><a href="192.html">数据网格行过滤（DataGrid Filter Row）</a></li><li ><a href="193.html">数据网格行拖放（Drag and Drop Rows in DataGrid）</a></li><li ><a href="194.html">树形网格行拖放（Drag and Drop Rows in TreeGrid）</a></li><li ><a href="195.html">主题（Themes）</a></li><li ><a href="196.html">DWR 加载器（DWR Loader）</a></li><li ><a href="200.html">RTL 支持（RTL support）</a></li><li ><a href="201.html">Ribbon</a></li></ul></li><li></ul></div><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300*600 --><ins class="adsbygoogle"   style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="1805384745"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;" id="ad"><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div id="right"><div id="right-main"><div class="page-header" style="margin:10px 0;"><h1>EasyUI 可编辑的数据网格（Editable DataGrid）</h1></div><div style="margin-bottom:10px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script> <img src="../Uploads/images/datagrid_editable.png"/> <h2>用法</h2> <h4>在 html 标签中创建数据网格（datagrid）</h4> <pre class="prettyprint linenums">&lt;table id="tt" style="width:600px;height:200px"
+		title="Editable DataGrid"
+		singleSelect="true"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th field="itemid" width="100" editor="{type:'validatebox',options:{required:true}}"&gt;Item ID&lt;/th&gt;
+			&lt;th field="productid" width="100" editor="text"&gt;Product ID&lt;/th&gt;
+			&lt;th field="listprice" width="100" align="right" editor="{type:'numberbox',options:{precision:1}}"&gt;List Price&lt;/th&gt;
+			&lt;th field="unitcost" width="100" align="right" editor="numberbox"&gt;Unit Cost&lt;/th&gt;
+			&lt;th field="attr1" width="150" editor="text"&gt;Attribute&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+&lt;/table&gt;
+</pre> <h4>让数据网格（datagrid）可编辑</h4> <pre class="prettyprint linenums">$('#tt').edatagrid({
+	url: 'datagrid_data.json',
+	saveUrl: ...,
+	updateUrl: ...,
+	destroyUrl: ...
+});
+</pre> <p>现在您可以双击数据网格行开始编辑操作。您也可以设置 saveUrl、updateUrl、destroyUrl 属性来自动同步客户端与服务器端的数据。</p> <h2>属性</h2> <p>该属性扩展自数据网格（datagrid），下面是为可编辑的数据网格（edatagrid）添加的属性。</p> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th><strong>名称</strong></th> <th><strong>类型</strong></th> <th><strong>描述</strong></th> <th><strong>默认值</strong></th> </tr> <tr> <td>destroyMsg</td> <td>object</td> <td>当销毁一行时要显示的确认对话框消息。</td> <td> <pre class="prettyprint linenums">destroyMsg:{
+	norecord:{	// when no record is selected
+		title:'Warning',
+		msg:'No record is selected.'
+	},
+	confirm:{	// when select a row
+		title:'Confirm',
+		msg:'Are you sure you want to delete?'
+	}
+}
+</pre> </td> </tr> <tr> <td>autoSave</td> <td>boolean</td> <td>设置为 true，则当点击数据网格外部时自动保存编辑行。</td> <td>false</td> </tr> <tr> <td>url</td> <td>string</td> <td>一个 URL，从服务器检索数据。</td> <td>null</td> </tr> <tr> <td>saveUrl</td> <td>string</td> <td>一个 URL，向服务器保存数据，并返回添加的行。</td> <td>null</td> </tr> <tr> <td>updateUrl</td> <td>string</td> <td>一个 URL，向服务器更新数据，并返回更新的行。</td> <td>null</td> </tr> <tr> <td>destroyUrl</td> <td>string</td> <td>一个 URL，向服务器传送 'id' 参数来销毁该行。</td> <td>null</td> </tr> <tr> <td>tree</td> <td>selector</td> <td>显示对应的树组件的树选择器。</td> <td>null</td> </tr> <tr> <td>treeUrl</td> <td>string</td> <td>一个 URL，检索树的数据。</td> <td>null</td> </tr> <tr> <td>treeDndUrl</td> <td>string</td> <td>一个 URL，处理拖放操作。</td> <td>null</td> </tr> <tr> <td>treeTextField</td> <td>string</td> <td>定义树的文本字段名称。</td> <td>name</td> </tr> <tr> <td>treeParentField</td> <td>string</td> <td>定义树的父节点字段名称。</td> <td>parentId</td> </tr> </table></div> <h2>事件</h2> <p>该事件扩展自数据网格（datagrid），下面是为可编辑的数据网格（edatagrid）添加的事件。</p> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th><strong>名称</strong></th> <th><strong>参数</strong></th> <th><strong>描述</strong></th> </tr> <tr> <td>onAdd</td> <td>index,row</td> <td>当添加一个新行时触发。</td> </tr> <tr> <td>onEdit</td> <td>index,row</td> <td>当编辑一行时触发。</td> </tr> <tr> <td>onBeforeSave</td> <td>index</td> <td>一行被保存之前触发，返回 false 则取消保存动作。</td> </tr> <tr> <td>onSave</td> <td>index,row</td> <td>当保存一行时触发。</td> </tr> <tr> <td>onDestroy</td> <td>index,row</td> <td>当销毁一行时触发。</td> </tr> <tr> <td>onError</td> <td>index,row</td> <td> 当发生服务器错误时触发。<br/> 服务器应返回一个 'isError' 属性设置为 true 的行，表示发生错误。 <p>代码实例：</p> <pre class="prettyprint linenums">//server side code
+echo json_encode(array(
+	'isError' =&gt; true,
+	'msg' =&gt; 'error message.'
+));
+</pre> <pre class="prettyprint linenums">//client side code
+$('#dg').edatagrid({
+	onError: function(index,row){
+		alert(row.msg);
+	}
+});
+</pre> </td> </tr> </table></div> <h2>方法</h2> <p>该方法扩展自数据网格（datagrid），下面是为可编辑的数据网格（edatagrid）添加或重写的方法。</p> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th><strong>名称</strong></th> <th><strong>参数</strong></th> <th><strong>描述</strong></th> </tr> <tr> <td>options</td> <td>none</td> <td>返回选项（options）对象。</td> </tr> <tr> <td>enableEditing</td> <td>none</td> <td>启用数据网格（datagrid）编辑。</td> </tr> <tr> <td>disableEditing</td> <td>none</td> <td>禁用数据网格（datagrid）编辑。</td> </tr> <tr> <td>editRow</td> <td>index</td> <td>编辑指定的行。</td> </tr> <tr> <td>addRow</td> <td>index</td> <td> 向指定的行索引添加一个新行。<br/> 如果 index 参数未指定，则向最后的位置追加一个新行。 <p>代码实例：</p> <pre class="prettyprint linenums">// append an empty row
+$('#dg').edatagrid('addRow');
+
+// append an empty row as first row
+$('#dg').edatagrid('addRow',0);
+
+// insert a row with default values
+$('#dg').edatagrid('addRow',{
+	index: 2,
+	row:{
+		name:'name1',
+		addr:'addr1'
+	}
+});
+</pre> </td> </tr> <tr> <td>saveRow</td> <td>none</td> <td>保存编辑行，发布到服务器。</td> </tr> <tr> <td>cancelRow</td> <td>none</td> <td>取消编辑行。</td> </tr> <tr> <td>destroyRow</td> <td>index</td> <td> 销毁当前选中的行。<br/> 如果 index 参数未指定，则销毁所有选中的行。 <p>代码实例：</p> <pre class="prettyprint linenums">// destroy all the selected rows
+$('#dg').edatagrid('destroyRow');
+
+// destroy the first row
+$('#dg').edatagrid('destroyRow', 0);
+
+// destroy the specified rows
+$('#dg').edatagrid('destroyRow', [3,4,5]);
+</pre> </td> </tr> </table></div> <script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="file"><h3 class="page-header">jQuery EasyUI 实例下载</h3><a href="../Uploads/file/jquery-easyui-edatagrid.zip" class="btn btn-lg btn-default">jquery-easyui-edatagrid.zip</a></div><div id="page"><ul><li><a href="189.html">上一篇：EasyUI 数据网格视图（DataGrid View）</a></li><li style="text-align:right;"><a href="191.html">下一篇：EasyUI 可编辑的树（Editable Tree）</a></li><div class="clear"></div></ul></div></div></div></div><div class="container" style="margin-top:20px;"><div style="float:right;width:200px" ><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 200*90 --><ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-6117966252207595"
+     data-ad-slot="3373881537"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 970x90 --><ins class="adsbygoogle"    style="display:inline-block;width:970px;height:90px"  data-ad-client="ca-pub-6117966252207595" data-ad-slot="2920092348"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><footer><div class="container"><p><a href="../index.html">Jquery EasyUI中文网</a>内容基于<a href="http://www.jeasyui.com/">EasyUI官网</a>，由EasyUI中文小组翻译整理，完全遵循官方Free - Non-commercial 及<a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议。</p><p>Copyright © 2014 - 2015 Jquery EasyUI中文网, <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14024044号-2</a>, All Rights Reserved.</p><ul class="bs-docs-footer-links muted"><li><a href="http://www.jqueryui.org.cn/" target="_blank">Jquery UI中文网</a></li><li>·</li><li><a href="http://www.redis.net.cn/" target="_blank">Redis中文网</a></li><li>·</li><li><a href="https://www.zuijuzi.com/" target="_blank">最句子</a></li><li>·</li><li><a href="../ad/index.html">广告合作</a></li><li>·</li><li><a href="../hongbao/index.html">关注我们</a></li><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm2aef.js?e5fb31febce575aa5e2a1e32ee7bb7c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></ul></div></footer><script src="../Public/js/jquery.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/google-code-prettify/prettify.js"></script><script type="text/javascript">    /*图+推广*/
+    /*建议投放在200*300以上的图片*/
+    var cpro_id = "u1948815";
+</script><script type="text/javascript" src="../../cpro.baidustatic.com/cpro/ui/i.js"></script><script>$(document).ready(function(){
+
+	if($("#ad").offset()){
+		var origin_top= $("#ad").offset().top;
+		$(window).scroll(function(event){
+			var top = $("#ad").offset().top - $(window).scrollTop();
+			if(top < 55){
+				$("#ad").addClass('fixed');
+			}
+			if($("#ad").offset().top < origin_top){
+
+				$("#ad").removeClass('fixed');
+			}
+		});
+	}
+});
+
+
+</script></body>
+<!-- Mirrored from www.jeasyui.net/extension/190.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:53:56 GMT -->
+</html>

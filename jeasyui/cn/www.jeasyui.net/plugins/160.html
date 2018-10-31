@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.jeasyui.net/plugins/160.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:50:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF8"><title>Easyui Tabs 标签页/选项卡_EasyUI 插件</title><meta name="keywords" content="Tabs 标签页/选项卡,EasyUI 插件"><meta name="description" content=""><style>#right{min-height:2035px;}
+</style><link href="../Public/index/css/bootstrap.min.css" rel="stylesheet"><link href="../Public/index/css/style.css" rel="stylesheet"><link href="../Public/js/google-code-prettify/prettify.css" rel="stylesheet"><link rel="shortcut icon" href="../Public/index/img/favicon.ico" type="image/x-icon" /></head><body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()"><header class="navbar  navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><a href="../index.html" class="navbar-brand">Jquery EasyUI中文网</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li ><a href="../index.html">首页</a></li><li 		><a href="../demo/380.html">EasyUI Demo</a></li><li 		><a href="../tutorial/index.html">EasyUI 教程</a></li><li class="active"		><a href="index.html">EasyUI 插件</a></li><li 		><a href="../extension/index.html">EasyUI 扩展</a></li><li 		><a href="../download/index.html">EasyUI下载</a></li><li><a href="https://s.click.taobao.com/vouVNUw" target="_blank" >Ecs推荐</a></li><li><a href="http://wulv5.com/index/keCourse06.html" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'web前端'])" target="_blank" >Web前端免费课</a></li><li><a href="http://demo.topjui.com/?from=jeasyui" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'TopJUI'])" target="_blank" >综合演示</a></li><li ><a href="../hongbao/index.html" >领红包</a></li></ul></nav></div></header><main id="banner" role="main"><div class="container" ><div class="row"><div class="col-md-3 item1"><a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=iuvvbh9n" target="_blank"><p class="p1">阿里云￥1888</p><p class="p2">零门槛，领取阿里云1888元代金券</p></a></div><div class="col-md-3 item2"><a href="https://cloud.tencent.com/redirect.php?redirect=1014&amp;cps_key=788ce861399613ebaa86cab488aeca4c&amp;from=console" target="_blank"><p class="p1">腾讯云 3折</p><p class="p2">热卖云产品3折起，低至22.22元/月</p></a></div><div class="col-md-3 item1"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DJ1gv%2BO2qLD4cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQhB1t7n5FeOY%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZTX1BBitdF6TsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0lpa1ptKO5BLRDASZ17VUv3T6N01Hh6CoJ7Qo28KjBySXJyCdRhTxYn8P%2FHYXvjWwxg5p7bh%2BFbQ%3D" target="_blank"><p class="p1">阿里云ecs 2折</p><p class="p2">全民云计算，1核1G仅需293元/年</p></a></div><div class="col-md-3 item2"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DGrmOw6nfc1ocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQlNvQJ6gy1mU%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZfDZCapcWphDsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0TXcy3f2zBgfXb7YcYklj7N47SHQYF9SBXa2mv8pFwnUjuFEs%2B0GyeRBHlJ5PMn6aCf4WzR8RYpEMlu5kMKse3g%3D%3D" target="_blank"><p class="p1">阿里云免备案</p><p class="p2">海外免备案云服务器2折起，低至293元/年</p></a></div></div></div></main><style>#banner{
+	background:#2d3e50;
+	padding:0;
+	margin-bottom:10px;
+	color:#fff;
+}
+#banner a{
+	color:#fff;
+	text-decoration:none;
+}
+#banner .p1{
+	font-size:15px;
+}
+#banner .p2{
+	font-size:12px;
+	color:#f7f7f7;
+
+}
+#banner .col-md-3{
+	padding:40px 20px;
+}
+#banner .item1{
+	background:#2d3e50;	
+}
+#banner .item2{
+	background:#27384b;
+}
+
+</style><div class="container bs-docs-container" style="margin-top:20px;"><div id="left"><div class="bs-docs-sidebar" role="complementary" id="list"><ul class="nav bs-docs-sidenav"><li class="active"><a href="#">Base（基础）</a><ul class="nav"><li ><a href="150.html">Parser 解析器</a></li><li ><a href="151.html">Easyloader 加载器</a></li><li ><a href="152.html">Draggable 可拖动</a></li><li ><a href="153.html">Droppable 可放置</a></li><li ><a href="154.html">Resizable 可调整尺寸</a></li><li ><a href="155.html">Pagination 分页</a></li><li ><a href="156.html">Searchbox 搜索框</a></li><li ><a href="157.html">Progressbar 进度条</a></li><li ><a href="158.html">Tooltip 提示框</a></li></ul></li><li class="active"><a href="#">Layout（布局）</a><ul class="nav"><li ><a href="159.html">Panel 面板</a></li><li class="active"><a href="160.html">Tabs 标签页/选项卡</a></li><li ><a href="161.html">Accordion 折叠面板</a></li><li ><a href="162.html">Layout 布局</a></li></ul></li><li class="active"><a href="#">Menu（菜单）与 Button（按钮）</a><ul class="nav"><li ><a href="163.html">Menu 菜单</a></li><li ><a href="187.html">Linkbutton 链接按钮</a></li><li ><a href="164.html">Menubutton 菜单按钮</a></li><li ><a href="165.html">Splitbutton 分割按钮</a></li></ul></li><li class="active"><a href="#">Form（表单）</a><ul class="nav"><li ><a href="166.html">Form 表单</a></li><li ><a href="167.html">Validatebox 验证框</a></li><li ><a href="169.html">Combobox 组合框</a></li><li ><a href="168.html">Combo 组合</a></li><li ><a href="170.html">Combotree 组合树</a></li><li ><a href="171.html">Combogrid 组合网格</a></li><li ><a href="172.html">Numberbox 数字框</a></li><li ><a href="173.html">Datebox 日期框</a></li><li ><a href="174.html">Datetimebox 日期时间框</a></li><li ><a href="175.html">Calendar 日历</a></li><li ><a href="176.html">Spinner 微调器</a></li><li ><a href="177.html">Numberspinner 数值微调器</a></li><li ><a href="178.html">Timespinner 时间微调器</a></li><li ><a href="179.html">Slider 滑块</a></li></ul></li><li class="active"><a href="#">Window（窗口）</a><ul class="nav"><li ><a href="180.html">Window 窗口</a></li><li ><a href="181.html">Dialog 对话框</a></li><li ><a href="182.html">Messager 消息框</a></li></ul></li><li class="active"><a href="#">DataGrid（数据网格）与 Tree（树）</a><ul class="nav"><li ><a href="183.html">Datagrid 数据网格</a></li><li ><a href="184.html">Propertygrid 属性网格</a></li><li ><a href="185.html">Tree 树</a></li><li ><a href="186.html">Treegrid 树形网格</a></li></ul></li><li></ul></div><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300*600 --><ins class="adsbygoogle"   style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="1805384745"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;" id="ad"><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div id="right"><div id="right-main"><div class="page-header" style="margin:10px 0;"><h1>EasyUI Tabs 标签页/选项卡</h1></div><div style="margin-bottom:10px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script> <div class="tutintro"> <p>通过 $.fn.tabs.defaults 重写默认的 defaults。</p> <p>The tabs display a collection of panel. It shows only one tab panel at a time. Each tab panel has the header title and some mini button tools, including close button and other customized buttons. </p> </div> <img src="../Uploads/images/tabs.png"/> <h2>依赖</h2> <ul> <li>panel</li> <li>linkbutton</li> </ul> <h2>用法</h2> <h4>创建标签页（Tabs）</h4> <p>1、通过标记创建标签页（Tabs）</p> <p>从标记创建标签页（Tabs）更容易，我们不需要写任何 JavaScript 代码。记住把 'easyui-tabs' class 添加到 &lt;div&gt; 标记。每个标签页面板（tab panel）通过子 &lt;div&gt; 标记被创建，其用法与面板（panel）一样。 </p> <pre class="prettyprint linenums">&lt;div id="tt" class="easyui-tabs" style="width:500px;height:250px;"&gt;
+    &lt;div title="Tab1" style="padding:20px;display:none;"&gt;
+		tab1
+    &lt;/div&gt;
+    &lt;div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;"&gt;
+		tab2
+    &lt;/div&gt;
+    &lt;div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="padding:20px;display:none;"&gt;
+		tab3
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre> <p>2、编程创建标签页（Tabs）</p> <p>现在我们编程创建标签页（Tabs），我们同时捕捉 'onSelect' 事件。</p> <pre class="prettyprint linenums">$('#tt').tabs({
+    border:false,
+    onSelect:function(title){
+		alert(title+' is selected');
+    }
+});
+</pre> <h4>添加新的标签页面板（tab panel）</h4> <p>通过迷你工具添加一个新的标签页面板（tab panel），迷你工具图标（8x8）放置在关闭按钮前。</p> <pre class="prettyprint linenums">// 添加一个新的标签页面板（tab panel）
+$('#tt').tabs('add',{
+    title:'New Tab',
+    content:'Tab Body',
+    closable:true,
+    tools:[{
+		iconCls:'icon-mini-refresh',
+		handler:function(){
+			alert('refresh');
+		}
+    }]
+});
+</pre> <h4>获取选中的标签页（Tab）</h4> <pre class="prettyprint linenums">// 获取选中的标签页面板（tab panel）和它的标签页（tab）对象
+var pp = $('#tt').tabs('getSelected');
+var tab = pp.panel('options').tab; // 相应的标签页（tab）对象 
+</pre> <h2>属性</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">类型</th> <th align="left">描述</th> <th align="left">默认值</th> </tr> <tr> <td>width</td> <td>number</td> <td>标签页（Tabs）容器的宽度。</td> <td>auto</td> </tr> <tr> <td>height</td> <td>number</td> <td>标签页（Tabs）容器的高度。</td> <td>auto</td> </tr> <tr> <td>plain</td> <td>boolean</td> <td>当设置为 true 时，就不用背景容器图片来呈现 tab 条。</td> <td>false</td> </tr> <tr> <td>fit</td> <td>boolean</td> <td>当设置为 true 时，就设置标签页（Tabs）容器的尺寸以适应它的父容器。</td> <td>false</td> </tr> <tr> <td>border</td> <td>boolean</td> <td>当设置为 true 时，就显示标签页（Tabs）容器边框。</td> <td>true</td> </tr> <tr> <td>scrollIncrement</td> <td>number</td> <td>每按一次 tab 滚动按钮，滚动的像素数。</td> <td>100</td> </tr> <tr> <td>scrollDuration</td> <td>number</td> <td>每一个滚动动画应该持续的毫秒数。</td> <td>400</td> </tr> <tr> <td>tools</td> <td>array,selector</td> <td>放置在头部的左侧或右侧的工具栏，可能的值：<br> 1、数组，指示工具组，每个工具选项都和链接按钮（Linkbutton）一样。<br> 2、选择器，指示包含工具的 &lt;div&gt;。<br> <br> 代码实例：<br> 通过数组定义工具。 <pre class="prettyprint linenums">$('#tt').tabs({
+	tools:[{
+		iconCls:'icon-add',
+		handler:function(){
+			alert('add')
+		}
+	},{
+		iconCls:'icon-save',
+		handler:function(){
+			alert('save')
+		}
+	}]
+});
+</pre> 通过已有的 DOM 容器定义工具。 <pre class="prettyprint linenums">$('#tt').tabs({
+	tools:'#tab-tools'
+});
+&lt;div id="tab-tools"&gt;
+	&lt;a href="#" class="easyui-linkbutton" plain="true" iconCls="icon-add"&gt;&lt;/a&gt;
+	&lt;a href="#" class="easyui-linkbutton" plain="true" iconCls="icon-save"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre> </td> <td>null</td> </tr> <tr> <td>toolPosition</td> <td>string</td> <td>工具栏位置。可能的值：'left'、'right'。该属性自版本 1.3.2 起可用。</td> <td>right</td> </tr> <tr> <td>tabPosition</td> <td>string</td> <td>标签页（tab）位置。可能的值：'top'、'bottom'、'left'、'right'。该属性自版本 1.3.2 起可用。</td> <td>top</td> </tr> <tr> <td>headerWidth</td> <td>number</td> <td>标签页（tab）头部宽度，只有当 tabPosition 设置为 'left' 或 'right' 时才有效。该属性自版本 1.3.2 起可用。</td> <td>150</td> </tr> <tr> <td>tabWidth</td> <td>number</td> <td>tab 条的宽度。该属性自版本 1.3.4 起可用。</td> <td>auto</td> </tr> <tr> <td>tabHeight</td> <td>number</td> <td>tab 条的高度。该属性自版本 1.3.4 起可用。</td> <td>27</td> </tr> <tr> <td>selected</td> <td>number</td> <td>初始化选定的标签页索引。该属性自版本 1.3.5 起可用。</td> <td>0</td> </tr> <tr> <td>showHeader</td> <td>boolean</td> <td>当设置为 true 时，显示标签页（tab）头部。该属性自版本 1.3.5 起可用。</td> <td>true</td> </tr> </table></div> <h2>事件</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>onLoad</td> <td>panel</td> <td>当一个 ajax 标签页面板（tab panel）完成加载远程数据时触发。</td> </tr> <tr> <td>onSelect</td> <td>title,index</td> <td>当用户选择一个标签页面板（tab panel）时触发。</td> </tr> <tr> <td>onUnselect</td> <td>title,index</td> <td>当用户未选择一个标签页面板（tab panel）时触发。该事件自版本 1.3.5 起可用。</td> </tr> <tr> <td>onBeforeClose</td> <td>title,index</td> <td>当一个标签页面板（tab panel）被关闭前触发，返回 false 就取消关闭动作。下面的实例演示如何在关闭标签页面板（tab panel）前显示确认对话框。 <pre class="prettyprint linenums">$('#tt').tabs({
+  onBeforeClose: function(title){
+	return confirm('Are you sure you want to close ' + title);
+  }
+});
+// using the async confirm dialog
+$('#tt').tabs({
+  onBeforeClose: function(title,index){
+	var target = this;
+	$.messager.confirm('Confirm','Are you sure you want to close '+title,function(r){
+		if (r){
+			var opts = $(target).tabs('options');
+			var bc = opts.onBeforeClose;
+			opts.onBeforeClose = function(){};  // allowed to close now
+			$(target).tabs('close',index);
+			opts.onBeforeClose = bc;  // restore the event function
+		}
+	});
+	return false;	// prevent from closing
+  }
+});
+</pre> </td> </tr> <tr> <td>onClose</td> <td>title,index</td> <td>当用户关闭一个标签页面板（tab panel）时触发。</td> </tr> <tr> <td>onAdd</td> <td>title,index</td> <td>当一个新的标签页面板（tab panel）被添加时触发。</td> </tr> <tr> <td>onUpdate</td> <td>title,index</td> <td>当一个标签页面板（tab panel）被更新时触发。</td> </tr> <tr> <td>onContextMenu</td> <td>e, title,index</td> <td>当一个标签页面板（tab panel）被右键点击时触发。</td> </tr> </table></div> <h2>方法</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>options</td> <td>none</td> <td>返回标签页（tabs）选项（options）。</td> </tr> <tr> <td>tabs</td> <td>none</td> <td>返回全部的标签页面板（tab panel）。</td> </tr> <tr> <td>resize</td> <td>none</td> <td>调整标签页（tabs）容器的尺寸并做布局。</td> </tr> <tr> <td>add</td> <td>options</td> <td>添加一个新的标签页面板（tab panel），options 参数是一个配置对象，更多详细信息请参见标签页面板（tab panel）属性。<br> 当添加一个新的标签页面板（tab panel）时，它将被选中。<br> 如需添加一个未选中的标签页面板（tab panel），请记得设置 'selected' 属性为 false。 <pre class="prettyprint linenums">// add a unselected tab panel
+$('#tt').tabs('add',{
+	title: 'new tab',
+	selected: false
+	//...
+});
+</pre> </td> </tr> <tr> <td>close</td> <td>which</td> <td>关闭一个标签页面板（tab panel），'which' 参数可以是要被关闭的标签页面板（tab panel）的标题（title）或索引（index）。</td> </tr> <tr> <td>getTab</td> <td>which</td> <td>获取指定的标签页面板（tab panel），'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。</td> </tr> <tr> <td>getTabIndex</td> <td>tab</td> <td>获取指定的标签页面板（tab panel）索引。</td> </tr> <tr> <td>getSelected</td> <td>none</td> <td>获取选中的标签页面板（tab panel）。下面的实例演示如何获取选中的标签页面板（tab panel）的索引。 <pre class="prettyprint linenums">var tab = $('#tt').tabs('getSelected');
+var index = $('#tt').tabs('getTabIndex',tab);
+alert(index);
+</pre> </td> </tr> <tr> <td>select</td> <td>which</td> <td>选择一个标签页面板（tab panel），'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。</td> </tr> <tr> <td>unselect</td> <td>which</td> <td>选择一个标签页面板（tab panel），'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。该方法自版本 1.3.5 起可用。</td> </tr> <tr> <td>showHeader</td> <td>none</td> <td>显示标签页（tabs）头部。该方法自版本 1.3.5 起可用。</td> </tr> <tr> <td>hideHeader</td> <td>none</td> <td>隐藏标签页（tabs）头部。该方法自版本 1.3.5 起可用。</td> </tr> <tr> <td>exists</td> <td>which</td> <td>指示指定的面板是否已存在，'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。</td> </tr> <tr> <td>update</td> <td>param</td> <td>更新指定的标签页面板（tab panel），param 参数包含两个属性：<br> tab：被更新的标签页面板（tab panel）。<br> options：面板（panel）的选项（options）。<br> <br> 代码实例： <pre class="prettyprint linenums">// update the selected panel with new title and content
+var tab = $('#tt').tabs('getSelected');  // get selected panel
+$('#tt').tabs('update', {
+	tab: tab,
+	options: {
+		title: 'New Title',
+		href: 'get_content.php'  // the new content URL
+	}
+});
+
+// call 'refresh' method for tab panel to update its content
+var tab = $('#tt').tabs('getSelected');  // get selected panel
+tab.panel('refresh', 'get_content.php');
+</pre> </td> </tr> <tr> <td>enableTab</td> <td>which</td> <td>启用指定的标签页面板（tab panel），'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。该方法自版本 1.3 起可用。<br> <br> 代码实例： <pre class="prettyprint linenums">$('#tt').tabs('enableTab', 1);	// enable the second tab panel
+$('#tt').tabs('enableTab', 'Tab2');	enable the tab panel that has 'Tab2' title
+</pre> </td> </tr> <tr> <td>disableTab</td> <td>which</td> <td>禁用指定的标签页面板（tab panel），'which' 参数可以是标签页面板（tab panel）的标题（title）或索引（index）。该方法自版本 1.3 起可用。<br> <br> 代码实例： <pre class="prettyprint linenums">$('#tt').tabs('disableTab', 1);	// disable the second tab panel.
+</pre> </td> </tr> <tr> <td>scrollBy</td> <td>deltaX</td> <td>通过指定的像素数滚动标签页（tab）头部，负值表示滚动到右边，正值表示滚动到左边。该方法自版本 1.3.2 起可用。<br> <br> 代码实例： <pre class="prettyprint linenums">// scroll the tab header to left
+$('#tt').tabs('scroll', 10);
+</pre> </td> </tr> </table></div> <h2>标签页面板（Tab Panel）</h2> <p>标签页面板（tab panel）属性被定义在面板（panel）组件里，下面是一些常用的属性。</p> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">类型</th> <th align="left">描述</th> <th align="left">默认值</th> </tr> <tr> <td>id</td> <td>string</td> <td>标签页面板（tab panel）的 id 属性。</td> <td>null</td> </tr> <tr> <td>title</td> <td>string</td> <td>标签页面板（tab panel）的标题文字。</td> <td> </td> </tr> <tr> <td>content</td> <td>string</td> <td>标签页面板（tab panel）的内容。</td> <td> </td> </tr> <tr> <td>href</td> <td>string</td> <td>加载远程内容来填充标签页面板（tab panel）的 URL。</td> <td>null</td> </tr> <tr> <td>cache</td> <td>boolean</td> <td>当设置为 true 时，在设定了有效的 href 特性时缓存这个标签页面板（tab panel）。</td> <td>true</td> </tr> <tr> <td>iconCls</td> <td>string</td> <td>显示在标签页面板（tab panel）标题上的图标的 CSS class。</td> <td>null</td> </tr> <tr> <td>width</td> <td>number</td> <td>标签页面板（tab panel）的宽度。</td> <td>auto</td> </tr> <tr> <td>height</td> <td>number</td> <td>标签页面板（tab panel）的高度。</td> <td>auto</td> </tr> <tr> <td>collapsible</td> <td>boolean</td> <td>当设置为 true 时，允许标签页面板（tab panel）可折叠。</td> <td>false</td> </tr> </table></div> <p>一些附加的属性。</p> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">类型</th> <th align="left">描述</th> <th align="left">默认值</th> </tr> <tr> <td>closable</td> <td>boolean</td> <td>当设置为 true 时，标签页面板（tab panel）将显示一个关闭按钮，点击它就能关闭这个标签页面板（tab panel）。</td> <td>false</td> </tr> <tr> <td>selected</td> <td>boolean</td> <td>当设置为 true 时，标签页面板（tab panel）将被选中。</td> <td>false</td> </tr> </table></div> <script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="page"><ul><li><a href="159.html">上一篇：EasyUI Panel 面板</a></li><li style="text-align:right;"><a href="161.html">下一篇：EasyUI Accordion 折叠面板</a></li><div class="clear"></div></ul></div></div></div></div><div class="container" style="margin-top:20px;"><div style="float:right;width:200px" ><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 200*90 --><ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-6117966252207595"
+     data-ad-slot="3373881537"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 970x90 --><ins class="adsbygoogle"    style="display:inline-block;width:970px;height:90px"  data-ad-client="ca-pub-6117966252207595" data-ad-slot="2920092348"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><footer><div class="container"><p><a href="../index.html">Jquery EasyUI中文网</a>内容基于<a href="http://www.jeasyui.com/">EasyUI官网</a>，由EasyUI中文小组翻译整理，完全遵循官方Free - Non-commercial 及<a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议。</p><p>Copyright © 2014 - 2015 Jquery EasyUI中文网, <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14024044号-2</a>, All Rights Reserved.</p><ul class="bs-docs-footer-links muted"><li><a href="http://www.jqueryui.org.cn/" target="_blank">Jquery UI中文网</a></li><li>·</li><li><a href="http://www.redis.net.cn/" target="_blank">Redis中文网</a></li><li>·</li><li><a href="https://www.zuijuzi.com/" target="_blank">最句子</a></li><li>·</li><li><a href="../ad/index.html">广告合作</a></li><li>·</li><li><a href="../hongbao/index.html">关注我们</a></li><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm2aef.js?e5fb31febce575aa5e2a1e32ee7bb7c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></ul></div></footer><script src="../Public/js/jquery.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/google-code-prettify/prettify.js"></script><script type="text/javascript">    /*图+推广*/
+    /*建议投放在200*300以上的图片*/
+    var cpro_id = "u1948815";
+</script><script type="text/javascript" src="../../cpro.baidustatic.com/cpro/ui/i.js"></script><script>$(document).ready(function(){
+
+	if($("#ad").offset()){
+		var origin_top= $("#ad").offset().top;
+		$(window).scroll(function(event){
+			var top = $("#ad").offset().top - $(window).scrollTop();
+			if(top < 55){
+				$("#ad").addClass('fixed');
+			}
+			if($("#ad").offset().top < origin_top){
+
+				$("#ad").removeClass('fixed');
+			}
+		});
+	}
+});
+
+
+</script></body>
+<!-- Mirrored from www.jeasyui.net/plugins/160.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:50:58 GMT -->
+</html>

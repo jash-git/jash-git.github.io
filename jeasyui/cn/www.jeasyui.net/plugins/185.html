@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.jeasyui.net/plugins/185.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:51:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF8"><title>Easyui Tree 树_EasyUI 插件</title><meta name="keywords" content="Tree 树,EasyUI 插件"><meta name="description" content=""><style>#right{min-height:2035px;}
+</style><link href="../Public/index/css/bootstrap.min.css" rel="stylesheet"><link href="../Public/index/css/style.css" rel="stylesheet"><link href="../Public/js/google-code-prettify/prettify.css" rel="stylesheet"><link rel="shortcut icon" href="../Public/index/img/favicon.ico" type="image/x-icon" /></head><body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()"><header class="navbar  navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><a href="../index.html" class="navbar-brand">Jquery EasyUI中文网</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li ><a href="../index.html">首页</a></li><li 		><a href="../demo/380.html">EasyUI Demo</a></li><li 		><a href="../tutorial/index.html">EasyUI 教程</a></li><li class="active"		><a href="index.html">EasyUI 插件</a></li><li 		><a href="../extension/index.html">EasyUI 扩展</a></li><li 		><a href="../download/index.html">EasyUI下载</a></li><li><a href="https://s.click.taobao.com/vouVNUw" target="_blank" >Ecs推荐</a></li><li><a href="http://wulv5.com/index/keCourse06.html" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'web前端'])" target="_blank" >Web前端免费课</a></li><li><a href="http://demo.topjui.com/?from=jeasyui" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'TopJUI'])" target="_blank" >综合演示</a></li><li ><a href="../hongbao/index.html" >领红包</a></li></ul></nav></div></header><main id="banner" role="main"><div class="container" ><div class="row"><div class="col-md-3 item1"><a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=iuvvbh9n" target="_blank"><p class="p1">阿里云￥1888</p><p class="p2">零门槛，领取阿里云1888元代金券</p></a></div><div class="col-md-3 item2"><a href="https://cloud.tencent.com/redirect.php?redirect=1014&amp;cps_key=788ce861399613ebaa86cab488aeca4c&amp;from=console" target="_blank"><p class="p1">腾讯云 3折</p><p class="p2">热卖云产品3折起，低至22.22元/月</p></a></div><div class="col-md-3 item1"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DJ1gv%2BO2qLD4cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQhB1t7n5FeOY%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZTX1BBitdF6TsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0lpa1ptKO5BLRDASZ17VUv3T6N01Hh6CoJ7Qo28KjBySXJyCdRhTxYn8P%2FHYXvjWwxg5p7bh%2BFbQ%3D" target="_blank"><p class="p1">阿里云ecs 2折</p><p class="p2">全民云计算，1核1G仅需293元/年</p></a></div><div class="col-md-3 item2"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DGrmOw6nfc1ocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQlNvQJ6gy1mU%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZfDZCapcWphDsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0TXcy3f2zBgfXb7YcYklj7N47SHQYF9SBXa2mv8pFwnUjuFEs%2B0GyeRBHlJ5PMn6aCf4WzR8RYpEMlu5kMKse3g%3D%3D" target="_blank"><p class="p1">阿里云免备案</p><p class="p2">海外免备案云服务器2折起，低至293元/年</p></a></div></div></div></main><style>#banner{
+	background:#2d3e50;
+	padding:0;
+	margin-bottom:10px;
+	color:#fff;
+}
+#banner a{
+	color:#fff;
+	text-decoration:none;
+}
+#banner .p1{
+	font-size:15px;
+}
+#banner .p2{
+	font-size:12px;
+	color:#f7f7f7;
+
+}
+#banner .col-md-3{
+	padding:40px 20px;
+}
+#banner .item1{
+	background:#2d3e50;	
+}
+#banner .item2{
+	background:#27384b;
+}
+
+</style><div class="container bs-docs-container" style="margin-top:20px;"><div id="left"><div class="bs-docs-sidebar" role="complementary" id="list"><ul class="nav bs-docs-sidenav"><li class="active"><a href="#">Base（基础）</a><ul class="nav"><li ><a href="150.html">Parser 解析器</a></li><li ><a href="151.html">Easyloader 加载器</a></li><li ><a href="152.html">Draggable 可拖动</a></li><li ><a href="153.html">Droppable 可放置</a></li><li ><a href="154.html">Resizable 可调整尺寸</a></li><li ><a href="155.html">Pagination 分页</a></li><li ><a href="156.html">Searchbox 搜索框</a></li><li ><a href="157.html">Progressbar 进度条</a></li><li ><a href="158.html">Tooltip 提示框</a></li></ul></li><li class="active"><a href="#">Layout（布局）</a><ul class="nav"><li ><a href="159.html">Panel 面板</a></li><li ><a href="160.html">Tabs 标签页/选项卡</a></li><li ><a href="161.html">Accordion 折叠面板</a></li><li ><a href="162.html">Layout 布局</a></li></ul></li><li class="active"><a href="#">Menu（菜单）与 Button（按钮）</a><ul class="nav"><li ><a href="163.html">Menu 菜单</a></li><li ><a href="187.html">Linkbutton 链接按钮</a></li><li ><a href="164.html">Menubutton 菜单按钮</a></li><li ><a href="165.html">Splitbutton 分割按钮</a></li></ul></li><li class="active"><a href="#">Form（表单）</a><ul class="nav"><li ><a href="166.html">Form 表单</a></li><li ><a href="167.html">Validatebox 验证框</a></li><li ><a href="169.html">Combobox 组合框</a></li><li ><a href="168.html">Combo 组合</a></li><li ><a href="170.html">Combotree 组合树</a></li><li ><a href="171.html">Combogrid 组合网格</a></li><li ><a href="172.html">Numberbox 数字框</a></li><li ><a href="173.html">Datebox 日期框</a></li><li ><a href="174.html">Datetimebox 日期时间框</a></li><li ><a href="175.html">Calendar 日历</a></li><li ><a href="176.html">Spinner 微调器</a></li><li ><a href="177.html">Numberspinner 数值微调器</a></li><li ><a href="178.html">Timespinner 时间微调器</a></li><li ><a href="179.html">Slider 滑块</a></li></ul></li><li class="active"><a href="#">Window（窗口）</a><ul class="nav"><li ><a href="180.html">Window 窗口</a></li><li ><a href="181.html">Dialog 对话框</a></li><li ><a href="182.html">Messager 消息框</a></li></ul></li><li class="active"><a href="#">DataGrid（数据网格）与 Tree（树）</a><ul class="nav"><li ><a href="183.html">Datagrid 数据网格</a></li><li ><a href="184.html">Propertygrid 属性网格</a></li><li class="active"><a href="185.html">Tree 树</a></li><li ><a href="186.html">Treegrid 树形网格</a></li></ul></li><li></ul></div><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300*600 --><ins class="adsbygoogle"   style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="1805384745"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div style="margin-top:5px;" id="ad"><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div id="right"><div id="right-main"><div class="page-header" style="margin:10px 0;"><h1>EasyUI Tree 树</h1></div><div style="margin-bottom:10px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script> <div class="tutintro"> <p>通过 $.fn.tree.defaults 重写默认的 defaults。</p> <p>树（tree）在网页中以树形结构显示分层数据。它向用户提供展开、折叠、拖拽、编辑和异步加载功能。</p> </div> <img src="../Uploads/images/tree.png"/> <h2>依赖</h2> <ul> <li>draggable</li> <li>droppable</li> </ul> <h2>用法</h2> <p>树（tree）定义在 &lt;ul&gt; 元素中。该标记可定义叶节点和子节点。节点将是 ul 列表内的 &lt;li&gt; 元素。下面演示了将被用于制作嵌套在 ul 元素内的树节点的元素。</p> <pre class="prettyprint linenums">&lt;ul id="tt" class="easyui-tree"&gt;
+    &lt;li&gt;
+		&lt;span&gt;Folder&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;
+				&lt;span&gt;Sub Folder 1&lt;/span&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;span&gt;&lt;a href="#"&gt;File 11&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;span&gt;File 12&lt;/span&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;span&gt;File 13&lt;/span&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;File 2&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;File 3&lt;/span&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;File21&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre> <p>树（Tree）也可以在一个空的 &lt;ul&gt; 元素中定义，可使用 javascript 加载数据。</p> <pre class="prettyprint linenums">&lt;ul id="tt"&gt;&lt;/ul&gt;
+</pre> <pre class="prettyprint linenums">$('#tt').tree({
+    url:'tree_data.json'
+});
+</pre> <p>使用 loadFilter 来处理来自 ASP.NET web 服务的 json 数据。</p> <pre class="prettyprint linenums">$('#tt').tree({
+    url: ...,
+    loadFilter: function(data){
+		if (data.d){
+			return data.d;
+		} else {
+			return data;
+		}
+    }
+});
+</pre> <h2>树的数据格式（Tree Data Format）</h2> <p>每个节点可以包括下列属性：</p> <ul> <li>id：节点的 id，它对于加载远程数据很重要。</li> <li>text：要显示的节点文本。</li> <li>state：节点状态，'open' 或 'closed'，默认是 'open'。当设置为 'closed' 时，该节点有子节点，并且将从远程站点加载它们。</li> <li>checked：指示节点是否被选中。</li> <li>attributes：给一个节点添加的自定义属性。</li> <li>children：定义了一些子节点的节点数组。</li> </ul> <p>实例：</p> <pre class="prettyprint linenums">[{
+    "id":1,
+    "text":"Folder1",
+    "iconCls":"icon-save",
+    "children":[{
+		"text":"File1",
+		"checked":true
+    },{
+		"text":"Books",
+		"state":"open",
+		"attributes":{
+			"url":"/demo/book/abc",
+			"price":100
+		},
+		"children":[{
+			"text":"PhotoShop",
+			"checked":true
+		},{
+			"id": 8,
+			"text":"Sub Bookds",
+			"state":"closed"
+		}]
+    }]
+},{
+    "text":"Languages",
+    "state":"closed",
+    "children":[{
+		"text":"Java"
+    },{
+		"text":"C#"
+    }]
+}]
+</pre> <h2>异步树</h2> <p>树支持内置的异步加载模式，因此用户可以创建一个空的树，然后指定一个动态返回 JSON 数据的服务器端，用于根据需求异步填充树。下面是一个实例：</p> <pre class="prettyprint linenums">&lt;ul class="easyui-tree" data-options="url:'get_data.php'"&gt;&lt;/ul&gt;
+</pre> <p>树是通过 URL 'get_data.php' 加载的。子节点依赖于父节点状态被加载。当展开一个关闭的节点时，如果该节点没有子节点加载，它将通过上面定义的 URL 向服务器发送节点的 id 值作为名为 'id' 的 http 请求参数，以便检索子节点。</p> <p>请看从服务器返回的数据：</p> <pre class="prettyprint linenums">[{
+    "id": 1,
+    "text": "Node 1",
+    "state": "closed",
+    "children": [{
+		"id": 11,
+		"text": "Node 11"
+    },{
+		"id": 12,
+		"text": "Node 12"
+    }]
+},{
+    "id": 2,
+    "text": "Node 2",
+    "state": "closed"
+}]
+</pre> <p>节点 1 和节点 2 是关闭的，当展开节点 1 时，将直接展示它的子节点。当展开节点 2 时，将向服务器发送 value(2) 以便检索子节点。</p> <p>本教程中的 <a href="jeasyui-tree-tree2.html" target='_blank'>创建异步树</a> 演示了如何编写服务器代码来根据需求返回树的数据。</p> <h2>属性</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">类型</th> <th align="left">描述</th> <th align="left">默认值</th> </tr> <tr> <td>url</td> <td>string</td> <td>获取远程数据的 URL 。</td> <td>null</td> </tr> <tr> <td>method</td> <td>string</td> <td>检索数据的 http 方法（method）。</td> <td>post</td> </tr> <tr> <td>animate</td> <td>boolean</td> <td>定义当节点展开折叠时是否显示动画效果。</td> <td>false</td> </tr> <tr> <td>checkbox</td> <td>boolean</td> <td>定义是否在每个节点前边显示复选框。</td> <td>false</td> </tr> <tr> <td>cascadeCheck</td> <td>boolean</td> <td>定义是否级联检查。</td> <td>true</td> </tr> <tr> <td>onlyLeafCheck</td> <td>boolean</td> <td>定义是否只在叶节点前显示复选框。</td> <td>false</td> </tr> <tr> <td>lines</td> <td>boolean</td> <td>定义是否显示树线条。</td> <td>false</td> </tr> <tr> <td>dnd</td> <td>boolean</td> <td>定义是否启用拖放。</td> <td>false</td> </tr> <tr> <td>data</td> <td>array</td> <td>要加载的节点数据。 <pre class="prettyprint linenums">$('#tt').tree({
+	data: [{
+		text: 'Item1',
+		state: 'closed',
+		children: [{
+			text: 'Item11'
+		},{
+			text: 'Item12'
+		}]
+	},{
+		text: 'Item2'
+	}]
+});
+</pre> </td> <td>null</td> </tr> <tr> <td>formatter</td> <td>function(node)</td> <td>定义如何呈现节点文本。<br> 代码实例： <pre class="prettyprint linenums">$('#tt').tree({
+	formatter:function(node){
+		return node.text;
+	}
+});
+</pre> </td> <td></td> </tr> <tr> <td>loader</td> <td>function(param,success,error)</td> <td>定义如何从远程服务器加载数据。返回 false 则取消该动作。该函数有下列参数：<br> param：要传递到远程服务器的参数对象。<br> success(data)：当检索数据成功时调用的回调函数。<br> error()：当检索数据失败时调用的回调函数。<br> </td> <td>json loader</td> </tr> <tr> <td>loadFilter</td> <td>function(data,parent)</td> <td>返回要显示的过滤数据。返回数据时以标准树格式返回的。该函数有下列参数：<br> data：要加载的原始数据。<br> parent：DOM 对象，表示父节点。 </td> <td></td> </tr> </table></div> <h2>事件</h2> <p>很多事件的回调函数需要 'node' 参数，它包括下列属性：</p> <ul> <li>id：绑定到节点的标识值。</li> <li>text：要显示的文本。</li> <li>iconCls：用来显示图标的 css class。</li> <li>checked：节点是否被选中。</li> <li>state：节点状态，'open' 或 'closed'。</li> <li>attributes：绑定到节点的自定义属性。</li> <li>target：目标的 DOM 对象。</li> </ul> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>onClick</td> <td>node</td> <td>当用户点击一个节点时触发。代码实例： <pre class="prettyprint linenums">$('#tt').tree({
+	onClick: function(node){
+		alert(node.text);  // alert node text property when clicked
+	}
+});
+</pre> </td> </tr> <tr> <td>onDblClick</td> <td>node</td> <td>当用户双击一个节点时触发。</td> </tr> <tr> <td>onBeforeLoad</td> <td>node, param</td> <td>当加载数据的请求发出前触发，返回 false 则取消加载动作。</td> </tr> <tr> <td>onLoadSuccess</td> <td>node, data</td> <td>当数据加载成功时触发。</td> </tr> <tr> <td>onLoadError</td> <td>arguments</td> <td>当数据加载失败时触发，arguments 参数与 jQuery.ajax 的 'error' 函数一样。</td> </tr> <tr> <td>onBeforeExpand</td> <td>node</td> <td>节点展开前触发，返回 false 则取消展开动作。</td> </tr> <tr> <td>onExpand</td> <td>node</td> <td>当节点展开时触发。</td> </tr> <tr> <td>onBeforeCollapse</td> <td>node</td> <td>节点折叠前触发，返回 false 则取消折叠动作。</td> </tr> <tr> <td>onCollapse</td> <td>node</td> <td>当节点折叠时触发。</td> </tr> <tr> <td>onBeforeCheck</td> <td>node, checked</td> <td>当用户点击复选框前触发，返回 false 则取消该选中动作。该事件自版本 1.3.1 起可用。</td> </tr> <tr> <td>onCheck</td> <td>node, checked</td> <td>当用户点击复选框时触发。</td> </tr> <tr> <td>onBeforeSelect</td> <td>node</td> <td>节点被选中前触发，返回 false 则取消选择动作。</td> </tr> <tr> <td>onSelect</td> <td>node</td> <td>当节点被选中时触发。</td> </tr> <tr> <td>onContextMenu</td> <td>e, node</td> <td>当右键点击节点时触发。代码实例： <pre class="prettyprint linenums">// right click node and then display the context menu
+$('#tt').tree({
+	onContextMenu: function(e, node){
+		e.preventDefault();
+		// select the node
+		$('#tt').tree('select', node.target);
+		// display context menu
+		$('#mm').menu('show', {
+			left: e.pageX,
+			top: e.pageY
+		});
+	}
+});
+
+// the context menu is defined as below:
+&lt;div id="mm" class="easyui-menu" style="width:120px;"&gt;
+	&lt;div onclick="append()" data-options="iconCls:'icon-add'"&gt;Append&lt;/div&gt;
+	&lt;div onclick="remove()" data-options="iconCls:'icon-remove'"&gt;Remove&lt;/div&gt;
+&lt;/div&gt;
+</pre> </td> </tr> <tr> <td>onBeforeDrag</td> <td>node</td> <td>当节点的拖拽开始时触发，返回 false 则禁止拖拽。该事件自版本 1.3.2 起可用。 </td> </tr> <tr> <td>onStartDrag</td> <td>node</td> <td>当开始拖拽节点时触发。该事件自版本 1.3.2 起可用。</td> </tr> <tr> <td>onStopDrag</td> <td>node</td> <td>当停止拖拽节点时触发。该事件自版本 1.3.2 起可用。</td> </tr> <tr> <td>onDragEnter</td> <td>target, source</td> <td>当节点被拖拽进入某个允许放置的目标节点时触发，返回 false 则禁止放置。<br> target：被放置的目标节点元素。<br> source：被拖拽的源节点。<br> 该事件自版本 1.3.2 起可用。 </td> </tr> <tr> <td>onDragOver</td> <td>target, source</td> <td>当节点被拖拽到允许放置的目标节点上时触发，返回 false 则禁止放置。<br> target：被放置的目标节点元素。<br> source：被拖拽的源节点。<br> 该事件自版本 1.3.2 起可用。 </td> </tr> <tr> <td>onDragLeave</td> <td>target, source</td> <td>当节点被拖拽离开允许放置的目标节点时触发。<br> target：被放置的目标节点元素。<br> source：被拖拽的源节点。<br> 该事件自版本 1.3.2 起可用。 </td> </tr> <tr> <td>onBeforeDrop</td> <td>target,source,point</td> <td>节点被放置之前触发，返回 false 则禁止放置。<br> target：DOM 对象，放置的目标节点。<br> source：源节点。<br> point：表示放置操作，可能的值是：'append'、'top' 或 'bottom'。<br> 该事件自版本 1.3.2 起可用。 </td> </tr> <tr> <td>onDrop</td> <td>target,source,point</td> <td>当节点被放置时触发。 target：DOM 对象，放置的目标节点。<br> source：源节点。<br> point：表示放置操作，可能的值是：'append'、'top' 或 'bottom'。 </td> </tr> <tr> <td>onBeforeEdit</td> <td>node</td> <td>编辑节点前触发。</td> </tr> <tr> <td>onAfterEdit</td> <td>node</td> <td>编辑节点后触发。</td> </tr> <tr> <td>onCancelEdit</td> <td>node</td> <td>当取消编辑动作时触发。</td> </tr> </table></div> <h2>方法</h2> <div class="table_box"><table class="table table-striped table-bordered"> <tr> <th align="left">名称</th> <th align="left">参数</th> <th align="left">描述</th> </tr> <tr> <td>options</td> <td>none</td> <td>返回树的选项（options）。</td> </tr> <tr> <td>loadData</td> <td>data</td> <td>加载树的数据。</td> </tr> <tr> <td>getNode</td> <td>target</td> <td>获取指定的节点对象。</td> </tr> <tr> <td>getData</td> <td>target</td> <td>获取指定的节点数据，包括它的子节点。</td> </tr> <tr> <td>reload</td> <td>target</td> <td>重新加载树的数据。</td> </tr> <tr> <td>getRoot</td> <td>none</td> <td>获取根节点，返回节点对象。</td> </tr> <tr> <td>getRoots</td> <td>none</td> <td>获取根节点，返回节点数组。</td> </tr> <tr> <td>getParent</td> <td>target</td> <td>获取父节点，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>getChildren</td> <td>target</td> <td>获取子节点， target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>getChecked</td> <td>state</td> <td>获取选中的节点。状态可用值有：'checked'、'unchecked'、'indeterminate'。如果状态未分配，则返回 'checked' 节点。<br> 代码实例： <pre class="prettyprint linenums">var nodes = $('#tt').tree('getChecked');	// get checked nodes
+var nodes = $('#tt').tree('getChecked', 'unchecked');	// get unchecked nodes
+var nodes = $('#tt').tree('getChecked', 'indeterminate');	// get indeterminate nodes
+var nodes = $('#tt').tree('getChecked', ['checked','indeterminate']);	// get checked and indeterminate nodes
+</pre> </td> </tr> <tr> <td>getSelected</td> <td>none</td> <td>获取选中的节点并返回它，如果没有选中节点，则返回 null。</td> </tr> <tr> <td>isLeaf</td> <td>target</td> <td>把指定的节点定义成叶节点，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>find</td> <td>id</td> <td>找到指定的节点并返回该节点对象。代码实例： <pre class="prettyprint linenums">// find a node and then select it
+var node = $('#tt').tree('find', 12);
+$('#tt').tree('select', node.target);
+</pre> </td> </tr> <tr> <td>select</td> <td>target</td> <td>选中一个节点，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>check</td> <td>target</td> <td>把指定节点设置为勾选。</td> </tr> <tr> <td>uncheck</td> <td>target</td> <td>把指定节点设置为未勾选。</td> </tr> <tr> <td>collapse</td> <td>target</td> <td>折叠一个节点，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>expand</td> <td>target</td> <td>展开一个节点，target 参数表示节点的 DOM 对象。当节点关闭且没有子节点时，节点的 id 值（名为 'id' 参数）将被发送至服务器以请求子节点数据。</td> </tr> <tr> <td>collapseAll</td> <td>target</td> <td>折叠所有的节点。</td> </tr> <tr> <td>expandAll</td> <td>target</td> <td>展开所有的节点。</td> </tr> <tr> <td>expandTo</td> <td>target</td> <td>从根部展开一个指定的节点。</td> </tr> <tr> <td>scrollTo</td> <td>target</td> <td>滚动到指定节点。该方法自版本 1.3.4 起可用。</td> </tr> <tr> <td>append</td> <td>param</td> <td>追加一些子节点到一个父节点，param 参数有两个属性：<br> parent：DOM 对象，要追加到的父节点，如果没有分配，则追加为根节点。<br> data：数组，节点的数据。<br> <br> 代码实例： <pre class="prettyprint linenums">// append some nodes to the selected node
+var selected = $('#tt').tree('getSelected');
+$('#tt').tree('append', {
+	parent: selected.target,
+	data: [{
+		id: 23,
+		text: 'node23'
+	},{
+		text: 'node24',
+		state: 'closed',
+		children: [{
+			text: 'node241'
+		},{
+			text: 'node242'
+		}]
+	}]
+});
+</pre> </td> </tr> <tr> <td>toggle</td> <td>target</td> <td>切换节点的展开/折叠状态，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>insert</td> <td>param</td> <td>在指定节点的前边或后边插入一个节点，param 参数包括下列属性：<br> before：DOM 对象，前边插入的节点。<br> after：DOM 对象，后边插入的节点。<br> data：对象，节点数据。<br> <br> 下面的代码演示了如何在选中节点之前插入一个新的节点： <pre class="prettyprint linenums">var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('insert', {
+		before: node.target,
+		data: {
+			id: 21,
+			text: 'node text'
+		}
+	});
+}
+</pre> </td> </tr> <tr> <td>remove</td> <td>target</td> <td>移除一个节点和它的子节点，target 参数表示节点的 DOM 对象。</td> </tr> <tr> <td>pop</td> <td>target</td> <td>弹出一个节点和它的子节点，该方法和 remove 一样，但是返回了移除的节点数据。</td> </tr> <tr> <td>update</td> <td>param</td> <td>更新指定的节点，'param' 参数有下列属性：<br> target（DOM 对象，要被更新的节点）、id、text、iconCls、checked，等等。<br> <br> 代码实例： <pre class="prettyprint linenums">// update the selected node text
+var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('update', {
+		target: node.target,
+		text: 'new text'
+	});
+}
+</pre> </td> </tr> <tr> <td>enableDnd</td> <td>none</td> <td>启用拖放功能。</td> </tr> <tr> <td>disableDnd</td> <td>none</td> <td>禁用拖放功能。</td> </tr> <tr> <td>beginEdit</td> <td>target</td> <td>开始编辑节点。</td> </tr> <tr> <td>endEdit</td> <td>target</td> <td>结束编辑节点。</td> </tr> <tr> <td>cancelEdit</td> <td>target</td> <td>取消编辑节点。</td> </tr> </table></div> <script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="page"><ul><li><a href="184.html">上一篇：EasyUI Propertygrid 属性网格</a></li><li style="text-align:right;"><a href="186.html">下一篇：EasyUI Treegrid 树形网格</a></li><div class="clear"></div></ul></div></div></div></div><div class="container" style="margin-top:20px;"><div style="float:right;width:200px" ><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 200*90 --><ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-6117966252207595"
+     data-ad-slot="3373881537"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 970x90 --><ins class="adsbygoogle"    style="display:inline-block;width:970px;height:90px"  data-ad-client="ca-pub-6117966252207595" data-ad-slot="2920092348"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><footer><div class="container"><p><a href="../index.html">Jquery EasyUI中文网</a>内容基于<a href="http://www.jeasyui.com/">EasyUI官网</a>，由EasyUI中文小组翻译整理，完全遵循官方Free - Non-commercial 及<a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议。</p><p>Copyright © 2014 - 2015 Jquery EasyUI中文网, <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14024044号-2</a>, All Rights Reserved.</p><ul class="bs-docs-footer-links muted"><li><a href="http://www.jqueryui.org.cn/" target="_blank">Jquery UI中文网</a></li><li>·</li><li><a href="http://www.redis.net.cn/" target="_blank">Redis中文网</a></li><li>·</li><li><a href="https://www.zuijuzi.com/" target="_blank">最句子</a></li><li>·</li><li><a href="../ad/index.html">广告合作</a></li><li>·</li><li><a href="../hongbao/index.html">关注我们</a></li><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm2aef.js?e5fb31febce575aa5e2a1e32ee7bb7c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></ul></div></footer><script src="../Public/js/jquery.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/google-code-prettify/prettify.js"></script><script type="text/javascript">    /*图+推广*/
+    /*建议投放在200*300以上的图片*/
+    var cpro_id = "u1948815";
+</script><script type="text/javascript" src="../../cpro.baidustatic.com/cpro/ui/i.js"></script><script>$(document).ready(function(){
+
+	if($("#ad").offset()){
+		var origin_top= $("#ad").offset().top;
+		$(window).scroll(function(event){
+			var top = $("#ad").offset().top - $(window).scrollTop();
+			if(top < 55){
+				$("#ad").addClass('fixed');
+			}
+			if($("#ad").offset().top < origin_top){
+
+				$("#ad").removeClass('fixed');
+			}
+		});
+	}
+});
+
+
+</script></body>
+<!-- Mirrored from www.jeasyui.net/plugins/185.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:51:01 GMT -->
+</html>

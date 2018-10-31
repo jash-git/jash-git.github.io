@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.jeasyui.net/tutorial/54.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:53:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF8"><title>Easyui 树形菜单添加节点_EasyUI 教程</title><meta name="keywords" content="树形菜单添加节点,EasyUI 教程"><meta name="description" content=""><style>#right{min-height:1971px;}
+</style><link href="../Public/index/css/bootstrap.min.css" rel="stylesheet"><link href="../Public/index/css/style.css" rel="stylesheet"><link href="../Public/js/google-code-prettify/prettify.css" rel="stylesheet"><link rel="shortcut icon" href="../Public/index/img/favicon.ico" type="image/x-icon" /></head><body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()"><header class="navbar  navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><a href="../index.html" class="navbar-brand">Jquery EasyUI中文网</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li ><a href="../index.html">首页</a></li><li 		><a href="../demo/380.html">EasyUI Demo</a></li><li class="active"		><a href="index.html">EasyUI 教程</a></li><li 		><a href="../plugins/index.html">EasyUI 插件</a></li><li 		><a href="../extension/index.html">EasyUI 扩展</a></li><li 		><a href="../download/index.html">EasyUI下载</a></li><li><a href="https://s.click.taobao.com/vouVNUw" target="_blank" >Ecs推荐</a></li><li><a href="http://wulv5.com/index/keCourse06.html" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'web前端'])" target="_blank" >Web前端免费课</a></li><li><a href="http://demo.topjui.com/?from=jeasyui" 
+ onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'TopJUI'])" target="_blank" >综合演示</a></li><li ><a href="../hongbao/index.html" >领红包</a></li></ul></nav></div></header><main id="banner" role="main"><div class="container" ><div class="row"><div class="col-md-3 item1"><a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=iuvvbh9n" target="_blank"><p class="p1">阿里云￥1888</p><p class="p2">零门槛，领取阿里云1888元代金券</p></a></div><div class="col-md-3 item2"><a href="https://cloud.tencent.com/redirect.php?redirect=1014&amp;cps_key=788ce861399613ebaa86cab488aeca4c&amp;from=console" target="_blank"><p class="p1">腾讯云 3折</p><p class="p2">热卖云产品3折起，低至22.22元/月</p></a></div><div class="col-md-3 item1"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DJ1gv%2BO2qLD4cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQhB1t7n5FeOY%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZTX1BBitdF6TsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0lpa1ptKO5BLRDASZ17VUv3T6N01Hh6CoJ7Qo28KjBySXJyCdRhTxYn8P%2FHYXvjWwxg5p7bh%2BFbQ%3D" target="_blank"><p class="p1">阿里云ecs 2折</p><p class="p2">全民云计算，1核1G仅需293元/年</p></a></div><div class="col-md-3 item2"><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DGrmOw6nfc1ocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvGgDNt%2FdwNQlNvQJ6gy1mU%2BmQ3egC%2F94B58OUq1L74UjOgy%2BxlNqnZfDZCapcWphDsGFuxRGRKDjbWOQdzGwNlEiFenDNcIzk9%2FYFgWEAd0TXcy3f2zBgfXb7YcYklj7N47SHQYF9SBXa2mv8pFwnUjuFEs%2B0GyeRBHlJ5PMn6aCf4WzR8RYpEMlu5kMKse3g%3D%3D" target="_blank"><p class="p1">阿里云免备案</p><p class="p2">海外免备案云服务器2折起，低至293元/年</p></a></div></div></div></main><style>#banner{
+	background:#2d3e50;
+	padding:0;
+	margin-bottom:10px;
+	color:#fff;
+}
+#banner a{
+	color:#fff;
+	text-decoration:none;
+}
+#banner .p1{
+	font-size:15px;
+}
+#banner .p2{
+	font-size:12px;
+	color:#f7f7f7;
+
+}
+#banner .col-md-3{
+	padding:40px 20px;
+}
+#banner .item1{
+	background:#2d3e50;	
+}
+#banner .item2{
+	background:#27384b;
+}
+
+</style><div class="container bs-docs-container" style="margin-top:20px;"><div id="left"><div class="bs-docs-sidebar" role="complementary" id="list"><ul class="nav bs-docs-sidenav"><li class="active"><a href="#">EasyUI应用</a><ul class="nav"><li ><a href="147.html">创建 CRUD 应用</a></li><li ><a href="148.html">创建 CRUD 数据网格（DataGrid）</a></li><li ><a href="4.html">创建展开行明细编辑表单的 CRUD 应用</a></li><li ><a href="5.html">创建 RSS Feed 阅读器</a></li></ul></li><li class="active"><a href="#">EasyUI 拖放</a><ul class="nav"><li ><a href="6.html">基本的拖动和放置</a></li><li ><a href="7.html">创建拖放的购物车</a></li><li ><a href="8.html">创建学校课程表</a></li></ul></li><li class="active"><a href="#">EasyUI 菜单与按钮</a><ul class="nav"><li ><a href="9.html">创建简单的菜单</a></li><li ><a href="10.html">创建链接按钮（Link Button）</a></li><li ><a href="11.html">创建菜单按钮（Menu Button）</a></li><li ><a href="12.html">创建分割按钮（Split Button）</a></li></ul></li><li class="active"><a href="#">EasyUI 布局</a><ul class="nav"><li ><a href="13.html">为网页创建边框布局</a></li><li ><a href="14.html">在面板中创建复杂布局</a></li><li ><a href="15.html">创建折叠面板</a></li><li ><a href="16.html">创建标签页（Tabs）</a></li><li ><a href="17.html">动态添加标签页（Tabs）</a></li><li ><a href="18.html">添加自动播放标签页（Tabs）</a></li><li ><a href="19.html">创建 XP 风格左侧面板</a></li></ul></li><li class="active"><a href="#">EasyUI 数据网格</a><ul class="nav"><li ><a href="20.html">转换 HTML 表格为数据网格</a></li><li ><a href="21.html">添加分页组件</a></li><li ><a href="22.html">添加查询功能</a></li><li ><a href="23.html">取得选中行数据</a></li><li ><a href="24.html">添加工具栏</a></li><li ><a href="25.html">创建复杂工具栏</a></li><li ><a href="26.html">设置冻结列</a></li><li ><a href="27.html">动态改变列</a></li><li ><a href="28.html">格式化列</a></li><li ><a href="29.html">设置排序</a></li><li ><a href="32.html">自定义排序</a></li><li ><a href="33.html">创建列组合</a></li><li ><a href="34.html">添加复选框</a></li><li ><a href="35.html">自定义分页</a></li><li ><a href="36.html">启用行内编辑</a></li><li ><a href="37.html">扩展编辑器</a></li><li ><a href="38.html">列运算</a></li><li ><a href="39.html">合并单元格</a></li><li ><a href="40.html">创建自定义视图</a></li><li ><a href="41.html">创建页脚摘要</a></li><li ><a href="42.html">条件设置行背景颜色</a></li><li ><a href="43.html">创建属性网格</a></li><li ><a href="44.html">扩展行显示细节</a></li><li ><a href="45.html">创建子网格</a></li><li ><a href="46.html">使用虚拟滚动视图显示海量数据</a></li></ul></li><li class="active"><a href="#">EasyUI 窗口</a><ul class="nav"><li ><a href="47.html">创建简单窗口</a></li><li ><a href="48.html">自定义窗口工具栏</a></li><li ><a href="49.html">窗口与布局</a></li><li ><a href="50.html">创建对话框</a></li><li ><a href="51.html">自定义带有工具条和按钮的对话框</a></li></ul></li><li class="active"><a href="#">EasyUI 树形菜单</a><ul class="nav"><li ><a href="52.html">使用标记创建树形菜单</a></li><li ><a href="53.html">创建异步树形菜单</a></li><li class="active"><a href="54.html">树形菜单添加节点</a></li><li ><a href="55.html">创建带复选框的树形菜单</a></li><li ><a href="56.html">树形菜单拖放控制</a></li><li ><a href="57.html">树形菜单加载父/子节点</a></li><li ><a href="58.html">创建基础树形网格</a></li><li ><a href="59.html">创建复杂树形网格</a></li><li ><a href="60.html">树形网格动态加载</a></li><li ><a href="61.html">树形网格添加分页</a></li><li ><a href="62.html">树形网格惰性加载节点</a></li></ul></li><li class="active"><a href="#">EasyUI 表单</a><ul class="nav"><li ><a href="63.html">创建异步提交表单</a></li><li ><a href="64.html">创建树形下拉框</a></li><li ><a href="65.html">表单验证</a></li><li ><a href="66.html">格式化下拉框</a></li><li ><a href="67.html">过滤下拉数据网格</a></li></ul></li><li></ul></div><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><!----><div style="margin-top:5px;" id="ad"><div class="g_ajax g_300_250"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 300x250 --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2779308349"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div id="right"><div id="right-main"><div class="page-header" style="margin:10px 0;"><h1>EasyUI 树形菜单添加节点</h1></div><div style="margin-bottom:10px;"><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script> <p>本教程向您展示如何附加节点到树形菜单（Tree）。我们将创建一个包含水果和蔬菜节点的食品树，然后添加一些其他水果到已存在的水果节点。</p> <img src="../Uploads/images/tree3_1.png"/> <h4>创建食品树</h4> <p>首先，我们创建食品树，代码如下所示：</p> <pre class="prettyprint linenums">	&lt;div style="width:200px;height:auto;border:1px solid #ccc;"&gt;
+		&lt;ul id="tt" class="easyui-tree" url="tree_data.json"&gt;&lt;/ul&gt;
+	&lt;/div&gt;
+</pre> <p>请注意，树（Tree)组件是定义在 &lt;ul&gt; 标记中，树节点数据从 URL "tree_data.json" 加载。</p> <h4>得到父节点</h4> <p>然后我们通过点击节点选择水果节点，我们将添加一些其他的水果数据。执行 getSelected 方法得到处理节点：</p> <pre class="prettyprint linenums">	var node = $('#tt').tree('getSelected');
+</pre> <p>getSelected 方法的返回结果是一个 javascript 对象，它有一个 id、text、target 属性。target 属性是一个 DOM 对象，引用选中节点，它的 append 方法将用于附加子节点。</p> <h4>附加节点</h4> <pre class="prettyprint linenums">	var node = $('#tt').tree('getSelected');
+	if (node){
+		var nodes = [{
+			"id":13,
+			"text":"Raspberry"
+		},{
+			"id":14,
+			"text":"Cantaloupe"
+		}];
+		$('#tt').tree('append', {
+			parent:node.target,
+			data:nodes
+		});
+	}
+</pre> <p>当添加一些水果，您将看见：</p> <img src="../Uploads/images/tree3_2.png"/> <p>正如您所看到的，使用 easyui 的树（Tree）插件去附加节点不是那么的难。</p> <script type="text/javascript" src="../../1.codezh.com/rmevnnull.js"></script><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 728x90 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6117966252207595" data-ad-slot="2639707541"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="file"><h3 class="page-header">jQuery EasyUI 实例下载</h3><a href="../Uploads/file/jeasyui-tree-tree3.zip" class="btn btn-lg btn-default">jeasyui-tree-tree3.zip</a></div><div id="page"><ul><li><a href="53.html">上一篇：EasyUI 创建异步树形菜单</a></li><li style="text-align:right;"><a href="55.html">下一篇：EasyUI 创建带复选框的树形菜单</a></li><div class="clear"></div></ul></div></div></div></div><div class="container" style="margin-top:20px;"><div style="float:right;width:200px" ><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 200*90 --><ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-6117966252207595"
+     data-ad-slot="3373881537"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- 970x90 --><ins class="adsbygoogle"    style="display:inline-block;width:970px;height:90px"  data-ad-client="ca-pub-6117966252207595" data-ad-slot="2920092348"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><footer><div class="container"><p><a href="../index.html">Jquery EasyUI中文网</a>内容基于<a href="http://www.jeasyui.com/">EasyUI官网</a>，由EasyUI中文小组翻译整理，完全遵循官方Free - Non-commercial 及<a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议。</p><p>Copyright © 2014 - 2015 Jquery EasyUI中文网, <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14024044号-2</a>, All Rights Reserved.</p><ul class="bs-docs-footer-links muted"><li><a href="http://www.jqueryui.org.cn/" target="_blank">Jquery UI中文网</a></li><li>·</li><li><a href="http://www.redis.net.cn/" target="_blank">Redis中文网</a></li><li>·</li><li><a href="https://www.zuijuzi.com/" target="_blank">最句子</a></li><li>·</li><li><a href="../ad/index.html">广告合作</a></li><li>·</li><li><a href="../hongbao/index.html">关注我们</a></li><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm2aef.js?e5fb31febce575aa5e2a1e32ee7bb7c4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></ul></div></footer><script src="../Public/js/jquery.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/google-code-prettify/prettify.js"></script><script type="text/javascript">    /*图+推广*/
+    /*建议投放在200*300以上的图片*/
+    var cpro_id = "u1948815";
+</script><script type="text/javascript" src="../../cpro.baidustatic.com/cpro/ui/i.js"></script><script>$(document).ready(function(){
+
+	if($("#ad").offset()){
+		var origin_top= $("#ad").offset().top;
+		$(window).scroll(function(event){
+			var top = $("#ad").offset().top - $(window).scrollTop();
+			if(top < 55){
+				$("#ad").addClass('fixed');
+			}
+			if($("#ad").offset().top < origin_top){
+
+				$("#ad").removeClass('fixed');
+			}
+		});
+	}
+});
+
+
+</script></body>
+<!-- Mirrored from www.jeasyui.net/tutorial/54.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:53:40 GMT -->
+</html>

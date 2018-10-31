@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.jeasyui.net	TRUE	/	FALSE	1999999999	__cfduid	d08dd787365c9417711a50da53f098eeb1540946969
+www.jeasyui.net	TRUE	/	FALSE	1999999999	PHPSESSID	dbpsf1bkp68hhs44po76qckgd0
+.baidu.com	TRUE	/	FALSE	1999999999	BAIDUID	47E03C82828984DDB3A680896320ADC9:FG=1
+hm.baidu.com	TRUE	/	FALSE	1999999999	HMACCOUNT	AB8C4ED4DE9C9D83
+
