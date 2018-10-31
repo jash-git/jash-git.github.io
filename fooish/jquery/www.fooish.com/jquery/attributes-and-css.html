@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-Hant-TW">
+<!-- Mirrored from www.fooish.com/jquery/attributes-and-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:20:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><title>jQuery 屬性與樣式 (Attribute and CSS) - jQuery 教學 Tutorial</title><meta name="viewport" content="width=device-width,minimum-scale=1"><meta property="og:image" content="../assets/img/fooish.jpg"><link href="https://www.fooish.com/favicon.ico" rel="icon" type="image/x-icon"><link rel="canonical" href="attributes-and-css.html"><link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"><link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"><link rel="stylesheet" href="../assets/css/base-305d0c54fd.css"><script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]--><script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-0139842686857411", enable_page_level_ads: true});</script><script>var deviceWidth = $(window).outerWidth(), deviceHeight = $(window).outerHeight();</script></head><body><div id="wrapper" class="wrapper"><header id="topics"><nav><ul><li>//<a href="https://www.fooish.com/">Fooish 程式技術</a>//</li><li><a href="https://www.fooish.com/javascript/">JavaScript</a></li><li><a href="index.html">jQuery</a></li><li><a href="https://www.fooish.com/json/">JSON</a></li><li><a href="https://www.fooish.com/reactjs/">React.js</a></li><li><a href="https://www.fooish.com/regex-regular-expression/">Regex</a></li><li><a href="https://www.fooish.com/sql/">SQL</a></li><li><a href="https://www.fooish.com/posts/">技術文章</a></li></ul></nav><div id="search"><form action="https://www.google.com.tw/" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-0139842686857411:7956756743"><input type="hidden" name="ie" value="UTF-8"><input type="text" name="q" size="20"><input type="submit" name="sa" value="&#x641c;&#x5c0b;"></div></form></div></header><div id="articles-nav-container"><div id="articles-nav"><nav><ul><li><a href="index.html">jQuery 教學</a></li><li><a href="basics.html">jQuery 初探</a></li><li><a href="selectors.html">jQuery 選取元素</a></li><li><a href="attributes-and-css.html">jQuery 屬性與樣式</a></li><li><a href="traversing.html">jQuery 篩選元素</a></li><li><a href="dom-manipulation.html">jQuery DOM 操作</a></li><li><a href="events.html">jQuey 事件處理</a></li><li><a href="effects.html">jQuery 效果動畫</a></li><li><a href="ajax.html">jQuery Ajax</a></li><li><a href="data.html">jQuery Data</a></li><li><a href="deferred.html">jQuery Deferred</a></li></ul></nav></div></div><aside id="aside-container"><div id="ad-aside"><script>if (deviceWidth > 900) {
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    
+                }</script></div></aside><main id="main-container"><article id="article"><h1 id="jquery-屬性與樣式-attributes-css">jQuery 屬性與樣式 (Attributes &amp; CSS)</h1><p>我想一般對於 JavaScript 大部分的操作都用在變動 HTML DOM 元素的屬性跟樣式，如果你有這個經驗，就會知道在設定時會有許多複雜及麻煩的問題，比如說舊 IE 它 setAttribute 不吃 name 屬性；又像在指定 class 屬性時，名稱不能用 class 而要用 className 等問題。令人開心的，jQuery 已經幫你處理掉中間這些繁雜過程可能遇到的問題了！</p><p class="tip">用 jQuery 時，你只需要記得原本的 HTML 和 CSS 是怎樣寫就行。</p><h2 id="jquery-對於-html-tag-屬性的操作-attributes">jQuery 對於 HTML Tag 屬性的操作 (Attributes)</h2><p>取得選取到的元素之屬性值：</p><pre><code class="language-javascript">.attr(attributeName)
+</code></pre><p>例如，取得第一個連結的 title 值：</p><pre><code class="language-javascript">$('a').attr('title');
+</code></pre><hr><p>替選取到的元素設定屬性值：</p><pre><code class="language-javascript">.attr(attributeName, value)
+</code></pre><p>例如，替所有連結的 title 屬性設為 Enjoy jQuery：</p><pre><code class="language-javascript">$('a').attr('title', 'Enjoy jQuery');
+</code></pre><hr><p>你也可以用 key/value object 的方式來替所有匹配到的元素設定多個屬性值：</p><pre><code class="language-javascript">.attr(attributes)
+</code></pre><p>例如，同時改變 alt 和 title 屬性：</p><pre><code class="language-javascript">$( &quot;#greatphoto&quot; ).attr({
+    alt: &quot;Beijing Brush Seller&quot;,
+    title: &quot;photo by Kelly Clark&quot;
+});
+</code></pre><hr><p>移除元素屬性也很簡單：</p><pre><code class="language-javascript">.removeAttr(attributeName)
+</code></pre><p>例如，移除所有連結的 title 屬性：</p><pre><code class="language-javascript">$('a').removeAttr('title');
+// 上面同等於這樣做
+$('a').attr('title', null);
+</code></pre><h2 id="jquery-對-class-這個屬性有特別的處理">jQuery 對 class 這個屬性有特別的處理</h2><p>對於 class，jQuery 另外提供個別的函式來作 class 增刪的動作，這是為了可以方便疊加與移除特定的 class。</p><p>增加 class:</p><pre><code class="language-javascript">.addClass(className)
+</code></pre><p>例如，幫所有的段落加入 selected 和 highlight 類別：</p><pre><code class="language-javascript">$('p').addClass('selected highlight');
+</code></pre><p class="tip">用空白隔開多個 class。</p><hr><p>移除 class：</p><pre><code class="language-javascript">.removeClass(className)
+</code></pre><p>例如，移除 id 為 wrapper 的元素其 blue 這個類別：</p><pre><code class="language-javascript">$('#wrapper').removeClass('blue');
+</code></pre><h2 id="value-getter-setter">Value - Getter/Setter</h2><p>val，一個很常用到的方法，用來取得和設定表單元素的 value 值：</p><pre><code class="language-javascript">.val() // get
+.val(value) // set
+</code></pre><p>例如，取得表單元素的值：</p><pre><code class="language-javascript">// 取得下拉選單 (select box) 的值
+$('select.foo').val();
+
+// 取得 checkbox 欄位的選取值
+$('input:checkbox:checked').val();
+
+// 取得 radio 欄位的選取值
+$('input:radio[name=bar]:checked').val();
+</code></pre><p>例如，設定表單元素的值：</p><pre><code class="language-javascript">// HTML
+&lt;input type=&quot;text&quot;&gt;
+// 設定欄位值
+$('input').val('Hello World!');
+// 設定後的結果
+&lt;input type=&quot;text&quot; value=&quot;Hello World!&quot;&gt;
+</code></pre><h2 id="jquery-對於樣式的操作-css">jQuery 對於樣式的操作 (CSS)</h2><p>傳統 JavaScript 在處理 CSS 的問題上簡直頭大，設定一個 background-color 你得先知道其實要改用 elem.style.backgroundColor；對透明度 opacity 設定上你要了解舊 IE 是用 filter··。jQuery 的寫法很簡單，就直接用 key/value 成對的一組屬性來設定，我們只要知道 CSS 的表達式就沒問題。</p><p>取得第一個匹配到的元素之樣式：</p><pre><code class="language-javascript">.css(propertyName)
+</code></pre><p>例如，取得第一個段落的字體顏色：</p><pre><code class="language-javascript">$('p').css('color'); 
+</code></pre><hr><p>替所有匹配到元素設定一種樣式：</p><pre><code class="language-javascript">.css(propertyName, value)
+</code></pre><p>例如，替所有段落的透明度設為半透明：</p><pre><code class="language-javascript">$('p').css('opacity', '0.5');
+// 是的，設 opacity 就可以，jQuery 已經幫你處理好跨瀏覽器問題
+</code></pre><p>你也可以用 key/value 對的方式指定給所有匹配的元素多個樣式：</p><pre><code class="language-javascript">.css(properties)
+</code></pre><p>例如，替所有段落的字體設為紅色，背景設為藍色：</p><pre><code class="language-javascript">$('p').css({
+  color: 'red',
+  'background-color': 'blue'
+});
+</code></pre><p class="tip">若屬性中包含 <code>-</code>，記得加上引號，沒有的話則可有可無。</p><h2 id="元素的位置及寬高-常用的屬性獨立出來">元素的位置及寬高 - 常用的屬性獨立出來</h2><pre><code class="language-javascript">.width() // 取得元素寬度
+.width(value) // 設定元素寬度
+</code></pre><pre><code class="language-javascript">.height() // 取得元素高度
+.height(value) // 設定元素高度
+</code></pre><p>.width() .height() 抓到的值是元素內容寬、高度，不包含 padding, border, margin。</p><p>例如，取得第一個匹配到的段落元素高度 (px) (無參數)</p><pre><code class="language-javascript">$('p').height();
+</code></pre><p>例如，設定每個匹配到的段落元素其高度設為 100px (沒指定單位時預設為 px) (有參數)</p><pre><code class="language-javascript">$('p').height(100);
+</code></pre><hr><p>取得元素相對於當前視窗左上角的位置偏移量：</p><pre><code class="language-javascript">.offset()
+// 返回值 Object{top, left}
+var offset = $('p:last').offset();
+console.log(offset.left)
+console.log(offset.top)
+</code></pre><p>一般在傳統 JavaScript 我們會用 offsetLeft 及 offsetTop 來取得元素在頁面上的座標，不過 IE 與 FF 瀏覽器解讀這兩個屬性是不一樣的，IE 會解讀成目標元素跟父元素的 left-top 距離；FF 則是相對於頁面上的 left-top，所以在 IE 下我們一般都需要利用往父元素跑迴圈加總 offsetLeft 來取得元素在頁面上的座標值。不過，在 jQuery 中我們統一用 offset() 就可以囉！</p><p>看過上述 jQuery 對於屬性及樣式的操作，是不是簡化了我們許多不必要的煩惱，讓我們可以將精力拉回純 HTML 與 CSS 的思緒上面呢！</p><footer class="info"><time>Apr 24 &#39;17</time> 最後更新 . <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNroYOBB5JwJhTialJCMkBOU-tX7eGpPdBos641tSF-VVzVQ/viewform?usp=pp_url&amp;entry.799785302=https%3a%2f%2fwww.fooish.com%2fjquery%2fattributes-and-css.html" target="_blank" rel="nofollow">勘誤回報</a></footer></article><div class="post-share"></div><div id="ad-bottom-container"><script>if (deviceWidth > 1200) {
+                document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="9120291142"></ins>');
+            } else {
+                document.write('<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0139842686857411" data-ad-slot="2665098747" data-ad-format="auto"></ins>');
+            }
+            (adsbygoogle = window.adsbygoogle || []).push({});</script><script>if (deviceWidth > 1200) {
+                document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="9120291142"></ins>');
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }</script></div><footer id="footer">Copyright &copy; 2008-2018 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNroYOBB5JwJhTialJCMkBOU-tX7eGpPdBos641tSF-VVzVQ/viewform?usp=pp_url&amp;entry.799785302=https%3a%2f%2fwww.fooish.com%2fjquery%2fattributes-and-css.html" target="_blank" rel="nofollow">聯絡表單</a></footer></main><div style="clear:both"></div></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><script src="../assets/js/base-03c70f4725.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');ga('create', 'UA-81706810-1', 'auto');ga('send', 'pageview');</script><script src="https://www.google.com.tw/coop/cse/brand?form=cse-search-box&amp;lang=zh-TW"></script></body>
+<!-- Mirrored from www.fooish.com/jquery/attributes-and-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:20:54 GMT -->
+</html>

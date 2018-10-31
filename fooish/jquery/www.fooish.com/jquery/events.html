@@ -1,0 +1,104 @@
+<!doctype html><html lang="zh-Hant-TW">
+<!-- Mirrored from www.fooish.com/jquery/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:20:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><title>jQuey 事件處理 (Events) - jQuery 教學 Tutorial</title><meta name="viewport" content="width=device-width,minimum-scale=1"><meta property="og:image" content="../assets/img/fooish.jpg"><link href="https://www.fooish.com/favicon.ico" rel="icon" type="image/x-icon"><link rel="canonical" href="events.html"><link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"><link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"><link rel="stylesheet" href="../assets/css/base-305d0c54fd.css"><script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]--><script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-0139842686857411", enable_page_level_ads: true});</script><script>var deviceWidth = $(window).outerWidth(), deviceHeight = $(window).outerHeight();</script></head><body><div id="wrapper" class="wrapper"><header id="topics"><nav><ul><li>//<a href="https://www.fooish.com/">Fooish 程式技術</a>//</li><li><a href="https://www.fooish.com/javascript/">JavaScript</a></li><li><a href="index.html">jQuery</a></li><li><a href="https://www.fooish.com/json/">JSON</a></li><li><a href="https://www.fooish.com/reactjs/">React.js</a></li><li><a href="https://www.fooish.com/regex-regular-expression/">Regex</a></li><li><a href="https://www.fooish.com/sql/">SQL</a></li><li><a href="https://www.fooish.com/posts/">技術文章</a></li></ul></nav><div id="search"><form action="https://www.google.com.tw/" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-0139842686857411:7956756743"><input type="hidden" name="ie" value="UTF-8"><input type="text" name="q" size="20"><input type="submit" name="sa" value="&#x641c;&#x5c0b;"></div></form></div></header><div id="articles-nav-container"><div id="articles-nav"><nav><ul><li><a href="index.html">jQuery 教學</a></li><li><a href="basics.html">jQuery 初探</a></li><li><a href="selectors.html">jQuery 選取元素</a></li><li><a href="attributes-and-css.html">jQuery 屬性與樣式</a></li><li><a href="traversing.html">jQuery 篩選元素</a></li><li><a href="dom-manipulation.html">jQuery DOM 操作</a></li><li><a href="events.html">jQuey 事件處理</a></li><li><a href="effects.html">jQuery 效果動畫</a></li><li><a href="ajax.html">jQuery Ajax</a></li><li><a href="data.html">jQuery Data</a></li><li><a href="deferred.html">jQuery Deferred</a></li></ul></nav></div></div><aside id="aside-container"><div id="ad-aside"><script>if (deviceWidth > 900) {
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="4179047544"></ins>');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    
+                }</script></div></aside><main id="main-container"><article id="article"><h1 id="jquery-事件處理-events">jQuery 事件處理 (Events)</h1><p>jQuery 的事件處理函式大都提供兩種用途，一種是呼叫帶有參數的函式 - <strong>綁定事件處理函式</strong>；另一種則是呼叫不帶有參數的函式 - <strong>觸發該事件</strong>。</p><p>帶有參數，例如，綁定所有段落觸發 click 事件時，將背景顏色改為藍色：</p><pre><code class="language-javascript">$('p').click(function() {
+  $(this).css('background-color', 'blue');
+});
+</code></pre><p>不帶有參數，例如，觸發所有段落的 click 事件：</p><pre><code class="language-javascript">$('p').click();
+</code></pre><p class="tip">事件處理函數中的 <code>this</code> 為被觸發的「DOM元素」，而非 jQuery 物件。</p><p>上述的程式碼，我們用到 jQuery 定義好的 click 函式來處理 click event，然而 jQuery 也同樣對 DOM 其它的 event 都有相關的函式，如以下的 jQuery 事件函式也是同樣的使用方法：</p><table><thead><tr><th>事件</th><th>觸發條件</th></tr></thead><tbody><tr><td>blur</td><td>物件失去焦點時</td></tr><tr><td>change</td><td>物件內容改變時</td></tr><tr><td>click</td><td>滑鼠點擊物件時</td></tr><tr><td>dblclick</td><td>滑鼠連點二下物件時</td></tr><tr><td>error</td><td>當圖片或文件下載產生錯誤時</td></tr><tr><td>focus</td><td>當物件被點擊或取得焦點時</td></tr><tr><td>keydown</td><td>按下鍵盤按鍵時</td></tr><tr><td>keypress</td><td>按下並放開鍵盤按鍵後</td></tr><tr><td>keyup</td><td>按下並放開鍵盤按鍵時</td></tr><tr><td>load</td><td>網頁或圖片完成下載時</td></tr><tr><td>mousedown</td><td>按下滑鼠按鍵時</td></tr><tr><td>mousemove</td><td>介於over跟out間的滑鼠移動行為</td></tr><tr><td>mouseout</td><td>滑鼠離開某物件四周時</td></tr><tr><td>mouseover</td><td>滑鼠離開某物件四周時</td></tr><tr><td>mouseup</td><td>放開滑鼠按鍵時</td></tr><tr><td>resize</td><td>當視窗或框架大小被改變時</td></tr><tr><td>scroll</td><td>當捲軸被拉動時</td></tr><tr><td>select</td><td>當文字被選取時</td></tr><tr><td>submit</td><td>當按下送出按紐時</td></tr><tr><td>beforeunload</td><td>當使用者關閉 (或離開) 網頁之前</td></tr><tr><td>unload</td><td>當使用者關閉 (或離開) 網頁之後</td></tr></tbody></table><h2 id="jquery-的-event-object">jQuery 的 event object</h2><p>對於所有的 jQuery event handler，你都能傳入一個參數作為 event 物件，如下例：</p><pre><code class="language-javascript">$(document).click(function(event) {
+  alert(event.pageX);
+});
+</code></pre><p>上面這個例子是用來取得滑鼠游標相對於頁面的位置，重點是！這段程式碼在IE上也能執行 (註：原本的 IE 瀏覽器事件無 pageX 屬性)。Why? 因為 jQuery 又事先幫你解決掉事件處理中跨瀏覽器的問題了 - 「jQuery 修改了 event object 以使其符合 W3C 的標準」，所以從此你不用再重複 <code>if (window.event)</code>，你只需了解並使用標準的事件屬性！</p><h2 id="jquery-的事件綁定處理函式">jQuery 的事件綁定處理函式</h2><h3 id="hover-handlerin-handlerout"><code>.hover(handlerIn, handlerOut)</code></h3><p><code>$(selector).hover(handlerIn, handlerOut)</code> 其實是 <code>$(selector).mouseenter(handlerIn).mouseleave(handlerOut);</code> 的簡化版。</p><p>當滑鼠移動到一個匹配的元素上面時，會觸發第一個函數 (handlerIn)；當滑鼠移出該元素時，會觸發第二個函數 (handlerOut)。</p><p>例如，滑鼠移進 li 元素時，在後面加上 ***，移出時再刪掉：</p><pre><code class="language-javascript">$('li').hover(
+  function() {
+    $(this).append($('&lt;span&gt; ***&lt;/span&gt;'));
+  }, function() {
+    $(this).find('span:last').remove();
+  }
+);
+</code></pre><h3 id="bind-eventtype-handler-unbind-eventtype"><code>.bind(eventType, handler)</code> <code>unbind(eventType)</code></h3><p>除了直接用特定的事件函式來綁定事件 (i.e. .click())，你也可以用 <code>.bind()</code> 來做。</p><p>例如，滑鼠點 foo 元素時跳出 alert 訊息：</p><pre><code class="language-javascript">$('#foo').bind('click', function() {
+  alert('User clicked on foo.');
+});
+</code></pre><p><code>.unbind()</code> 用來移除事件處理函式，例如：</p><pre><code class="language-javascript">// 移除 foo 元素上所有綁定的事件處理函式
+$('#foo').unbind();
+// 只移除 foo 元素上所有綁定的 click 事件處理函式
+$('#foo').unbind('click');
+
+// 只移除特定事件的特定處理函式
+var handler = function() { alert('hi'); };
+$('#foo').bind('click', handler);
+$('#foo').unbind('click', handler);
+</code></pre><p>bind 及 unbind 還可以讓我們達到 <strong>自訂事件處理</strong> 的功能：</p><pre><code class="language-javascript">$('#foo').bind('myEvent', doSomething);
+</code></pre><p>如上，我們自訂一個叫作 myEvent 的事件，但這不是 DOM 標準事件啊，怎麼觸發它？答案是用接著會談到的 &quot;trigger&quot; 函式來觸發 myEvent。</p><h3 id="trigger-eventtype-extraparameters"><code>.trigger(eventType [, extraParameters])</code></h3><p>觸發事件，其中 extraParameters 為要傳給事件處理函式的參數 (一個陣列或物件)。</p><p>例如，觸發上面的自訂 myEvent 事件：</p><pre><code class="language-javascript">$('#foo').trigger('myEvent');
+</code></pre><p>當然也可以用來觸發一般事件：</p><pre><code class="language-javascript">$('#foo').trigger('click');
+</code></pre><h3 id="one-events-handler"><code>.one(events, handler)</code></h3><p>如果只是觸發 &quot;一次&quot; 事件，就使用 one 函式來作 bind 的動作，當該事件被觸發一次之後就會自己自動 unbind。</p><pre><code class="language-javascript">$('#foo').one('click', function() {
+  alert('This will be displayed only once.');
+});
+</code></pre><h3 id="on-off"><code>.on()</code> <code>.off()</code></h3><p>從 jQuery 1.7 開始 <code>.on()</code> 是主要推薦使用的事件處理綁定函式，也用來取代 <code>.bind()</code>, <code>.live()</code> 和 <code>.delegate()</code>。</p><p><code>.bind()</code> 的缺點在於 bind 是直接將事件處理函式直接綁定在選取的元素上面，所以在綁定當時，元素必須是已經存在 DOM 中的！</p><p>例如，這樣子是沒用的：</p><pre><code class="language-javascript">// 這時頁面上還沒有 #foo 這元素
+$('#foo').bind('click', function() { alert('hi'); });
+$(document.body).append('&lt;button id=&quot;foo&quot;&gt;hi&lt;/button&gt;');
+// 點 button 不會有 alert!
+</code></pre><p>.on() 充分利用瀏覽器事件傳播 (event bubbling) 的原理和事件委任 (event delegation) 的技巧！</p><p class="tip">在 IE8 以下，像是 change 和 submit 事件是不會 bubble 的，但 jQuery 也在底層幫你處理掉這個問題了 (yay cross-browser)！</p><p>因為事件委任的技巧讓 .on() 可以用來綁定事件處理在現在已經存在或還沒存在的 DOM 元素，像是你可以綁在 $(document).on() 監聽 DOM 的所有事件。</p><p>利用 event delegation 還有一個效能上的優點，你不用在一堆元素上各別綁定事件處理 (例如綁上千個元素，效能差)，你可以只綁在 document 或 container element 上面，獲得顯著的效能改善。</p><p>例如，綁一堆 click 事件處理在 #dataTable tbody 下面的一堆 tr 元素上：</p><pre><code class="language-javascript">$('#dataTable tbody tr').on('click', function() {
+  // 這裡的 this 指向 #dataTable tbody tr 這一個 DOM 元素
+  // 用 $() 將 this 轉成 jQuery object
+  console.log( $(this).text() );
+});
+</code></pre><p>V.S. 綁一個 click 事件處理在 #dataTable tbody 上，然後監聽從 tr bubble 上來的 click 事件：</p><pre><code class="language-javascript">$('#dataTable tbody').on('click', 'tr', function() {
+  // 這裡的 this 指向符合 selector 的 DOM 元素，也就是 tr
+  console.log( $(this).text() );
+});
+</code></pre><p>.on() 的第三個參數，可以用來傳資料進事件處理函式：</p><pre><code class="language-javascript">function greet(event) {
+  alert('Hello ' + event.data.name);
+}
+
+$('button').on('click', {
+  name: 'Karl'
+}, greet);
+
+$('button').on('click', {
+  name: 'Addy'
+}, greet);
+</code></pre><p>用 .off() 來移除事件處理函式，例如：</p><pre><code class="language-javascript">// 移除所有 p 元素的事件處理
+$('p').off();
+// 移除所有 p 元素的 click 事件處理
+$('p').off('click');
+// 移除 #foo 的 click 事件委任
+$('p').off('click', '#foo');
+</code></pre><p>還可以用空白隔開多個事件，同時綁定事件處理：</p><pre><code class="language-javascript">$('#cart').on('mouseenter mouseleave', function(event) {
+  $(this).toggleClass('active');
+});
+</code></pre><h2 id="替事件命名-namespacing-events">替事件命名 (Namespacing events)</h2><p>我們雖然可以用 unbind / off 來移除事件，但是它會一次移除全部綁定的事件處理耶，何解？答案是利用 jQuery 提供的 Namespacing events！看個例子就明白它是什麼：</p><pre><code class="language-javascript">// 綁定事件處理函式；並幫這事件命名為 name
+// 事件名稱要接在句點 . 後面
+$('#foo').on('click.name', function() { alert(1); });
+$('#foo').on('click.name', function() { alert(2); });
+// 觸發所有名稱是 name 的事件
+$('#foo').trigger('.name');
+// 移除所有名稱是 name 的事件
+$('#foo').off('.name');
+</code></pre><p>Namespacing events 簡單的說就是幫事件取個名字 (namespace)，了解吧 :)</p><h2 id="document-ready-function"><code>$(document).ready(function() {})</code></h2><p>最後，但是很重要也很常用的。jQuery 中，大部分的操作都基於 HTML DOM，所以我們必須確定頁面文件已經完全下載好才開始執行你的程式，jQuery 提供下面這個函式來處理 DOM ready 事件 (DOMContentLoaded)：</p><pre><code class="language-javascript">$(document).ready(function() {
+  // 這裡放你要執行的程式碼
+});
+</code></pre><p>你也可以這樣寫：</p><pre><code class="language-javascript">$(function() {
+  // 這裡放你要執行的程式碼
+});
+</code></pre><p class="tip">jQuery 的 DOM ready event 是等 HTML DOM 準備好就可以開始執行程式，不像一般常用的 window.onload 要連圖片、外部檔案等全部都下載完畢才會觸發 onload 事件。</p><h3 id="domcontentloaded-外部樣式表的問題">DOMContentLoaded &amp; 外部樣式表的問題？</h3><p>如上述，DOMContentLoaded 事件的觸發不必等到圖片檔案等下載完畢，但這裡有個問題就是，那需要等到 &quot;外部樣式表 (External CSS Styles)&quot; 下載完畢嗎？關於這一點，各家瀏覽器對於 DOMContentLoaded 事件的觸發也的確不一致，在 Opera 中瀏覽器不會等外部樣式表下載完即觸發 DOM ready；而 Firefox 則會等到外部 CSS 都加載完畢。因此若你有在 jQuery ready 事件中改變了元素的 CSS 屬性，對於 Opera，你修改的屬性很可能會被接著加載的外部樣式表覆蓋過去，這也就造成跨瀏覽器處理的問題。但如果你無法避免在頁面初始階段改變 CSS 屬性，這問題我們可以利用 load 事件來避開，以確定事件的觸發會在外部樣式表下載完畢之後：</p><pre><code class="language-javascript">$(window).load(function() {
+  // Run code
+});
+</code></pre><footer class="info"><time>Apr 24 &#39;17</time> 最後更新 . <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNroYOBB5JwJhTialJCMkBOU-tX7eGpPdBos641tSF-VVzVQ/viewform?usp=pp_url&amp;entry.799785302=https%3a%2f%2fwww.fooish.com%2fjquery%2fevents.html" target="_blank" rel="nofollow">勘誤回報</a></footer></article><div class="post-share"></div><div id="ad-bottom-container"><script>if (deviceWidth > 1200) {
+                document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="9120291142"></ins>');
+            } else {
+                document.write('<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0139842686857411" data-ad-slot="2665098747" data-ad-format="auto"></ins>');
+            }
+            (adsbygoogle = window.adsbygoogle || []).push({});</script><script>if (deviceWidth > 1200) {
+                document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0139842686857411" data-ad-slot="9120291142"></ins>');
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }</script></div><footer id="footer">Copyright &copy; 2008-2018 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNroYOBB5JwJhTialJCMkBOU-tX7eGpPdBos641tSF-VVzVQ/viewform?usp=pp_url&amp;entry.799785302=https%3a%2f%2fwww.fooish.com%2fjquery%2fevents.html" target="_blank" rel="nofollow">聯絡表單</a></footer></main><div style="clear:both"></div></div><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script><script src="../assets/js/base-03c70f4725.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');ga('create', 'UA-81706810-1', 'auto');ga('send', 'pageview');</script><script src="https://www.google.com.tw/coop/cse/brand?form=cse-search-box&amp;lang=zh-TW"></script></body>
+<!-- Mirrored from www.fooish.com/jquery/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 00:20:54 GMT -->
+</html>
