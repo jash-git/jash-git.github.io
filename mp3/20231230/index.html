@@ -5,10 +5,28 @@
     <body>
         <br />
         <div id="audioBox">
+        <div id="playButton"></div>
         <script src="jquery.min.js"></script>
         <script type="text/javascript">
             var myAudio = new Audio(); 
             var refreshIntervalId;
+            function CallPlay()
+            {
+                document.getElementById('playButton').click();
+                var myDiv = document.getElementById('playButton'); // 請將 'yourDivId' 替換為您的div元素的實際ID
+                // 設定寬度和高度
+                myDiv.style.width = '300px'; // 替換為您想要的寬度
+                myDiv.style.height = '200px'; // 替換為您想要的高度
+                // 設定背景色
+                myDiv.style.backgroundColor = '#ff0000'; // 替換為您想要的背景色，這裡使用的是十六進制表示的紅色
+                myDiv.style.color = '#FFFFFF'; // 替換為您想要的
+                myDiv.style.fontSize = '36'; // 將 'yourFontSize' 替換為你想要的文字大小
+
+                // 設置文字置中
+                myDiv.style.textAlign = 'center';                
+                myDiv.innerText = '按下該按鈕開始撥放音樂'; // 替換為您想要顯示的文字內容
+                clearInterval(refreshIntervalId);
+            }
             // 定義一個函數，用來產生隨機數
             function getRandomInt(min, max) {
               return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,7 +41,11 @@
             } 
             $(document).ready( 
                 function()
-                { 
+                {
+                    const button = document.getElementById('playButton');
+                    button.addEventListener('click', () => {
+                        myAudio.play();
+                    });                
                     var arr = [
                                       "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/06.mp3?raw=true",
                                       "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/videoplayback.mp3?raw=true",
@@ -39,7 +61,10 @@
                     myAudio.controls = true; 
                     myAudio.src = arr.pop();         //每次讀數組最後一個元素 
                     myAudio.addEventListener('ended', playEndedHandler, false); 
-                    myAudio.play(); 
+                    myAudio.addEventListener('canplay', function() {
+                        myAudio.play();
+                        refreshIntervalId = setInterval(CallPlay(), 1000);
+                    }); 
                     document.getElementById("audioBox").appendChild(myAudio); 
                     myAudio.loop = false;//禁止循環，否則無法觸發ended事件 
                     function playEndedHandler()
