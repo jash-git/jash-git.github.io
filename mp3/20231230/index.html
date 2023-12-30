@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+		<br />
+		<div id="audioBox">
+		<script src="jquery.min.js"></script>
+		<script type="text/javascript">
+		// 定義一個函數，用來產生隨機數
+		function getRandomInt(min, max) {
+		  return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+		// 定義一個函數，用來對陣列進行亂數排列
+		function shuffleArray(array) {
+		  for (let i = array.length - 1; i > 0; i--) {
+			const j = getRandomInt(0, i);
+			// 交換位置
+			[array[i], array[j]] = [array[j], array[i]];
+		  }
+		} 
+				$(document).ready( 
+					function()
+					{ 
+						var arr = [
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/06.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/videoplayback.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/04.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/03.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/02.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/01.mp3?raw=true",
+										  "https://github.com/jash-git/Wu-Bai-China-Blue-mp3_20220814/blob/main/videoplayback.mp3?raw=true"
+										  ];//把需要播放的歌曲從後往前排，這裏已添加兩首音樂，可繼續添加多個音樂 
+										shuffleArray(arr);
+						var myAudio = new Audio(); 
+						myAudio.preload = true; 
+						myAudio.controls = true; 
+						myAudio.src = arr.pop();         //每次讀數組最後一個元素 
+						myAudio.addEventListener('ended', playEndedHandler, false); 
+						myAudio.play(); 
+						document.getElementById("audioBox").appendChild(myAudio); 
+						myAudio.loop = false;//禁止循環，否則無法觸發ended事件 
+						function playEndedHandler()
+						{ 
+							myAudio.src = arr.pop(); 
+							myAudio.play(); 
+							console.log(myAudio.src); 
+							!arr.length && myAudio.removeEventListener('ended',playEndedHandler,false);//只有一個元素時解除綁定 
+						} 
+					}  
+				);
+			</script>
+		</div>
+		<br />
+    </body>
+</html>
