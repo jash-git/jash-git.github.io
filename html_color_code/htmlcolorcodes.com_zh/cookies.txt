@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+github.com	TRUE	/	FALSE	1999999999	_gh_sess	%2B7ErIMcroi%2BA82M%2Bzu%2BZIT6fgNJhSRLLGMk50qYnsek1juDOC8mzqSzm%2Fx9TkIfrWibooN2lyjKnedz6xNuV1zq8TUUDkUiqgiUh%2BCzfiI%2But5San51uCCEDvvasc4q3kgciJtH0AtNY4zXfpzzTvoW8Zrb6asiBnUPUINTh6uKIkStQxR7t8z6easMsXDF9UJINjyTcOqjzbzRVX04utkK0GU5tc7SEFHXMaaTwn7XneDjo5D1TZw3LkejldyqpTHciTDGTXM9YBDhW5U5W%2Bw%3D%3D--6%2FQUgmPI9r5%2FuagX--XMcrqHA59Ekm4ld5J%2F8V%2FA%3D%3D
+github.com	TRUE	/	FALSE	1999999999	_octo	GH1.1.405682311.1703749715
+github.com	TRUE	/	FALSE	1999999999	logged_in	no
+github.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.npmjs.com	TRUE	/	FALSE	1999999999	__cf_bm	3g4aPITlJz6A8Jsv2DJP3oRwLysLDlLqO6K755COxbA-1703749830-1-Abhc4aUVGnCBPNj1a8sled7sb1VsGI+KXeIL7Jhidu4RT6OJfrCfUuEh8RnDqcnNY8Y0ZsWDuj7q6WmofWpvQUU=
+.npmjs.com	TRUE	/	FALSE	1999999999	__cfruid	fd94254a2708003bf13bb7d2c957039fe87214cc-1703749830
+www.npmjs.com	TRUE	/	FALSE	1999999999	SameSite	None
+snyk.io	TRUE	/	FALSE	1999999999	ajs_anonymous_id	8f55f4f1-4967-412c-95e7-23474c6324e5
+
