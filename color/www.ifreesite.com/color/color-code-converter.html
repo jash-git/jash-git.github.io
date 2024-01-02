@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<!-- Mirrored from www.ifreesite.com/color/color-code-converter.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Jan 2024 05:46:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>色碼轉換器</title>
+<meta name="keywords" content="色碼轉換,顏色代碼轉換,16進位色碼轉10進位色碼,10進位色碼轉16進位色碼,color converter,color code converter,rgb to ycrcb color converter,ycrcb to rgb color converter" />
+<meta name="description" content="色碼轉換器﹑Color Code Converter" />
+<script type="text/javascript" src="imagejs/hexrgba.js"></script>
+<script type="text/javascript" src="../1-theme/swfjs/showhide.js"></script>
+<script type="text/javascript" src="../1-theme/swfjs/disnone.js"></script>
+<link rel="stylesheet" type="text/css" href="../1-theme/ifreesite/style.css" />
+<link rel="stylesheet" type="text/css" href="../1-theme/ifreesite/style-mini.css" />
+<meta name="author" content="Jack! and I.T Team" />
+<meta name="copyright" content="Online Tools." />
+<meta name="viewport" content="width=device-width" />
+<meta property="fb:app_id" content="174908615894115" />
+<meta property="fb:admins" content="1801384463" />
+<meta property="og:image" content="https://www.ifreesite.com/tool.png" />
+<!-- Popup Begin -->
+<link type="text/css" rel="stylesheet" href="../1-theme/popup/highslide.css" />
+<script type="text/javascript" src="../1-theme/popup/highslide-full.js"></script>
+<!-- Popup Flash Use Begin -->
+<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+<!-- Popup Flash Use End -->
+<script type="text/javascript">
+    hs.graphicsDir = 'https://www.ifreesite.com/1-theme/popup/graphics/';
+    hs.outlineType = 'beveled';
+    hs.showCredits = false;
+	hs.headingEval = 'this.a.title';
+	hs.loadingText = '讀取中...';
+	hs.loadingTitle = '按此取消';
+	hs.resizeTitle = '調整大小';
+	// Add black close button
+	hs.registerOverlay({
+	slideshowGroup: 'group1',
+	html: '<div class="closebutton-black" onclick="return hs.close(this)" title="隱藏/關閉"></div>',
+	position: 'top right',
+	fade: 2, 
+	useOnHtml: true
+	});
+</script>
+<style type="text/css">
+/* CSS for removing the Move and Close text */
+.highslide-header .highslide-move, .highslide-header .highslide-close {
+	display: none;
+}
+/* CSS for the close buttons */
+.closebutton-black {
+	position: relative;
+	top: -15px;
+	left: 15px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: url(../1-theme/popup/graphics/close.png);
+	/* NOTE! For IE6, you also need to update the highslide-ie6.css file. */
+}
+</style>
+<!-- Popup End -->
+<!-- Google Analytic Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEDGV3L0VY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DEDGV3L0VY');
+</script>
+<!-- Google Analytic End -->
+<!-- Page-level Ads Begin -->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4355432878324120",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- Page-level Ads End -->
+</head>
+<body>
+<div id="if_container">
+  <header id="if_mainboxa" role="banner">
+    <div class="if_menu">
+      <ul>
+        <li class="if_menua">
+          <label class="if_menulabela"><img src="../1-theme/ifreesite/image/ia.png" />
+          </label>
+          <span><a href="https://www.ifreesite.com/" title="線上工具｜網路資源" rel="home">主頁</a></span>
+        </li><li class="if_menub">
+          <label class="if_menulabelb"><img src="../1-theme/ifreesite/image/ib.png" />
+          </label>
+          <span><a href="http://www.fmyeah.com/" title="廣播電台線上收聽 | 電視直播在線收看" target="_blank">視聽樂</a></span>
+        </li><li class="if_menuc">
+          <label class="if_menulabelc"><img src="../1-theme/ifreesite/image/ic.png" />
+          </label>
+          <span><a href="http://www.moonlol.com/" title="月光部落 | 月亮下的碎碎唸唸" target="_blank">月光部落</a></span>
+        </li>
+      </ul>
+    </div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4355432878324120"
+     data-ad-slot="2021560894"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script type="text/javascript">
+<!--
+//R = hexToR("#FFFFFF");
+//G = hexToG("#FFFFFF");
+//B = hexToB("#FFFFFF");
+
+function hexToR(h) { return parseInt((cutHex(h)).substring(0,2),16) }
+function hexToG(h) { return parseInt((cutHex(h)).substring(2,4),16) }
+function hexToB(h) { return parseInt((cutHex(h)).substring(4,6),16) }
+function cutHex(h) { return (h.charAt(0)=="#") ? h.substring(1,7) : h}
+
+function setBgColorById(id,sColor) {
+ var elem;
+ if (document.getElementById) {
+  if (elem=document.getElementById(id)) {
+   if (elem.style) elem.style.backgroundColor=sColor;
+  }
+ }
+}
+
+//-->
+</script>
+<script type="text/javascript">
+		var hex;
+
+		function CalculateTint(control){
+			if (control.name == "Red" || control.name == "Green" || control.name == "Blue"){
+				with (document.entry){
+					if (Red.value.replace(/\s/g, "") != "" && Red.value < 256 && Green.value.replace(/\s/g, "") != ""  && Green.value < 256 && Blue.value.replace(/\s/g, "") != "" && Blue.value < 256){
+						var r = Red.value;
+						var g = Green.value;
+						var b = Blue.value;
+						hex = rgbToHex(r, g, b);
+						Hexd.value = hex;
+						document.getElementById("BaseColor").style.backgroundColor = hex;
+						if (Percent.value.replace(/\s/g, "") != ""){
+							var rt = tintCalc(r);
+							var gt = tintCalc(g);
+							var bt = tintCalc(b);
+							var ht = rgbToHex(rt, gt, bt);
+							RedTint.value = rt;
+							GreenTint.value = gt;
+							BlueTint.value = bt;
+							HexTint.value = ht;
+							document.getElementById("Tint").style.backgroundColor = ht;
+						}
+					}
+				}
+			}else if (control.name == "Hexd"){
+				with (document.entry){
+					var str = Hexd.value;
+					if (str.charAt(0) != "#"){
+						Hexd.value = "#" + Hexd.value;
+					}
+					str = Hexd.value;
+					if (str.length == 4 || str.length == 7){
+						var r = Red.value = hexToRgb(str).r;
+						var g = Green.value = hexToRgb(str).g;
+						var b = Blue.value = hexToRgb(str).b;
+						document.getElementById("BaseColor").style.backgroundColor = str;
+						if (Percent.value.replace(/\s/g, "") != ""){
+							var rt = tintCalc(r);
+							var gt = tintCalc(g);
+							var bt = tintCalc(b);
+							var ht = rgbToHex(rt, gt, bt);
+							RedTint.value = rt;
+							GreenTint.value = gt;
+							BlueTint.value = bt;
+							HexTint.value = ht;
+							document.getElementById("Tint").style.backgroundColor = ht;
+						}
+					}
+				}
+			}else if (control.name == "Percent"){
+				with (document.entry){
+					if (Red.value.replace(/\s/g, "") == "" && Green.value.replace(/\s/g, "") == "" && Blue.value.replace(/\s/g, "") == "" && (Hexd.value.replace(/\s/g, "") == "" || Hexd.value == "#")){
+						alert("Do Nothing");
+						//do nothing
+					}else{
+						var str = Hexd.value;
+						if (str.charAt(0) != "#"){
+							Hexd.value = "#" + Hexd.value;
+						}
+						str = Hexd.value;
+						if (str.length == 4 || str.length == 7){
+							var r = Red.value = hexToRgb(str).r;
+							var g = Green.value = hexToRgb(str).g;
+							var b = Blue.value = hexToRgb(str).b;
+							document.getElementById("BaseColor").style.backgroundColor = str;
+							if (Percent.value.replace(/\s/g, "") != ""){
+								var rt = tintCalc(r);
+								var gt = tintCalc(g);
+								var bt = tintCalc(b);
+								var ht = rgbToHex(rt, gt, bt);
+								RedTint.value = rt;
+								GreenTint.value = gt;
+								BlueTint.value = bt;
+								HexTint.value = ht;
+								document.getElementById("Tint").style.backgroundColor = ht;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	function hexToRgb(hex) {
+		var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+		return result ? {
+			r: parseInt(result[1], 16),
+			g: parseInt(result[2], 16),
+			b: parseInt(result[3], 16)
+		} : null;
+	}
+ 
+		function rgbToHex(r, g, b){
+			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+		}
+
+		function componentToHex(c){
+			n = parseInt(c,10);
+			if (isNaN(n)) return "00";
+			n = Math.max(0,Math.min(n,255));
+			return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
+		}
+
+		function tintCalc(x){
+			return Math.round(((100-document.entry.Percent.value)*.01)*(255-x)+parseInt(x));
+		}
+
+		function valNum(evt){
+			var theEvent = evt || window.event;
+			var key = theEvent.keyCode || theEvent.which;
+			if (key != 8 && key != 9 && key != 46){
+				key = String.fromCharCode( key );
+				var regex = /[0-9]/;
+				if( !regex.test(key) ) {
+					theEvent.returnValue = false;
+					if(theEvent.preventDefault) theEvent.preventDefault();
+				}
+			}
+		}
+
+		function valHex(evt){
+			var theEvent = evt || window.event;
+			var key = theEvent.keyCode || theEvent.which;
+			if (key != 8 && key != 9 && key != 46){
+				key = String.fromCharCode( key );
+				var regex = /[0-9A-Fa-f]|\#/;
+				if( !regex.test(key) ) {
+					theEvent.returnValue = false;
+					if(theEvent.preventDefault) theEvent.preventDefault();
+				}
+			}
+		}
+
+		function valNSize(control){
+			with(document.entry){
+				if (control.value > 255){
+					if (control.name == "Red"){
+						document.entry.Red.value = "255";
+					}else if(control.name == "Green"){
+						document.entry.Green.value = "255";
+					}else if(control.name == "Blue"){
+						document.entry.Blue.value = "255";
+					}
+				}
+			}
+			CalculateTint(control);
+		}
+
+</script>
+<script type="text/javascript">
+<!--
+var computedC;
+var computedM;
+var computedY;
+var computedK;
+
+//function cutHex(h) { return (h.charAt(0)=="#") ? h.substring(1,7) : h}
+//function hexToR(h) { return parseInt((cutHex(h)).substring(0,2),16) }
+//function hexToG(h) { return parseInt((cutHex(h)).substring(2,4),16) }
+//function hexToB(h) { return parseInt((cutHex(h)).substring(4,6),16) }
+
+function hexToCMYK (hex) {
+ computedC = 0;
+ computedM = 0;
+ computedY = 0;
+ computedK = 0;
+
+ hex = (hex.charAt(0)=="#") ? hex.substring(1,7) : hex;
+
+ if (hex.length != 6)                  {alert ('Invalid length of the input hex value!'); return; }
+ if (/[0-9a-f]{6}/i.test(hex) != true) {alert ('Invalid digits in the input hex value!'); return; }
+
+ var r = parseInt(hex.substring(0,2),16); 
+ var g = parseInt(hex.substring(2,4),16); 
+ var b = parseInt(hex.substring(4,6),16); 
+
+ // BLACK
+ if (r==0 && g==0 && b==0) {
+  computedK = 1;
+  return [0,0,0,1];
+ }
+
+ computedC = 1 - (r/255);
+ computedM = 1 - (g/255);
+ computedY = 1 - (b/255);
+
+ var minCMY = Math.min(computedC,Math.min(computedM,computedY));
+
+ computedC = (computedC - minCMY) / (1 - minCMY) ;
+ computedM = (computedM - minCMY) / (1 - minCMY) ;
+ computedY = (computedY - minCMY) / (1 - minCMY) ;
+ computedK = minCMY;
+
+ return [computedC,computedM,computedY,computedK];
+}
+
+//-->
+</script>
+<script type="text/javascript">
+<!--
+var computedC;
+var computedM;
+var computedY;
+var computedK;
+
+function rgb2cmyk (r,g,b) {
+ computedC = 0;
+ computedM = 0;
+ computedY = 0;
+ computedK = 0;
+
+ //remove spaces from input RGB values, convert to int
+ var r = parseInt( (''+r).replace(/\s/g,''),10 ); 
+ var g = parseInt( (''+g).replace(/\s/g,''),10 ); 
+ var b = parseInt( (''+b).replace(/\s/g,''),10 ); 
+
+ if ( r==null || g==null || b==null ||
+     isNaN(r) || isNaN(g)|| isNaN(b) )
+ {
+   alert ('Please enter numeric RGB values!');
+   return;
+ }
+ if (r<0 || g<0 || b<0 || r>255 || g>255 || b>255) {
+   alert ('RGB values must be in the range 0 to 255.');
+   return;
+ }
+
+ // BLACK
+ if (r==0 && g==0 && b==0) {
+  computedK = 1;
+  return [0,0,0,1];
+ }
+
+ computedC = 1 - (r/255);
+ computedM = 1 - (g/255);
+ computedY = 1 - (b/255);
+
+ var minCMY = Math.min(computedC,
+              Math.min(computedM,computedY));
+ computedC = (computedC - minCMY) / (1 - minCMY) ;
+ computedM = (computedM - minCMY) / (1 - minCMY) ;
+ computedY = (computedY - minCMY) / (1 - minCMY) ;
+ computedK = minCMY;
+
+ return [computedC,computedM,computedY,computedK];
+}
+
+//-->
+</script>
+<script type="text/javascript">
+<!--
+var computedH;
+var computedS;
+var computedV;
+
+function rgb2hsv (r,g,b) {
+ computedH = 0;
+ computedS = 0;
+ computedV = 0;
+
+ //remove spaces from input RGB values, convert to int
+ var r = parseInt( (''+r).replace(/\s/g,''),10 ); 
+ var g = parseInt( (''+g).replace(/\s/g,''),10 ); 
+ var b = parseInt( (''+b).replace(/\s/g,''),10 ); 
+
+ if ( r==null || g==null || b==null ||
+     isNaN(r) || isNaN(g)|| isNaN(b) ) {
+   alert ('Please enter numeric RGB values!');
+   return;
+ }
+ if (r<0 || g<0 || b<0 || r>255 || g>255 || b>255) {
+   alert ('RGB values must be in the range 0 to 255.');
+   return;
+ }
+ r=r/255; g=g/255; b=b/255;
+ var minRGB = Math.min(r,Math.min(g,b));
+ var maxRGB = Math.max(r,Math.max(g,b));
+
+ // Black-gray-white
+ if (minRGB==maxRGB) {
+  computedV = minRGB;
+  return [0,0,computedV];
+ }
+
+ // Colors other than black-gray-white:
+ var d = (r==minRGB) ? g-b : ((b==minRGB) ? r-g : b-r);
+ var h = (r==minRGB) ? 3 : ((b==minRGB) ? 1 : 5);
+ computedH = 60*(h - d/(maxRGB - minRGB));
+ computedS = (maxRGB - minRGB)/maxRGB;
+ computedV = maxRGB;
+ return [computedH,computedS,computedV];
+}
+//-->
+</script>
+<script type="text/javascript">
+function update_rgba_hex() {
+ var cname = document.getElementById('cname').value;
+ document.getElementById('rgba').innerHTML = color_convert.to_rgba(cname);
+ document.getElementById('hex').innerHTML = color_convert.to_hex(cname);
+ var canvas, context;
+ canvas = document.getElementById('swatch');
+ context = canvas.getContext('2d');
+ context.clearRect(0, 0, canvas.width, canvas.height);
+ context.fillStyle = cname;
+ context.fillRect(0, 0, canvas.width, canvas.height);
+ }
+</script>
+    <nav class="navmenu" role="navigation">
+      <ul>
+        <li class="nava">
+		<a href="https://www.ifreesite.com/color" title="色碼表">色碼表</a>
+		</li>
+        <li class="nave">
+		<a href="online-color-picker.html" title="中英文顏色代碼">中英文顏色代碼</a>
+		</li>
+        <li class="navb">
+		<a href="web-color-code.html" title="常用顏色表">常用顏色表</a>
+		</li>
+        <li class="navc">
+		<a href="hue-color.html" title="色彩代碼">色彩代碼</a>
+		</li>
+        <li class="navd">
+		<a href="html-color-code.html" title="配色表">配色表</a>
+		</li>
+      </ul>
+	 </nav>
+  </header>
+  <section id="if_mainboxb" role="main">
+    <div class="if_synopsib">
+      <div class="if_synopsis">
+	  色碼轉換器
+	  </div>
+      <p class="tbi">RGBA、Hex、RGB、CMYK、HSV 色碼轉換器。</p>
+	  <p class="tbi">產生器：<a href="https://www.ifreesite.com/colorfont" target="_blank">漸變彩字</a></p>
+    </div>
+<!-- ads
+<br /> -->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle if_adslot"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4355432878324120"
+     data-ad-slot="7082315882"
+     data-ad-format="auto"
+     data-full-width-responsive="false"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br />
+<div class="toolbo">
+    <div class="tooltexo">
+        <div class="toolnv">
+            <div class="toolft">
+                <div class="boxdb">
+                    <div class="boxtitlf">Hex to RGB</div>
+                    <form name="hex" class="centerme">
+                        <input type="text" id="colorSample" readonly class="text2" />
+                        <input type="text" name="hex" maxlength="7" value="#FFFFFF" class="text2" />
+                        <br />
+                        <br />
+                        <input type="button" name="btn" value="色碼轉換!" onclick="setBgColorById('colorSample',this.form.hex.value);this.form.r.value=hexToR(this.form.hex.value);this.form.g.value=hexToG(this.form.hex.value);this.form.b.value=hexToB(this.form.hex.value);" />
+                        <br />
+                        <br /> R:
+                        <input type="text" name="r" class="text1" /> G:
+                        <input type="text" name="g" class="text1" /> B:
+                        <input type="text" name="b" class="text1" />
+                    </form>
+                </div>
+                <br />
+                <div class="boxda">
+                    <div class="boxtitle">Hex to CMYK</div>
+                    <form name="cmyk" class="centerme">
+                        <input type="text" name="hex" maxlength="7" value="#FFFFFF" class="text2" />
+                        <br />
+                        <br />
+                        <input type="button" name="btn" value="色碼轉換!" onClick="hexToCMYK(this.form.hex.value);this.form.C.value=computedC.toFixed(4);this.form.M.value=computedM.toFixed(4);this.form.Y.value=computedY.toFixed(4);this.form.K.value=computedK.toFixed(4);" />
+                        <br />
+                        <br /> C:
+                        <input type="text" name="C" class="text2" style="width:58px;" /> M:
+                        <input type="text" name="M" class="text2" style="width:58px;" /> Y:
+                        <input type="text" name="Y" class="text2" style="width:58px;" /> K:
+                        <input type="text" name="K" class="text2" style="width:58px;" />
+                    </form>
+                </div>
+                <br />
+                <div class="boxdb">
+                    <div class="boxtitlf">Hex & RGBA Converter</div>
+                    <div class="centerme">
+                        <input type="text" id="cname" oninput="update_rgba_hex();" value="#B5E61D / rgba(181,230,29,1)" class="text3" />
+                        <br />
+                        <br />
+                        <input type="button" onclick="update_rgba_hex();" value="色碼轉換!" />
+                        <br />
+                        <br /> Rgba:
+                        <span id="rgba" style="width:135px;height:27px;text-align:left;line-height:27px;padding:0 3px;border:1px solid #DFDFDF;background:#fff;color:#000;font-size:12px;display:inline-block;"> &nbsp; </span> Hex:
+                        <span id="hex" style="width:75px;height:27px;text-align:left;line-height:27px;padding:0 3px;border:1px solid #DFDFDF;background:#fff;color:#000;font-size:12px;display:inline-block;"> &nbsp; </span>
+                        <canvas id="swatch" width="35" height="29" style="float:right;"></canvas>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="toolma">
+                &nbsp;
+            </div>
+            <div class="toolig">
+                <div class="boxda">
+                    <div class="boxtitle">RGB to Hex</div>
+                    <form name="rgb" class="centerme">
+                        R:
+                        <input type="text" name="r" maxlength="3" value="255" onFocus="this.form.hex.value=''" onBlur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample2',sNewColor);" class="text1" />                        G:
+                        <input type="text" name="g" maxlength="3" value="255" onFocus="this.form.hex.value=''" onBlur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample2',sNewColor);" class="text1" />                        B:
+                        <input type="text" name="b" maxlength="3" value="255" onFocus="this.form.hex.value=''" onBlur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample2',sNewColor);" class="text1" />
+                        <br />
+                        <br />
+                        <input type="button" name="btn" value="色碼轉換!" onClick="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);this.form.hex.value=sNewColor;setBgColorById('colorSample2',sNewColor);">
+                        <br />
+                        <br />
+                        <input type="text" id="colorSample2" readonly class="text2" />
+                        <input type="text" name="hex" class="text2" />
+                    </form>
+                    <!-- <form name="entry">
+	  Base Color Values
+	  <p>Percentage <input name="OrigPercent" id="OrigPercent" size=3 maxlength=3 disabled value="100" class="flat">&#37;</p>
+	  <p><label for="Red">Red </label><input name="Red" id="Red" size=3 maxlength=3 onkeypress='valNum(event)' onblur="valNSize(this)" class="flat"> <label for="Green">Green </label><input name="Green" id="Green" size=3 maxlength=3  onkeypress='valNum(event)' onblur="valNSize(this)" class="flat"> <label for="Blue">Blue </label><input name="Blue" id="Blue" size=3 maxlength=3  onkeypress='valNum(event)' onblur="valNSize(this)" class="flat"></p>
+	  <p><label for="Hexd">Hexadecimal </label><input name="Hexd" id="Hexd" size=7 maxlength=7  onkeypress='valHex(event)' onblur="CalculateTint(this)" class="flat"></p>
+	  <div id="BaseColor" style="width:150px; height:150px;"></div>
+	  Tint Values
+	  <p><label for="Percent">Percentage </label><input name="Percent" id="Percent" size=2 maxlength=2  onkeypress='valNum(event)' onBlur="CalculateTint(this)" class="flat">&#37;</p>
+	  <p><label for="RedTint">Red </label><input name="RedTint" id="RedTint" size=3 maxlength=3 readOnly class="flat"> <label for="GreenTint">Green </label><input name="GreenTint" id="GreenTint" size=3 maxlength=3 readOnly class="flat"> <label for="BlueTint">Blue </label><input name="BlueTint" id="BlueTint" size=3 maxlength=3 readOnly class="flat"></p>
+	  <p><label for="HexTint">Hexadecimal </label><input name="HexTint" id="HexTint" size=7 maxlength=7 readOnly class="flat"></p>
+	  <div id="Tint" style="width:150px; height:150px; float:left;"></div>
+	  </form> -->
+                </div>
+                <br />
+                <div class="boxdb">
+                    <div class="boxtitlf">RGB to CMYK</div>
+                    <form name="cmyks" class="centerme">
+                        R:
+                        <input type="text" name="R" value="255" class="text1" /> G:
+                        <input type="text" name="G" value="255" class="text1" /> B:
+                        <input type="text" name="B" value="255" class="text1" />
+                        <br />
+                        <br />
+                        <input type="button" name="btn" value="色碼轉換!" onClick="rgb2cmyk(this.form.R.value,this.form.G.value,this.form.B.value);this.form.C.value=computedC.toFixed(4);this.form.M.value=computedM.toFixed(4);this.form.Y.value=computedY.toFixed(4);this.form.K.value=computedK.toFixed(4);"
+                        />
+                        <br />
+                        <br /> C:
+                        <input type="text" name="C" class="text2" style="width:58px;" /> M:
+                        <input type="text" name="M" class="text2" style="width:58px;" /> Y:
+                        <input type="text" name="Y" class="text2" style="width:58px;" /> K:
+                        <input type="text" name="K" class="text2" style="width:58px;" />
+                    </form>
+                </div>
+                <br />
+                <div class="boxda">
+                    <div class="boxtitle">RGB to HSV</div>
+                    <form name="hsv" class="centerme">
+                        R:
+                        <input type="text" name="R" value="255" maxlength="3" class="text1" /> G:
+                        <input type="text" name="G" value="255" maxlength="3" class="text1" /> B:
+                        <input type="text" name="B" value="255" maxlength="3" class="text1" />
+                        <br />
+                        <br />
+                        <input type="button" name="btn" value="色碼轉換!" onClick="rgb2hsv(this.form.R.value,this.form.G.value,this.form.B.value);this.form.H.value=computedH.toFixed(1);this.form.S.value=computedS.toFixed(4);this.form.V.value=computedV.toFixed(4);" />
+                        <br />
+                        <br /> H:
+                        <input type="text" name="H" class="text2" /> S:
+                        <input type="text" name="S" class="text2" /> V:
+                        <input type="text" name="V" class="text2" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </section>
+  <section id="if_mainboxc" role="complementary">
+   <div class="if_foads">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-4355432878324120"
+     data-ad-slot="3184445236"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+   </div>
+   <!-- PO --><div class="hey">
+21世紀還不懂中文輸入法，太OUT了，來!...輕鬆快樂學打字。 <a href="http://www.ifreesite.com/typing/k-board.htm" target="_blank">點此看 »</a>
+</div>
+  </section>
+  <footer id="if_mainboxd" class="if_colophon" role="contentinfo">
+    <div class="if_footer_box">
+      <div id="if_flk" class="if_footery">
+        <a href="https://www.ifreesite.com/" title="線上工具｜網路資源" rel="home">線上工具</a> <span class="if_pipe">|</span> <a href="https://www.ifreesite.com/sitemap.htm" title="網站地圖">Sitemap</a> <span class="if_pipe">|</span> <a href="http://www.addus.info/" title="聯絡我們">聯絡我們</a> <span class="if_pipe">|</span> <a href="https://www.ifreesite.com/emoji" title="Emoji(表情圖示)">繪文字</a> <span class="if_pipe">|</span> <a href="https://www.ifreesite.com/hi/wishing-tree" title="Wishing Tree"><font color="#F9F900">許</font><font color="#FFE153">願</font><font color="#A8FF24">樹</font></a>
+        <div class="if_xs0">
+		Copyright &copy;2023 Online Tools,All Rights Reserved. <span class="if_scrolltop" onClick="window.scrollTo(0,0);return false;" title="回頂部" style="cursor:pointer"><strong>TOP</strong></span>
+        </div>
+      </div>
+      <div id="if_frt">
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+          <a class="a2a_button_google_gmail" title="@Gmail 郵件分享!"></a>
+          <a class="a2a_button_facebook" title="分享至 Facebook"></a>
+          <a class="a2a_button_twitter" title="Twitter! 推特"></a>
+          <a class="a2a_button_whatsapp" title="WhatsApp Send"></a>
+		  <a class="a2a_button_telegram" title="Telegram 分享"></a>
+          <a class="a2a_button_wechat" title="WeChat 微信"></a>
+          <a class="a2a_button_line" title="Line Messages"></a>
+          <a class="a2a_dd" href="http://www.addtoany.com/share" title="更多! More..."></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- AddToAny Begin -->
+<script type="text/javascript" src="../../static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny End -->
+<script>(function(){var js = "window['__CF$cv$params']={r:'83f0b3adba3a0d54',t:'MTcwNDE3NDM4OS41NzgwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../cdn-cgi/challenge-platform/h/g/scripts/jsd/74bd6362/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from www.ifreesite.com/color/color-code-converter.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Jan 2024 05:46:39 GMT -->
+</html>
